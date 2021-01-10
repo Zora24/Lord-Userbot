@@ -29,7 +29,7 @@ async def help(event):
             string += "`" + str(i)
             string += "`\t ★ "
         await event.edit(f"★{string}★"
-                          "\n╾─────────────────────╼\
+                         "\n╾─────────────────────╼\
                           \n  ⊙ **【**LORD**】** **:** `@liualvinas`")
         await asyncio.sleep(1000)
         await event.delete()
