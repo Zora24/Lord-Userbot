@@ -315,7 +315,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```  ✦҈͜͡➳  Lord-Userbot \n ✗ TELAH DIAKTIFKAN ✗```")
+    await bot.send_message(BOTLOG_CHATID, "```『Lord-Userbot Telah Aktif』```")
     return
 
 with bot:
