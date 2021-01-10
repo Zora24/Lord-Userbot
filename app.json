@@ -1,0 +1,245 @@
+{
+  "name": "Lord-Userbot",
+  "description": "[Lord-Userbot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "logo": "https://telegra.ph/file/4f5bf8e3f8b710d8e990b.jpg",
+  "keywords": [
+    "telegram",
+    "userbot",
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/Zora24/Lord-Userbot",
+  "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
+  "success_url": "https://t.me/liualvinasmahaputra",
+  "stack": "container",
+  "env": {
+    "API_KEY": {
+      "description": "Dapatkan Api Key di web my.telegram.org.",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Dapatkan Api Hash Di Web my.telegram.org.",
+      "required": true
+    },
+     "STRING_SESSION": {
+      "description": "Dapatkan di termux caranya ada di repo",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Nama App heroku yang di isi diawal",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
+      "value": "Check Di Heroku Dashboard Mu",
+      "required": true
+    },
+    "BOTLOG": {
+      "description": "Incase you want to turn off logging, put this to false",
+      "value": "True",
+      "required": true
+    },
+    "BOTLOG_CHATID": {
+      "description": "ChatID of the Log group. Set it to '0' if BOTLOG = False and/or if LOGSPAMMER = False.",
+      "required": true
+    },
+    "CONSOLE_LOGGER_VERBOSE": {
+      "description": "If you need verbosity on the console logging",
+      "value": "False"
+    },
+    "QUOTES_API_TOKEN": {
+      "description": "Get this value from http://antiddos.systems! Please do not steal",
+      "required": false
+    },
+    "GENIUS_ACCESS_TOKEN": {
+      "description": "Client Access Token from https://genius.com/api-clients.",
+      "required": false
+    },
+    "MONGO_URI": {
+      "description": "Your MongoDB Atlas URL, Get your guide from https://telegra.ph/Mongo-DB-12-24.",
+      "required": false
+    },
+    "GENIUS": {
+      "description": "Get this value from https://genius.com/developers., basically same as GENIUS_API_TOKEN.",
+      "required": false
+    },
+    "GITHUB_ACCESS_TOKEN": {
+      "description": "Your GITHUB_ACCESS_TOKEN, get it from 'https://github.com/settings/tokens'",
+      "required": false
+    },
+    "GIT_REPO_NAME": {
+      "description": "Add the GIT_REPO_NAME here. It helps with commit on GitHub.",
+      "required": false
+    },
+    "COUNTRY": {
+      "description": "Set your Country to be used in the .time and .date commands.",
+      "value": "ID",
+      "required": true
+    },
+    "TZ_NUMBER": {
+      "description": "Change this value in case your country has multiple Time Zones.",
+      "value": "1",
+      "required": false
+    },
+    "OPEN_WEATHER_MAP_APPID": {
+      "description": "Get your own APPID (API key)from https://api.openweathermap.org/data/2.5/weather",
+      "required": false
+    },
+    "PM_AUTO_BAN": {
+      "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
+      "value": "False",
+      "required": true
+    },
+    "YOUTUBE_API_KEY": {
+      "description": "YouTube Data API Key for .yt command. Get from https://console.cloud.google.com",
+      "required": false
+    },
+    "OCR_SPACE_API_KEY": {
+      "description": "OCR API Key for .ocr command. Get from https://ocr.space/ocrapi",
+      "required": false
+    },
+    "REM_BG_API_KEY": {
+      "description": "API Key for .rbg command. Get from https://www.remove.bg/api",
+      "required": false
+    },
+    "ANTI_SPAMBOT": {
+      "description": "Kicks spambots from groups after they join. [Requires admin powers in groups to kick.]",
+      "value": "False"
+    },
+    "ANTI_SPAMBOT_SHOUT": {
+      "description": "Report spambots to @admins in groups after they join, just in case when you don't have admin powers to kick that shit yourself.",
+      "value": "False"
+    },
+    "TMP_DOWNLOAD_DIRECTORY": {
+      "description": "Download location for many modules (GDrive, .download etc..)",
+      "value": "./downloads/"
+    },
+    "CLEAN_WELCOME": {
+      "description": "When a new person joins, the old welcome message is deleted.",
+      "value": "True"
+    },
+    "G_DRIVE_FOLDER_ID": {
+      "description": "Create a folder and put that folder's id here.check folder link for id.",
+      "required": false
+    },
+    "HEROKU_MEMEZ": {
+      "description": "This should be True if the userbot is running on a Heroku Dyno.",
+      "value": "True",
+      "required": true
+    },
+    "LASTFM_API": {
+      "description": "API Key for Last.FM module. [Get one from - https://www.last.fm/api/account/create]",
+      "required": false
+    },
+    "LASTFM_SECRET": {
+      "description": "SECRET Key for Last.FM module. [Get one from - https://www.last.fm/api/account/create]",
+      "required": false
+    },
+    "LASTFM_USERNAME": {
+      "description": "Last.FM Username",
+      "required": false
+    },
+    "LASTFM_PASSWORD": {
+      "description": "Last.FM Password",
+      "required": false
+    },
+    "BIO_PREFIX": {
+      "description": "Prefix for Last.FM Module Bio.",
+      "required": false
+    },
+    "DEFAULT_BIO": {
+      "description": "Default profile bio.",
+      "value": "LORD-USERBOT",
+      "required": false
+    },
+    "ALIVE_NAME": {
+      "description": "Name to show in .alive message",
+      "required": false
+    },
+    "S_PACK_NAME": {
+      "description": "change your sticker pack name",
+      "required": false
+    },
+    "G_BAN_LOGGER_GROUP": {
+      "description": "Add all sudo bots in your group and type id of that group.",
+      "value": "isi id group lu",
+      "required": false
+    },
+    "G_DRIVE_DATA": {
+      "description": "Enter the Google Drive authentication data, as a JSON structure.",
+      "required": false
+    },
+    "G_PHOTOS_CLIENT_ID": {
+      "description": "get the client id from https://j.mp/39lWQQm",
+      "required": false
+    },
+    "G_PHOTOS_CLIENT_SECRET": {
+      "description": "get the client secret from https://j.mp/39lWQQm",
+      "required": false
+    },
+    "BITLY_TOKEN": {
+      "description": "Your Bit.ly API key, get it from 'https://bitly.com/a/sign_up'",
+      "value": "",
+      "required": false
+    },
+    "UB_BLACK_LIST_CHAT": {
+      "description": "Isi Apa Aja",
+      "required": false
+    },
+    "LYDIA_API_KEY": {
+      "description": "This Module Needs CoffeeHouse API to work. so Join https://telegram.dog/IntellivoidDev and send #activateapi and follow instructions.",
+      "required": false
+    },
+    "WEATHER_DEFCITY": {
+      "description": "Set the default city for the userbot's weather module.",
+      "value": "Batam",
+      "required": false
+    },
+    "LOGSPAMMER": {
+      "description": "Set this to True in case you want the error logs to be stored in the userbot log group, instead of spitting out the file in the current chat, requires a valid BOTLOG_CHATID to be set.",
+      "value": "True",
+      "required": true
+    },
+    "DEEZER_ARL_TOKEN": {
+      "description": "Input your DEEZER ARL TOKEN https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken",
+      "required": false
+    },
+    "UPSTREAM_REPO_URL": {
+      "description": "In case you maintain a fork, add your repo URL here.",
+      "required": false
+    },
+    "BOT_TOKEN": {
+      "description": "Set this to enable inline bot helper. get the token from @BotFather",
+      "required": false
+    },
+    "BOT_USERNAME": {
+      "description": "Username of the bot you created with @BotFather",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],"buildpacks": [{
+    "url": "https://github.com/heroku/heroku-buildpack-python.git"
+  }, {
+    "url": "https://github.com/heroku/heroku-buildpack-redis"
+  }, {
+    "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+  }, {
+    "url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab"
+  },{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+  }, {
+    "url": "https://github.com/amivin/aria2-heroku"
+  }, {
+    "url": "https://github.com/stevo550/buildpack-slug-cleaner"
+  }]
+}
