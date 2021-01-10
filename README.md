@@ -40,4 +40,4 @@ wget https://raw.githubusercontent.com/Zora24/Lord-Userbot/Lord-Userbot/Getstrin
 
 <br>
 </p>
-### Jika Ada Yang Ingin Di Tanyakan Bisa Chat t.me/liualvinas
+
