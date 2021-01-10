@@ -21,23 +21,15 @@ async def help(event):
             await event.edit(str(CMD_HELP[args]))
         else:
             await event.edit("**Maaf Lord, Saya Tidak Punya Perintah Itu ツ**")
-            await asyncio.sleep(18)
+            await asyncio.sleep(200)
             await event.delete()
     else:
-        await event.edit(f"**╭━━━━━━━━━━━━━━━━━━━━━╮**\
-            \n    [✘ **LORD** ✘] \
-            \n╰━━━━━━━━━━━━━━━━━━━━━╯ \
-            \n╭━━━━━━━━━━━━━━━━━━━━━╮\
-            \n   Untuk Melihat Perintah Lengkap\
-            \n   Contoh: .help stickers\
-            \n  ✘ Modul Aktif: {len(modules)}\
-           \n╰━━━━━━━━━━━━━━━━━━━━━╯")
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
             string += "`\t ★ "
-        await event.reply(f"★{string}★"
+        await event.edit(f"★{string}★"
                           "\n╾─────────────────────╼\
                           \n  ⊙ **【**LORD**】** **:** `@liualvinas`")
-        await asyncio.sleep(100)
+        await asyncio.sleep(1000)
         await event.delete()
