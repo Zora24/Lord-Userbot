@@ -52,8 +52,8 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         heroku_applications = heroku.apps()
         if HEROKU_APP_NAME is None:
             await event.edit(
-                '`[HEROKU]: Please set up the` **HEROKU_APP_NAME** `variable'
-                ' to be able to deploy newest changes of userbot.`'
+                '`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `'
+                ' untuk dapat deploy perubahan terbaru dari Lord Userbot.`'
             )
             repo.__del__()
             return
@@ -63,11 +63,11 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await event.edit(
-                f'{txt}\n`Invalid Heroku credentials for deploying userbot dyno.`'
+                f'{txt}\n`Kredensial Heroku tidak valid untuk deploy Lord Userbot dyno.`'
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nUserbot dyno build in progress, please wait it can take 7-8 mins`'
+                         '\nDyno Lord-Userbot Sedang Dalam Proses, Mohon Menunggu 7-8 Menit`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -81,28 +81,28 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         try:
             remote.push(refspec="HEAD:refs/heads/master", force=True)
         except GitCommandError as error:
-            await event.edit(f'{txt}\n`Here is the error log:\n{error}`')
+            await event.edit(f'{txt}\n`Terjadi Kesalahan Di Log:\n{error}`')
             return repo.__del__()
         build = app.builds(order_by="created_at", sort="desc")[0]
         if build.status == "failed":
             await event.edit(
-                "`Build failed!\n" "Cancelled or there were some errors...`"
+                "`Build Gagal!\n" "Dibatalkan atau ada beberapa kesalahan...`"
             )
             await asyncio.sleep(5)
             return await event.delete()
         else:
-            await event.edit("`Successfully deployed!\n" "Restarting, please wait...`")
+            await event.edit("`Lord-Userbot Berhasil Di Deploy!\n" "Restarting, Mohon Menunggu.....`")
             await asyncio.sleep(15)
             await event.delete()
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#NOTE \n"
-                "OK ALVIN BOT Berhasil Di Update")
+                BOTLOG_CHATID, "#BOT \n"
+                "`Lord-Userbot Berhasil Di Update`")
 
     else:
         await event.edit('`[HEROKU]:'
-                         '\nPlease set up` **HEROKU_API_KEY** `variable.`'
+                         '\nHarap Siapkan Variabel` **HEROKU_API_KEY** `.`'
                          )
         await asyncio.sleep(10)
         await event.delete()
@@ -115,19 +115,19 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('`**ALVIN BOT** Berhasil Di Update!`')
+    await event.edit('**✥ Lord-Userbor** `Berhasil Di Update!`')
     await asyncio.sleep(1)
-    await event.edit('`ALVIN BOT Di Restart....`')
+    await event.edit('✥ Lord-Userbot `Di Restart....`')
     await asyncio.sleep(1)
-    await event.edit('`Silahkan Tunggu Beberapa Detik!`')
+    await event.edit('`Mohon Menunggu Beberapa Detik ツ`')
     await asyncio.sleep(10)
     await event.delete()
 
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#NOTICE \n"
-            "OK ALVIN BOT Berhasil Di Update")
-        await asyncio.sleep(10)
+            BOTLOG_CHATID, "#BOT \n"
+            "**Lord-Userbot Telah Di Perbarui ツ**")
+        await asyncio.sleep(100)
         await event.delete()
 
     # Spin a new instance of bot
@@ -139,7 +139,7 @@ async def update(event, repo, ups_rem, ac_br):
 @ register(outgoing=True, pattern=r"^.update(?: |$)(now|deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
-    await event.edit("`Mengecek Update, silakan tunggu....`")
+    await event.edit("`Mengecek Pembaruan, Silakan Menunggu....`")
     conf = event.pattern_match.group(1)
     off_repo = UPSTREAM_REPO_URL
     force_update = False
@@ -188,15 +188,15 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n`★ALVIN•BOT★ \n` sudah **versi terbaru**\n`BRANCH:`**{UPSTREAM_REPO_BRANCH}**\n')
+            f'\n**✣ Lord-Userbot Sudah Versi Terbaru**\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**UPDATE Terbaru Untuk ★ALVIN•BOT★ [{ac_br}]:\n\nPERUBAHAN:**\n`{changelog}`'
+        changelog_str = f'**✣ Pembaruan Untuk Lord-Userbot [{ac_br}]:\n\n✣ Pembaruan:**\n`{changelog}`'
         if len(changelog_str) > 4096:
-            await event.edit("`Changelog is too big, view the file to see it.`")
+            await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
             file.write(changelog_str)
             file.close()
@@ -214,10 +214,12 @@ async def upstream(event):
         await event.edit(
             '`Force-Syncing to latest stable userbot code, please wait...`')
     else:
-        await event.edit('`➸Proses Update Lord-Userbot, ....`')
-        await event.edit('`➸Proses Update Lord-Userbot, Loading....`')
-        await event.edit('`➸Proses Update Lord-Userbot, Updating....`')
-        await event.edit('`➸Proses Update Lord-Userbot, Mohon Menunggu Lord....`')
+        await event.edit('`✲ Proses Update Lord-Userbot, Loading....1%`')
+        await event.edit('`✲ Proses Update Lord-Userbot, Loading....20%`')
+        await event.edit('`✲ Proses Update Lord-Userbot, Loading....35%`')
+        await event.edit('`✲ Proses Update Lord-Userbot, Loading....77%`')
+        await event.edit('`✲ Proses Update Lord-Userbot, Updating...90%`')
+        await event.edit('`✲ Proses Update Lord-Userbot, Mohon Menunggu Lord....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
@@ -232,9 +234,9 @@ async def upstream(event):
 CMD_HELP.update({
     'update':
     ".update"
-    "\nUsage: Checks if the main userbot repository has any updates and shows a changelog if so."
+    "\nUsage: Untuk Melihat Pembaruan Terbaru Lord-Userbot."
     "\n\n.update now"
-    "\nUsage: Update your userbot, if there are any updates in your userbot repository."
+    "\nUsage: Memperbarui Lord-Userbot."
     "\n\n.update deploy"
-    "\nUsage: Deploy your userbot at heroku, if there are any updates in your userbot repository."
+    "\nUsage: Memperbarui Lord-Userbot Dengan Cara Deploy Ulang."
 })
