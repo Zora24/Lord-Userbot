@@ -23,15 +23,15 @@
       "required": true
     },
      "STRING_SESSION": {
-      "description": "Dapatkan di termux caranya ada di repo",
+      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya @liualvinas di telegram",
       "required": true
     },
     "HEROKU_APP_NAME": {
-      "description": "Nama App heroku yang di isi diawal",
+      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling 4tas)",
       "required": true
     },
     "HEROKU_API_KEY": {
-      "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
+      "description": "Heroku API KEY mu, dapatkan dari web 'https://dashboard.heroku.com/account'",
       "value": "Check Di Heroku Dashboard Mu",
       "required": true
     },
@@ -41,7 +41,8 @@
       "required": true
     },
     "BOTLOG_CHATID": {
-      "description": "ChatID of the Log group. Set it to '0' if BOTLOG = False and/or if LOGSPAMMER = False.",
+      "description": "Buatlah sebuah grup private/public masukan bot rose lalu ketik /id.",
+      "value": "Isi id grup mu",
       "required": true
     },
     "CONSOLE_LOGGER_VERBOSE": {
@@ -49,7 +50,7 @@
       "value": "False"
     },
     "QUOTES_API_TOKEN": {
-      "description": "Get this value from http://antiddos.systems! Please do not steal",
+      "description": "Dapatkan Token Dari http://antiddos.systems",
       "required": false
     },
     "GENIUS_ACCESS_TOKEN": {
@@ -154,16 +155,16 @@
       "required": false
     },
     "ALIVE_NAME": {
-      "description": "Name to show in .alive message",
+      "description": "Nama untuk menunjukan pesan .alive",
       "required": false
     },
     "S_PACK_NAME": {
-      "description": "change your sticker pack name",
+      "description": "Nama Sticker Pack Mu",
       "required": false
     },
     "G_BAN_LOGGER_GROUP": {
       "description": "Add all sudo bots in your group and type id of that group.",
-      "value": "isi id group lu",
+      "value": "Isi id grup mu",
       "required": false
     },
     "G_DRIVE_DATA": {
