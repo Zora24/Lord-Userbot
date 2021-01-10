@@ -29,7 +29,7 @@ async def help(event):
             string += "`" + str(i)
             string += "`\t**✥ Daftar Perintah Lord Userbot:** "
         await event.edit(f"【{string}】"
-                         "\n✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗\
-                          \n__Ketik Contoh__ `.help afk` __Untuk Informasi Perintah__\n ♕ **【LORD】:** `@liualvinas`")
+                         "\n✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗"
+                         "\n__Ketik Contoh__ `.help afk` __Untuk Informasi Perintah__\n ♕ **【REPO】:** `@liualvinas`")
         await asyncio.sleep(1000)
         await event.delete()
