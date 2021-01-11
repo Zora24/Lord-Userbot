@@ -187,7 +187,7 @@ async def kang(args):
                 rsp = await conv.get_response()
                 if "Sorry, the file type is invalid." in rsp.text:
                     return await args.edit(
-                        "`gagal menambahkan sticker, gunakan` @Stickers `bot untuk menambahkan sticker.`"
+                        "`Gagal menambahkan sticker, gunakan` @Stickers `bot untuk menambahkan sticker.`"
                     )
                 await conv.send_message(emoji)
                 # Ensure user doesn't get spamming notifications
@@ -198,7 +198,7 @@ async def kang(args):
                 # Ensure user doesn't get spamming notifications
                 await bot.send_read_acknowledge(conv.chat_id)
         else:
-            await args.edit("`Membuat Pack baru`")
+            await args.edit("`Membuat Lord Pack baru`")
             async with bot.conversation("Stickers") as conv:
                 await conv.send_message(cmd)
                 await conv.get_response()
@@ -217,7 +217,7 @@ async def kang(args):
                 rsp = await conv.get_response()
                 if "Sorry, the file type is invalid." in rsp.text:
                     return await args.edit(
-                        "`gagal menambahkan sticker, gunakan` @Stickers `bot untuk menambahkan sticker.`"
+                        "`Gagal menambahkan sticker, gunakan` @Stickers `bot untuk menambahkan sticker.`"
                     )
                 await conv.send_message(emoji)
                 # Ensure user doesn't get spamming notifications
@@ -242,8 +242,7 @@ async def kang(args):
                 await bot.send_read_acknowledge(conv.chat_id)
 
         await args.edit(
-            "`Sticker Berhasil Dibuat`"
-            f"\n   ✖ **[STICKER LORD](t.me/addstickers/{packname})** ✖\n`【 Tekan Sticker Lord 】`",
+            f"**Sticker Berhasil Di Tambahkan Ke Pack** **[Lord Sticker](t.me/addstickers/{packname})**",
             parse_mode="md",
         )
 
@@ -350,12 +349,12 @@ async def sticker_to_png(sticker):
 CMD_HELP.update(
     {
         "stickers": ">`.kang | .tikel [emoji('s)]?`"
-        "\nUsage: Reply .kang to a sticker or an image to kang it to your userbot pack "
-        "\nor specify the emoji you want to."
-        "\n\n>`.kang | .colong  (emoji['s]]?` [number]?"
-        "\nUsage: Kang's the sticker/image to the specified pack but uses 🤔 as emoji "
-        "or choose the emoji you want to."
+        "\nUsage: Balas .tikel Ke Sticker Atau Gambar Untuk Menambahkan Ke Pack Mu "
+        "\nBisa Memilih Emoji Sesuai Pilihanmu."
+        "\n\n>`.kang | .tikel  (emoji['s]]?` [nomer]?"
+        "\nUsage: Ambil Sticker/Gambar Ke Pack Baru Mu "
+        "Dan Bisa Pilih Emoji Sticker Mu."
         "\n\n>`.stkrinfo`"
-        "\nUsage: Gets info about the sticker pack."
+        "\nUsage: Dapatkan Informasi Pack Sticker."
         "\n\n>`.getsticker`"
-        "\nUsage: reply to a sticker to get 'PNG' file of sticker."})
+        "\nUsage: Balas Ke Stcker Untuk Mendapatkan File 'PNG' Sticker."})
