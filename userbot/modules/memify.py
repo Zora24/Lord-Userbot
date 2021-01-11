@@ -88,14 +88,14 @@ async def draw_meme_text(image_path, text):
             )
             draw.text(
                 xy=((i_width - u_width) / 2,
-     int(((current_h / 730) * i_width)) - 1),
+                    int(((current_h / 730) * i_width)) - 1),
                 text=u_text,
                 font=m_font,
                 fill=(0, 0, 0),
             )
             draw.text(
                 xy=(((i_width - u_width) / 2),
-     int(((current_h / 730) * i_width)) + 1),
+                    int(((current_h / 730) * i_width)) + 1),
                 text=u_text,
                 font=m_font,
                 fill=(0, 0, 0),
@@ -189,14 +189,14 @@ async def mim(event):
             "```Mengubah Gambar Ini Mwahaha Saatnya Menulis ツ ```"
         )
         await asyncio.sleep(5)
-        text=event.pattern_match.group(1)
+        text = event.pattern_match.group(1)
         if event.reply_to_msg_id:
-            file_name="meme.jpg"
-            reply_message=await event.get_reply_message()
-            to_download_directory=TEMP_DOWNLOAD_DIRECTORY
-            downloaded_file_name=os.path.join(
+            file_name = "meme.jpg"
+            reply_message = await event.get_reply_message()
+            to_download_directory = TEMP_DOWNLOAD_DIRECTORY
+            downloaded_file_name = os.path.join(
                 to_download_directory, file_name)
-            downloaded_file_name=await bot.download_media(
+            downloaded_file_name = await bot.download_media(
                 reply_message,
                 downloaded_file_name,
             )
