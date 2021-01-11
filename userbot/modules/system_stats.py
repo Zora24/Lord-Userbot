@@ -36,7 +36,7 @@ async def get_readable_time(seconds: int) -> str:
     count = 0
     up_time = ""
     time_list = []
-    time_suffix_list = ["s", "m", "h", "days"]
+    time_suffix_list = ["Dtk", "Mnt", "Jam", "Hari"]
 
     while count < 4:
         count += 1
@@ -72,7 +72,7 @@ async def psu(event):
     bt = datetime.fromtimestamp(boot_time_timestamp)
     softw += f"`Waktu Hidup: {bt.day}/{bt.month}/{bt.year}  {bt.hour}:{bt.minute}:{bt.second}`\n"
     # CPU Cores
-    cpuu = "**CPU Info**\n"
+    cpuu = "**informasi CPU**\n"
     cpuu += "`Physical cores   : " + \
         str(psutil.cpu_count(logical=False)) + "`\n"
     cpuu += "`Total cores      : " + \
@@ -103,7 +103,7 @@ async def psu(event):
     help_string += f"{str(cpuu)}\n"
     help_string += f"{str(memm)}\n"
     help_string += f"{str(bw)}\n"
-    help_string += "**Engine Info**\n"
+    help_string += "**Informasi Mesin**\n"
     help_string += f"`Python {sys.version}`\n"
     help_string += f"`Telethon {__version__}`"
     await event.edit(help_string)
@@ -165,17 +165,14 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "`╭━━━━━━━━━━━━━━━━━━━━╮\n "
-            "` ✖**Lord-Userbot Versi:** \n "
+            "**☛Lord-Userbot Versi:** \n "
             f"{verout}"
-            "` \n"
-            "   **Revision:** "
-            f"{revout}🇲🇨\n"
-            "╰━━━━━━━━━━━━━━━━━━━━╯ "
+            "**☛Revisi:** "
+            f"{revout}"
         )
     else:
         await event.edit(
-            "Shame that you don't have git, you're running - 'v1.beta.4' anyway!"
+            "Sayang sekali anda tidak memiliki git, Anda Menjalankan Bot - 'v1.beta.4'!"
         )
 
 
@@ -185,7 +182,7 @@ async def pipcheck(pip):
         return
     pipmodule = pip.pattern_match.group(1)
     if pipmodule:
-        await pip.edit("`Searching . . .`")
+        await pip.edit("`Mencari...`")
         pipc = await asyncrunapp(
             "pip3",
             "search",
@@ -199,7 +196,7 @@ async def pipcheck(pip):
 
         if pipout:
             if len(pipout) > 4096:
-                await pip.edit("`Output too large, sending as file`")
+                await pip.edit("`Output Terlalu Besar, Dikirim Sebagai File`")
                 file = open("output.txt", "w+")
                 file.write(pipout)
                 file.close()
@@ -232,19 +229,21 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
     output = (
-        f"✗ **Lord Userbot** ✗\n"
-        f"┣[• ✘ **Normal   :** `100%`  \n"
-        f"┣[• ✘ **LORD     :** `{DEFAULTUSER}` \n"
-        f"┣[• ✘ **Username :** `@{user.username}` \n"
-        "`┣▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱`\n"
-        f"┣[• ✘ **Telethon :** `v {version.__version__}` \n"
-        f"┣[• ✘ **Python   :** `v {python_version()}` \n"
-        f"┣[• ✘ **Userbot  :** `Lord` \n"
-        f"┣[• ✘ **Versi    :** `{BOT_VER}` \n"
-        f"┣[• ✘ **Modul    :** `{len(modules)} Loaded` \n"
-        f"┣[• ✘ **Uptime   :** `{uptime}` \n"
-        f"┣[• ✘ **Repo     :**  `@liualvinas` \n"
-        f" ✗ **Lord-Userbot** : `{DEFAULTUSER}`")
+        f" **LORD USERBOT** \n"
+        f"✘ __Lord__ \n"
+        f": `{DEFAULTUSER}` \n"
+        f"✘ __Username__ \n"
+        f": `@{user.username}` \n"
+        f"✘ __Telethon__ \n"
+        f": `Versi{version.__version__}` \n"
+        f"✘ __Python__ \n"
+        f": `Versi {python_version()}` \n"
+        f"✘ __Versi Bot__ \n"
+        f": `{BOT_VER}` \n"
+        f"✘ __Uptime__ \n"
+        f": `{uptime}` \n"
+        f"✘ __Modul__ \n"
+        f": `{len(modules)}` \n")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
