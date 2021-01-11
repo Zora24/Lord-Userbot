@@ -1,7 +1,7 @@
 {
   "name": "Lord-Userbot",
   "description": "[Lord-Userbot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
-  "logo": "https://telegra.ph/file/4f5bf8e3f8b710d8e990b.jpg",
+  "logo": "https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -10,7 +10,7 @@
     "productivity"
   ],
   "repository": "https://github.com/Zora24/Lord-Userbot",
-  "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
+  "telegram": "https://t.me/liualvinas",
   "success_url": "https://t.me/liualvinasmahaputra",
   "stack": "container",
   "env": {
@@ -27,7 +27,7 @@
       "required": true
     },
     "HEROKU_APP_NAME": {
-      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling 4tas)",
+      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
       "required": true
     },
     "HEROKU_API_KEY": {
@@ -36,7 +36,7 @@
       "required": true
     },
     "BOTLOG": {
-      "description": "Incase you want to turn off logging, put this to false",
+      "description": "Kalo Mau Off in BOTLOG Ganti False",
       "value": "True",
       "required": true
     },
@@ -150,7 +150,7 @@
       "required": false
     },
     "DEFAULT_BIO": {
-      "description": "Default profile bio.",
+      "description": "Default Bio Mu.",
       "value": "LORD-USERBOT",
       "required": false
     },
@@ -163,7 +163,7 @@
       "required": false
     },
     "G_BAN_LOGGER_GROUP": {
-      "description": "Add all sudo bots in your group and type id of that group.",
+      "description": "Buatlah Sebuah Grup Private/Public Lalu Masukkan Bot Rose Lalu Ketik /id.",
       "value": "Isi id grup mu",
       "required": false
     },
