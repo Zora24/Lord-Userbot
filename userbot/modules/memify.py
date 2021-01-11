@@ -16,21 +16,21 @@ async def mim(event):
         return
     if not event.reply_to_msg_id:
         await event.edit(
-            "`Syntax: reply to an image with .mmf` 'text on top' ; 'text on bottom' "
+            "`Syntax: Balas Ke Gambar Ketik .mmf` 'Teks Atas' ; 'Teks Bawah' "
         )
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("```reply to a image/sticker/gif```")
+        await event.edit("```Balas Ke Gambar/Sticker/Gif```")
         return
     reply_message.sender
     await bot.download_file(reply_message.media)
     if reply_message.sender.bot:
-        await event.edit("```Reply to actual users message.```")
+        await event.edit("```Balas ke pesan pengguna yang sebenarnya.```")
         return
     else:
         await event.edit(
-            "```Transfiguration Time! Mwahaha Memifying this image! (」ﾟﾛﾟ)｣ ```"
+            "``Mengubah Gambar Ini Mwahaha Saatnya Menulis ツ ```"
         )
         await asyncio.sleep(5)
         text = event.pattern_match.group(1)
@@ -58,7 +58,7 @@ async def draw_meme_text(image_path, text):
     os.remove(image_path)
     i_width, i_height = img.size
     m_font = ImageFont.truetype(
-        "userbot/resources/FontRemix.ttf", int((95 / 730) * i_width)
+        "userbot/utils/styles/MutantAcademyStyle.ttf", int((70 / 640) * i_width)
     )
     if ";" in text:
         upper_text, lower_text = text.split(";")
@@ -167,21 +167,23 @@ async def mim(event):
         return
     if not event.reply_to_msg_id:
         await event.edit(
-            "`Syntax: reply to an image with .mmf` 'text on top' ; 'text on bottom' "
+            "`Syntax: Balas Ke Gambar Ketik .mmf` 'Teks Atas' ; 'Teks Bawah' "
         )
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("```reply to a image/sticker/gif```")
+        await event.edit("```Balas Ke Gambar/Sticker/Gif```")
         return
     reply_message.sender
     await bot.download_file(reply_message.media)
     if reply_message.sender.bot:
-        await event.edit("```Reply to actual users message.```")
+        await event.edit("```Balas Ke Pesan Pengguna Yang Sebenarnya.```")
         return
     else:
         await event.edit(
-            "```Transfiguration Time! Mwahaha Memifying this image! (」ﾟﾛﾟ)｣ ```"
+            "```Mengubah Gambar Ini Mwahaha Saatnya Menulis ツ ```"
+        )
+        await asyncio.sleep(5) ```"
         )
         await asyncio.sleep(5)
         text = event.pattern_match.group(1)
@@ -209,7 +211,7 @@ async def draw_meme_text(image_path, text):
     os.remove(image_path)
     i_width, i_height = img.size
     m_font = ImageFont.truetype(
-        "userbot/resources/FontRemix2.ttf", int((95 / 730) * i_width)
+        "userbot/utils/styles/ProductSans-BoldItalic.ttf", int((95 / 730) * i_width)
     )
     if ";" in text:
         upper_text, lower_text = text.split(";")
@@ -314,8 +316,8 @@ async def draw_meme_text(image_path, text):
 
 CMD_HELP.update({
     "memify":
-        "`.mmf` texttop ; textbottom\
-        \nUsage: Reply a sticker/image/gif and send with cmd.\n"
-        "`.mmf2` texttop ; textbottom\
-        \nUsage: Reply a sticker/image/gif and send with cmd."
+        "`.mmf` Teks Atas ; Teks Bawah\
+        \nUsage: Balas Ke Sticker/Gambar/Gif.\n"
+        "`.mmf2` Teks Atas ; Teks Bawah\
+        \nUsage: Balas Ke Sticker/Gambar/Gif."
 })
