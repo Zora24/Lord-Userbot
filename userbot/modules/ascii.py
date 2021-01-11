@@ -20,13 +20,13 @@ bground = "black"
 @register(outgoing=True, pattern=r"^\.(ascii|asciis)$")
 async def ascii(event):
     if not event.reply_to_msg_id:
-        await event.edit("`Reply to Any media..`")
+        await event.edit("`Mohon Balas Ke Media..`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("`reply to a image/sticker/video`")
+        await event.edit("`Balas Ke Gambar/Sticker/Video`")
         return
-    await event.edit("`Downloading Media..`")
+    await event.edit("`Sedang Mendownload Media..`")
     if reply_message.photo:
         IMG = await bot.download_media(
             reply_message,
@@ -56,7 +56,7 @@ async def ascii(event):
             "ascii.png",
         )
     try:
-        await event.edit("`Processing..`")
+        await event.edit("`Sedang Dalam Proses..`")
         list = await random_color()
         color1 = list[0]
         color2 = list[1]
@@ -128,22 +128,22 @@ async def random_color():
 async def _(event):
     BG = event.pattern_match.group(1)
     if BG.isnumeric():
-        return await event.edit("`Please input a color not a number!`")
+        return await event.edit("`Mohon Masukkan Warna Bukan Angka Lord`")
     elif BG:
         global bground
         bground = BG
     else:
-        return await event.edit("`please insert bg of ascii`")
-    await event.edit(f"`Successfully set bg of ascii to` **{BG}**")
+        return await event.edit("`Mohon Masukkan Background Dari Ascii`")
+    await event.edit(f"`Berhasil Setel Background Dari Ascii Ke` **{BG}**")
 
 
 CMD_HELP.update(
     {
         "ascii": "`.ascii`\n"
-        "Usage: create ascii art from media\n\n"
+        "Usage: Buat Ascii Art Dari Media\n\n"
         "`.asciis`\n"
-        "Usage: same but upload the result as sticker\n\n"
+        "Usage: Sama Tapi Unggah Hasilnya Sebagai Sticker\n\n"
         "`.asciibg <color>`\n"
-        "Usage: to change background color of this ascii module"
+        "Usage: Untuk Mengubah Warna Background Dari Modul Ascii Contoh `.asciibg black`"
     }
 )
