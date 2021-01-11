@@ -1,26 +1,34 @@
 <p align="center">
-    <img alt="Lord-Userbot" src="https://img.shields.io/badge/LORD%20VERSION-4.+-brightgreen"/>
+  <a href="https://github.com/Zora24/Lord-Userbot/fork">
+    <img src="https://img.shields.io/github/forks/Zora24/Lord-Userbot?label=Fork&style=social">
     
-# Lord Userbot
+  </a>
+  <a href="https://github.com/Zora24/Lord-Userbot">
+    <img src="https://img.shields.io/github/stars/Zora24/Lord-Userbot?style=social">
+  </a>
+</p>  
 
-<h3 align="center">A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.</h3>
+# Lord Userbot
+![Lord Userbot Logo](https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg)
+
+<h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
 <p align="center">&nbsp;</p>
 
 ### Repo Lord Userbot
-Repo Yang Diciptakan Dari Berbagai Repo Userbot Github
+Repo Yang Dibuat [Alvin](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github 
 
 
-### Lakukan String Di Termux Dengan Cara Copas Dibawah Ini Ke Termux
+### Lakukan String Di Termux Dengan Cara Copy Paste Teks Dibawah Ini Ke Termux
 
 ```
 wget https://raw.githubusercontent.com/Zora24/Lord-Userbot/Lord-Userbot/Getstring.sh && bash Getstring.sh
 ```
 <br>
 
-## Bagaimana Cara Deploy 👷
+## Bagaimana Cara Deploy?
 
 ```
-* **[HEROKU](https://www.heroku.com/) Metode** 🔧
+* **CARA DEPLOY** 🔧
 
   > Pertama Dapatkan API_KE & API_HASH Di my.telegram.org (Wajib)
 
