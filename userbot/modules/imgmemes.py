@@ -404,7 +404,7 @@ async def nekobot(e):
         text1, text2 = input_str.split("|")
     else:
         await e.edit(
-            "Usage : reply to image or sticker with `.trap (name of the person to trap)|(trapper name)`"
+            "Balas Ke Gambar Atau Sticker Lalu Ketik `.trap (Nama Orang Yang Di Trap)|(Nama Trap)`"
         )
         return
     replied = await e.get_reply_message()
@@ -538,7 +538,7 @@ CMD_HELP.update({
     "imgmeme":
     "`.fgs`\
 \nUsage: Dapatkan meme dari google yang di custom pengguna!\
-\n`.fgs` [Teks Atas] ; [Teks Bawah]\
+\n`.fgs [Teks Atas] ; [Teks Bawah]`\
 \n\n<`.modi` or `.trump` or `.cmm` or `.kanna`> <text>\
 \nUsage: Just for Fun.\
 \n\n<`.ph` or `.threat` or `.trash` or `.trap` >\
