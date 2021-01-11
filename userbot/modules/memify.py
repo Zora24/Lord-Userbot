@@ -188,8 +188,6 @@ async def mim(event):
         await event.edit(
             "```Mengubah Gambar Ini Mwahaha Saatnya Menulis ツ ```"
         )
-        await asyncio.sleep(5) ```"
-        )
         await asyncio.sleep(5)
         text=event.pattern_match.group(1)
         if event.reply_to_msg_id:
