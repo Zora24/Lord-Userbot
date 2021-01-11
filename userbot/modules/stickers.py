@@ -135,7 +135,7 @@ async def kang(args):
                     )
                     await conv.send_message(packname)
                     x = await conv.get_response()
-                    if x.text == "Invalid pack selected.":
+                    if x.text == "Gagal Memilih Pack.":
                         await conv.send_message(cmd)
                         await conv.get_response()
                         # Ensure user doesn't get spamming notifications
@@ -175,7 +175,7 @@ async def kang(args):
                         return await args.edit(
                             "`Sticker ditambahkan ke pack yang berbeda !"
                             "\nIni pack yang baru saja Lord buat!"
-                            f"\nTekan Disamping Lord [STICKER LORD](t.me/addstickers/{packname}) Untuk Melihat Sticker Lord",
+                            f"\nTekan [Lord Sticker](t.me/addstickers/{packname}) Untuk Melihat Sticker Lord",
                             parse_mode="md",
                         )
                 if is_anim:
@@ -198,7 +198,7 @@ async def kang(args):
                 # Ensure user doesn't get spamming notifications
                 await bot.send_read_acknowledge(conv.chat_id)
         else:
-            await args.edit("`Membuat Lord Pack baru`")
+            await args.edit("`Membuat Sticker Lord Pack baru`")
             async with bot.conversation("Stickers") as conv:
                 await conv.send_message(cmd)
                 await conv.get_response()
@@ -242,7 +242,7 @@ async def kang(args):
                 await bot.send_read_acknowledge(conv.chat_id)
 
         await args.edit(
-            f"**Sticker Berhasil Di Tambahkan Ke Pack** **[Lord Sticker](t.me/addstickers/{packname})**",
+            f"**Sticker Berhasil Di Tambahkan Ke Pack Tekan** **[Lord Sticker](t.me/addstickers/{packname})** **Untuk Melihat Pack**",
             parse_mode="md",
         )
 
