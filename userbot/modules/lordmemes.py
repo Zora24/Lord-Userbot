@@ -2979,68 +2979,68 @@ async def _(event):
 
 
 CMD_HELP.update({
-    "remixmemes":
+    "lordmemes":
     "`.eye`\
-\nUsage: see it yourself.\
+\nUsage: Lihat Sendiri.\
 \n\n`.earth`\
-\nusage: spins like earth 🌎🌎\
+\nusage: Memutar Bumi 🌎🌎\
 \n\n`.bombs`\
-\nUsage: For bombing tg 🤣🤣\
+\nUsage: Bom Telegram🤣🤣\
 \n\n`.think`\
-\nUsage: hmmm\
-\n\n`.gotm` or `.gott`\
-\nUsage: got sucks🤣\
+\nUsage: hmmm berpikir\
+\n\n`.gotm` atau `.gott`\
+\nUsage: dapatkan sucks🤣\
 \n\n`.snake`\
-\nUsage: See it yourself\
+\nUsage: Lihat Sendiri\
 \n\n`.call`\
-\nUsage: call tg owner\
-\n\n`.belo` or `.hp` or `.suits`\
-\nUsage: kinda interesting\
+\nUsage: Memanggil Owner Telegram \
+\n\n`.belo` Atau `.hp` Atau `.suits`\
+\nUsage: Macam Macam Perintah Menarik\
 \n\n`.admeme`\
-\nUsage: spammy af\
+\nUsage: mememememe\
 \n\n`.qs`\
-\nUsage: start conversation\
+\nUsage: Memulai Percakapan\
 \n\n`.wtf`\
-\nUsage: See it yourself\
+\nUsage: Lihat Sendiri\
 \n\n`.load`,`.up`,`.square`,`.round`,`.heart`,`.monkey`,`.anim`,`.hand`,`.fnl`,`.cnt`,`.kiss`\
-\nUsage: See it yourself\
+\nUsage: Lihat Sendiri\
 \n\n`.human`\
-\nUsage: Nothing interesting\
+\nUsage: Tidak Ada Yang Menarik\
 \n\n`.wupload`\
 \nUsage: meh\
 \n\n`.music`\
-\nUsage: gey music player\
+\nUsage: music player\
 \n\n`.fleave`\
-\nUsage: fake leaving\
+\nUsage: Keluar boong an\
 \n\n`.fadmin`\
-\nUsage: Fake admin  🤣🤣\
+\nUsage: Jadi Admin Fake  🤣🤣\
 \n\n`.gift`\
-\nUsage: Well it's a gift i can't say what's inside 😁😁!\
+\nUsage: Memberi Hadiah Tapi Aku Tidak Mau Member Tau Apa Dalamnya!\
 \n\n`.police`\
-\nUsage: Time to go to jail 😔😔.\
+\nUsage: Waktunya Ke Penjara.\
 \n\n`.kill`\
-\nUsage: For killing your enemies 🔫🔫 !!\
+\nUsage: Untuk Membunuh Musuh Secara Online:v\
 \n\n`.os`\
-\nUsage: see it yourself 🤐🤐.\
+\nUsage: Lihat Sendiri.\
 \n\n`.isro`\
-\nUsage: For calling aliens 👽👽 :P\
+\nUsage: Untuk Memanggil Alien 👽\
 \n\n`.gangstar`\
-\nUsage:U becum gengstar 🤠🤠.\
+\nUsage: Anda Menjadi Gangstar.\
 \n\n`.hack`\
-\nUsage: For hacking telegram🖥️🖥️.\
+\nUsage: Untuk Hack Telegram:v\
 \n\n`.dump`\
-\nUsage: For throwing waste xD\
+\nUsage: xD\
 \n\n`.hypno`\
-\nUsage: Oh fek my eyes 👀\
+\nUsage: Ah Sial Mataku 👀\
 \n\n`.whatsapp`\
-\nUsage: Now you can hack whatsapp too 😂😂 \
+\nUsage: Untuk Hack Whatsapp:v \
 \n\n`.solar`\
-\nUsage: Our beautiful solar system 🌞🌞\
-\n\n`.quickheal` or `.sqh` or `.vquickheal`\
-\nUsage: Virus found ...Remove it using this 😂😂.\
+\nUsage: System Solar Kita Yang Cantik 🌞🌞\
+\n\n`.quickheal` atau `.sqh` atau `.vquickheal`\
+\nUsage: Virus Ditemukan, Hapus Itu Menggunakan Ini:v\
 \n\n`.plane`\
-\nUsage: For travelling from one place to another ✈️✈️\
+\nUsage: Untuk Berkeliling Di Satu Tempat✈️\
 \n\n`.jio`\
-\nUsage: Your network slow?? Boost it using this 🤣🤣\
-\n\n\nWARNING⚠️⚠️: All this cmds will spam group recents.\nUse it in OT groups/Spam groups OR GET YOU A** KICKED😂😂."
+\nUsage: Jaringan Mu Lambat?? Boost Menggunakan Ini\
+\n\n\n Selamat Bersenang-Senang Kawan:v"
 })
