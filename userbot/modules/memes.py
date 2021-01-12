@@ -432,7 +432,7 @@ CHASE_STR = [
     "Semoga peluang selalu menguntungkan Anda.",
     "Kata-kata terakhir yang terkenal.",
     "Dan mereka menghilang selamanya, tidak pernah terlihat lagi.",
-    "\" Oh, lihat aku! Saya sangat keren, saya bisa lari dari bot!\ "- orang ini",
+    r"\" Oh, lihat aku! Saya sangat keren, saya bisa lari dari bot!\ " - orang ini",
     "Ya ya, cukup ketuk /kickme.",
     "Ini, ambil cincin ini dan pergilah ke Mordor saat kamu melakukannya.",
     "Legenda mengatakan, mereka masih berjalan...",
@@ -545,7 +545,8 @@ SLAP_TEMPLATES_EN = [
     "{hits} {victim} sekitar sedikit dengan {item}.",
     "{throws} {item} ke {Victim}.",
     "mengambil {item} dan {throws} ke wajah {victim}.",
-    "Menusuk {victim} dengan tombak cinta.", "{throws} beberapa {item} ke {victim}.",
+    "Menusuk {victim} dengan tombak cinta.",
+    "{throws} beberapa {item} ke {victim}.",
     "mengambil {item} dan {throws} ke wajah {victim}.",
     "meluncurkan {item} ke arah umum {korban}.",
     "duduk di wajah {victim} sambil membanting {item}.",
@@ -560,20 +561,23 @@ SLAP_TEMPLATES_EN = [
     "{hits} {victim} {where} dengan {item}.",
     "mengikat {victim} ke tiang dan mencambuk mereka {where} dengan {item}."
     "memberikan dorongan ramah untuk membantu {victim} belajar berenang di lahar.",
-    "mengirim {victim} ke /laut /lahar.", "mengirim {victim} ke lubang memori.",
-    "memenggal {victim}.", "melemparkan {victim} dari sebuah gedung.",
+    "mengirim {victim} ke /laut /lahar.",
+    "mengirim {victim} ke lubang memori.",
+    "memenggal {victim}.",
+    "melemparkan {victim} dari sebuah gedung.",
     "mengganti semua musik {victim} dengan lagu iri bilang bos.",
-    "spam email {victim}.", "membuat {victim} depresi.",
+    "spam email {victim}.",
+    "membuat {victim} depresi.",
     "menampar {victim} tanpa apa-apa.",
     "pukul {victim} dengan pesawat garuda.",
-    "memukul kepala {victim}.", "taruh {victim} di tong sampah.",
+    "memukul kepala {victim}.",
+    "taruh {victim} di tong sampah.",
     "Menendang {victim} dan melemparnya ke sungai.",
     "letakkan {victim} di rumah hantu.",
-    "menampar {victim} dengan tongkat besi!"
-]
+    "menampar {victim} dengan tongkat besi!"]
 
 ITEMS_EN = [
-   "Tabung Gas",
+    "Tabung Gas",
     "Televisi 42 In",
     "Raket",
     "Raket Nyamuk",
@@ -982,7 +986,8 @@ async def boobs(e):
     await e.edit("`Berdosa, Mendapatkan Gambar Boobs...`")
     await sleep(3)
     await e.edit("`Mengirim Gambar Boobs...`")
-    nsfw = requests.get('http://api.oboobs.ru/noise/1').json()[0]["Gambar Boobs"]
+    nsfw = requests.get(
+        'http://api.oboobs.ru/noise/1').json()[0]["Gambar Boobs"]
     urllib.request.urlretrieve(
         "http://media.oboobs.ru/{}".format(nsfw), "*.jpg")
     os.rename('*.jpg', 'boobs.jpg')
@@ -996,7 +1001,8 @@ async def butts(e):
     await e.edit("`Berdosa, Mendapatkan Gambar Pantat Yang Indah...`")
     await sleep(3)
     await e.edit("`Mengirim Gambar Pantat Indah...`")
-    nsfw = requests.get('http://api.obutts.ru/noise/1').json()[0]["Gambar Pantat"]
+    nsfw = requests.get(
+        'http://api.obutts.ru/noise/1').json()[0]["Gambar Pantat"]
     urllib.request.urlretrieve(
         "http://media.obutts.ru/{}".format(nsfw), "*.jpg")
     os.rename('*.jpg', 'butts.jpg')
@@ -1798,9 +1804,9 @@ CMD_HELP.update({
     "\n[Tindakan yang Tersedia: (mengetik, kontak, game, lokasi, suara, bulat, video, foto, dokumen, batal)]"
     "\nUsage: Buat tindakan obrolan palsu, untuk bersenang-senang, (Tindakan default: mengetik)"
     "\n\nDan banyak lagi"
-    "\ n> .nou; .bot; .gey; .tf; .paw; .taco; .nih;"
-    "\ n> .fag; .gtfo; .stfu; .lol; .lool; .fail; .leave"
-    "\ n> .iwi; .sayhi; .koc; .gas; .earth; .love; .rain"
-    "\ n> .penis; .emo; .fuck; .ok; .skull"
+    r"\ n> .nou; .bot; .gey; .tf; .paw; .taco; .nih;"
+    r"\ n> .fag; .gtfo; .stfu; .lol; .lool; .fail; .leave"
+    r"\ n> .iwi; .sayhi; .koc; .gas; .earth; .love; .rain"
+    r"\ n> .penis; .emo; .fuck; .ok; .skull"
     "\n\n\nSemoga Harimu Menyenangkan -Alvin."
 })
