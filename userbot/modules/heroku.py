@@ -76,7 +76,7 @@ async def variable(var):
                 await var.edit("`Please set BOTLOG to True...`")
                 return False
     elif exe == "del":
-        await var.edit("`Deleting information...`")
+        await var.edit("`Menghapus Informasi...`")
         variable = var.pattern_match.group(2)
         if variable == '':
             await var.edit("`Specify ConfigVars you want to del...`")
@@ -88,34 +88,34 @@ async def variable(var):
                     "**Delete ConfigVar**:\n"
                     f"`{variable}`"
                 )
-            await var.edit("`Information deleted...`")
+            await var.edit("`Informasi Dihapus...`")
             del heroku_var[variable]
         else:
-            await var.edit("`Information don't exists...`")
+            await var.edit("`Informasi Tidak Didapatkan...`")
             return True
 
 
 @register(outgoing=True, pattern=r'^.set var (\w*) ([\s\S]*)')
 async def set_var(var):
-    await var.edit("`Setting information...`")
+    await var.edit("`Sedang Menyetel Var...`")
     variable = var.pattern_match.group(1)
     value = var.pattern_match.group(2)
     if variable in heroku_var:
         if BOTLOG:
             await var.client.send_message(
-                BOTLOG_CHATID, "#SETCONFIGVAR\n\n"
-                "**Change ConfigVar**:\n"
+                BOTLOG_CHATID, "#SETELCONFIGVAR\n\n"
+                "**Mengganti ConfigVar**:\n"
                 f"`{variable}` = `{value}`"
             )
-        await var.edit("`Information sets...`")
+        await var.edit("`Informasi Setelan...`")
     else:
         if BOTLOG:
             await var.client.send_message(
-                BOTLOG_CHATID, "#ADDCONFIGVAR\n\n"
-                "**Add ConfigVar**:\n"
+                BOTLOG_CHATID, "#MenambahkanConfigVar\n\n"
+                "**Menambahkan ConfigVar**:\n"
                 f"`{variable}` = `{value}`"
             )
-        await var.edit("`Information added...`")
+        await var.edit("`ConfigVar Di Tambahkan...`")
     heroku_var[variable] = value
 
 
@@ -129,7 +129,7 @@ async def dyno_usage(dyno):
     """
         Get your account Dyno Usage
     """
-    await dyno.edit("`Getting Information...`")
+    await dyno.edit("`Mendapatkan Informasi Dyno...`")
     useragent = (
         'Mozilla/5.0 (Linux; Android 10; SM-G975F) '
         'AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -150,7 +150,7 @@ async def dyno_usage(dyno):
                     f"`{r.reason}`",
                     reply_to=dyno.id
                 )
-                await dyno.edit("`Can't get information...`")
+                await dyno.edit("`Tidak Bisa Mendapatkan Informasi....`")
                 return False
             result = await r.json()
             quota = result['account_quota']
@@ -179,15 +179,15 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "**Dyno Usage**:\n\n╭━━━━━━━━━━━━━━━━━━━━╮\n"
-                f"-> `Penggunaan Dyno `  **{app.name}**:\n"
-                f"    •**{AppHours} jam - "
-                f"{AppMinutes} menit  -  {AppPercentage}%**"
-                "\n ◐━─━─━─━─━──━─━─━─━─━◐\n"
-                "-> `Sisa Dyno Bulan Ini`:\n"
-                f"    •**{hours} jam - {minutes} menit  "
+                "**Informasi Dyno**:\n\n╭━✘━━━━━━━━━━━━━━━━✘━╮\n"
+                f"✥ `Penggunaan Dyno ` **{app.name}**:\n"
+                f"    ❉**{AppHours} Jam - "
+                f"{AppMinutes} Menit  -  {AppPercentage}%**"
+                "\n ✘━─━─━─━─━──━─━─━─━─━✘\n"
+                "✥ `Sisa Dyno Bulan Ini`:\n"
+                f"    ❉**{hours} Jam - {minutes} Menit  "
                 f"-  {percentage}%**\n"
-                "╰━━━━━━━━━━━━━━━━━━━━╯"
+                "╰━✘━━━━━━━━━━━━━━━━✘━╯"
             )
             await asyncio.sleep(20)
             await event.delete()
