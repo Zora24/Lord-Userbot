@@ -18,7 +18,7 @@
 Repo Yang Dibuat [Alvin](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github 
 
 
-### Lakukan String Di Termux Dengan Cara Copy Paste Teks Dibawah Ini Ke Termux
+### Dapatkan String Sesson Di Termux Dengan Cara Copy Paste Teks Dibawah Ini Ke Termux
 
 ```
 wget https://raw.githubusercontent.com/Zora24/Lord-Userbot/Lord-Userbot/Getstring.sh && bash Getstring.sh
