@@ -45,7 +45,6 @@ async def typewriter(typew):
                      "`\n╲╲┃┈┈┈┈┃  \n╲╲┃┈┏┓┈┃ `")
 
 
-
 # Create by myself @localheart
 
 CMD_HELP.update({
