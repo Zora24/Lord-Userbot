@@ -75,11 +75,11 @@ async def add_new_filter(new_handler):
     elif new_handler.reply_to_msg_id and not string:
         rep_msg = await new_handler.get_reply_message()
         string = rep_msg.text
-    success = "`Filter`  **{}**  `{} Di Tambahkan`."
+    success = "`Berhasil Menambahkan Filter` **{}** `{}`."
     if add_filter(str(new_handler.chat_id), keyword, string, msg_id) is True:
-        await new_handler.edit(success.format(keyword, 'Berhasil'))
+        await new_handler.edit(success.format(keyword, 'Disini'))
     else:
-        await new_handler.edit(success.format(keyword, 'Berhasil'))
+        await new_handler.edit(success.format(keyword, 'Disini'))
 
 
 @register(outgoing=True, pattern=r"^.stop (.*)")
@@ -91,10 +91,10 @@ async def remove_a_filter(r_handler):
         return await r_handler.edit("`Berjalan Pada Mode Non-SQL!`")
     filt = r_handler.pattern_match.group(1)
     if not remove_filter(r_handler.chat_id, filt):
-        await r_handler.edit("`Filter`  **{}**  `Tidak Ada Disini`.".format(filt))
+        await r_handler.edit("`Filter` **{}** `Tidak Ada Disini`.".format(filt))
     else:
         await r_handler.edit(
-            "`Filter`  **{}**  `Berhasil Di Hapus`.".format(filt))
+            "`Berhasil Menghapus Filter` **{}** `Disini`.".format(filt))
 
 
 @register(outgoing=True, pattern="^.bersihkanbotfilter (.*)")
@@ -133,7 +133,7 @@ async def filters_active(event):
     filters = get_filters(event.chat_id)
     for filt in filters:
         if transact == "`Tidak Ada Filter Apapun Disini.`":
-            transact = "**Daftar Filter Lord Yang Aktif Ada Di Obrolan Ini:**\n"
+            transact = "**Daftar Filter Lord Yang Aktif Disini:**\n"
             transact += "`{}`\n".format(filt.keyword)
         else:
             transact += "`{}`\n".format(filt.keyword)
