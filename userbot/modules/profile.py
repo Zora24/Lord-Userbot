@@ -30,16 +30,16 @@ from userbot import bot, CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
 from userbot.events import register
 
 # ====================== CONSTANT ===============================
-INVALID_MEDIA = "```The extension of the media entity is invalid.```"
-PP_CHANGED = "```Profile picture changed successfully.```"
-PP_TOO_SMOL = "```This image is too small, use a bigger image.```"
-PP_ERROR = "```Failure occured while processing image.```"
+INVALID_MEDIA = "```Maaf Lord Media Tidak Valid.```"
+PP_CHANGED = "```Lord, Foto Profil Anda Telah Berhasil Diubah.```"
+PP_TOO_SMOL = "```Gambar Terlalu Kecil Lord, Mohon Gunakan Yang Lebih Besar.```"
+PP_ERROR = "```Kegagalan Terjadi Saat Proses Gambar, Foto Profil Gagal Diubah.```"
 
-BIO_SUCCESS = "```Successfully edited Bio.```"
+BIO_SUCCESS = "```Lord, Bio Anda Telah Berhasil Diubah.```"
 
-NAME_OK = "```Your name was succesfully changed.```"
-USERNAME_SUCCESS = "```Your username was succesfully changed.```"
-USERNAME_TAKEN = "```This username is already taken.```"
+NAME_OK = "```Lord, Nama Anda Telah Berhasil Diubah.```"
+USERNAME_SUCCESS = "```Username Anda Sudah Diubah.```"
+USERNAME_TAKEN = "```Mohon Maaf Lord, Username Itu Sudah Ada Yang Menggunakannya.```"
 # ===============================================================
 
 
@@ -126,7 +126,7 @@ async def count(event):
     bc = 0
     b = 0
     result = ""
-    await event.edit("`Processing..`")
+    await event.edit("`Sedang Dalam Proses....`")
     dialogs = await bot.get_dialogs(limit=None, ignore_migrated=True)
     for d in dialogs:
         currrent_entity = d.entity
@@ -145,11 +145,11 @@ async def count(event):
         else:
             print(d)
 
-    result += f"`Users:`\t**{u}**\n"
-    result += f"`Groups:`\t**{g}**\n"
-    result += f"`Super Groups:`\t**{c}**\n"
-    result += f"`Channels:`\t**{bc}**\n"
-    result += f"`Bots:`\t**{b}**"
+    result += f"`Pengguna:`\t**{u}**\n"
+    result += f"`Grup:`\t**{g}**\n"
+    result += f"`Super Grup:`\t**{c}**\n"
+    result += f"`Channel:`\t**{bc}**\n"
+    result += f"`Bot:`\t**{b}**"
 
     await event.edit(result)
 
@@ -178,14 +178,14 @@ async def remove_profilepic(delpfp):
                        file_reference=sep.file_reference))
     await delpfp.client(DeletePhotosRequest(id=input_photos))
     await delpfp.edit(
-        f"`Successfully deleted {len(input_photos)} profile picture(s).`")
+        f"`Berhasil Menghapus {len(input_photos)} Foto Profil.`")
 
 
 @register(pattern=".data(?: |$)(.*)", outgoing=True)
 async def who(event):
 
     await event.edit(
-        "`Hacking into @durov's account and stealing data 😂...`")
+        "`Mengambil Informasi Data`")
 
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
@@ -195,7 +195,7 @@ async def who(event):
     try:
         photo, caption = await fetch_info(replied_user, event)
     except AttributeError:
-        event.edit("`Could not fetch info of that user.`")
+        event.edit("`Saya Tidak Mendapatkan Informasi Pengguna.`")
         return
 
     message_id_to_reply = event.message.reply_to_msg_id
@@ -273,7 +273,7 @@ async def fetch_info(replied_user, event):
     try:
         dc_id, _ = get_input_location(replied_user.profile_photo)
     except Exception as e:
-        dc_id = "Couldn't fetch DC ID!"
+        dc_id = "Tidak Dapat Mengambil DC ID!"
         str(e)
     common_chat = replied_user.common_chats_count
     username = replied_user.user.username
@@ -286,46 +286,46 @@ async def fetch_info(replied_user, event):
                                                       str(user_id) + ".jpg",
                                                       download_big=True)
     first_name = first_name.replace(
-        "\u2060", "") if first_name else ("This User has no First Name")
+        "\u2060", "") if first_name else ("Orang Ini Tidak Punya Nama Depan")
     last_name = last_name.replace(
-        "\u2060", "") if last_name else ("This User has no Last Name")
+        "\u2060", "") if last_name else ("Orang Ini Tidak Punya Nama Belakang")
     username = "@{}".format(username) if username else (
-        "This User has no Username")
-    user_bio = "This User has no About" if not user_bio else user_bio
+        "Pengguna Ini Tidak Menggunakan Username")
+    user_bio = "Orang Ini Tidak Menggunakan Bio" if not user_bio else user_bio
 
-    caption = "<b>USER INFO:</b>\n\n"
-    caption += f"First Name: {first_name}\n"
-    caption += f"Last Name: {last_name}\n"
+    caption = "<b>Informasi Pengguna:</b>\n\n"
+    caption += f"Nama Depan: {first_name}\n"
+    caption += f"Nama Belakang: {last_name}\n"
     caption += f"Username: {username}\n"
     caption += f"Data Centre ID: {dc_id}\n"
-    caption += f"Number of Profile Pics: {replied_user_profile_photos_count}\n"
-    caption += f"Is Bot: {is_bot}\n"
-    caption += f"Is Restricted: {restricted}\n"
-    caption += f"Is Verified by Telegram: {verified}\n"
+    caption += f"Total Foto Profil: {replied_user_profile_photos_count}\n"
+    caption += f"Apakah Bot: {is_bot}\n"
+    caption += f"Dibatasi: {restricted}\n"
+    caption += f"Diverifikasi Oleh Telegram: {verified}\n"
     caption += f"ID: <code>{user_id}</code>\n\n"
     caption += f"Bio: \n<code>{user_bio}</code>\n\n"
-    caption += f"Common Chats with this user: {common_chat}\n"
-    caption += "Permanent Link To Profile: "
+    caption += f"Obrolan Umum Untuk Pengguna Ini: {common_chat}\n"
+    caption += "Permanen Link Ke Profil: "
     caption += f"<a href=\"tg://user?id={user_id}\">{first_name}</a>"
 
     return photo, caption
 
 CMD_HELP.update({
-    "profile":
-    "`.username` <new_username>\
-\nUsage: Changes your Telegram username.\
-\n\n`.name` <firstname> or `.name` <firstname> <lastname>\
-\nUsage: Changes your Telegram name.(First and last name will get split by the first space)\
+    "profil":
+    "`.username` <username baru>\
+\nUsage: Ganti Username Telegram.\
+\n\n`.name` <nama depan> Atau `.name` <Nama Depan> <Nama Belakang>\
+\nUsage: Ganti Nama Telegram Anda\
 \n\n`.setpfp`\
-\nUsage: Reply with .setpfp to an image to change your Telegram profie picture.\
-\n\n`.setbio` <new_bio>\
-\nUsage: Changes your Telegram bio.\
-\n\n`.delpfp` or `.delpfp` <number>/<all>\
-\nUsage: Deletes your Telegram profile picture(s).\
+\nUsage: Balas Ke Gambar Ketik .setpfp Untuk Mengganti Foto Profil Telegram.\
+\n\n`.setbio` <bio baru>\
+\nUsage: Untuk Mengganti Bio Telegram.\
+\n\n`.delpfp` Atau `.delpfp` <berapa profil>/<all>\
+\nUsage: Menghapus Foto Profil Telegram.\
 \n\n`.reserved`\
-\nUsage: Shows usernames reserved by you.\
+\nUsage: Menunjukkan nama pengguna yang dipesan oleh Anda.\
 \n\n`.count`\
-\nUsage: Counts your groups, chats, bots etc...\
-\n\n`.data` <username> or reply to someones text with `.data`\
-\nUsage: Gets info of an user."
+\nUsage: Menghitung Grup, Chat, Bot etc...\
+\n\n`.data` <username> Atau Balas Ke Pesan Ketik `.data`\
+\nUsage: Mendapatkan Informasi Pengguna."
 })
