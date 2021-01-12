@@ -128,8 +128,8 @@ async def fetch_info(replied_user, event):
     user_bio = "This User has no About" if not user_bio else user_bio
 
     caption = "<b>**INFORMASI PENGGUNA**:</b>\n\n"
-    caption += f"Nama Pertama: {first_name}\n"
-    caption += f"Nama Terakhir: {last_name}\n"
+    caption += f"Nama Depan: {first_name}\n"
+    caption += f"Nama Belakang: {last_name}\n"
     caption += f"Username: {username}\n"
     caption += f"Data Centre ID: {dc_id}\n"
     caption += f"Total Foto Profil: {replied_user_profile_photos_count}\n"
