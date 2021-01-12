@@ -49,7 +49,7 @@ REDIRECT_URI = "urn:ietf:wg:oauth:2.0:oob"
 #
 PHOTOS_BASE_URI = "https://photoslibrary.googleapis.com"
 
-TOKEN_FILE_NAME = "GP_REMIX.json"
+TOKEN_FILE_NAME = "GP_LORD.json"
 
 
 @register(outgoing=True, pattern=r"^\.gpsetup")
@@ -60,7 +60,7 @@ async def setup_google_photos(event):
     is_cred_exists, _ = await check_creds(token_file, event)
     if not is_cred_exists:
         await create_token_file(token_file, event)
-    await event.edit("CREDS created. 😕😖😖")
+    await event.edit("`CREDS Telah Dibuat`")
 
 
 async def create_token_file(token_file, event):
@@ -74,10 +74,10 @@ async def create_token_file(token_file, event):
     authorize_url = flow.step1_get_authorize_url()
     async with event.client.conversation(event.chat_id, timeout=600) as conv:
         await conv.send_message(
-            "Go to "
-            "the following link in "
-            f"your browser: {authorize_url} and "
-            "reply the code"
+            "Pergi Ke "
+            "Linknya Dan Ikuti "
+            f"Browser Anda Lord: {authorize_url} Dan "
+            "Balas Kode"
         )
         response = await conv.wait_event(
             events.NewMessage(outgoing=True, chats=BOTLOG_CHATID)
@@ -89,12 +89,12 @@ async def create_token_file(token_file, event):
         storage.put(credentials)
         imp_gsem = await conv.send_message(file=token_file)
         await imp_gsem.reply(
-            "Please set heroku ENV "
+            "Mohon Setel Heroku ENV "
             "<code>G_PHOTOS_AUTH_TOKEN_ID</code> "
             "= "
             f"<u>{imp_gsem.id}</u> ..!"
-            "\n\n<i>This is only required, "
-            "if you are running in an ephimeral file-system</i>.",
+            "\n\n<i>Ini Hanya Di Perlukan, "
+            "Jika Anda Menjalankan Ephimeral File-System</i>.",
             parse_mode="html",
         )
         return storage
@@ -129,14 +129,14 @@ async def upload_google_photos(event):
 
     if not event.reply_to_msg_id and not input_str:
         await event.edit(
-            "©️ <b>[REMIX]</b>\nNo one gonna help you 🤣🤣🤣🤣", parse_mode="html"
+            "©️ <b>[LORD]</b>\nTidak Ada Yang Akan Membantu Anda", parse_mode="html"
         )
         return
 
     token_file = TOKEN_FILE_NAME
     is_cred_exists, creds = await check_creds(token_file, event)
     if not is_cred_exists:
-        await event.edit("Run <code>.gpsetup</code> first 😡😒😒", parse_mode="html")
+        await event.edit("Pertama Jalankan <code>.gpsetup</code> Dulu Lord", parse_mode="html")
 
     service = build("photoslibrary", "v1", http=creds.authorize(Http()))
 
@@ -165,20 +165,20 @@ async def upload_google_photos(event):
     logger.info(file_path)
 
     if not file_path:
-        await event.edit("<b>[Stop Spamming]</b>", parse_mode="html")
+        await event.edit("<b>[BERHENTI MELAKUKAN SPAM]</b>", parse_mode="html")
         return
 
     file_name, mime_type, file_size = file_ops(file_path)
-    await event.edit("`File downloaded, " "gathering upload informations.`")
+    await event.edit("`File downloaded, " "`Sedang Mengumpulkan Informasi Unggahan`")
 
     async with aiohttp.ClientSession() as session:
         headers = {
             "Content-Length": "0",
-            "X-Goog-Upload-Command": "start",
-            "X-Goog-Upload-Content-Type": mime_type,
-            "X-Goog-Upload-File-Name": file_name,
-            "X-Goog-Upload-Protocol": "resumable",
-            "X-Goog-Upload-Raw-Size": str(file_size),
+            "Lord-Goog-Upload-Command": "start",
+            "Lord-Goog-Upload-Content-Type": mime_type,
+            "Lord-Goog-Upload-File-Name": file_name,
+            "Lord-Goog-Upload-Protocol": "resumable",
+            "Lord-Goog-Upload-Raw-Size": str(file_size),
             "Authorization": "Bearer " + creds.access_token,
         }
         # Step 1: Initiating an upload session
@@ -194,10 +194,10 @@ async def upload_google_photos(event):
         logger.info(step_one_resp_headers)
         # Step 2: Saving the session URL
 
-        real_upload_url = step_one_resp_headers.get("X-Goog-Upload-URL")
+        real_upload_url = step_one_resp_headers.get("Lord-Goog-Upload-URL")
         logger.info(real_upload_url)
         upload_granularity = int(
-            step_one_resp_headers.get("X-Goog-Upload-Chunk-Granularity")
+            step_one_resp_headers.get("Lord-Goog-Upload-Chunk-Granularity")
         )
         logger.info(upload_granularity)
         number_of_req_s = int((file_size / upload_granularity))
@@ -212,8 +212,8 @@ async def upload_google_photos(event):
 
                 headers = {
                     "Content-Length": str(part_size),
-                    "X-Goog-Upload-Command": "upload",
-                    "X-Goog-Upload-Offset": str(offset),
+                    "Lord-Goog-Upload-Command": "upload",
+                    "Lord-Goog-Upload-Offset": str(offset),
                     "Authorization": "Bearer " + creds.access_token,
                 }
                 logger.info(i)
@@ -239,8 +239,8 @@ async def upload_google_photos(event):
             logger.info(number_of_req_s)
             headers = {
                 "Content-Length": str(len(current_chunk)),
-                "X-Goog-Upload-Command": "upload, finalize",
-                "X-Goog-Upload-Offset": str(number_of_req_s * upload_granularity),
+                "Lord-Goog-Upload-Command": "upload, finalize",
+                "Lord-Goog-Upload-Offset": str(number_of_req_s * upload_granularity),
                 "Authorization": "Bearer " + creds.access_token,
             }
             logger.info(headers)
@@ -252,7 +252,7 @@ async def upload_google_photos(event):
         final_response_text = await response.text()
         logger.info(final_response_text)
 
-    await event.edit("`Uploaded to Google Photos, " "Getting FILE URI`")
+    await event.edit("`Mengunggah Foto Google, " "Mendapatkan FILE URI`")
 
     response_create_album = (
         service.mediaItems()
@@ -279,7 +279,7 @@ async def upload_google_photos(event):
             .get("mediaItem")
             .get("productUrl")
         )
-        await event.edit(f"`[SUCCESS]`\n\nUploaded to Google Photo [View]({photo_url})")
+        await event.edit(f"`[BERHASIL]`\n\nMengunggah Foto Ke Google [Lihat]({photo_url})")
     except Exception as e:
         await event.edit(str(e))
 
