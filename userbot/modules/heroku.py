@@ -179,15 +179,15 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "**Informasi Dyno**:\n\n╭━✘━━━━━━━━━━━━━━━━✘━╮\n"
+                "**☛ Informasi Dyno**:\n\n╭━┯━━━━━━━━┯━━━━━━━┯━╮\n"
                 f"✥ `Penggunaan Dyno ` **{app.name}**:\n"
-                f"    ❉**{AppHours} Jam - "
+                f"  ❉ **{AppHours} Jam - "
                 f"{AppMinutes} Menit  -  {AppPercentage}%**"
-                "\n ✘━─━─━─━─━──━─━─━─━─━✘\n"
+                "\n ✲━─━─━─━─━─━─━─━─━─━✲\n"
                 "✥ `Sisa Dyno Bulan Ini`:\n"
-                f"    ❉**{hours} Jam - {minutes} Menit  "
+                f"  ❉ **{hours} Jam - {minutes} Menit  "
                 f"-  {percentage}%**\n"
-                "╰━✘━━━━━━━━━━━━━━━━✘━╯"
+                "╰━┷━━━━━━━━━━━━━━━━┷━╯"
             )
             await asyncio.sleep(20)
             await event.delete()
@@ -216,13 +216,13 @@ async def _(dyno):
 
 
 CMD_HELP.update({"heroku": ">.`usage`"
-                 "\nUsage: Check your heroku dyno hours remaining"
+                 "\nUsage: Check Dyno Heroku"
                  "\n\n>`.set var <NEW VAR> <VALUE>`"
-                 "\nUsage: add new variable or update existing value variable"
-                 "\n!!! WARNING !!!, after setting a variable the bot will restarted"
+                 "\nUsage: Tambahkan Variabel Baru Atau Memperbarui Variabel"
+                 "\nSetelah Menyetel Variabel Lord-Userbot Akan Di Restart."
                  "\n\n>`.get var or .get var <VAR>`"
-                 "\nUsage: get your existing varibles, use it only on your private group!"
-                 "\nThis returns all of your private information, please be caution..."
+                 "\nUsage: Dapatkan Variabel Yang Ada, Gunakan Hanya Di Grup Privasi Anda!"
+                 "\nIni Mengembalikan Semua Informasi Pribadi Anda, Harap berhati-hati."
                  "\n\n>`.del var <VAR>`"
-                 "\nUsage: delete existing variable"
-                 "\n!!! WARNING !!!, after deleting variable the bot will restarted"})
+                 "\nUsage: Menghapus Variabel Yang Ada"
+                 "\nSetelah Menghapus Variabel Bot Akan Di Restart."})
