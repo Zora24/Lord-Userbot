@@ -8,29 +8,26 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.remixhelp$")
+@register(outgoing=True, pattern="^.lordhelp$")
 async def usit(e):
     await e.edit(
-        f"Here's something for {DEFAULTUSER} to use it for help_on_update on **XBot-Remix**:\n"
-        "\n[Windows Method](https://telegra.ph/How-to-keep-repo-updated-while-keeping-your-changes-through-windows-cmd-method-04-01)"
-        "\n[Termux Method](https://telegra.ph/How-to-keep-XBot-Remix-repo-updated-while-keeping-your-changes-through-Termux--kali-linux-06-02)"
-        "\n[Kali Linux Method](https://telegra.ph/How-to-keep-OpenUserBot-repo-updated-while-keeping-your-changes-through-Termux-method-04-01)"
-        "\n[Ubuntu Linux Method](https://telegra.ph/How-to-keep-OUB-repo-updated-while-keeping-your-changes-through-Ubuntu-Terminal-method-04-01-2)"
-        "\n[Gdrive Tutorial](https://telegra.ph/How-To-Setup-Google-Drive-04-03)"
-        "\n[video-tutorial](https://youtu.be/us1O-AnWmHA)")
+        f"**Hai Lord {DEFAULTUSER} Kalo Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `.help` Atau Bisa Minta Bantuan Ke:\n"
+        "\n[Telegram](t.me/liualvinas)"
+        "\n[Repo](https://github.com/zora24/Lord-Userbot)"
+        "\n[Instagram](Instagram.com/liualvinas_)")
 
 
-@register(outgoing=True, pattern="^.remixvar$")
+@register(outgoing=True, pattern="^.lordvar$")
 async def var(m):
     await m.edit(
-        f"Here's a list of VARS for {DEFAULTUSER} on **XBot-Remix**:\n"
-        "\n[HEROKU VARS](https://raw.githubusercontent.com/X-Newbie/XBot-Remix/x-sql-extended/varshelper.txt)")
+        f"**Disini Daftar Vars Dari {DEFAULTUSER}:**\n"
+        "\n[DAFTAR VARS](https://raw.githubusercontent.com/Zora24/Lord-Userbot/Lord-Userbot/varshelper.txt)")
 
 
 CMD_HELP.update({
-    "remixhelper":
-    "`.remixhelp`\
-\nUsage: Provide links to update repo guides while you keep your changes on the floor.\
-\n`.remixvar`\
-\nUsage: Provide vars to cross check for you."
+    "lordhelper":
+    "`.lordhelp`\
+\nUsage: Bantuan Untuk Lord-Userbot.\
+\n`.lordvar`\
+\nUsage: Melihat Daftar Vars."
 })
