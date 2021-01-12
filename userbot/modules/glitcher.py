@@ -35,21 +35,21 @@ EMOJI_PATTERN = re.compile(
 @register(outgoing=True, pattern=r"^\.glitch(?: |$)(.*)")
 async def glitch(event):
     if not event.reply_to_msg_id:
-        await event.edit("`I Wont Glitch A Ghost!`")
+        await event.edit("`Aku Mau Glitch Sebuah Hantu!`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("`reply to a image/sticker`")
+        await event.edit("`Bales Ke Gambar/Sticker`")
         return
     await bot.download_file(reply_message.media)
-    await event.edit("`Downloading Media..`")
+    await event.edit("`Sedang Mendownload Media....`")
     if event.is_reply:
         data = await check_media(reply_message)
         if isinstance(data, bool):
-            await event.edit("`Unsupported Files...`")
+            await event.edit("`File Tidak Di Dukung...`")
             return
     else:
-        await event.edit("`Reply to Any Media Sur`")
+        await event.edit("`Balas Ke Media....`")
         return
 
     try:
@@ -58,7 +58,7 @@ async def glitch(event):
             raise ValueError
     except ValueError:
         value = 2
-    await event.edit("```Glitching This Media```")
+    await event.edit("```Melakukan Glitch Pada Media Ini ツ```")
     await asyncio.sleep(2)
     file_name = "glitch.png"
     to_download_directory = TEMP_DOWNLOAD_DIRECTORY
@@ -81,7 +81,7 @@ async def glitch(event):
         duration=DURATION,
         loop=LOOP,
     )
-    await event.edit("`Uploading Glitched Media...`")
+    await event.edit("`Sedang Mengunggah Media Yang Telah Di Glitch ツ`")
     c_time = time.time()
     nosave = await event.client.send_file(
         event.chat_id,
@@ -113,7 +113,7 @@ async def draw_meme_text(image_path, text):
     os.remove(image_path)
     i_width, i_height = img.size
     m_font = ImageFont.truetype(
-        "fontx/FontRemix.ttf", int((70 / 640) * i_width)
+        "LordFont/FontLord.ttf", int((70 / 640) * i_width)
     )
     if ";" in text:
         upper_text, lower_text = text.split(";")
@@ -248,6 +248,6 @@ async def check_media(reply_message):
 CMD_HELP.update(
     {
         "glitch": ">`.glitch <1-8>`"
-        "\nUsage: Reply a sticker/image and send with cmd.\nvalue is range 1-8 if doenst it will give default value which is 2"
+        "\nUsage: Balas Ke Sticker/Gambar.\nGlitch Level 1-8 Jika Tidak Membuat Level Maka Otomatis Default Level 2"
     }
 )
