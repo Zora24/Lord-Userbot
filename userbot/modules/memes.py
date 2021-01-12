@@ -19,13 +19,13 @@ from userbot.modules.admin import get_user_from_event
 
 # ================= CONSTANT =================
 METOOSTR = [
-    "Me too thanks",
-    "Haha yes, me too",
-    "Same lol",
-    "Me irl",
-    "Same here",
-    "Haha yes",
-    "Me rn",
+    "Aku Juga Terimakasih",
+    "Haha Iya, Aku Juha",
+    "Sama Haha",
+    "Aku Juga Gabut",
+    "Sama Sini",
+    "Haha Iya",
+    "Aku Juga",
 ]
 
 ZALG_LIST = [[
@@ -174,68 +174,67 @@ EMOJIS = [
 ]
 
 INSULT_STRINGS = [
-    "Owww ... Such a stupid idiot.",
-    "Don't drink and type.",
-    "I think you should go home or better a mental asylum.",
-    "Command not found. Just like your brain.",
-    "Do you realize you are making a fool of yourself? Apparently not.",
-    "You can type better than that.",
-    "Bot rule 544 section 9 prevents me from replying to stupid humans like you.",
-    "Sorry, we do not sell brains.",
-    "Believe me you are not normal.",
-    "I bet your brain feels as good as new, seeing that you never use it.",
-    "If I wanted to kill myself I'd climb your ego and jump to your IQ.",
-    "Zombies eat brains... you're safe.",
-    "You didn't evolve from apes, they evolved from you.",
-    "Come back and talk to me when your I.Q. exceeds your age.",
-    "I'm not saying you're stupid, I'm just saying you've got bad luck when it comes to thinking.",
-    "What language are you speaking? Cause it sounds like bullshit.",
-    "Stupidity is not a crime so you are free to go.",
-    "You are proof that evolution CAN go in reverse.",
-    "I would ask you how old you are but I know you can't count that high.",
-    "As an outsider, what do you think of the human race?",
-    "Brains aren't everything. In your case they're nothing.",
-    "Ordinarily people live and learn. You just live.",
-    "I don't know what makes you so stupid, but it really works.",
-    "Keep talking, someday you'll say something intelligent! (I doubt it though)",
-    "Shock me, say something intelligent.",
-    "Your IQ's lower than your shoe size.",
-    "Alas! Your neurotransmitters are no more working.",
-    "Are you crazy you fool.",
-    "Everyone has the right to be stupid but you are abusing the privilege.",
-    "I'm sorry I hurt your feelings when I called you stupid. I thought you already knew that.",
-    "You should try tasting cyanide.",
-    "Your enzymes are meant to digest rat poison.",
-    "You should try sleeping forever.",
-    "Pick up a gun and shoot yourself.",
-    "You could make a world record by jumping from a plane without parachute.",
-    "Stop talking BS and jump in front of a running bullet train.",
-    "Try bathing with Hydrochloric Acid instead of water.",
-    "Try this: if you hold your breath underwater for an hour, you can then hold it forever.",
-    "Go Green! Stop inhaling Oxygen.",
-    "God was searching for you. You should leave to meet him.",
-    "give your 100%. Now, go donate blood.",
-    "Try jumping from a hundred story building but you can do it only once.",
-    "You should donate your brain seeing that you never used it.",
-    "Volunteer for target in an firing range.",
-    "Head shots are fun. Get yourself one.",
-    "You should try swimming with great white sharks.",
-    "You should paint yourself red and run in a bull marathon.",
-    "You can stay underwater for the rest of your life without coming back up.",
-    "How about you stop breathing for like 1 day? That'll be great.",
-    "Try provoking a tiger while you both are in a cage.",
-    "Have you tried shooting yourself as high as 100m using a canon.",
-    "You should try holding TNT in your mouth and igniting it.",
-    "Try playing catch and throw with RDX its fun.",
-    "I heard phogine is poisonous but i guess you wont mind inhaling it for fun.",
-    "Launch yourself into outer space while forgetting oxygen on Earth.",
-    "You should try playing snake and ladders, with real snakes and no ladders.",
-    "Dance naked on a couple of HT wires.",
-    "Active Volcano is the best swimming pool for you.",
-    "You should try hot bath in a volcano.",
-    "Try to spend one day in a coffin and it will be yours forever.",
-    "Hit Uranium with a slow moving neutron in your presence. It will be a worthwhile experience.",
-    "You can be the first person to step on sun. Have a try.",
+    "Jangan minum dan mengetik.",
+    "Saya pikir Anda harus pulang atau lebih baik ke rumah sakit jiwa.",
+    "Perintah tidak ditemukan. Sama seperti otak Anda.",
+    "Apakah kamu sadar bahwa kamu membodohi dirimu sendiri? Ternyata tidak.",
+    "Anda bisa mengetik lebih baik dari itu.",
+    "Bot aturan 544 bagian 9 mencegah saya membalas orang bodoh seperti Anda.",
+    "Maaf, kami tidak menjual otak.",
+    "Percayalah kamu tidak normal.",
+    "Saya yakin otak Anda terasa seperti baru, mengingat Anda tidak pernah menggunakannya.",
+    "Jika saya ingin bunuh diri, saya akan meningkatkan ego Anda dan melompat ke IQ Anda.",
+    "Zombie memakan otak ... kamu aman.",
+    "Anda tidak berevolusi dari kera, mereka berevolusi dari Anda.",
+    "Kembalilah dan bicara padaku ketika IQ mu melebihi umurmu.",
+    "Saya tidak mengatakan Anda bodoh, saya hanya mengatakan bahwa Anda tidak beruntung dalam hal berpikir.",
+    "Kamu berbicara bahasa apa? Karena terdengar seperti omong kosong.",
+    "Kebodohan bukanlah kejahatan jadi kamu bebas pergi.",
+    "Anda adalah bukti bahwa evolusi BISA mundur.",
+    "Aku akan bertanya berapa umurmu tapi aku tahu kamu tidak bisa menghitung setinggi itu.",
+    "Sebagai orang luar, apa pendapat Anda tentang umat manusia?",
+    "Otak bukanlah segalanya. Dalam kasusmu mereka bukan apa-apa.",
+    "Biasanya orang hidup dan belajar. Kamu hidup saja.",
+    "Aku tidak tahu apa yang membuatmu begitu bodoh, tapi itu benar-benar berhasil.",
+    "Teruslah berbicara, suatu hari nanti kamu akan mengatakan sesuatu yang cerdas! (Meskipun aku ragu)"
+    "Shock saya, katakan sesuatu yang cerdas.",
+    "IQ Anda lebih rendah dari ukuran sepatu Anda.",
+    "Aduh! Neurotransmiter Anda tidak lagi bekerja.",
+    "Apakah kamu gila kamu bodoh.",
+    "Setiap orang berhak untuk menjadi bodoh tetapi Anda menyalahgunakan hak istimewa tersebut.",
+    "Maaf aku menyakiti perasaanmu saat menyebutmu bodoh. Kupikir kamu sudah tahu itu.",
+    "Anda harus mencoba mencicipi sianida.",
+    "Enzim Anda dimaksudkan untuk mencerna racun tikus.",
+    "Kamu harus mencoba tidur selamanya.",
+    "Ambil pistol dan tembak dirimu sendiri.",
+    "Anda bisa membuat rekor dunia dengan melompat dari pesawat tanpa parasut.",
+    "Berhenti berbicara BS dan melompat di depan kereta peluru yang sedang berjalan.",
+    "Cobalah mandi dengan Hydrochloric Acid daripada air.",
+    "Coba ini: jika Anda menahan napas di bawah air selama satu jam, Anda dapat menahannya selamanya.",
+    "Go Green! Berhenti menghirup Oksigen.",
+    "Tuhan sedang mencarimu. Kamu harus pergi untuk bertemu dengannya.",
+    "berikan 100% mu. Sekarang, pergi donor darah.",
+    "Cobalah melompat dari gedung seratus lantai tetapi Anda hanya dapat melakukannya sekali.",
+    "Anda harus menyumbangkan otak Anda melihat bahwa Anda tidak pernah menggunakannya.",
+    "Relawan untuk target dalam jarak tembak.",
+    "Tembak kepala itu menyenangkan. Dapatkan dirimu sendiri.",
+    "Anda harus mencoba berenang dengan hiu putih besar.",
+    "Anda harus mengecat diri Anda dengan warna merah dan berlari dalam bull marathon.",
+    "Anda bisa tetap di bawah air selama sisa hidup Anda tanpa harus kembali lagi.",
+    "Bagaimana kalau kamu berhenti bernapas selama 1 hari? Itu akan bagus.",
+    "Cobalah memprovokasi harimau saat kalian berdua berada di dalam sangkar.",
+    "Sudahkah Anda mencoba menembak diri Anda sendiri setinggi 100m menggunakan kanon.",
+    "Anda harus mencoba menahan TNT di mulut Anda dan menyalakannya.",
+    "Cobalah bermain menangkap dan melempar dengan RDX itu menyenangkan.",
+    "Saya dengar phogine beracun tapi saya rasa Anda tidak keberatan menghirupnya untuk bersenang-senang.",
+    "Luncurkan diri Anda ke luar angkasa sambil melupakan oksigen di Bumi.",
+    "Kamu harus mencoba bermain ular tangga, dengan ular sungguhan dan tanpa tangga.",
+    "Menari telanjang di beberapa kabel HT.",
+    "Gunung Berapi Aktif adalah kolam renang terbaik untuk Anda.",
+    "Anda harus mencoba mandi air panas di gunung berapi.",
+    "Cobalah untuk menghabiskan satu hari di peti mati dan itu akan menjadi milikmu selamanya.",
+    "Pukul Uranium dengan neutron yang bergerak lambat di hadapanmu. Ini akan menjadi pengalaman yang berharga.",
+    "Anda bisa menjadi orang pertama yang menginjak matahari. Selamat mencoba.",
 ]
 
 UWUS = [
@@ -386,98 +385,98 @@ FACEREACTS = [
 ]
 
 RUNS_STR = [
-    "Runs to Thanos..",
-    "Runs far, far away from earth..",
-    "Running faster than Bolt coz i'mma userbot !!",
-    "Runs to Marie..",
-    "This Group is too cancerous to deal with.",
-    "Cya bois",
-    "Kys",
-    "I go away",
-    "I am just walking off, coz me is too fat.",
-    "I Fugged off!",
-    "Will run for chocolate.",
-    "I run because I really like food.",
-    "Running...\nbecause dieting is not an option.",
-    "Wicked fast runnah",
-    "If you wanna catch me, you got to be fast...\nIf you wanna stay with me, you got to be good...\nBut if you wanna pass me...\nYou've got to be kidding.",
-    "Anyone can run a hundred meters, it's the next forty-two thousand and two hundred that count.",
-    "Why are all these people following me?",
-    "Are the kids still chasing me?",
-    "Running a marathon...there's an app for that.",
+    "Berlari ke Thanos..",
+    "Berlari jauh, jauh dari bumi..",
+    "Berlari lebih cepat dari Bolt karena aku pengguna bot !!",
+    "Berlari ke Mia Khalifa..",
+    "Grup ini terlalu berbahaya untuk ditangani.",
+    "Cyaaaaa",
+    "Aku sang lelah",
+    "Aku pergi",
+    "Saya hanya berjalan pergi, karena saya terlalu gemuk.",
+    "Saya Cape!",
+    "Akan lari untuk coklat.",
+    "Saya lari karena saya sangat suka makanan.",
+    "Lari... \nkarena diet bukanlah pilihan.",
+    "Berlari Cepat Dari Orang Gila",
+    "Jika kamu ingin menangkapku, kamu harus cepat ... \nJika kamu ingin tinggal bersamaku, kamu harus menjadi orang yang baik... \nTapi jika kamu ingin melewati aku... \nKamu pasti bercanda. ",
+    "Siapapun dapat berlari seratus meter, itu hitungan empat puluh dua ribu dua ratus berikutnya.",
+    "Mengapa semua orang ini mengikuti saya?",
+    "Apakah anak-anak masih mengejarku?",
+    "Menjalankan maraton..ada aplikasi untuk itu.",
 ]
 
 CHASE_STR = [
-    "Where do you think you're going?",
-    "Huh? what? did they get away?",
-    "ZZzzZZzz... Huh? what? oh, just them again, nevermind.",
-    "Get back here!",
-    "Not so fast...",
-    "Look out for the wall!",
-    "Don't leave me alone with them!!",
-    "You run, you die.",
-    "Jokes on you, I'm everywhere",
-    "You're gonna regret that...",
-    "You could also try /kickme, I hear that's fun.",
-    "Go bother someone else, no-one here cares.",
-    "You can run, but you can't hide.",
-    "Is that all you've got?",
-    "I'm behind you...",
-    "You've got company!",
-    "We can do this the easy way, or the hard way.",
-    "You just don't get it, do you?",
-    "Yeah, you better run!",
-    "Please, remind me how much I care?",
-    "I'd run faster if I were you.",
-    "That's definitely the droid we're looking for.",
-    "May the odds be ever in your favour.",
-    "Famous last words.",
-    "And they disappeared forever, never to be seen again.",
-    "\"Oh, look at me! I'm so cool, I can run from a bot!\" - this person",
-    "Yeah yeah, just tap /kickme already.",
-    "Here, take this ring and head to Mordor while you're at it.",
-    "Legend has it, they're still running...",
-    "Unlike Harry Potter, your parents can't protect you from me.",
-    "Fear leads to anger. Anger leads to hate. Hate leads to suffering. If you keep running in fear, you might "
-    "be the next Vader.",
-    "Multiple calculations later, I have decided my interest in your shenanigans is exactly 0.",
-    "Legend has it, they're still running.",
-    "Keep it up, not sure we want you here anyway.",
-    "You're a wiza- Oh. Wait. You're not Harry, keep moving.",
-    "NO RUNNING IN THE HALLWAYS!",
-    "Hasta la vista, baby.",
-    "Who let the dogs out?",
-    "It's funny, because no one cares.",
-    "Ah, what a waste. I liked that one.",
-    "Frankly, my dear, I don't give a damn.",
-    "My milkshake brings all the boys to yard... So run faster!",
-    "You can't HANDLE the truth!",
-    "A long time ago, in a galaxy far far away... Someone would've cared about that. Not anymore though.",
-    "Hey, look at them! They're running from the inevitable banhammer... Cute.",
-    "Han shot first. So will I.",
-    "What are you running after, a white rabbit?",
-    "As The Doctor would say... RUN!",
+    "Menurutmu kemana kamu akan pergi?",
+    "Hah? Apa? Apakah mereka lolos?",
+    "ZZzzZZzz... Hah? Apa? Oh, hanya mereka lagi, lupakan.",
+    "Kembali kesini!",
+    "Tidak terlalu cepat...",
+    "Awas ke dinding!",
+    "Jangan tinggalkan aku sendiri dengan mereka !!",
+    "Kamu lari, kamu mati.",
+    "Bercanda, aku ada dimana-mana",
+    "Kamu akan menyesali itu ...",
+    "Kamu juga bisa mencoba /kickme, kudengar itu menyenangkan.",
+    "Ganggu orang lain, tidak ada yang peduli.",
+    "Kamu bisa lari, tapi kamu tidak bisa bersembunyi.",
+    "Apakah hanya itu yang kamu punya?",
+    "Saya di belakang Anda...",
+    "Anda punya teman!",
+    "Kita bisa melakukan ini dengan cara mudah, atau cara sulit.",
+    "Anda tidak mengerti, bukan?",
+    "Ya, sebaiknya kau lari!",
+    "Tolong, ingatkan saya apakah saya peduli?",
+    "Aku akan lari lebih cepat jika jadi kamu.",
+    "Itu pasti droid yang kami cari.",
+    "Semoga peluang selalu menguntungkan Anda.",
+    "Kata-kata terakhir yang terkenal.",
+    "Dan mereka menghilang selamanya, tidak pernah terlihat lagi.",
+    "\" Oh, lihat aku! Saya sangat keren, saya bisa lari dari bot!\ "- orang ini",
+    "Ya ya, cukup ketuk /kickme.",
+    "Ini, ambil cincin ini dan pergilah ke Mordor saat kamu melakukannya.",
+    "Legenda mengatakan, mereka masih berjalan...",
+    "Tidak seperti Harry Potter, orang tuamu tidak bisa melindungimu dariku.",
+    "Ketakutan menyebabkan kemarahan. Kemarahan mengarah pada kebencian. Kebencian menyebabkan penderitaan. Jika Anda terus berlari dalam ketakutan, Anda mungkin"
+    "jadilah Vader berikutnya.",
+    "Beberapa kalkulasi nanti, saya telah memutuskan minat saya pada kejahatan Anda tepat 0.",
+    "Legenda mengatakan, mereka masih berjalan.",
+    "Teruskan, kami tidak yakin kami menginginkanmu di sini.",
+    "Kamu seorang penyihir- Oh. Tunggu. Kamu bukan Harry, terus bergerak.",
+    "JANGAN BERLARI DI SINI!",
+    "Hasta la vista, sayang.",
+    "Siapa yang membiarkan anjing keluar?",
+    "Ini lucu, karena tidak ada yang peduli.",
+    "Ah, sayang sekali, Aku suka yang itu.",
+    "Terus terang, sayangku, aku tidak peduli.",
+    "Milkshake saya membawa semua anak laki-laki ke halaman... Jadi lari lebih cepat!",
+    "Anda tidak bisa MENANGANI kebenaran!",
+    "Dahulu kala, di galaksi yang sangat jauh... Seseorang akan peduli tentang itu, Tapi sekarang tidak lagi.",
+    "Hei, lihat mereka! Mereka lari dari palu yang tak terelakkan... Manis.",
+    "Han menembak lebih dulu, Aku juga.",
+    "Apa yang kamu kejar, kelinci putih?",
+    "Seperti yang dikatakan The Doctor... LARI!",
 ]
 
 HELLOSTR = [
-    "Hi !",
-    "‘Ello, gov'nor!",
-    "What’s crackin’?",
-    "‘Sup, homeslice?",
-    "Howdy, howdy ,howdy!",
-    "Hello, who's there, I'm talking.",
-    "You know who this is.",
+    "Hai!",
+    "'Ello, bro!",
+    "Apa itu crackin?",
+    "Apa kabarmu?",
+    "Halo, apa kabar, apa kabar!",
+    "Halo, siapa di sana, saya sedang berbicara.",
+    "Kamu tahu siapa ini.",
     "Yo!",
-    "Whaddup.",
-    "Greetings and salutations!",
-    "Hello, sunshine!",
-    "Hey, howdy, hi!",
-    "What’s kickin’, little chicken?",
-    "Peek-a-boo!",
-    "Howdy-doody!",
-    "Hey there, freshman!",
-    "I come in peace!",
-    "Ahoy, matey!",
+    "Wassup.",
+    "Salam dan salam!",
+    "Halo, sinar matahari!",
+    "Hei, apa kabar, hai!",
+    "Apa yang menendang, ayam kecil?",
+    "Ciluk ba!",
+    "Halo-bagus!",
+    "Halo, mahasiswa baru!",
+    "Saya datang dengan damai!",
+    "Ahoy, sobat!",
     "Hiya!",
 ]
 
@@ -541,95 +540,104 @@ CRI = [
 ]
 
 SLAP_TEMPLATES_EN = [
-    "{hits} {victim} with a {item}.",
-    "{hits} {victim} in the face with a {item}.",
-    "{hits} {victim} around a bit with a {item}.",
-    "`{throws} a {item} at {victim}.`",
-    "grabs a {item} and {throws} it at {victim}'s face.",
-    "{hits} a {item} at {victim}.", "{throws} a few {item} at {victim}.",
-    "grabs a {item} and {throws} it in {victim}'s face.",
-    "launches a {item} in {victim}'s general direction.",
-    "sits on {victim}'s face while slamming a {item} {where}.",
-    "starts slapping {victim} silly with a {item}.",
-    "pins {victim} down and repeatedly {hits} them with a {item}.",
-    "grabs up a {item} and {hits} {victim} with it.",
-    "starts slapping {victim} silly with a {item}.",
-    "holds {victim} down and repeatedly {hits} them with a {item}.",
-    "prods {victim} with a {item}.",
-    "picks up a {item} and {hits} {victim} with it.",
-    "`ties {victim} to a chair and {throws} a {item} at them.`",
-    "{hits} {victim} {where} with a {item}.",
-    "ties {victim} to a pole and whips them {where} with a {item}."
-    "gave a friendly push to help {victim} learn to swim in lava.",
-    "sent {victim} to /dev/null.", "sent {victim} down the memory hole.",
-    "beheaded {victim}.", "threw {victim} off a building.",
-    "replaced all of {victim}'s music with Nickelback.",
-    "spammed {victim}'s email.", "made {victim} a knuckle sandwich.",
-    "slapped {victim} with pure nothing.",
-    "hit {victim} with a small, interstellar spaceship.",
-    "quickscoped {victim}.", "put {victim} in check-mate.",
-    "RSA-encrypted {victim} and deleted the private key.",
-    "put {victim} in the friendzone.",
-    "slaps {victim} with a DMCA takedown request!"
+    "{hits} {victim} dengan {item}.",
+    "{hits} {victim} di wajah dengan {item}.",
+    "{hits} {victim} sekitar sedikit dengan {item}.",
+    "{throws} {item} ke {Victim}.",
+    "mengambil {item} dan {throws} ke wajah {victim}.",
+    "Menusuk {victim} dengan tombak cinta.", "{throws} beberapa {item} ke {victim}.",
+    "mengambil {item} dan {throws} ke wajah {victim}.",
+    "meluncurkan {item} ke arah umum {korban}.",
+    "duduk di wajah {victim} sambil membanting {item}.",
+    "mulai menampar {victim} dengan konyol dengan {item}.",
+    "pin {victim} ke bawah dan berulang kali {hits} mereka dengan {item}.",
+    "mengambil {item} dan {hits} {victim} dengannya.",
+    "mulai menampar {victim} dengan konyol dengan {item}.",
+    "menahan {victim} dan berulang kali {hits} mereka dengan {item}.",
+    "memukul {victim} dengan {item}.",
+    "mengambil {item} dan {hits} {victim} dengannya.",
+    "mengikat {victim} ke kursi dan {throws} {item} padanya.",
+    "{hits} {victim} {where} dengan {item}.",
+    "mengikat {victim} ke tiang dan mencambuk mereka {where} dengan {item}."
+    "memberikan dorongan ramah untuk membantu {victim} belajar berenang di lahar.",
+    "mengirim {victim} ke /laut /lahar.", "mengirim {victim} ke lubang memori.",
+    "memenggal {victim}.", "melemparkan {victim} dari sebuah gedung.",
+    "mengganti semua musik {victim} dengan lagu iri bilang bos.",
+    "spam email {victim}.", "membuat {victim} depresi.",
+    "menampar {victim} tanpa apa-apa.",
+    "pukul {victim} dengan pesawat garuda.",
+    "memukul kepala {victim}.", "taruh {victim} di tong sampah.",
+    "Menendang {victim} dan melemparnya ke sungai.",
+    "letakkan {victim} di rumah hantu.",
+    "menampar {victim} dengan tongkat besi!"
 ]
 
 ITEMS_EN = [
-    "cast iron skillet",
-    "large trout",
-    "baseball bat",
-    "cricket bat",
-    "wooden cane",
-    "nail",
-    "printer",
-    "shovel",
-    "pair of trousers",
-    "CRT monitor",
-    "diamond sword",
-    "baguette",
-    "physics textbook",
-    "toaster",
-    "portrait of Richard Stallman",
-    "television",
-    "mau5head",
-    "five ton truck",
-    "roll of duct tape",
-    "book",
-    "laptop",
-    "old television",
-    "sack of rocks",
-    "rainbow trout",
-    "cobblestone block",
-    "lava bucket",
-    "rubber chicken",
-    "spiked bat",
-    "gold block",
-    "fire extinguisher",
-    "heavy rock",
-    "chunk of dirt",
-    "beehive",
-    "piece of rotten meat",
-    "bear",
-    "ton of bricks",
+   "Tabung Gas",
+    "Televisi 42 In",
+    "Raket",
+    "Raket Nyamuk",
+    "Kaca",
+    "Buku",
+    "Ringgis",
+    "Telur",
+    "Jarum",
+    "Monitor Tabung",
+    "Obeng",
+    "Almunium",
+    "Emas",
+    "Printer",
+    "Speaker",
+    "Gas Lpg",
+    "Tangki Bensin",
+    "Tandon Air",
+    "Bola Boling",
+    "Laptop",
+    "Hardisk Rusak",
+    "Wajan Panas",
+    "Virus Corona",
+    "Meja Kantor",
+    "Meja Arsip",
+    "Lemari",
+    "Ember Besi",
+    "Besi Beton",
+    "Timah Panas",
+    "Harimau",
+    "Batu Krikil",
+    "Makanan Basi",
+    "Pesawat AirBus",
+    "Roket Nasa",
+    "Satelit Nasa",
+    "Matahari",
+    "Meteor",
+    "Berkas Kantor",
+    "Beton panas",
+    "Cermin",
+    "Batu Giok",
+    "Botol",
+    "Nezuko",
+    "Kaset Pita",
+    "Tiang Jemuran",
+    "Pisau Lipat",
+    "Bongkahan Es ",
+    "Asteroid",
 ]
 
 THROW_EN = [
-    "throws",
-    "flings",
-    "chucks",
-    "hurls",
+    "melempar",
+    "melemparkan",
 ]
 
 HIT_EN = [
-    "hits",
-    "whacks",
-    "slaps",
-    "smacks",
-    "bashes",
+    "memukul",
+    "menendang",
+    "menampar",
+    "memukul",
+    "melempar",
 ]
 
-WHERE_EN = ["in the chest", "on the head", "on the butt", "on the crotch"]
+WHERE_EN = ["di pipi", "di kepala", "di pantat", "di badan"]
 
-# ID translation by @yincen
 SLAP_TEMPLATES_ID = [
     "{hits} {victim} dengan {item}.",
     "{throws} sebuah  {item} kepada {victim}.",
@@ -882,30 +890,30 @@ async def univsaye(cowmsg):
 
 @register(outgoing=True, pattern=r"^\.coinflip (.*)")
 async def coin(event):
-    r = choice(["heads", "tails"])
+    r = choice(["Kepala", "Ekor"])
     input_str = event.pattern_match.group(1)
     if input_str:
         input_str = input_str.lower()
-    if r == "heads":
-        if input_str == "heads":
+    if r == "Kepala":
+        if input_str == "Kepala":
             await event.edit(
-                "The coin landed on: **Heads**.\nYou were correct.")
-        elif input_str == "tails":
+                "Koin Itu Mendarat Di: **Kepala**.\nKamu Benar.")
+        elif input_str == "Ekor":
             await event.edit(
-                "The coin landed on: **Heads**.\nYou weren't correct, try again ..."
+                "Koin Itu Mendarat Di: **Kepala**.\nKamu Salah, Coba Lagi..."
             )
         else:
-            await event.edit("The coin landed on: **Heads**.")
-    elif r == "tails":
-        if input_str == "tails":
+            await event.edit("Koin Itu Mendarat Di: **Kepala**.")
+    elif r == "Ekor":
+        if input_str == "Ekor":
             await event.edit(
-                "The coin landed on: **Tails**.\nYou were correct.")
-        elif input_str == "heads":
+                "Koin Itu Mendarat Di: **Ekor**.\nKamu Benar.")
+        elif input_str == "Kepala":
             await event.edit(
-                "The coin landed on: **Tails**.\nYou weren't correct, try again ..."
+                "Koin Itu Mendarat Di: **Ekor**.\nKamu Salah, Coba Lagi..."
             )
         else:
-            await event.edit("The coin landed on: **Tails**.")
+            await event.edit("Koin Itu Mendarat Di: **Ekor**.")
 
 
 @register(pattern=r"^\.slap(?: |$)(.*)", outgoing=True)
@@ -923,7 +931,7 @@ async def who(event):
 
     except BaseException:
         await event.edit(
-            "`Can't slap this person, need to fetch some sticks and stones !!`"
+            "`Tidak bisa slap orang ini, perlu mengambil beberapa meteor dan batu!`"
         )
 
 
@@ -971,10 +979,10 @@ async def slap(replied_user, event):
 
 @register(outgoing=True, pattern=r"^\.boobs(?: |$)(.*)")
 async def boobs(e):
-    await e.edit("`Finding some big boobs...`")
+    await e.edit("`Berdosa, Mendapatkan Gambar Boobs...`")
     await sleep(3)
-    await e.edit("`Sending some big boobs...`")
-    nsfw = requests.get('http://api.oboobs.ru/noise/1').json()[0]["preview"]
+    await e.edit("`Mengirim Gambar Boobs...`")
+    nsfw = requests.get('http://api.oboobs.ru/noise/1').json()[0]["Gambar Boobs"]
     urllib.request.urlretrieve(
         "http://media.oboobs.ru/{}".format(nsfw), "*.jpg")
     os.rename('*.jpg', 'boobs.jpg')
@@ -983,12 +991,12 @@ async def boobs(e):
     await e.delete()
 
 
-@register(outgoing=True, pattern=r"^\.butts(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.pantat(?: |$)(.*)")
 async def butts(e):
-    await e.edit("`Finding some beautiful butts...`")
+    await e.edit("`Berdosa, Mendapatkan Gambar Pantat Yang Indah...`")
     await sleep(3)
-    await e.edit("`Sending some beautiful butts...`")
-    nsfw = requests.get('http://api.obutts.ru/noise/1').json()[0]["preview"]
+    await e.edit("`Mengirim Gambar Pantat Indah...`")
+    nsfw = requests.get('http://api.obutts.ru/noise/1').json()[0]["Gambar Pantat"]
     urllib.request.urlretrieve(
         "http://media.obutts.ru/{}".format(nsfw), "*.jpg")
     os.rename('*.jpg', 'butts.jpg')
@@ -1041,7 +1049,7 @@ async def copypasta(cp_e):
     elif textx:
         message = textx.text
     else:
-        return await cp_e.edit("`😂🅱️IvE👐sOME👅text👅for✌️Me👌tO👐MAkE👀iT💞funNy!💦`")
+        return await cp_e.edit("`😂🅱️AhHH👐MaNtAp👅Bro👅UnTuk✌️MeMbuAT👌Ku👐TeRliHat👀LuCu💞HaHAhaA!💦`")
 
     reply_text = choice(EMOJIS)
     # choose a random character in the message to be substituted with 🅱️
@@ -1074,7 +1082,7 @@ async def vapor(vpr):
     elif textx:
         message = textx.text
     else:
-        return await vpr.edit("`Ｇｉｖｅ ｓｏｍｅ ｔｅｘｔ ｆｏｒ ｖａｐｏｒ！`")
+        return await vpr.edit("`B e r i k a n S e b u a h T e k s U n t u k Vａｐｏｒ！`")
 
     for charac in message:
         if 0x21 <= ord(charac) <= 0x7F:
@@ -1098,7 +1106,7 @@ async def stretch(stret):
     elif textx:
         message = textx.text
     else:
-        return await stret.edit("`GiiiiiiiB sooooooomeeeeeee teeeeeeext!`")
+        return await stret.edit("`Beriiiiiiiiikaaannnn sebuuuuuuuuuah teeeeeeeks!`")
 
     count = randint(3, 10)
     reply_text = sub(r"([aeiouAEIOUａｅｉｏｕＡＥＩＯＵаеиоуюяыэё])", (r"\1" * count),
@@ -1118,7 +1126,7 @@ async def zal(zgfy):
         message = textx.text
     else:
         return await zgfy.edit(
-            "`gͫ ̆ i̛ ̺ v͇̆ ȅͅ   a̢ͦ   s̴̪ c̸̢ ä̸ rͩͣ y͖͞   t̨͚ é̠ x̢͖  t͔͛`"
+            "`b̜́ͨe͒͜r̠͂ͬi̷̱̋k͖͒ͤa̋ͫ͑n͕͂͗ t̢͘͟e͂̽̈́k͎͂͠s̤͚ͭ m̪͔͑è͜͡n͈ͮḁ͞ͅk̲̮͛u̺͂ͩt̬̗́k͍̙̮á ̺n̨̹ͪ`"
         )
 
     for charac in message:
@@ -1160,7 +1168,7 @@ async def faces(owo):
     elif textx:
         message = textx.text
     else:
-        return await owo.edit("` UwU no text given! `")
+        return await owo.edit("` Mohon Berikan Teks UwU! `")
 
     reply_text = sub(r"(r|l)", "w", message)
     reply_text = sub(r"(R|L)", "W", reply_text)
@@ -1357,13 +1365,13 @@ async def claptext(memereview):
     await memereview.edit(reply_text)
 
 
-@register(outgoing=True, pattern=r"^\.bt$")
+@register(outgoing=True, pattern=r"^\.teksbiru$")
 async def bluetext(bt_e):
     """ Believe me, you will find this useful. """
     if await bt_e.get_reply_message() and bt_e.is_group:
         await bt_e.edit(
-            "/BLUETEXT /MUST /CLICK.\n"
-            "/ARE /YOU /A /STUPID /ANIMAL /WHICH /IS /ATTRACTED /TO /COLOURS?")
+            "/TEKSBIRU /APAKAH /ANDA.\n"
+            "/SEDANG /GABUT /KARNA /TERTARIK /MELIHAT /TEKS /BIRU /PASTI /ANDA /BOSAN?")
 
 
 @register(outgoing=True, pattern=r"^\.f (.*)")
@@ -1389,7 +1397,7 @@ async def let_me_google_that_for_you(lmgtfy_q):
     lfy_url = f"http://lmgtfy.com/?s=g&iie=1&q={query_encoded}"
     payload = {'format': 'json', 'url': lfy_url}
     r = requests.get('http://is.gd/create.php', params=payload)
-    await lmgtfy_q.edit("Here you are, help yourself."
+    await lmgtfy_q.edit("Ini Dia, Bantu Dirimu Sendiri."
                         f"\n[{query}]({r.json()['shorturl']})")
 
 
@@ -1411,8 +1419,8 @@ async def sayhi(e):
 async def scam(event):
     """ Just a small command to fake chat actions for fun !! """
     options = [
-        'typing', 'contact', 'game', 'location', 'voice', 'round', 'video',
-        'photo', 'document', 'cancel'
+        'mengetik', 'kontak', 'game', 'lokasi', 'suara', 'bulat', 'video',
+        'foto', 'dokumen', 'batal'
     ]
     input_str = event.pattern_match.group(1)
     args = input_str.split()
@@ -1430,10 +1438,10 @@ async def scam(event):
         scam_action = str(args[0]).lower()
         scam_time = int(args[1])
     else:
-        await event.edit("`Invalid Syntax !!`")
+        await event.edit("`Tidak Valid`")
         return
     try:
-        if (scam_time > 0):
+        if (scam_time > 300):
             await event.delete()
             async with event.client.action(event.chat_id, scam_action):
                 await sleep(scam_time)
@@ -1451,7 +1459,7 @@ async def typewriter(typew):
     elif textx:
         message = textx.text
     else:
-        return await typew.edit("`Give a text to type!`")
+        return await typew.edit("`Berikan Sebuah Teks Untuk Type!`")
     sleep_time = 0.03
     typing_symbol = "|"
     old_text = ""
@@ -1469,7 +1477,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern=r"^\.leave$")
 async def leave(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("`You must Leaving dis Group kek!`")
+        await e.edit("`Lord Telah Meninggalkan Grup ツ`")
 
 
 @register(outgoing=True, pattern=r"^\.fail$")
@@ -1531,11 +1539,11 @@ async def nih(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`\n(\_/)`"
                      "`\n(●_●)`"
-                     "`\n />🌹 *ini buat kamu`"
+                     "`\n />💖 *Ini Buat Kamu`"
                      "`\n                    `"
                      r"`\n(\_/)`"
                      "`\n(●_●)`"
-                     "`\n🌹<\  *tapi boong`")
+                     "`\n💖<\  *Tapi Boong`")
 
 
 @register(outgoing=True, pattern=r"^\.fag$")
@@ -1550,12 +1558,12 @@ async def gtfo(e):
                      "`\n ██   ██`")
 
 
-@register(outgoing=True, pattern=r"^\.taco$")
+@register(outgoing=True, pattern=r"^\.tai$")
 async def taco(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("\n{\__/}"
                      "\n(●_●)"
-                     "\n( >🌮 Want a tai?")
+                     "\n( >🌮 Mau Tai Ku?")
 
 
 @register(outgoing=True, pattern=r"^\.paw$")
@@ -1575,7 +1583,7 @@ async def gey(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`\n┈┈┈╭━━━━━╮┈┈┈┈┈\n┈┈┈┃┊┊┊┊┊┃┈┈┈┈┈`"
                      "`\n┈┈┈┃┊┊╭━╮┻╮┈┈┈┈\n┈┈┈╱╲┊┃▋┃▋┃┈┈┈┈\n┈┈╭┻┊┊╰━┻━╮┈┈┈┈`"
-                     "`\n┈┈╰┳┊╭━━━┳╯┈┈┈┈\n┈┈┈┃┊┃╰━━┫┈NIGGA U GEY`"
+                     "`\n┈┈╰┳┊╭━━━┳╯┈┈┈┈\n┈┈┈┃┊┃╰━━┫┈Lu Bau Hehe`"
                      "\n┈┈┈┈┈┈┏━┓┈┈┈┈┈┈")
 
 
@@ -1584,7 +1592,7 @@ async def gey(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`\n┈┈┈╭━━━━━╮┈┈┈┈┈\n┈┈┈┃┊┊┊┊┊┃┈┈┈┈┈`"
                      "`\n┈┈┈┃┊┊╭━╮┻╮┈┈┈┈\n┈┈┈╱╲┊┃▋┃▋┃┈┈┈┈\n┈┈╭┻┊┊╰━┻━╮┈┈┈┈`"
-                     "`\n┈┈╰┳┊╭━━━┳╯┈┈┈┈\n┈┈┈┃┊┃╰━━┫┈BAPAQ U GAY`"
+                     "`\n┈┈╰┳┊╭━━━┳╯┈┈┈┈\n┈┈┈┃┊┃╰━━┫┈ANDA GAY`"
                      "\n┈┈┈┈┈┈┏━┓┈┈┈┈┈┈")
 
 
@@ -1622,7 +1630,7 @@ async def faces(siwis):
     elif textx:
         message = textx.text
     else:
-        await siwis.edit("` IwI no text given! `")
+        await siwis.edit("` Anda Harus Memberikan Teks Ke IwI  `")
         return
 
     reply_text = sub(r"(a|i|u|e|o)", "i", message)
@@ -1651,10 +1659,20 @@ async def koc(e):
         await e.edit("8=✊==D")
         await e.edit("8==✊=D")
         await e.edit("8===✊D")
+        await e.edit("8==✊=D")
+        await e.edit("8=✊==D")
         await e.edit("8===✊D💦")
-        await e.edit("8====D💦💦")
-        await e.edit("crooottssssssss")
-        await e.edit(choice(FACEREACTS))
+        await e.edit("8==✊=D💦💦")
+        await e.edit("8=✊==D💦💦💦")
+        await e.edit("8✊===D💦💦💦💦")
+        await e.edit("8===✊D💦💦💦💦💦")
+        await e.edit("8==✊=D💦💦💦💦💦💦")
+        await e.edit("8=✊==D💦💦💦💦💦💦💦")
+        await e.edit("8✊===D💦💦💦💦💦💦💦💦")
+        await e.edit("8===✊D💦💦💦💦💦💦💦💦💦")
+        await e.edit("8==✊=D💦💦💦💦💦💦💦💦💦💦")
+        await e.edit("8=✊==D Lah Kok Habis?")
+        await e.edit("😭😭😭😭")
 
 
 @register(outgoing=True, pattern="^.gas$")
@@ -1668,7 +1686,7 @@ async def gas(e):
         await e.edit("_____🚑______________")
         await e.edit("__🚑_________________")
         await e.edit("🚑___________________")
-        await e.edit("_____________________")
+        await e.edit("__Lah___Kok__Hilang__")
         await e.edit(choice(FACEREACTS))
 
 
@@ -1716,73 +1734,73 @@ async def emoji_tengkorak(e):
 
 CMD_HELP.update({
     "memes":
-    ">`.cowsay`"
-    "\nUsage: cow which says things."
-    "\n\n>`.cp`"
-    "\nUsage: Copypasta the famous meme"
-    "\n\n>`.vapor`"
-    "\nUsage: Vaporize everything!"
-    "\n\n>`.str`"
-    "\nUsage: Stretch it."
-    "\n\n>`.10iq`"
-    "\nUsage: You retard !!"
-    "\n\n>`.zal`"
-    "\nUsage: Invoke the feeling of chaos."
+    "> .cowsay"
+    "\ nPenggunaan: sapi yang mengatakan sesuatu."
+    "\ n \ n> .cp"
+    "\ nPenggunaan: Copypasta meme terkenal"
+    "\ n \ n>. uap"
+    "\ nPenggunaan: Menguapkan semuanya!"
+    "\ n \ n> .str"
+    "\ nPenggunaan: Regangkan."
+    "\ n \ n> .10iq"
+    "\ nPenggunaan: Kamu mundur !!"
+    "\ n \ n> .zal"
+    "\ nUsage: Munculkan perasaan kacau."
     "\n\n>`Oem`"
-    "\nUsage: Oeeeem"
+    "\nPenggunaan: Oeeeem"
     "\n\n>`.fp`"
-    "\nUsage: Facepalm :P"
+    "\nUsage: Telapak Tangan:P"
     "\n\n>`.moon`"
-    "\nUsage: kensar moon animation."
+    "\nUsage: animasi bulan."
     "\n\n>`.clock`"
-    "\nUsage: kensar clock animation."
+    "\nUsage: animasi jam."
     "\n\n>`.hi`"
-    "\nUsage: Greet everyone!"
-    "\n\n>`.coinflip <heads/tails>`"
-    "\nUsage: Flip a coin !!"
+    "\nUsage: Sapa semuanya!"
+    "\n\n>`.coinflip` <Kepala/Ekor>"
+    "\nUsage: Melempar koin !!"
     "\n\n>`.owo`"
     "\nUsage: UwU"
     "\n\n>`.react`"
-    "\nUsage: Make your userbot react to everything."
-    "\n\n>`.slap` <id/jutsu>"
-    "\nUsage: reply to slap them with random objects !!"
+    "\nUsage: Buat Userbot Anda bereaksi terhadap semuanya."
+    "\n\n>`.slap`"
+    "\nUsage: balas tampar mereka dengan benda acak !!"
     "\n\n>`.cry`"
-    "\nUsage: y u du dis, i cri."
+    "\nUsage: jika kamu melakukan ini, aku akan menangis."
     "\n\n>`.shg`"
-    "\nUsage: Shrug at it !!"
+    "\nUsage: Angkat bahu!"
     "\n\n>`.run`"
-    "\nUsage: Let Me Run, run, RUNNN!"
+    "\nUsage: Biarkan Aku Lari, Lari, LARI!"
     "\n\n>`.chase`"
-    "\nUsage: You better start running"
+    "\nUsage: Sebaiknya Anda mulai berlari"
     "\n\n>`.metoo`"
-    "\nUsage: Haha yes"
+    "\nUsage: Haha ya"
     "\n\n>`.mock`"
-    "\nUsage: Do it and find the real fun."
+    "\nUsage: Lakukan dan temukan kesenangan yang sesungguhnya."
     "\n\n>`.clap`"
-    "\nUsage: Praise people!"
+    "\nUsage: Puji orang!"
     "\n\n>`.boobs`"
-        "\nUsage: Get b00bs imej"
-        "\n\n>`.butts`"
-        "\nUsage: Get 🅱️utts imej"
-    "\n\n>`.f <emoji/character>`"
-    "\nUsage: Pay Respects."
+        "\nUsage: Dapatkan Gambar Boobs 😳"
+        "\n\n>`.pantat`"
+        "\nUsage: Dapatkan Gambar Pantat Indah 😳"
+    "\n\n>`.f` <emoji/karakter>"
+    "\nUsage: Bayar Hormat."
     "\n\n>`.bt`"
-    "\nUsage: Believe me, you will find this useful."
+    "\nUsage: Percayalah, Anda akan menemukan ini berguna."
     "\n\n>`.weeb`"
-    "\nUsage: To Weeb-ify your text."
-    "\n\n>`.type`"
-    "\nUsage: Just a small command to make your keyboard become a typewriter!"
-    "\n\n>`.lfy <query>`"
-    "\nUsage: Let me Google that for you real quick !!"
-    "\n\n>`.decide [Alternates: (.yes, .no, .maybe)]`"
-    "\nUsage: Make a quick decision."
-    "\n\n>`.scam <action> <time>`"
-    "\n[Available Actions: (typing, contact, game, location, voice, round, video, photo, document, cancel)]"
-    "\nUsage: Create fake chat actions, for fun. (Default action: typing)"
-    "\n\nAnd many more"
-    "`\n>.nou ; .bot ; .gey ; .tf ; .paw ; .taco ; .nih ;`"
-    "`\n>.fag ; .gtfo ; .stfu ; .lol ; .lool ; .fail ; .leave`"
-    "`\n>.iwi ; .sayhi ; .koc ; .gas ; .earth ; .love ; .rain`"
-    "`\n>.penis ; .emo ; .fuck ; .ok ; .skull`"
-    "\n\n\nThanks to 🅱️ottom🅱️ext🅱️ot (@NotAMemeBot) for some of these."
+    "\nUsage: Untuk Mengubah Teks Menjadi Weeb-ify."
+    "\n\n>`.type` <teks>"
+    "\nUsage: Hanya perintah kecil untuk membuat keyboard Anda menjadi mesin tik!"
+    "\n\n>`.lfy` <query>"
+    "\nUsage: Biar saya Google itu untuk Anda dengan cepat!"
+    "\n\n>`.decide` [Alternatif: (.yes, .no, .maybe)]"
+    "\nPenggunaan: Buat keputusan cepat."
+    "\n\n>`.scam` <aksi> <waktu>"
+    "\n[Tindakan yang Tersedia: (mengetik, kontak, game, lokasi, suara, bulat, video, foto, dokumen, batal)]"
+    "\nUsage: Buat tindakan obrolan palsu, untuk bersenang-senang, (Tindakan default: mengetik)"
+    "\n\nDan banyak lagi"
+    "\ n> .nou; .bot; .gey; .tf; .paw; .taco; .nih;"
+    "\ n> .fag; .gtfo; .stfu; .lol; .lool; .fail; .leave"
+    "\ n> .iwi; .sayhi; .koc; .gas; .earth; .love; .rain"
+    "\ n> .penis; .emo; .fuck; .ok; .skull"
+    "\n\n\nSemoga Harimu Menyenangkan -Alvin."
 })
