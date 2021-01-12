@@ -4,23 +4,23 @@ from userbot.events import register
 from userbot import bot, CMD_HELP
 
 
-@register(outgoing=True, pattern=r"^\.gid(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.getid(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("`Balas Di Teks Ajg!!`")
+        await event.edit("`Mohon Balas Ke Pesan Lord`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.text:
-        await event.edit("```Balas Di Teks Goblok!!```")
+        await event.edit("```Mohon Balas Ke Pesan Lord```")
         return
     chat = "@getidsbot"
     reply_message.sender
     if reply_message.sender.bot:
-        await event.edit("`Balas Di Teks Asu!!`")
+        await event.edit("`Mohon Balas Ke Pesan Lord`")
         return
-    await event.edit("`Membongkar ID.......`")
+    await event.edit("`Mencari ID.......`")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -30,16 +30,16 @@ async def _(event):
             await bot.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await event.reply("`Bunuh @getidsbot dulu bos, biar botnya bisa jalan -_-`")
+            await event.reply("`Bot Sedang Error`")
             return
         if response.text.startswith("Forward"):
-            await event.edit("`Profil Buriq Tidak Punya ID...`")
+            await event.edit("`Lord Orang Ini Tidak Mempunyai ID`")
         else:
             await event.edit(f"{response.message.message}")
 
 
 CMD_HELP.update({
-    "get_uid":
+    "getid":
     "`.gid`"
-    "\nUsage: Reply in message to get user ID."
+    "\nUsage: Balas Ke Pesan Pengguna Untuk Mendapatkan ID Nya."
 })
