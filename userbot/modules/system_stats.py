@@ -72,7 +72,7 @@ async def psu(event):
     bt = datetime.fromtimestamp(boot_time_timestamp)
     softw += f"`Waktu Hidup: {bt.day}/{bt.month}/{bt.year}  {bt.hour}:{bt.minute}:{bt.second}`\n"
     # CPU Cores
-    cpuu = "**informasi CPU**\n"
+    cpuu = "**Informasi CPU**\n"
     cpuu += "`Physical cores   : " + \
         str(psutil.cpu_count(logical=False)) + "`\n"
     cpuu += "`Total cores      : " + \
@@ -90,7 +90,7 @@ async def psu(event):
     cpuu += f"`All Core: {psutil.cpu_percent()}%`\n"
     # RAM Usage
     svmem = psutil.virtual_memory()
-    memm = "**Memory Usage**\n"
+    memm = "**Memori Digunakan**\n"
     memm += f"`Total     : {get_size(svmem.total)}`\n"
     memm += f"`Available : {get_size(svmem.available)}`\n"
     memm += f"`Used      : {get_size(svmem.used)}`\n"
@@ -165,9 +165,9 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**☛Lord-Userbot Versi:** \n "
+            "**☛**Lord-Userbot Versi:** \n "
             f"{verout}"
-            "**☛Revisi:** "
+            "**☛**Revisi:** "
             f"{revout}"
         )
     else:
@@ -235,7 +235,7 @@ async def amireallyalive(alive):
         f"✘ __Username__ \n"
         f": `@{user.username}` \n"
         f"✘ __Telethon__ \n"
-        f": `Versi{version.__version__}` \n"
+        f": `Versi {version.__version__}` \n"
         f"✘ __Python__ \n"
         f": `Versi {python_version()}` \n"
         f"✘ __Versi Bot__ \n"
