@@ -20,6 +20,7 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
     await typew.edit("`HALLO LORD AKU ADALAH BOT, DAN AKU AKAN SELALU MEMBANTU MU`")
+    sleep(1)
     await typew.edit("`\n█████████`"
                      "`\n█▄█████▄█`"
                      "`\n█▼▼▼▼▼`"
@@ -27,21 +28,26 @@ async def typewriter(typew):
                      "`\n█▲▲▲▲▲`"
                      "`\n█████████`"
                      "`\n ██   ██`")
+    sleep(2)
     await typew.edit("`\n┈┈┈╭━━━━━╮┈┈┈┈┈\n┈┈┈┃┊┊┊┊┊┃┈┈┈┈┈`"
                      "`\n┈┈┈┃┊┊╭━╮┻╮┈┈┈┈\n┈┈┈╱╲┊┃▋┃▋┃┈┈┈┈\n┈┈╭┻┊┊╰━┻━╮┈┈┈┈`"
                      "`\n┈┈╰┳┊╭━━━┳╯┈┈┈┈\n┈┈┈┃┊┃╰━━┫┈Yo Bro`"
                      "\n┈┈┈┈┈┈┏━┓┈┈┈┈┈┈")
+    sleep(1)
     await typew.edit("\n┈┈┈╱▔▔▔▔╲┈╭━━━━━\n┈┈▕▂▂▂▂▂▂▏┃LORD┊👑`"
                      "`\n┈┈▕▔▇▔▔┳▔▏╰┳╮LORD┊\n┈┈▕╭━╰╯━╮▏━╯╰━━━\n╱▔▔▏▅▅▅▅▕▔▔╲┈┈┈┈`"
                      "`\n▏┈┈╲▂▂▂▂╱┈┈┈▏┈┈┈`")
+    sleep(2)
     await typew.edit("`\n┈╭╮╭╮\n┈┃┃┃┃\n╭┻┗┻┗╮`"
                      "`\n┃┈▋┈▋┃\n┃┈╭▋━╮━╮\n┃┈┈╭╰╯╰╯╮`"
                      "`\n┫┈┈ LORD\n┃┈╰╰━━━━╯`"
                      "`\n┗━━┻━┛`")
+    sleep(2)
     await typew.edit("`\n╭╭━━━╮╮┈┈┈┈┈┈┈┈┈┈\n┈┃╭━━╯┈┈┈┈▕╲▂▂╱▏┈\n┈┃┃╱▔▔▔▔▔▔▏╱▋▋╮┈`"
                      "`\n┈┃╰▏┃╱╭╮┃╱╱▏╱╱▆┃┈\n┈╰━▏┗━╰╯┗━╱╱╱╰┻┫┈\n┈┈┈▏┏┳━━━━▏┏┳━━╯┈`"
                      "`\n┈┈┈▏┃┃┈┈┈┈▏┃┃┈┈┈┈ `")
-    await typew.edit("` \n   ╲╲╭━━━━╮ \n╭╮┃✚┈┈✚┃╭╮ \n┃╰┫★★★┣╯┃ \n╰━┫★★★┣━╯`"
+    sleep(1)
+    await typew.edit("` \n   ╲╲╭━━━━╮ \n╭╮┃▆┈┈▆┃╭╮ \n┃╰┫★★★┣╯┃ \n╰━┫★★★┣━╯`"
                      "`\n╲╲┃┈┈┈┈┃  \n╲╲┃┈┏┓┈┃ `")
 
 
