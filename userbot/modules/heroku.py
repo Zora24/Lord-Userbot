@@ -179,8 +179,8 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "**☛ Informasi Dyno**:\n\n╭━┯━━━━━━━━┯━━━━━━━┯━╮\n"
-                f"✥ `Penggunaan Dyno ` **{app.name}**:\n"
+                "**☛ Informasi Dyno**:\n\n╭━┯━━━━━━━━━━━━━━━━┯━╮\n"
+                f"✥ `Penggunaan Dyno` **{app.name}**:\n"
                 f"  ❉ **{AppHours} Jam - "
                 f"{AppMinutes} Menit  -  {AppPercentage}%**"
                 "\n ✲━─━─━─━─━─━─━─━─━─━✲\n"
@@ -203,7 +203,7 @@ async def _(dyno):
         return await dyno.reply(
             "`Please make sure your Heroku API Key, Your App name are configured correctly in the heroku var.`"
         )
-    await dyno.edit("`Getting Logs....`")
+    await dyno.edit("`Mendapatkan Logs....`")
     with open("logs.txt", "w") as log:
         log.write(app.get_log())
     fd = codecs.open("logs.txt", "r", encoding="utf-8")
@@ -211,7 +211,7 @@ async def _(dyno):
     key = (requests.post("https://nekobin.com/api/documents",
                          json={"content": data}) .json() .get("result") .get("key"))
     url = f"https://nekobin.com/raw/{key}"
-    await dyno.edit(f"`Here the heroku logs:`\n\nPasted to: [Nekobin]({url})")
+    await dyno.edit(f"`Disini Logs Heroku Anda:`\n\nPaste Ke: [Nekobin]({url})")
     return os.remove("logs.txt")
 
 
