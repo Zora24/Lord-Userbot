@@ -64,7 +64,7 @@ async def speedtst(spd):
                    f"`{result['ping']}` \n"
                    "✘ **ISP:** "
                    f"`{result['client']['isp']}` \n"
-                   "✦҈͜͡➳ **BOT**: `Lord Userbot`")
+                   "✦҈͜͡➳ **BOT:** `Lord Userbot`")
 
 
 def speed_convert(size):
@@ -88,7 +88,7 @@ async def pingme(pong):
     await pong.edit("`Pinging..............`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**✘ PONGGG!! **\n**✘ Pinger** : `%sms`\n**✘ Uptime** : `{uptime}`\n**✦҈͜͡➳  My Lord: {ALIVE_NAME}**" % (duration))
+    await pong.edit(f"**✘ PONGGG!! **\n**✘ Pinger:** `%sms`\n**✘ Uptime:** `{uptime}`\n**✦҈͜͡➳  My Lord: {ALIVE_NAME}**" % (duration))
 
 
 @register(outgoing=True, pattern="^.pong$")
@@ -98,7 +98,7 @@ async def pingme(pong):
     await pong.edit("`Pong.....🔨`")
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit("`✘ Ping!\n%sms`" % (duration))
+    await pong.edit("`✘ **Ping!**\n%sms`" % (duration))
 
 CMD_HELP.update(
     {"ping": "`.ping`\
