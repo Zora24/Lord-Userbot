@@ -38,10 +38,10 @@ async def _(fry):
             """ - don't spam notif - """
             await bot.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await fry.reply("`Please unblock` @image_deepfrybot`...`")
+            await fry.reply("`Lord Mohon Unblock` @image_deepfrybot`...`")
             return
         if response.text.startswith("Forward"):
-            await fry.edit("`Please disable your forward privacy setting...`")
+            await fry.edit("`Lord Mohon Matikan Setelan Forward Privasi...`")
         else:
             downloaded_file_name = await fry.client.download_media(
                 response.media,
@@ -69,7 +69,7 @@ async def _(fry):
 
 @register(outgoing=True, pattern=r'^.df(:? |$)([1-8])?')
 async def _(fry):
-    await fry.edit("`Deepfryer......`")
+    await fry.edit("`Sedang Dalam Proses......`")
     level = fry.pattern_match.group(2)
     if fry.fwd_from:
         return
@@ -100,10 +100,10 @@ async def _(fry):
             """ - don't spam notif - """
             await bot.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await fry.reply("`Please unblock` @image_deepfrybot`...`")
+            await fry.reply("`Lord Mohon Unblock` @image_deepfrybot`...`")
             return
         if response.text.startswith("Forward"):
-            await fry.edit("`Please disable your forward privacy setting...`")
+            await fry.edit("`Lord Mohon Matikan Setelan Privasi Forward...`")
         else:
             downloaded_file_name = await fry.client.download_media(
                 response.media,
