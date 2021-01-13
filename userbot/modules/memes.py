@@ -1301,6 +1301,7 @@ async def earth(event):
     except BaseException:
         return
 
+
 @register(outgoing=True, pattern="^.monyet$")
 async def earth(event):
     deq = deque(list("🙈🙉🙈🙉🙈🙉🙈🙉"))
