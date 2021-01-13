@@ -1200,13 +1200,13 @@ async def shrugger(shg):
 
 @register(outgoing=True, pattern=r"^\.chase$")
 async def police(chase):
-    """ Run boi run, i'm gonna catch you !! """
+    """ Lari bro lari, aku akan segera menangkapmu !! """
     await chase.edit(choice(CHASE_STR))
 
 
 @register(outgoing=True, pattern=r"^\.run$")
 async def runner_lol(run):
-    """ Run, run, RUNNN! """
+    """ Lari, lari, LARIII! """
     await run.edit(choice(RUNS_STR))
 
 
@@ -1325,7 +1325,7 @@ async def spongemocktext(mock):
     elif textx:
         message = textx.text
     else:
-        return await mock.edit("`gIvE sOMEtHInG tO MoCk!`")
+        return await mock.edit("`bEriKan PeSan UnTuK MoCk!`")
 
     for charac in message:
         if charac.isalpha() and randint(0, 1):
@@ -1344,7 +1344,7 @@ async def weebify(e):
         get = await e.get_reply_message()
         args = get.text
     if not args:
-        await e.edit("`What I am Supposed to Weebify U Dumb`")
+        await e.edit("`Apa Yang Anda Lakukan Lord ツ`")
         return
     string = '  '.join(args).lower()
     for normiecharacter in string:
@@ -1547,7 +1547,7 @@ async def nih(e):
                      "`\n(●_●)`"
                      "`\n />💖 *Ini Buat Kamu`"
                      "`\n                    `"
-                     r"`\n(\_/)`"
+                     "`\n(\_/)`"
                      "`\n(●_●)`"
                      "`\n💖<\  *Tapi Boong`")
 
@@ -1784,10 +1784,6 @@ CMD_HELP.update({
     "\nUsage: Lakukan dan temukan kesenangan yang sesungguhnya."
     "\n\n>`.clap`"
     "\nUsage: Puji orang!"
-    "\n\n>`.boobs`"
-        "\nUsage: Dapatkan Gambar Boobs 😳"
-        "\n\n>`.pantat`"
-        "\nUsage: Dapatkan Gambar Pantat Indah 😳"
     "\n\n>`.f` <emoji/karakter>"
     "\nUsage: Bayar Hormat."
     "\n\n>`.bt`"
@@ -1799,14 +1795,10 @@ CMD_HELP.update({
     "\n\n>`.lfy` <query>"
     "\nUsage: Biar saya Google itu untuk Anda dengan cepat!"
     "\n\n>`.decide` [Alternatif: (.yes, .no, .maybe)]"
-    "\nPenggunaan: Buat keputusan cepat."
-    "\n\n>`.scam` <aksi> <waktu>"
-    "\n[Tindakan yang Tersedia: (mengetik, kontak, game, lokasi, suara, bulat, video, foto, dokumen, batal)]"
-    "\nUsage: Buat tindakan obrolan palsu, untuk bersenang-senang, (Tindakan default: mengetik)"
-    "\n\nDan banyak lagi"
-    r"\ n> .nou; .bot; .gey; .tf; .paw; .taco; .nih;"
+    "\nUsage: Buat keputusan cepat."
+    r"\ n> .nou; .bot; .gey; .tf; .paw; .tai; .nih;"
     r"\ n> .fag; .gtfo; .stfu; .lol; .lool; .fail; .leave"
     r"\ n> .iwi; .sayhi; .koc; .gas; .earth; .love; .rain"
-    r"\ n> .penis; .emo; .fuck; .ok; .skull"
+    r"\ n> .penis; .emo; .fuck; .ok; .skull; .teksbiru"
     "\n\n\nSemoga Harimu Menyenangkan -Alvin."
 })
