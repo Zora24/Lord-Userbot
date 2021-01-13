@@ -1547,7 +1547,7 @@ async def nih(e):
                      "`\n(●_●)`"
                      "`\n />💖 *Ini Buat Kamu`"
                      "`\n                    `"
-                     "`\n(\_/)`"
+                     r"`\n(\_/)`"
                      "`\n(●_●)`"
                      "`\n💖<\  *Tapi Boong`")
 
