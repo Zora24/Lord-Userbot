@@ -33,11 +33,11 @@ async def _(event):
         r_msg = await event.get_reply_message()
         if r_msg.media:
             bot_api_file_id = pack_bot_file_id(r_msg.media)
-            await event.edit("Current Chat ID: `{}`\nFrom User ID: `{}`\nBot API File ID: `{}`".format(str(event.chat_id), str(r_msg.from_id), bot_api_file_id))
+            await event.edit("ID Grup: `{}`\nID Dari Pengguna: `{}`\nID Bot File API: `{}`".format(str(event.chat_id), str(r_msg.from_id), bot_api_file_id))
         else:
-            await event.edit("Current Chat ID: `{}`\nFrom User ID: `{}`".format(str(event.chat_id), str(r_msg.from_id)))
+            await event.edit("ID Grup: `{}`\nID Dari Pengguna: `{}`".format(str(event.chat_id), str(r_msg.from_id)))
     else:
-        await event.edit("Current Chat ID: `{}`".format(str(event.chat_id)))
+        await event.edit("ID Grup: `{}`".format(str(event.chat_id)))
 
 
 @register(outgoing=True, pattern="^.link(?: |$)(.*)")
@@ -58,14 +58,14 @@ async def permalink(mention):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "**Bots in this Channel**: \n"
+    mentions = "**Bot Di Channel Ini**: \n"
     input_str = event.pattern_match.group(1)
     to_write_chat = await event.get_input_chat()
     chat = None
     if not input_str:
         chat = to_write_chat
     else:
-        mentions = "Bot in {} channel: \n".format(input_str)
+        mentions = "Bot Dalam {} Channel: \n".format(input_str)
         try:
             chat = await bot.get_entity(input_str)
         except Exception as e:
@@ -92,15 +92,15 @@ async def log(log_text):
             reply_msg = await log_text.get_reply_message()
             await reply_msg.forward_to(BOTLOG_CHATID)
         elif log_text.pattern_match.group(1):
-            user = f"#LOG / Chat ID: {log_text.chat_id}\n\n"
+            user = f"#LOG\n ID Obrolan: {log_text.chat_id}\n\n"
             textx = user + log_text.pattern_match.group(1)
             await bot.send_message(BOTLOG_CHATID, textx)
         else:
-            await log_text.edit("`What am I supposed to log?`")
+            await log_text.edit("`Apa Yang Harus Saya Log?`")
             return
-        await log_text.edit("`Logged Successfully`")
+        await log_text.edit("`Logged Berhasil!`")
     else:
-        await log_text.edit("`This feature requires Logging to be enabled!`")
+       await log_text.edit("`Fitur Ini Mengharuskan Logging Diaktifkan!`")
     await sleep(2)
     await log_text.delete()
 
@@ -121,7 +121,7 @@ async def unmute_chat(unm_e):
         await unm_e.edit('`Running on Non-SQL Mode!`')
         return
     unkread(str(unm_e.chat_id))
-    await unm_e.edit("```Unmuted this chat Successfully```")
+    await unm_e.edit("```Berhasil Dibuka, Obrolan Tidak Lagi Dibisukan```")
     await sleep(2)
     await unm_e.delete()
 
@@ -136,13 +136,13 @@ async def mute_chat(mute_e):
         return
     await mute_e.edit(str(mute_e.chat_id))
     kread(str(mute_e.chat_id))
-    await mute_e.edit("`Shush! This chat will be silenced!`")
+    await mute_e.edit("`Ssshssh Lord Telah Membisukan Obrolan!`")
     await sleep(2)
     await mute_e.delete()
     if BOTLOG:
         await mute_e.client.send_message(
             BOTLOG_CHATID,
-            str(mute_e.chat_id) + " was silenced.")
+            str(mute_e.chat_id) + " Telah Dibisukan.")
 
 
 @register(incoming=True, disable_errors=True)
@@ -165,7 +165,7 @@ regexNinja = False
 
 @register(outgoing=True, pattern="^s/")
 async def sedNinja(event):
-    """For regex-ninja module, auto delete command starting with s/"""
+    """Untuk Modul Regex-Ninja, Perintah Hapus Otomatis Yang Dimulai Dengans/"""
     if regexNinja:
         await sleep(.5)
         await event.delete()
@@ -173,30 +173,30 @@ async def sedNinja(event):
 
 @register(outgoing=True, pattern="^.regexninja (on|off)$")
 async def sedNinjaToggle(event):
-    """ Enables or disables the regex ninja module. """
+    """ Aktifkan Atau Nonaktifkan Modul Regex Ninja. """
     global regexNinja
     if event.pattern_match.group(1) == "on":
         regexNinja = True
-        await event.edit("`Successfully enabled ninja mode for Regexbot.`")
+        await event.edit("`Berhasil Mengaktifkan Mode Regex Ninja.`")
         await sleep(1)
         await event.delete()
     elif event.pattern_match.group(1) == "off":
         regexNinja = False
-        await event.edit("`Successfully disabled ninja mode for Regexbot.`")
+        await event.edit("`Berhasil Menonaktifkan Mode Regez Ninja.`")
         await sleep(1)
         await event.delete()
 
 
 @register(pattern=".chatinfo(?: |$)(.*)", outgoing=True)
 async def info(event):
-    await event.edit("`Analysing the chat...`")
+    await event.edit("`Menganalisis Obrolan Ini...`")
     chat = await get_chatinfo(event)
     caption = await fetch_info(chat, event)
     try:
         await event.edit(caption, parse_mode="html")
     except Exception as e:
         print("Exception:", e)
-        await event.edit("`An unexpected error has occurred.`")
+        await event.edit("`Terjadi Kesalah Yang Tidak Terduga.`")
     return
 
 
@@ -221,13 +221,13 @@ async def get_chatinfo(event):
         try:
             chat_info = await event.client(GetFullChannelRequest(chat))
         except ChannelInvalidError:
-            await event.edit("`Invalid channel/group`")
+            await event.edit("`Channel/Grup Tidak Valid`")
             return None
         except ChannelPrivateError:
-            await event.edit("`This is a private channel/group or I am banned from there`")
+            await event.edit("`Ini Adalah Channel/Grup Privasi Atau Lord Dibanned Dari Sana`")
             return None
         except ChannelPublicGroupNaError:
-            await event.edit("`Channel or supergroup doesn't exist`")
+            await event.edit("`Channel Atau Supergrup Tidak Ditemukan`")
             return None
         except (TypeError, ValueError) as err:
             await event.edit(str(err))
@@ -256,7 +256,7 @@ async def fetch_info(chat, event):
     creator_valid = True if first_msg_valid and msg_info.users else False
     creator_id = msg_info.users[0].id if creator_valid else None
     creator_firstname = msg_info.users[0].first_name if creator_valid and msg_info.users[
-        0].first_name is not None else "Deleted Account"
+        0].first_name is not None else "Akun Terhapus"
     creator_username = msg_info.users[0].username if creator_valid and msg_info.users[0].username is not None else None
     created = msg_info.messages[0].date if first_msg_valid else None
     former_title = msg_info.messages[0].action.title if first_msg_valid and isinstance(
@@ -293,15 +293,15 @@ async def fetch_info(chat, event):
     bots_list = chat.full_chat.bot_info  # this is a list
     bots = 0
     supergroup = "<b>Yes</b>" if hasattr(chat_obj_info,
-                                         "megagroup") and chat_obj_info.megagroup else "No"
+                                         "megagroup") and chat_obj_info.megagroup else "Tidak"
     slowmode = "<b>Yes</b>" if hasattr(chat_obj_info,
-                                       "slowmode_enabled") and chat_obj_info.slowmode_enabled else "No"
+                                       "slowmode_enabled") and chat_obj_info.slowmode_enabled else "Tidak"
     slowmode_time = chat.full_chat.slowmode_seconds if hasattr(
         chat_obj_info, "slowmode_enabled") and chat_obj_info.slowmode_enabled else None
     restricted = "<b>Yes</b>" if hasattr(chat_obj_info,
-                                         "restricted") and chat_obj_info.restricted else "No"
+                                         "restricted") and chat_obj_info.restricted else "Tidak"
     verified = "<b>Yes</b>" if hasattr(chat_obj_info,
-                                       "verified") and chat_obj_info.verified else "No"
+                                       "verified") and chat_obj_info.verified else "Tidak"
     username = "@{}".format(username) if username else None
     creator_username = "@{}".format(
         creator_username) if creator_username else None
@@ -320,52 +320,52 @@ async def fetch_info(chat, event):
         for bot in bots_list:
             bots += 1
 
-    caption = "<b>CHAT INFO:</b>\n"
+    caption = "<b>INFORMASI OBROLAN:</b>\n"
     caption += f"ID: <code>{chat_obj_info.id}</code>\n"
     if chat_title is not None:
-        caption += f"{chat_type} name: {chat_title}\n"
+        caption += f"{chat_type} Nama: {chat_title}\n"
     if former_title is not None:  # Meant is the very first title
-        caption += f"Former name: {former_title}\n"
+        caption += f"Nama Lama: {former_title}\n"
     if username is not None:
-        caption += f"{chat_type} type: Public\n"
+        caption += f"{chat_type} Type: Publik\n"
         caption += f"Link: {username}\n"
     else:
-        caption += f"{chat_type} type: Private\n"
+        caption += f"{chat_type} type: Privasi\n"
     if creator_username is not None:
-        caption += f"Creator: {creator_username}\n"
+        caption += f"Pembuat: {creator_username}\n"
     elif creator_valid:
-        caption += f"Creator: <a href=\"tg://user?id={creator_id}\">{creator_firstname}</a>\n"
+        caption += f"Pembuat: <a href=\"tg://user?id={creator_id}\">{creator_firstname}</a>\n"
     if created is not None:
-        caption += f"Created: <code>{created.date().strftime('%b %d, %Y')} - {created.time()}</code>\n"
+        caption += f"Informasi Pembuatan: <code>{created.date().strftime('%b %d, %Y')} - {created.time()}</code>\n"
     else:
-        caption += f"Created: <code>{chat_obj_info.date.date().strftime('%b %d, %Y')} - {chat_obj_info.date.time()}</code> {warn_emoji}\n"
+        caption += f"Informasi Pembuatan: <code>{chat_obj_info.date.date().strftime('%b %d, %Y')} - {chat_obj_info.date.time()}</code> {warn_emoji}\n"
     caption += f"Data Centre ID: {dc_id}\n"
     if exp_count is not None:
         chat_level = int((1 + sqrt(1 + 7 * exp_count / 14)) / 2)
-        caption += f"{chat_type} level: <code>{chat_level}</code>\n"
+        caption += f"{chat_type} Level: <code>{chat_level}</code>\n"
     if messages_viewable is not None:
-        caption += f"Viewable messages: <code>{messages_viewable}</code>\n"
+        caption += f"Pesan Yang Dapat Dilihat: <code>{messages_viewable}</code>\n"
     if messages_sent:
-        caption += f"Messages sent: <code>{messages_sent}</code>\n"
+        caption += f"Pesan Dikirim: <code>{messages_sent}</code>\n"
     elif messages_sent_alt:
-        caption += f"Messages sent: <code>{messages_sent_alt}</code> {warn_emoji}\n"
+        caption += f"Pesan Dikirim: <code>{messages_sent_alt}</code> {warn_emoji}\n"
     if members is not None:
-        caption += f"Members: <code>{members}</code>\n"
+        caption += f"Member: <code>{members}</code>\n"
     if admins is not None:
-        caption += f"Administrators: <code>{admins}</code>\n"
+        caption += f"Admin: <code>{admins}</code>\n"
     if bots_list:
-        caption += f"Bots: <code>{bots}</code>\n"
+        caption += f"Bot: <code>{bots}</code>\n"
     if members_online:
-        caption += f"Currently online: <code>{members_online}</code>\n"
+        caption += f"Sedang Online: <code>{members_online}</code>\n"
     if restrcited_users is not None:
-        caption += f"Restricted users: <code>{restrcited_users}</code>\n"
+        caption += f"Pengguna Yang Dibatasi: <code>{restrcited_users}</code>\n"
     if banned_users is not None:
-        caption += f"Banned users: <code>{banned_users}</code>\n"
+        caption += f"Banned Pengguna: <code>{banned_users}</code>\n"
     if group_stickers is not None:
-        caption += f"{chat_type} stickers: <a href=\"t.me/addstickers/{chat.full_chat.stickerset.short_name}\">{group_stickers}</a>\n"
+        caption += f"{chat_type} Sticker: <a href=\"t.me/addstickers/{chat.full_chat.stickerset.short_name}\">{group_stickers}</a>\n"
     caption += "\n"
     if not broadcast:
-        caption += f"Slow mode: {slowmode}"
+        caption += f"Mode Slow: {slowmode}"
         if hasattr(
                 chat_obj_info,
                 "slowmode_enabled") and chat_obj_info.slowmode_enabled:
@@ -373,21 +373,21 @@ async def fetch_info(chat, event):
         else:
             caption += "\n\n"
     if not broadcast:
-        caption += f"Supergroup: {supergroup}\n\n"
-    if hasattr(chat_obj_info, "restricted"):
-        caption += f"Restricted: {restricted}\n"
+        caption += f"Supergrup: {supergroup}\n\n"
+    if hasattr(chat_obj_info, "Terbatas"):
+        caption += f"Terbatas: {restricted}\n"
         if chat_obj_info.restricted:
             caption += f"> Platform: {chat_obj_info.restriction_reason[0].platform}\n"
-            caption += f"> Reason: {chat_obj_info.restriction_reason[0].reason}\n"
-            caption += f"> Text: {chat_obj_info.restriction_reason[0].text}\n\n"
+            caption += f"> Alasan: {chat_obj_info.restriction_reason[0].reason}\n"
+            caption += f"> Teks: {chat_obj_info.restriction_reason[0].text}\n\n"
         else:
             caption += "\n"
     if hasattr(chat_obj_info, "scam") and chat_obj_info.scam:
         caption += "Scam: <b>Yes</b>\n\n"
     if hasattr(chat_obj_info, "verified"):
-        caption += f"Verified by Telegram: {verified}\n\n"
+        caption += f"Di Verifikasi Oleh Telegram: {verified}\n\n"
     if description:
-        caption += f"Description: \n<code>{description}</code>\n"
+        caption += f"Deskripsi: \n<code>{description}</code>\n"
     return caption
 
 
@@ -397,7 +397,7 @@ async def _(event):
         return
     to_add_users = event.pattern_match.group(1)
     if event.is_private:
-        await event.edit("`.invite` users to a chat, not to a Private Message")
+        await event.edit("`.invite` Pengguna Ke Obrolan, Tidak Ke Pesan Pribadi")
     else:
         if not event.is_channel and event.is_group:
             # https://lonamiwebs.github.io/Telethon/methods/messages/add_chat_user.html
@@ -410,7 +410,7 @@ async def _(event):
                     ))
                 except Exception as e:
                     await event.reply(str(e))
-            await event.edit("Invited Successfully")
+            await event.edit("`Berhasil Menambahkan Pengguna Ke Obrolan`")
         else:
             # https://lonamiwebs.github.io/Telethon/methods/channels/invite_to_channel.html
             for user_id in to_add_users.split(" "):
@@ -421,29 +421,29 @@ async def _(event):
                     ))
                 except Exception as e:
                     await event.reply(str(e))
-            await event.edit("Invited Successfully")
+            await event.edit("`Berhasil Menambahkan Pengguna Ke Obrolan`")
 
 CMD_HELP.update({
     "chat":
     "`.getid`\
-\nUsage: Get ID of any Telegram media, or any user\
+\nUsage: Dapatkan ID dari media Telegram mana pun, atau pengguna mana pun\
 \n\n`.getbot`\
-\nUsage: Get the Bots in any chat.\
+\nUsage: Dapatkan Bot dalam obrolan apa pun.\
 \n\n`.logit`\
-\nUsage: Forwards the message you've replied to in your bot logs group.\
+\nUsage: Meneruskan pesan yang telah Anda balas di grup log bot Anda.\
 \n\n`.kickme`\
-\nUsage: Leave from a targeted group.\
+\nUsagw: Keluar dari grup.\
 \n\n`.unmutechat`\
-\nUsage: Unmutes a muted chat.\
+\nUsage: Membuka obrolan yang dibisukan.\
 \n\n`.mutechat`\
-\nUsage: Allows you to mute any chat.\
-\n\n`.link` <username/userid> : <optional text> (or) reply to someone's message with .link <optional text>\
-\nUsage: Generate a permanent link to the user's profile with optional custom text.\
-\n\n`.regexninja` on/off\
-\nUsage: Globally enable/disables the regex ninja module.\
-\nRegex Ninja module helps to delete the regex bot's triggering messages.\
-\n\n`.chatinfo [optional: <reply/tag/chat id/invite link>]`\
-\nUsage: Gets info of a chat. Some info might be limited due to missing permissions..\
-\n\n`.invite`\
-\nUsage: Invites users to a chat, not to a private message."
+\nUsage: Memungkinkan Anda membisukan obrolan apa pun.\
+\n\n`.link` <username/userid>: <opsional teks> (atau) balas pesan seseorang dengan .link <teks opsional>\
+\nUsage: Buat tautan permanen ke profil pengguna dengan teks ubahsuaian opsional.\
+\n\n`.regexninja` hidup/mati\
+\nUsage: Mengaktifkan/menonaktifkan modul ninja regex secara global.\
+\nModul Regex Ninja membantu menghapus pesan pemicu bot regex.\
+\n\n`.chatinfo [opsional: <reply/tag/chat id/invite link>]`\
+\nUsage: Mendapatkan info obrolan. Beberapa info mungkin dibatasi karena izin yang hilang..\
+\n\n`.undang` \
+\nUsage: Mengundang pengguna ke obrolan, bukan ke pesan pribadi. "
 })
