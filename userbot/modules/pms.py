@@ -270,7 +270,7 @@ async def disapprovepm(disapprvpm):
         await disapprvpm.client.send_message(
             BOTLOG_CHATID,
             f"[{name0}](tg://user?id={disapprvpm.chat_id})"
-            "`Berhasil Ditolak` !",
+            " `Berhasil Ditolak` !",
         )
 
 
@@ -367,7 +367,7 @@ async def add_pmsg(cust_msg):
     if conf.lower() == "reset":
         if custom_message is not None:
             sql.delgvar("unapproved_msg")
-            await cust_msg.edit("`Telah Menghapus Pesan Custom PM Anda Ke Default`")
+            await cust_msg.edit("`Anda Telah Menghapus Pesan Custom PM Ke Default`")
         else:
             await cust_msg.edit("`Pesan PM Anda Sudah Default Sejak Awal`")
 
