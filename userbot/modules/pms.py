@@ -103,7 +103,8 @@ async def permitpm(event):
                             BOTLOG_CHATID,
                             "Terjadi Masalah Saat Menghitung Pesan Pribadi, Mohon Restart Bot!",
                         )
-                    return LOGS.info("Penghitungan Pesan Pribadi Terjadi Kesalahan")
+                    return LOGS.info(
+                        "Penghitungan Pesan Pribadi Terjadi Kesalahan")
 
                 await event.client(BlockRequest(event.chat_id))
                 await event.client(ReportSpamRequest(peer=event.chat_id))
@@ -404,6 +405,4 @@ CMD_HELP.update(
         "\nUsage: Menghapus pesan PM ke default"
         "\n\n*Pesan Pribadi yang belum diterima saat ini tidak dapat disetel"
         "\nke teks format kaya bold, underline, link, dll."
-        "\nPesan akan terkirim normal saja"
-    }
-)
+        "\nPesan akan terkirim normal saja"})
