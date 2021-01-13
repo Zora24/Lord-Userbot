@@ -28,18 +28,18 @@ async def fastpurger(purg):
                 await purg.client.delete_messages(chat, msgs)
                 msgs = []
     else:
-        return await purg.edit("`Balas di Pesan Goblokk!!.`")
+        return await purg.edit("`Mohon Balas Ke Pesan Lord ツ `")
 
     if msgs:
         await purg.client.delete_messages(chat, msgs)
     done = await purg.client.send_message(
-        purg.chat_id, f"`Berhasil Menghapus Kenangan!`\
-        \nSebanyak: {str(count)} Kenangan😭")
+        purg.chat_id, f"`Berhasil Menghapus Pesan Lord`\
+        \nJumlah Pesan Yang Dihapus {str(count)} Pesan")
     """
     if BOTLOG:
         await purg.client.send_message(
             BOTLOG_CHATID,
-            "Kenangan sebanyak: " + str(count) + " berhasil di bersihkan.")
+            "Berhasil Menghapus Pesan Lord " + str(count) + " Pesan Berhasil  Dibersihkan.")
     """
     await sleep(2)
     await done.delete()
@@ -59,13 +59,13 @@ async def purgeme(delme):
 
     smsg = await delme.client.send_message(
         delme.chat_id,
-        "`Menghapus Kenangan!` Sebanyak " + str(count) + " Sukses.",
+        "`Berhasil Menghapus Pesan Lord,` " + str(count) + " `Pesan Telah Dihapus ツ`",
     )
     """
     if BOTLOG:
         await delme.client.send_message(
             BOTLOG_CHATID,
-            "Berhasil menghapus " + str(count) + " kenangan.....")
+            "`Lord Telah Menghapus Pesan,` " + str(count) + " Pesan Telah Dihapus ツ`")
     """
     await sleep(2)
     i = 1
@@ -82,14 +82,14 @@ async def delete_it(delme):
             """
             if BOTLOG:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "Deletion of message was successful")
+                    BOTLOG_CHATID, "`Lord Berhasil Menghapus Pesan ツ`")
             """
         except rpcbaseerrors.BadRequestError:
-            await delme.edit("Well, I can't delete a message")
+            await delme.edit("`Tidak Bisa Menghapus Pesan`")
             """
             if BOTLOG:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "Well, I can't delete a message")
+                    BOTLOG_CHATID, "`Tidak Bisa Menghapus Pesan`")
             """
 
 
@@ -109,7 +109,7 @@ async def editer(edit):
     """
     if BOTLOG:
         await edit.client.send_message(BOTLOG_CHATID,
-                                       "Edit query was executed successfully")
+                                       "`Berhasil Mengedit Pesan ツ`")
    """
 
 
@@ -125,19 +125,19 @@ async def selfdestruct(destroy):
     """
     if BOTLOG:
         await destroy.client.send_message(BOTLOG_CHATID,
-                                          "sd query done successfully")
+                                          "`SD Berhasil Dilakukan ツ`")
     """
 
 
 CMD_HELP.update({"purge": ">`.purge`"
-                 "\nUsage: Purges all messages starting from the reply.",
-                 "purgeme": ">`.purgeme <x>`"
-                 "\nUsage: Deletes x amount of your latest messages.",
+                 "\nUsage: Membersihkan semua pesan mulai dari pesam yang dibalas.",
+                 "purgeme": ">`.purgeme <angka>`"
+                 "\nUsage: Menghapus jumlah pesan anda, yang mau anda hapus.",
                  "del": ">`.del`"
-                 "\nUsage: Deletes the message you replied to.",
-                 "edit": ">`.edit <newmessage>`"
-                 "\nUsage: Replace your last message with <newmessage>.",
-                 "sd": ">`.sd <x> <message>`"
-                 "\nUsage: Creates a message that selfdestructs in x seconds."
-                 "\nKeep the seconds under 100 since it puts your bot to sleep.",
+                 "\nUsage: Menghapus pesan, balas ke pesan.",
+                 "edit": ">`.edit <pesan baru>`"
+                 "\nUsage: Ganti pesan terakhir Anda dengan <pesan baru>.",
+                 "sd": ">`.sd <x> <pesan>`"
+                 "\nUsage: Membuat pesan yang hancur sendiri dalam x detik."
+                 "\nJaga agar detik di bawah 100 karena bot Anda akan tidur.",
                  })
