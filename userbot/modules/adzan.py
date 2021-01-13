@@ -13,7 +13,7 @@ async def get_adzan(adzan):
     if not adzan.pattern_match.group(1):
         LOCATION = PLACE
         if not LOCATION:
-            await adzan.edit("Please specify a city or a state.")
+            await adzan.edit("`Harap Menentukan Kota Atau Negara.`")
             return
     else:
         LOCATION = adzan.pattern_match.group(1)
@@ -22,21 +22,21 @@ async def get_adzan(adzan):
     url = f"https://api.pray.zone/v2/times/today.json?city={LOCATION}"
     request = requests.get(url)
     if request.status_code == 500:
-        return await adzan.edit(f"Couldn't find city `{LOCATION}`")
+        return await adzan.edit(f"Tidak Dapat Menemukan Kota `{LOCATION}`")
 
     parsed = json.loads(request.text)
 
-    city = parsed["results"]["location"]["city"]
-    country = parsed["results"]["location"]["country"]
-    timezone = parsed["results"]["location"]["timezone"]
-    date = parsed["results"]["datetime"][0]["date"]["gregorian"]
+    city = parsed["Hasil"]["Lokasi"]["Kota"]
+    country = parsed["Has"]["Lokasi"]["Negara"]
+    timezone = parsed["Hasil"]["Lokasi"]["Zona Waktu"]
+    date = parsed["Hasil"]["Tanggal Waktu"][0]["Tanggal"]["gregorian"]
 
-    imsak = parsed["results"]["datetime"][0]["times"]["Imsak"]
-    subuh = parsed["results"]["datetime"][0]["times"]["Fajr"]
-    zuhur = parsed["results"]["datetime"][0]["times"]["Dhuhr"]
-    ashar = parsed["results"]["datetime"][0]["times"]["Asr"]
-    maghrib = parsed["results"]["datetime"][0]["times"]["Maghrib"]
-    isya = parsed["results"]["datetime"][0]["times"]["Isha"]
+    imsak = parsed["Hasil"]["Tanggal Waktu"][0]["Waktu"]["Imsak"]
+    subuh = parsed["Hasil"]["Tanggal Waktu"][0]["Waktu"]["Subuh"]
+    zuhur = parsed["Hasil"]["Tanggal Waktu"][0]["Waktu"]["Zuhur"]
+    ashar = parsed["Hasil"]["Tanggal Waktu"][0]["Waktu"]["Ashar"]
+    maghrib = parsed["Hasil"]["Tanggal Waktu"][0]["Waktu"]["Maghrib"]
+    isya = parsed["Hasil"]["Tanggal Waktu"][0]["Waktu"]["Isha"]
 
     result = (
         f"**Jadwal Sholat**:\n"
@@ -53,5 +53,5 @@ async def get_adzan(adzan):
     await adzan.edit(result)
 
 
-CMD_HELP.update({"adzan": "\n\n`>.adzan <city>`"
-                 "\nUsage: Gets the prayer time for moslem."})
+CMD_HELP.update({"adzan": "\n\n`>.adzan <kota>`"
+                 "\nUsage: Memberikan Informasi Waktu Sholat."})
