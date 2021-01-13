@@ -440,7 +440,7 @@ CMD_HELP.update({
 \nUsage: Memungkinkan Anda membisukan obrolan apa pun.\
 \n\n`.link` <username/userid>: <opsional teks> (atau) balas pesan seseorang dengan .link <teks opsional>\
 \nUsage: Buat tautan permanen ke profil pengguna dengan teks ubahsuaian opsional.\
-\n\n`.regexninja` hidup/mati\
+\n\n`.regexninja` enable/disabled\
 \nUsage: Mengaktifkan/menonaktifkan modul ninja regex secara global.\
 \nModul Regex Ninja membantu menghapus pesan pemicu bot regex.\
 \n\n`.chatinfo [opsional: <reply/tag/chat id/invite link>]`\
