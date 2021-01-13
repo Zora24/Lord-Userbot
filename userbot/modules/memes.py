@@ -1301,6 +1301,17 @@ async def earth(event):
     except BaseException:
         return
 
+@register(outgoing=True, pattern="^.monyet$")
+async def earth(event):
+    deq = deque(list("🙈🙉🙈🙉🙈🙉🙈🙉"))
+    try:
+        for x in range(32):
+            await sleep(0.1)
+            await event.edit("".join(deq))
+            deq.rotate(1)
+    except BaseException:
+        return
+
 
 @register(outgoing=True, pattern="^.emo$")
 async def earth(event):
@@ -1364,7 +1375,7 @@ async def claptext(memereview):
     elif textx:
         message = textx.text
     else:
-        return await memereview.edit("`Hah, I don't clap pointlessly!`")
+        return await memereview.edit("`Lord, Mohon Balas Ke Pesan Orang Yang Ingin Anda Puji ツ`")
     reply_text = "👏 "
     reply_text += message.replace(" ", " 👏 ")
     reply_text += " 👏"
@@ -1799,6 +1810,6 @@ CMD_HELP.update({
     r"\ n> .nou; .bot; .gey; .tf; .paw; .tai; .nih;"
     r"\ n> .fag; .gtfo; .stfu; .lol; .lool; .fail; .leave"
     r"\ n> .iwi; .sayhi; .koc; .gas; .earth; .love; .rain"
-    r"\ n> .penis; .emo; .fuck; .ok; .skull; .teksbiru"
+    r"\ n> .penis; .emo; .fuck; .ok; .skull; .teksbiru; .monyet"
     "\n\n\nSemoga Harimu Menyenangkan -Alvin."
 })
