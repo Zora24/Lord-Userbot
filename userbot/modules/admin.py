@@ -500,9 +500,9 @@ async def gspider(gspdr):
         await gspdr.edit("`Error! Pengguna Sudah Dibisukan.`")
     else:
         if reason:
-            await gspdr.edit(f"`Dibisukan Global!`\nAlasan: {reason}")
+            await gspdr.edit(f"`Dibisukan Secara Global!`\nAlasan: {reason}")
         else:
-            await gspdr.edit("`Dibisukan Global!`")
+            await gspdr.edit("`Dibisukan Secara Global!`")
 
         if BOTLOG:
             await gspdr.client.send_message(
