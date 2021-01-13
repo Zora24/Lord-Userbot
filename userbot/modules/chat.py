@@ -100,7 +100,7 @@ async def log(log_text):
             return
         await log_text.edit("`Logged Berhasil!`")
     else:
-       await log_text.edit("`Fitur Ini Mengharuskan Logging Diaktifkan!`")
+        await log_text.edit("`Fitur Ini Mengharuskan Logging Diaktifkan!`")
     await sleep(2)
     await log_text.delete()
 
@@ -294,8 +294,9 @@ async def fetch_info(chat, event):
     bots = 0
     supergroup = "<b>Yes</b>" if hasattr(chat_obj_info,
                                          "megagroup") and chat_obj_info.megagroup else "Tidak"
-    slowmode = "<b>Yes</b>" if hasattr(chat_obj_info,
-                                       "slowmode_enabled") and chat_obj_info.slowmode_enabled else "Tidak"
+    slowmode = "<b>Yes</b>" if hasattr(
+        chat_obj_info,
+        "slowmode_enabled") and chat_obj_info.slowmode_enabled else "Tidak"
     slowmode_time = chat.full_chat.slowmode_seconds if hasattr(
         chat_obj_info, "slowmode_enabled") and chat_obj_info.slowmode_enabled else None
     restricted = "<b>Yes</b>" if hasattr(chat_obj_info,
