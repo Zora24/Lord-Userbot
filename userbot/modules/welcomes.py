@@ -53,7 +53,7 @@ async def welcome_to_chat(event):
             else:
                 pass
 
-            title = chat.title if chat.title else "this chat"
+            title = chat.title if chat.title else "Grup Ini"
             participants = await event.client.get_participants(chat)
             count = len(participants)
             mention = "[{}](tg://user?id={})".format(a_user.first_name,
@@ -106,16 +106,16 @@ async def save_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import add_welcome_setting
     except AttributeError:
-        return await event.edit("`Running on Non-SQL mode!`")
+        return await event.edit("`Berjalan Pada Mode Non-SQL!`")
     msg = await event.get_reply_message()
     string = event.pattern_match.group(1)
     msg_id = None
     if msg and msg.media and not string:
         if BOTLOG_CHATID:
             await event.client.send_message(
-                BOTLOG_CHATID, f"#WELCOME_NOTE \nCHAT ID: {event.chat_id}"
-                "\nThe following message is saved as the new welcome note "
-                "for the chat, please do NOT delete it !!"
+                BOTLOG_CHATID, f"#WELCOME \nID GRUP: {event.chat_id}"
+                "\nLord Memasang Pesan Perintah Welcome Digrup, Ini Adalah Catatan Pesan Welcome "
+                "Mohon Jangan Dihapus Lord!"
             )
             msg_o = await event.client.forward_messages(
                 entity=BOTLOG_CHATID,
@@ -125,16 +125,16 @@ async def save_welcome(event):
             msg_id = msg_o.id
         else:
             return await event.edit(
-                "`Saving media as part of the welcome note requires the BOTLOG_CHATID to be set.`"
+                "`Untuk membuat media sebagai pesan Welcome, BOTLOG_CHATID Harus disetel.`"
             )
     elif event.reply_to_msg_id and not string:
         rep_msg = await event.get_reply_message()
         string = rep_msg.text
-    success = "`Welcome Berhasil Di {} Di Sini....`"
+    success = "`Berhasil Menyimpan Pesan Welcome {} ツ`"
     if add_welcome_setting(event.chat_id, 0, string, msg_id) is True:
-        await event.edit(success.format('SIMPAN'))
+        await event.edit(success.format('Disini'))
     else:
-        await event.edit(success.format('updated'))
+        await event.edit(success.format('Disini'))
 
 
 @register(outgoing=True, pattern="^.checkwelcome$")
@@ -145,16 +145,16 @@ async def show_welcome(event):
         return await event.edit("`Running on Non-SQL mode!`")
     cws = get_current_welcome_settings(event.chat_id)
     if not cws:
-        return await event.edit("`Tidak Ada Welcome Yg Di Simpan Di sini..`")
+        return await event.edit("`Disini Tidak Ada Pesan Welcome Yang Anda Simpan Lord ツ`")
     elif cws and cws.f_mesg_id:
         msg_o = await event.client.get_messages(entity=BOTLOG_CHATID,
                                                 ids=int(cws.f_mesg_id))
         await event.edit(
-            "`Hmm, Sepertinya Anda Telah Membuat Welcome Di Sini.`")
+            "`Anda Telah Membuat Pesan Welcome Disini ツ`")
         await event.reply(msg_o.message, file=msg_o.media)
     elif cws and cws.reply:
         await event.edit(
-            "`Hmm, Sepertinya Anda Telah Membuat Welcome Di Sini.`")
+            "`Anda Telah Membuat Pesan Welcome Disini ツ`")
         await event.reply(cws.reply)
 
 
@@ -165,21 +165,21 @@ async def del_welcome(event):
     except AttributeError:
         return await event.edit("`Running on Non-SQL mode!`")
     if rm_welcome_setting(event.chat_id) is True:
-        await event.edit("`Welcome Berhasil Di Hapus Dari Group Ini.`")
+        await event.edit("`Menghapus Pesan Welcome Berhasil Dilakukan ツ`")
     else:
-        await event.edit("`Tidak Ada Welcome Disini, Goblok!! ?`")
+        await event.edit("`Anda Tidak Menyimpan Pesan Welcome Apapun Disini Lord ツ`")
 
 
 CMD_HELP.update({
     "welcome":
-    ">`.setwelcome <welcome message> or reply to a message with .setwelcome`"
-    "\nUsage: Saves the message as a welcome note in the chat."
-    "\n\nAvailable variables for formatting welcome messages :"
+    ">`.setwelcome` <pesan welcome> atau balas ke pesan ketik `.setwelcome`"
+    "\nUsage: Menyimpan pesan welcome digrup."
+    "\n\nFormat Variabel yang bisa digunakan dipesan welcome:"
     "\n`{mention}, {title}, {count}, {first}, {last}, {fullname}, "
     "{userid}, {username}, {my_first}, {my_fullname}, {my_last}, "
     "{my_mention}, {my_username}`"
     "\n\n>`.checkwelcome`"
-    "\nUsage: Check whether you have a welcome note in the chat."
+    "\nUsage: Check pesan welcome yang anda simpan."
     "\n\n>`.rmwelcome`"
-    "\nUsage: Deletes the welcome note for the current chat."
+    "\nUsage: Menghapus pesan welcome yang anda simpan."
 })
