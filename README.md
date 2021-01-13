@@ -40,7 +40,7 @@ wget https://raw.githubusercontent.com/Zora24/Lord-Userbot/Lord-Userbot/Getstrin
 
   > Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy :)
 ```
-Atau Bisa Gabung Grup Support Repo Lord Userbot [TEKAN DISINI](https://t.me/LordUserbot_Group)
+Atau Bisa Gabung Ke Grup Lord Userbot -> [TEKAN DISINI](https://t.me/LordUserbot_Group)
 ## <p align="center">DEPLOY LORD-USERBOT</p>
 
 
