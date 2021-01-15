@@ -18,12 +18,17 @@
 Repo Yang Dibuat [Alvin](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github 
 
 
-### Dapatkan String Sesson Di Termux Dengan Cara Copy Paste Teks Dibawah Ini Ke Termux
+### Dapatkan String Sesson Di Termux Dengan Cara Copy Paste 2 Teks Dibawah Ini Ke Termux
+
 
 ```
-wget https://raw.githubusercontent.com/Zora24/Lord-Userbot/Lord-Userbot/Getstring.sh && bash Getstring.sh
+1. pkg update -y && pkg upgrade && pkg install wget python
+
+2. wget https://raw.githubusercontent.com/Zora24/Lord-Userbot/Lord-Userbot/Getstring.sh && bash Getstring.sh
 ```
 <br>
+
+Kalo Tidak Tau Caranya Pergi Ke Grup Support Lord-Userbot [TEKAN DISINI](https://t.me/LordUserbot_Group)
 
 ## Bagaimana Cara Deploy?
 
