@@ -1,5 +1,5 @@
 # We're using Ubuntu 20.10
-FROM liualvinas24/docker:latest
+FROM xnewbie/docker:goovy
 
 #
 # Clone repo and prepare working directory
