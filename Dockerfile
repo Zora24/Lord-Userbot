@@ -6,6 +6,7 @@ FROM liualvinas24/docker:latest
 #
 RUN git clone -b Lord-Userbot https://github.com/Zora24/Lord-Userbot /root/userbot
 RUN mkdir /root/userbot/.bin
+RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
 
 #Install python requirements
