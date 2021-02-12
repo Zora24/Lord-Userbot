@@ -29,9 +29,9 @@ Click on generate new token
 Enable this permissions:https://telegra.ph/file/0262c512e2b82fcd0260a.jpg
 
 # Custom (forked) repo URL for updater. this vars are important
-UPSTREAM_REPO_URL = https://github.com/Zora24/Lord-Userbot.git
-REPO_URL = https://github.com/Zora24/Lord-Userbot.git
-REPO_LINK = https://github.com/Zora24/Lord-Userbot.git
+UPSTREAM_REPO_URL = https://github.com/mkaraniya/OpenUserBot.git
+REPO_URL = https://github.com/mkaraniya/OpenUserBot.git
+REPO_LINK = https://github.com/mkaraniya/OpenUserBot.git
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = False
