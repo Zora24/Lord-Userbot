@@ -1555,13 +1555,13 @@ async def gtfo(e):
 @register(outgoing=True, pattern=r"^\.nih$")
 async def nih(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("`\n(\_/)`"
+        await e.edit("`\n(\\_/)`"
                      "`\n(●_●)`"
                      "`\n />💖 *Ini Buat Kamu`"
                      "`\n                    `"
                      r"`\n(\_/)`"
                      "`\n(●_●)`"
-                     "`\n💖<\  *Tapi Boong`")
+                     "`\n💖<\\  *Tapi Boong`")
 
 
 @register(outgoing=True, pattern=r"^\.fag$")
@@ -1579,7 +1579,7 @@ async def gtfo(e):
 @register(outgoing=True, pattern=r"^\.tai$")
 async def taco(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("\n{\__/}"
+        await e.edit("\n{\\__/}"
                      "\n(●_●)"
                      "\n( >🌮 Mau Tai Ku?")
 
