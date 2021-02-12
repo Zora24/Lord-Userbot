@@ -169,7 +169,7 @@ async def carbon_api(e):
 @register(outgoing=True, pattern="^.img (.*)")
 async def img_sampler(event):
     """ For .img command, search and return images matching the query. """
-    await event.edit("Mohon Tunggu Tuanku Aku Sedang Mencari Gambar...")
+    await event.edit("`Mohon Menunggu Lord, Sedang Mencari Gambar Yang Anda Cari...`")
     query = event.pattern_match.group(1)
     lim = findall(r"lim=\d+", query)
     try:
@@ -1328,7 +1328,7 @@ async def capture(url):
 CMD_HELP.update(
     {
         "image_search": ">`.img <search_query>`\
-    \nUsage: Does an image search on Google and shows 5 images.",
+    \nUsage: Does an image search on Google and shows 15 images.",
         "currency": "`.currency` <amount> <from> <to>\
     \nUsage: Converts various currencies for you.",
         "carbon": "`.carbon` <text or reply>\
