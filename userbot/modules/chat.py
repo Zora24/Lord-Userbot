@@ -58,7 +58,7 @@ async def permalink(mention):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "**Bot Di Channel Ini**: \n"
+    mentions = "**Bot Di Channel Ini:** \n"
     input_str = event.pattern_match.group(1)
     to_write_chat = await event.get_input_chat()
     chat = None
@@ -100,7 +100,7 @@ async def log(log_text):
             return
         await log_text.edit("`Logged Berhasil!`")
     else:
-        await log_text.edit("`Fitur Ini Mengharuskan Logging Diaktifkan!`")
+        await log_text.edit("`Fitur Ini Mengharuskan Loging Diaktifkan!`")
     await sleep(2)
     await log_text.delete()
 
@@ -221,10 +221,10 @@ async def get_chatinfo(event):
         try:
             chat_info = await event.client(GetFullChannelRequest(chat))
         except ChannelInvalidError:
-            await event.edit("`Channel/Grup Tidak Valid`")
+            await event.edit("`Grup/Channel Tidak Valid`")
             return None
         except ChannelPrivateError:
-            await event.edit("`Ini Adalah Channel/Grup Privasi Atau Lord Dibanned Dari Sana`")
+            await event.edit("`Ini Adalah Grup/Channel Privasi Atau Lord Dibanned Dari Sana`")
             return None
         except ChannelPublicGroupNaError:
             await event.edit("`Channel Atau Supergrup Tidak Ditemukan`")
@@ -445,6 +445,6 @@ CMD_HELP.update({
 \nModul Regex Ninja membantu menghapus pesan pemicu bot regex.\
 \n\n`.chatinfo [opsional: <reply/tag/chat id/invite link>]`\
 \nUsage: Mendapatkan info obrolan. Beberapa info mungkin dibatasi karena izin yang hilang..\
-\n\n`.undang` \
-\nUsage: Mengundang pengguna ke obrolan, bukan ke pesan pribadi. "
+\n\n`.invite` \
+\nUsage: Menambahkan pengguna ke obrolan, bukan ke pesan pribadi. "
 })

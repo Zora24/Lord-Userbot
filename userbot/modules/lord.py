@@ -18,13 +18,12 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.lord(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    sleep(1)
     await typew.edit("`HALLO LORD AKU ADALAH BOT, DAN AKU AKAN SELALU MEMBANTU MU UNTUK BERSENANG-SENANG DI DUNIA TELEGRAM`")
     sleep(2)
     await typew.edit("`\n█████████`"
                      "`\n█▄█████▄█`"
                      "`\n█▼▼▼▼▼`"
-                     "`\n█    AKU ADALAH LORD`"
+                     "`\n█    WOAAARGHH LOOORD`"
                      "`\n█▲▲▲▲▲`"
                      "`\n█████████`"
                      "`\n ██   ██`")
@@ -34,7 +33,7 @@ async def typewriter(typew):
                      "`\n┈┈╰┳┊╭━━━┳╯┈┈┈┈\n┈┈┈┃┊┃╰━━┫┈Yo Bro`"
                      "\n┈┈┈┈┈┈┏━┓┈┈┈┈┈┈")
     sleep(1)
-    await typew.edit("\n┈┈┈╱▔▔▔▔╲┈╭━━━━━\n┈┈▕▂▂▂▂▂▂▏┃LORD┊👑`"
+    await typew.edit("\n┈┈┈╱▔▔▔▔╲┈╭━━━━━\n┈┈▕▂▂▂▂▂▂▏┃LUV U┊👑`"
                      "`\n┈┈▕▔▇▔▔┳▔▏╰┳╮LORD┊\n┈┈▕╭━╰╯━╮▏━╯╰━━━\n╱▔▔▏▅▅▅▅▕▔▔╲┈┈┈┈`"
                      "`\n▏┈┈╲▂▂▂▂╱┈┈┈▏┈┈┈`")
     sleep(2)
@@ -49,22 +48,63 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("` \n   ╲╲╭━━━━╮ \n╭╮┃▆┈┈▆┃╭╮ \n┃╰┫★★★┣╯┃ \n╰━┫★★★┣━╯`"
                      "`\n╲╲┃┈┈┈┈┃  \n╲╲┃┈┏┓┈┃ `")
-    sleep(3)
+    sleep(1)
     await typew.edit("`\n█████████`"
                      "`\n█▄█████▄█`"
                      "`\n█▼▼▼▼▼`"
-                     "`\n█    AKU ADALAH LORD`"
+                     "`\n█    WOAAARGHHHH`"
                      "`\n█▲▲▲▲▲`"
                      "`\n█████████`"
                      "`\n ██   ██`")
+    sleep(2)
+    await typew.edit("`\n┻┳|―-∩`"
+                     "`\n┳┻|     ヽ`"
+                     "`\n┻┳|    ● |`"
+                     "`\n┳┻|▼) _ノ`"
+                     "`\n┻┳|￣  )`"
+                     "`\n┳ﾐ(￣ ／`"
+                     "`\n┻┳T￣|`"
+                     "\n**Aku Nyimak Ajalah**")
+
+
+@register(outgoing=True, pattern='^.punten(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("`\n┻┳|―-∩`"
+                     "`\n┳┻|     ヽ`"
+                     "`\n┻┳|    ● |`"
+                     "`\n┳┻|▼) _ノ`"
+                     "`\n┻┳|￣  )`"
+                     "`\n┳ﾐ(￣ ／`"
+                     "`\n┻┳T￣|`"
+                     "\n**Punten**")
+
+
+@register(outgoing=True, pattern='^.pantau(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("`\n┻┳|―-∩`"
+                     "`\n┳┻|     ヽ`"
+                     "`\n┻┳|    ● |`"
+                     "`\n┳┻|▼) _ノ`"
+                     "`\n┻┳|￣  )`"
+                     "`\n┳ﾐ(￣ ／`"
+                     "`\n┻┳T￣|`"
+                     "\n**Masih Ku Pantau**")
 
 
 # Create by myself @localheart
 
 CMD_HELP.update({
     "lord":
-    "`.lord`\
-\nUsage: Bot\
-\n\n`.sadboy`\
-\nUsage: hiks"
+    "`.lord` ; `.lordalive` ; `.lordping`\
+    \nUsage: bot.\
+    \n\n`.sadboy`\
+    \nUsage: hiks\
+    \n\n`.punten` ; `.pantau`\
+    \nUsage: coba aja.\
+    \n\n`kosong`\
+    \nUsage: tunggu update selanjutnya.\
+    \n\n`kosong`\
+    \nUsage: tunggu update selanjutnya."
 })

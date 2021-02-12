@@ -120,14 +120,14 @@ async def fetch_info(replied_user, event):
                                                       str(user_id) + ".jpg",
                                                       download_big=True)
     first_name = first_name.replace(
-        "\u2060", "") if first_name else ("This User has no First Name")
+        "\u2060", "") if first_name else ("Tidak Ada Nama Depan")
     last_name = last_name.replace(
-        "\u2060", "") if last_name else ("This User has no Last Name")
+        "\u2060", "") if last_name else ("Tidak Ada Nama Belakang")
     username = "@{}".format(username) if username else (
-        "This User has no Username")
-    user_bio = "This User has no About" if not user_bio else user_bio
+        "Tidak Menggunakan Username")
+    user_bio = "Tidak Punya Bio" if not user_bio else user_bio
 
-    caption = "<b>**INFORMASI PENGGUNA**:</b>\n\n"
+    caption = "<b>INFORMASI PENGGUNA:</b>\n\n"
     caption += f"Nama Depan: {first_name}\n"
     caption += f"Nama Belakang: {last_name}\n"
     caption += f"Username: {username}\n"

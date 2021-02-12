@@ -16,12 +16,12 @@ async def mim(event):
         return
     if not event.reply_to_msg_id:
         await event.edit(
-            "`Syntax: Balas Ke Gambar Ketik .mmf` 'Teks Atas' ; 'Teks Bawah' "
+            "Mohon Balas Ke Gambar Ketik `.mmf 'Teks Atas' ; 'Teks Bawah'` "
         )
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("```Balas Ke Gambar/Sticker/Gif```")
+        await event.edit("```Mohon Balas Ke Gambar/Sticker/Gif```")
         return
     reply_message.sender
     await bot.download_file(reply_message.media)
@@ -30,7 +30,7 @@ async def mim(event):
         return
     else:
         await event.edit(
-            "``Mengubah Gambar Ini Mwahaha Saatnya Menulis ツ ```"
+            "```Mengubah Gambar Ini Mwahaha Saatnya Menulis ツ ```"
         )
         await asyncio.sleep(5)
         text = event.pattern_match.group(1)
@@ -172,12 +172,12 @@ async def mim(event):
         return
     if not event.reply_to_msg_id:
         await event.edit(
-            "`Syntax: Balas Ke Gambar Ketik .mmf` 'Teks Atas' ; 'Teks Bawah' "
+            "Mohon Balas Ke Gambar Ketik `.mmf2 'Teks Atas' ; 'Teks Bawah'` "
         )
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("```Balas Ke Gambar/Sticker/Gif```")
+        await event.edit("```Mohon Balas Ke Gambar/Sticker/Gif```")
         return
     reply_message.sender
     await bot.download_file(reply_message.media)
@@ -224,7 +224,7 @@ async def draw_meme_text(image_path, text):
     draw = ImageDraw.Draw(img)
     current_h, pad = 10, 5
     if upper_text:
-        for u_text in textwrap.wrap(upper_text, width=18):
+        for u_text in textwrap.wrap(upper_text, width=16):
             u_width, u_height = draw.textsize(u_text, font=m_font)
 
             draw.text(
@@ -260,7 +260,7 @@ async def draw_meme_text(image_path, text):
             )
             current_h += u_height + pad
     if lower_text:
-        for l_text in textwrap.wrap(lower_text, width=18):
+        for l_text in textwrap.wrap(lower_text, width=16):
             u_width, u_height = draw.textsize(l_text, font=m_font)
 
             draw.text(
@@ -319,8 +319,8 @@ async def draw_meme_text(image_path, text):
 
 CMD_HELP.update({
     "memify":
-        "`.mmf` Teks Atas ; Teks Bawah\
+        "`.mmf Teks Atas ; Teks Bawah`\
         \nUsage: Balas Ke Sticker/Gambar/Gif.\n"
-        "`.mmf2` Teks Atas ; Teks Bawah\
+        "`.mmf2 Teks Atas ; Teks Bawah`\
         \nUsage: Balas Ke Sticker/Gambar/Gif."
 })

@@ -1,9 +1,3 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
-#
-# Port From UniBorg to UserBot by MoveAngel
 
 import random
 import requests
@@ -29,7 +23,7 @@ if 1 == 1:
         "unauthorized": "You're unauthorized to do this.",
         "not_enough_permissions": "Wrong template. You can use only the default one.",
         "templates": "Available Templates: <code>{}</code>",
-        "cannot_send_stickers": "You cannot send stickers in this chat.",
+        "cannot_send_stickers": "`Anda Tidak Bisa Mengirim Pesan Ke Obrolan Ini.`",
         "admin": "admin",
         "creator": "creator",
         "hidden": "hidden",
@@ -46,14 +40,14 @@ async def quotess(qotli):
     if qotli.fwd_from:
         return
     if not qotli.reply_to_msg_id:
-        return await qotli.edit("```Balas di Pesan Goblok!!.```")
+        return await qotli.edit("```Mohon Balas Ke Pesan Lord```")
     reply_message = await qotli.get_reply_message()
     if not reply_message.text:
-        return await qotli.edit("```Balas di Pesan Goblok!!```")
+        return await qotli.edit("```Mohon Balas Ke Pesan Lord```")
     chat = "@QuotLyBot"
     if reply_message.sender.bot:
-        return await qotli.edit("```Balas di Pesan Goblok!!.```")
-    await qotli.edit("```Membuat Sticker......```")
+        return await qotli.edit("```Mohon Balas Ke Pesan Lord```")
+    await qotli.edit("```Sedang Memproses Sticker, Mohon Menunggu ツ```")
     try:
         async with bot.conversation(chat) as conv:
             try:
@@ -66,9 +60,9 @@ async def quotess(qotli):
                 """ - don't spam notif - """
                 await bot.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                return await qotli.reply("```Please unblock @QuotLyBot and try again```")
+                return await qotli.reply("```Harap Jangan Blockir @QuotLyBot Buka Blokir Lalu Coba Lagi```")
             if response.text.startswith("Hi!"):
-                await qotli.edit("```Can you kindly disable your forward privacy settings for good?```")
+                await qotli.edit("```Mohon Menonaktifkan Pengaturan Privasi Forward Anda```")
             else:
                 await qotli.delete()
                 await bot.forward_messages(qotli.chat_id, response.message)
@@ -84,11 +78,11 @@ async def quotess(qotli):
 async def quote_search(event):
     if event.fwd_from:
         return
-    await event.edit("Processing...")
+    await event.edit("`Sedang Memproses...`")
     search_string = event.pattern_match.group(1)
     input_url = "https://bots.shrimadhavuk.me/Telegram/GoodReadsQuotesBot/?q={}".format(
         search_string)
-    headers = {"USER-AGENT": "UniBorg"}
+    headers = {"USER-AGENT": "Uniborg"}
     try:
         response = requests.get(input_url, headers=headers).json()
     except BaseException:
@@ -101,13 +95,13 @@ async def quote_search(event):
     if result:
         await event.edit(result.replace("<code>", "`").replace("</code>", "`"))
     else:
-        await event.edit("Zero results found")
+        await event.edit("`Tidak Ada Hasil Yang Ditemukan`")
 
 
 CMD_HELP.update({
     "quotly":
     "`.q`\
-\nUsage: Enhance ur text to sticker.\
+\nUsage: Membuat pesan mu menjadi sticker.\
 \n\n`.xquote`\
-\nUsage: Enhance ur text to stickers."
+\nUsage: membuat pesan mu menjadi sticker."
 })

@@ -26,13 +26,13 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    "Hai Selamat Datang Di Room Chat\n"
-    f"Lord `{DEFAULTUSER}` Saya Adalah Bot\n"
-    f"Yang Menjaga Room Chat Lord `{DEFAULTUSER}`\n"
-    "Mohon Jangan Melakukan Spam Ke Room Chat Lord\n"
-    "Karna Jika Anda Melakukan Itu Saya Akan Otomatis\n"
-    f"Memblokir Anda, Tunggulah Sampai Lord `{DEFAULTUSER}`\n"
-    "Menerima Pesan Anda, Terimakasih.")
+    "__Hai, Welcome To Room Chat__ "
+    f"__Lord__ `{DEFAULTUSER}` __Saya Adalah Bot__ "
+    f"__Yang Menjaga Room Chat Lord__ `{DEFAULTUSER}` \n"
+    "__Mohon Jangan Melakukan Spam Ke Room Chat Lord__ "
+    "__Karna Jika Anda Melakukan Itu Saya Akan Otomatis__ "
+    f"__Memblokir Anda, Tunggulah Sampai Lord__ `{DEFAULTUSER}` "
+    "__Menerima Pesan Anda, Terimakasih.__")
 # =================================================================
 
 
@@ -77,9 +77,9 @@ async def permitpm(event):
                         event.chat_id, from_user="me", search=UNAPPROVED_MSG
                     ):
                         await message.delete()
-                    await event.reply(f"`{UNAPPROVED_MSG}`")
+                    await event.reply(f"{UNAPPROVED_MSG}")
             else:
-                await event.reply(f"`{UNAPPROVED_MSG}`")
+                await event.reply(f"{UNAPPROVED_MSG}")
             LASTMSG.update({event.chat_id: event.text})
             if notifsoff:
                 await event.client.send_read_acknowledge(event.chat_id)
@@ -119,7 +119,7 @@ async def permitpm(event):
                         + "](tg://user?id="
                         + str(event.chat_id)
                         + ")"
-                        + " was just another retarded nibba",
+                        + " Terblokir Karna Melakukan Spamming Ke Room Chat",
                     )
 
 
@@ -231,7 +231,7 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`Pesan Anda Sudah Diterima ツ`")
+        return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima ツ`")
 
     await apprvpm.edit(f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima ツ`")
     await apprvpm.delete(getmsg)
@@ -288,7 +288,7 @@ async def blockpm(block):
     else:
         await block.client(BlockRequest(block.chat_id))
         aname = await block.client.get_entity(block.chat_id)
-        await block.edit("`Anda Telah Diblokir\nDadah....`")
+        await block.edit("`Anda Telah Diblokir!`")
         name0 = str(aname.first_name)
         uid = block.chat_id
 
@@ -327,7 +327,7 @@ async def unblockpm(unblock):
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
-        return await cust_msg.edit("Lord Anda Harus Menyetel `PM_AUTO_BAN` Ke `True`")
+        return await cust_msg.edit("**Lord Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True`")
     try:
         import userbot.modules.sql_helper.globals as sql
     except AttributeError:
@@ -341,12 +341,12 @@ async def add_pmsg(cust_msg):
 
     if conf.lower() == "set":
         message = await cust_msg.get_reply_message()
-        status = "Disimpan"
+        status = "Pesan"
 
         # check and clear user unapproved message first
         if custom_message is not None:
             sql.delgvar("unapproved_msg")
-            status = "Diperbarui"
+            status = "Pesan"
 
         if message:
             # TODO: allow user to have a custom text formatting
@@ -361,7 +361,7 @@ async def add_pmsg(cust_msg):
 
         if BOTLOG:
             await cust_msg.client.send_message(
-                BOTLOG_CHATID, f"***{status} Pesan Tidak Disetujui :*** \n\n{msg}"
+                BOTLOG_CHATID, f"**{status} PM Yang Tersimpan Dalam Room Chat Anda:** \n\n{msg}"
             )
 
     if conf.lower() == "reset":
@@ -374,12 +374,12 @@ async def add_pmsg(cust_msg):
     if conf.lower() == "get":
         if custom_message is not None:
             await cust_msg.edit(
-                "***Ini Adalah Pesan Yang Sekarang Dikirimkan Ke PM Anda:***" f"\n\n{custom_message}"
+                "**Ini Adalah Pesan PM Yang Sekarang Dikirimkan Ke Room Chat Anda:**" f"\n\n{custom_message}"
             )
         else:
             await cust_msg.edit(
                 "*Anda Belum Menyetel Pesan PM*\n"
-                f"Masih Menggunakan Pesan Default: \n\n`{DEF_UNAPPROVED_MSG}`"
+                f"Masih Menggunakan Pesan PM Default: \n\n`{DEF_UNAPPROVED_MSG}`"
             )
 
 
@@ -403,6 +403,6 @@ CMD_HELP.update(
         "\nUsage: Mendapatkan Custom pesan PM mu"
         "\n\n>`.reset pm_msg`"
         "\nUsage: Menghapus pesan PM ke default"
-        "\n\n*Pesan Pribadi yang belum diterima saat ini tidak dapat disetel"
+        "\n\nPesan Pribadi yang belum diterima saat ini tidak dapat disetel"
         "\nke teks format kaya bold, underline, link, dll."
         "\nPesan akan terkirim normal saja"})

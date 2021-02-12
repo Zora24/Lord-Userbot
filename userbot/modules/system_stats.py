@@ -1,11 +1,4 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
-#
-""" Userbot module for getting information about the server. """
-
-
+# Ya
 import asyncio
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
@@ -167,7 +160,7 @@ async def bot_ver(event):
         await event.edit(
             "**☛**Lord-Userbot Versi:** \n "
             f"{verout}"
-            "**☛**Revisi:** "
+            "\n**☛**Revisi:**\n "
             f"{revout}"
         )
     else:
@@ -221,15 +214,15 @@ async def pipcheck(pip):
                 "`\n**Result: **\n`No Result Returned/False`"
             )
     else:
-        await pip.edit("`Use .help pip to see an example`")
+        await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:lordalive|lordon)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
     output = (
-        f" **LORD USERBOT** \n"
+        f" **┗┓LORD USERBOT┏┛** \n"
         f"✘ __Lord__ \n"
         f": `{DEFAULTUSER}` \n"
         f"✘ __Username__ \n"
@@ -249,12 +242,82 @@ async def amireallyalive(alive):
             logo = ALIVE_LOGO
             await alive.delete()
             msg = await bot.send_file(alive.chat_id, logo, caption=output)
-            await asyncio.sleep(100)
+            await asyncio.sleep(200)
             await msg.delete()
         except BaseException:
             await alive.edit(
                 output + "\n\n *`The provided logo is invalid."
                 "\nMake sure the link is directed to the logo picture`"
+            )
+            await asyncio.sleep(100)
+            await alive.delete()
+    else:
+        await alive.edit(output)
+        await asyncio.sleep(100)
+        await alive.delete()
+
+
+@register(outgoing=True, pattern=r"^\.(?:xalive|xon)\s?(.)?")
+async def amireallyalive(alive):
+    user = await bot.get_me()
+    await get_readable_time((time.time() - StartTime))
+    output = (
+        f"**▬▬▬▬▬▬❙۩♛۩❙▬▬▬▬▬▬**\n"
+        f"     **♕ LORD USERBOT ♕** \n\n"
+        f"❃ **Lord**     \n   ➥ `{DEFAULTUSER}` \n"
+        f"❃ **Username** \n   ➥ `@{user.username}` \n"
+        f"❃ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
+        f"❃ **Python**   \n   ➥ `Versi {python_version()}` \n"
+        f"❃ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
+        f"❃ **Modul**    \n   ➥ `{len(modules)}` \n\n"
+        f"❃ **Repo Userbot:** [Lord-Userbot](https://github.com/Zora24/Lord-Userbot)\n❃ **Grup Userbot: **[Tekan](t.me/LordUserbot_Group)\n❃ **Pemilik:** [Alvin](t.me/liualvinas)\n"
+        f"**▬▬▬▬▬▬❙۩★۩❙▬▬▬▬▬▬**")
+    if ALIVE_LOGO:
+        try:
+            logo = ALIVE_LOGO
+            await alive.delete()
+            msg = await bot.send_file(alive.chat_id, logo, caption=output)
+            await asyncio.sleep(200)
+            await msg.delete()
+        except BaseException:
+            await alive.edit(
+                output + "\n\n *`The provided logo is invalid."
+                "\nMake sure the link is directed to the logo picture`"
+            )
+            await asyncio.sleep(100)
+            await alive.delete()
+    else:
+        await alive.edit(output)
+        await asyncio.sleep(100)
+        await alive.delete()
+
+
+@register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
+async def amireallyalive(alive):
+    user = await bot.get_me()
+    await get_readable_time((time.time() - StartTime))
+    output = (
+        f" **┗┓LORD USERBOT┏┛** \n\n"
+        f"♛ **Lord:** \n"
+        f" `{DEFAULTUSER}` \n"
+        f"♛ **Username:** \n"
+        f" `@{user.username}` \n\n"
+        f"__Lord-Userbot Adalah Userbot Khusus__ "
+        f"__Yang Digunakan Untuk Bersenang-Senang__ "
+        f"__Di Telegram__ __Versi Bot Yang Digunakan__ `{BOT_VER}` "
+        f"__Jumlah Modul Dalam Lord Userbot__ `{len(modules)}` \n\n"
+        f"❃ **Repo Userbot:** [Lord-Userbot](https://github.com/Zora24/Lord-Userbot)\n❃ **Grup Userbot: **[Tekan](t.me/LordUserbot_Group)\n❃ **Pemilik:** [Alvin](t.me/liualvinas)\n")
+    if ALIVE_LOGO:
+        try:
+            logo = ALIVE_LOGO
+            await alive.delete()
+            msg = await bot.send_file(alive.chat_id, logo, caption=output)
+            await asyncio.sleep(500)
+            await msg.delete()
+        except BaseException:
+            await alive.edit(
+                output + "\n\n *`Logo Yang Disediakan Tidak Valid."
+                "\nPastikan Tautan Yang Anda Gunakan Valid`"
             )
             await asyncio.sleep(100)
             await alive.delete()

@@ -18,25 +18,25 @@ async def get_adzan(adzan):
     else:
         LOCATION = adzan.pattern_match.group(1)
 
-    # url = f'http://muslimsalat.com/{LOKASI}.json?key=bd099c5825cbedb9aa934e255a81a5fc'
+    # url = f'http://muslimsalat.com/{LOCATION}.json?key=bd099c5825cbedb9aa934e255a81a5fc'
     url = f"https://api.pray.zone/v2/times/today.json?city={LOCATION}"
     request = requests.get(url)
     if request.status_code == 500:
-        return await adzan.edit(f"Tidak Dapat Menemukan Kota `{LOCATION}`")
+        return await adzan.edit(f"**Tidak Dapat Menemukan Kota** `{LOCATION}`")
 
     parsed = json.loads(request.text)
 
-    city = parsed["Hasil"]["Lokasi"]["Kota"]
-    country = parsed["Has"]["Lokasi"]["Negara"]
-    timezone = parsed["Hasil"]["Lokasi"]["Zona Waktu"]
-    date = parsed["Hasil"]["Tanggal Waktu"][0]["Tanggal"]["gregorian"]
+    city = parsed["results"]["location"]["city"]
+    country = parsed["results"]["location"]["country"]
+    timezone = parsed["results"]["location"]["timezone"]
+    date = parsed["results"]["datetime"][0]["date"]["gregorian"]
 
-    imsak = parsed["Hasil"]["Tanggal Waktu"][0]["Waktu"]["Imsak"]
-    subuh = parsed["Hasil"]["Tanggal Waktu"][0]["Waktu"]["Subuh"]
-    zuhur = parsed["Hasil"]["Tanggal Waktu"][0]["Waktu"]["Zuhur"]
-    ashar = parsed["Hasil"]["Tanggal Waktu"][0]["Waktu"]["Ashar"]
-    maghrib = parsed["Hasil"]["Tanggal Waktu"][0]["Waktu"]["Maghrib"]
-    isya = parsed["Hasil"]["Tanggal Waktu"][0]["Waktu"]["Isha"]
+    imsak = parsed["results"]["datetime"][0]["times"]["Imsak"]
+    subuh = parsed["results"]["datetime"][0]["times"]["Fajr"]
+    zuhur = parsed["results"]["datetime"][0]["times"]["Dhuhr"]
+    ashar = parsed["results"]["datetime"][0]["times"]["Asr"]
+    maghrib = parsed["results"]["datetime"][0]["times"]["Maghrib"]
+    isya = parsed["results"]["datetime"][0]["times"]["Isha"]
 
     result = (
         f"**Jadwal Sholat**:\n"

@@ -20,7 +20,7 @@ from userbot.modules.admin import get_user_from_event
 # ================= CONSTANT =================
 METOOSTR = [
     "Aku Juga Terimakasih",
-    "Haha Iya, Aku Juha",
+    "Haha Iya, Aku Juga",
     "Sama Haha",
     "Aku Juga Gabut",
     "Sama Sini",
@@ -389,21 +389,21 @@ RUNS_STR = [
     "Berlari jauh, jauh dari bumi..",
     "Berlari lebih cepat dari Bolt karena aku pengguna bot !!",
     "Berlari ke Mia Khalifa..",
-    "Grup ini terlalu berbahaya untuk ditangani.",
-    "Cyaaaaa",
-    "Aku sang lelah",
-    "Aku pergi",
-    "Saya hanya berjalan pergi, karena saya terlalu gemuk.",
+    "Grup ini terlalu berbahaya untuk ditangani, aku harus lari.",
+    "`Berlari Dari Orang Yang Bau Sawi 😬`",
+    "Aku sangat lelah untuk berlari dan mengejarmu 💔",
+    "Aku pergi dulu",
+    "Saya hanya berjalan pergi, karena saya terlalu gemuk untuk lari.",
     "Saya Cape!",
-    "Akan lari untuk coklat.",
-    "Saya lari karena saya sangat suka makanan.",
+    "Larii Disini Bau Sawii 😭",
+    "Saya lari karena saya sangat gabut.",
     "Lari... \nkarena diet bukanlah pilihan.",
     "Berlari Cepat Dari Orang Gila",
     "Jika kamu ingin menangkapku, kamu harus cepat... \nJika kamu ingin tinggal bersamaku, kamu harus menjadi orang yang baik... \nTapi jika kamu ingin melewati aku... \nKamu pasti bercanda. ",
     "Siapapun dapat berlari seratus meter, itu hitungan empat puluh dua ribu dua ratus berikutnya.",
     "Mengapa semua orang ini mengikuti saya?",
     "Apakah anak-anak masih mengejarku?",
-    "Menjalankan maraton..ada aplikasi untuk itu.",
+    "Berlari Sekencang Super Dede.. Apakah Sopan Begitu?",
 ]
 
 CHASE_STR = [
@@ -1254,6 +1254,42 @@ async def moon(event):
         return
 
 
+@register(outgoing=True, pattern=r"^\.bunga$")
+async def moon(event):
+    deq = deque(list("🌼🌻🌺🌹🌸🌷"))
+    try:
+        for x in range(35):
+            await sleep(0.1)
+            await event.edit("".join(deq))
+            deq.rotate(1)
+    except BaseException:
+        return
+
+
+@register(outgoing=True, pattern=r"^\.waktu$")
+async def moon(event):
+    deq = deque(list("🎑🌄🌅🌇🌆🌃🌌"))
+    try:
+        for x in range(100):
+            await sleep(0.1)
+            await event.edit("".join(deq))
+            deq.rotate(1)
+    except BaseException:
+        return
+
+
+@register(outgoing=True, pattern=r"^\.buah$")
+async def moon(event):
+    deq = deque(list("🍉🍓🍇🍎🍍🍐🍌"))
+    try:
+        for x in range(35):
+            await sleep(0.1)
+            await event.edit("".join(deq))
+            deq.rotate(1)
+    except BaseException:
+        return
+
+
 @register(outgoing=True, pattern=r"^\.clock$")
 async def clock(event):
     deq = deque(list("🕙🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛"))
@@ -1293,6 +1329,18 @@ async def love(event):
 @register(outgoing=True, pattern="^.earth$")
 async def earth(event):
     deq = deque(list("🌏🌍🌎🌎🌍🌏🌍🌎"))
+    try:
+        for x in range(32):
+            await sleep(0.1)
+            await event.edit("".join(deq))
+            deq.rotate(1)
+    except BaseException:
+        return
+
+
+@register(outgoing=True, pattern="^.hati$")
+async def earth(event):
+    deq = deque(list("🖤💜💙💚💛🧡❤️🤍"))
     try:
         for x in range(32):
             await sleep(0.1)
@@ -1516,6 +1564,18 @@ async def lol(e):
                      "`\n╱┗━━━┛╰━━━╯┗━━━┛╱ `")
 
 
+@register(outgoing=True, pattern=r"^\.rock$")
+async def lol(e):
+    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+        await e.edit("`\n┈╭╮┈┈┈┈┈┈┈┈┈┈┈┈ `"
+                     "`\n┈┃┃┈╭╮┈┏╮╭╮╭╮┃╭ `"
+                     "`\n┈┃┃┈┃┃┈┣┫┃┃┃┈┣┫ `"
+                     "`\n┈┃┣┳┫┃┈┃╰╰╯╰╯┃╰ `"
+                     "`\n╭┻┻┻┫┃┈┈╭╮┃┃━┳━ `"
+                     "`\n┃╱╭━╯┃┈┈┃┃┃┃┈┃┈ `"
+                     "`\n╰╮╱╱╱┃┈┈╰╯╰╯┈┃┈ `")
+
+
 @register(outgoing=True, pattern=r"^\.lool$")
 async def lool(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
@@ -1558,10 +1618,10 @@ async def nih(e):
         await e.edit("`\n(\\_/)`"
                      "`\n(●_●)`"
                      "`\n />💖 *Ini Buat Kamu`"
-                     "`\n                    `"
-                     r"`\n(\_/)`"
+                     "\n                    \n"
+                     r"`(\_/)`"
                      "`\n(●_●)`"
-                     "`\n💖<\\  *Tapi Boong`")
+                     "`\n💖<\\  *Tapi Bo'ong`")
 
 
 @register(outgoing=True, pattern=r"^\.fag$")
@@ -1581,7 +1641,7 @@ async def taco(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("\n{\\__/}"
                      "\n(●_●)"
-                     "\n( >🌮 Mau Tai Ku?")
+                     "\n( >💩 Mau Tai Ku?")
 
 
 @register(outgoing=True, pattern=r"^\.paw$")
@@ -1704,7 +1764,7 @@ async def gas(e):
         await e.edit("_____🚑______________")
         await e.edit("__🚑_________________")
         await e.edit("🚑___________________")
-        await e.edit("__Lah___Kok__Hilang__")
+        await e.edit("_____________________")
         await e.edit(choice(FACEREACTS))
 
 
@@ -1797,7 +1857,7 @@ CMD_HELP.update({
     "\n\n>`.clap`"
     "\nUsage: Puji orang!"
     "\n\n>`.f` <emoji/karakter>"
-    "\nUsage: Bayar Hormat."
+    "\nUsage: F."
     "\n\n>`.bt`"
     "\nUsage: Percayalah, Anda akan menemukan ini berguna."
     "\n\n>`.weeb`"
@@ -1808,9 +1868,9 @@ CMD_HELP.update({
     "\nUsage: Biar saya Google itu untuk Anda dengan cepat!"
     "\n\n>`.decide` [Alternatif: (.yes, .no, .maybe)]"
     "\nUsage: Buat keputusan cepat."
-    r"\ n> .nou; .bot; .gey; .tf; .paw; .tai; .nih;"
-    r"\ n> .fag; .gtfo; .stfu; .lol; .lool; .fail; .leave"
-    r"\ n> .iwi; .sayhi; .koc; .gas; .earth; .love; .rain"
-    r"\ n> .penis; .emo; .fuck; .ok; .skull; .teksbiru; .monyet"
-    "\n\n\nSemoga Harimu Menyenangkan -Alvin."
+    "\n\n> `.nou` `.bot` `.rock` `.gey` `.tf` `.paw` `.tai` `.nih`"
+    "\n> `.fag` `.gtfo`; `.stfu` `.lol` `.lool` `.fail` `.leave`"
+    "\n> `.iwi` `.sayhi` `.koc` `.gas` `.earth` `.love` `.rain`"
+    "\n> `.penis` `.emo` `.fuck` `.skull`  `.monyet`\nUsage: Cobain aja"
+    "\n\n\n**Semoga Harimu Menyenangkan**\n➥ `Alvin`"
 })

@@ -5,7 +5,7 @@ Available Commands:
 .ungban REASON"""
 import asyncio
 from userbot.events import register
-from userbot import CMD_HELP, bot, G_BAN_LOGGER_GROUP, ALIVE_NAME
+from userbot import ALIVE_NAME, G_BAN_LOGGER_GROUP, bot
 # imported from uniborg by @heyworld
 
 # ================= CONSTANT =================
@@ -13,7 +13,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.gban(?: |$)(.*)")
+@register(outgoing=True, pattern="^.gbanb(?: |$)(.*)")
 async def _(event):
     if G_BAN_LOGGER_GROUP is None:
         await event.edit("Set G_BAN_LOGGER_GROUP in vars otherwise module won't work.")
@@ -39,7 +39,7 @@ async def _(event):
     await event.delete()
 
 
-@register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
+@register(outgoing=True, pattern="^.ungbanb(?: |$)(.*)")
 async def _(event):
     if G_BAN_LOGGER_GROUP is None:
         await event.edit("Set G_BAN_LOGGER_GROUP in vars otherwise module won't work.")
@@ -60,12 +60,3 @@ async def _(event):
     await event.edit(f"**User ungbanned by {DEFAULTUSER}**")
     asyncio.sleep(5)
     await event.delete()
-
-
-CMD_HELP.update({
-    "gban": "\
-`.gban reason`\
-\nUsage: Globally Ban users from all the Group Administrations bots where you are SUDO.\
-\n\n`.ungban reason`\
-\nUsage: Globally unBan users from all the Group Administrations bots where you are SUDO"
-})

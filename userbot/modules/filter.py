@@ -116,10 +116,10 @@ async def kick_marie_filter(event):
             await event.reply("/stop %s" % (i.strip()))
         await sleep(0.3)
     await event.respond(
-        "```Berhasil Menghapus Semua Filter Di Bot!```\n Berikan Aku Permen!")
+        "```Berhasil Menghapus Semua Filter Bot!```")
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "Saya Membersihkan Semua Filter Di " + str(event.chat_id))
+            BOTLOG_CHATID, "Saya Membersihkan Semua Filter Bot Di " + str(event.chat_id))
 
 
 @register(outgoing=True, pattern="^.filters$")
@@ -133,10 +133,10 @@ async def filters_active(event):
     filters = get_filters(event.chat_id)
     for filt in filters:
         if transact == "`Tidak Ada Filter Apapun Disini.`":
-            transact = "**Daftar Filter Lord Yang Aktif Disini:**\n"
-            transact += "`{}`\n".format(filt.keyword)
+            transact = "**❃ Daftar Filter Lord Yang Aktif Disini:**\n"
+            transact += " ➥ `{}`\n".format(filt.keyword)
         else:
-            transact += "`{}`\n".format(filt.keyword)
+            transact += " ➥ `{}`\n".format(filt.keyword)
 
     await event.edit(transact)
 
