@@ -11,7 +11,7 @@
 TELEGRAM=$SEMAPHORE_PROJECT_DIR/init/telegramapi
 export TELEGRAM
 # Caster configurations
-MAINGROUP_ID="-1001372935489"
+MAINGROUP_ID="-1001445525038"
 
 # sendcast to group
 tg_sendinfo() {
