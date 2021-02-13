@@ -449,8 +449,6 @@ async def upload_track(track_location, message):
 
 CMD_HELP.update(
     {
-        "song": ">`.song <Judul Lagu>`"
-        "\nUsage: Download Musik Dari @WooHaiBot"
         ">`.net <Artis - Judul Lagu>`"
         "\nUsage: Download Musik Dari @WooHaiBot"
         "\n\n>`.net now`"
