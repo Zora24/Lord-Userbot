@@ -1,5 +1,5 @@
 # We're using Ubuntu 20.10
-FROM liualvinas24/lord:latest
+FROM xnewbie/docker:groovy
 
 #
 # Clone repo and prepare working directory
