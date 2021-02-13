@@ -32,7 +32,7 @@ DEF_UNAPPROVED_MSG = (
     "__Mohon Jangan Melakukan Spam Ke Room Chat Lord__ "
     "__Karna Jika Anda Melakukan Itu Saya Akan Otomatis__ "
     f"**Memblokir Anda**, __Tunggulah Sampai__ **Lord {DEFAULTUSER}** "
-    "__Menerima__ **Pesan Anda**, __Terimakasih ヅ__\n"
+    "__Menerima__ **Pesan Anda**, __Terimakasih ヅ__\n\n"
     "**PESAN OTOMATIS**"
     "\n━━━━━━━━━━━━━━━"
     "\n**▬▬▬▬▬▬❙۩★۩❙▬▬▬▬▬▬**")
