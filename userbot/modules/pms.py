@@ -28,7 +28,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 DEF_UNAPPROVED_MSG = (
     "**▬▬▬▬▬▬❙۩♛۩❙▬▬▬▬▬▬**\n"
     f"**Welcome To Room Chat** `{DEFAULTUSER}`\n "
-    f"__Saya Bot Yang Menjaga Room Chat__ **Lord {DEFAULTUSER}** \n"
+    f"__Saya Bot Yang Menjaga Room Chat__ \n**Lord {DEFAULTUSER}**\n"
     "__Mohon Jangan Melakukan Spam Ke Room Chat Lord__ "
     "__Karna Jika Anda Melakukan Itu Saya Akan Otomatis__ "
     f"**Memblokir Anda**, __Tunggulah Sampai__ **Lord {DEFAULTUSER}** "
