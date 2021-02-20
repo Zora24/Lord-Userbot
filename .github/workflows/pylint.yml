@@ -29,6 +29,6 @@ jobs:
           commit_message: 'pylint: auto fixes'
           commit_options: '--no-verify --signoff'
           repository: .
-          commit_user_name: Zora24
-          commit_user_email: liualvinas24@gmail.com
-          commit_author: Zora24 <liualvinas24@gmail.com>
+          commit_user_name: Ependelope53
+          commit_user_email: hendraputra563@yahoo.com
+          commit_author: Ependelope53 <hendraputra563@yahoo.com>
