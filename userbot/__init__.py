@@ -100,7 +100,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/Zora24/Lord-Userbot.git")
+    "https://github.com/Ependelope53/GabutC-UBot.git")
 UPSTREAM_REPO_BRANCH = os.environ.get(
     "UPSTREAM_REPO_BRANCH", "Lord-Userbot")
 
@@ -315,7 +315,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```『Lord-Userbot Telah Aktif』```")
+    await bot.send_message(BOTLOG_CHATID, "```『GabutC-UBot Telah Aktif』```")
     return
 
 with bot:
