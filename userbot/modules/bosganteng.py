@@ -1,4 +1,4 @@
-# Alvin Gans
+# Bos Ganteng
 
 from time import sleep
 from userbot import CMD_HELP, bot
@@ -141,8 +141,8 @@ async def _(event):
             await asyncio.sleep(animation_interval)
 
             await event.edit(animation_chars[i % 11])
-# Alvin Imut
-# Alvin Gans
+# Alvin Imut Hendra juga sama
+# Alvin Gans Hendra juga sama
 
 CMD_HELP.update({
     "animasi":
