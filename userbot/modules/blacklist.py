@@ -25,7 +25,7 @@ async def on_new_message(event):
             try:
                 await event.delete()
             except Exception:
-                await event.reply("I do not have DELETE permission in this chat")
+                await event.reply("`Lord, Anda Tidak Punya Izin Untuk Menghapus Pesan Disini`")
                 await sleep(1)
                 await reply.delete()
                 sql.rm_from_blacklist(event.chat_id, snip.lower())
@@ -42,7 +42,7 @@ async def on_add_black_list(addbl):
     for trigger in to_blacklist:
         sql.add_to_blacklist(addbl.chat_id, trigger.lower())
     await addbl.edit(
-        "`Added` **{}** `to the blacklist in the current chat`".format(text)
+        "`Menambahkan Kata` **{}** `Ke Blacklist Untuk Obrolan Ini`".format(text)
     )
 
 
@@ -54,7 +54,7 @@ async def on_view_blacklist(listbl):
         for trigger in all_blacklisted:
             OUT_STR += f"`{trigger}`\n"
     else:
-        OUT_STR = "`There are no blacklist in current chat.`"
+        OUT_STR = "`Tidak Ada Blacklist Dalam Obrolan Ini.`"
     if len(OUT_STR) > 4096:
         with io.BytesIO(str.encode(OUT_STR)) as out_file:
             out_file.name = "blacklist.text"
@@ -63,7 +63,7 @@ async def on_view_blacklist(listbl):
                 out_file,
                 force_document=True,
                 allow_cache=False,
-                caption="BlackLists in the Current Chat",
+                caption="Blacklist Dalam Obrolan Ini",
                 reply_to=listbl,
             )
             await listbl.delete()
@@ -83,15 +83,15 @@ async def on_delete_blacklist(rmbl):
         if sql.rm_from_blacklist(rmbl.chat_id, trigger.lower()):
             successful += 1
     if not successful:
-        await rmbl.edit("`Blacklist` **{}** `doesn't exist.`".format(text))
+        await rmbl.edit("`Lord,` **{}** `Tidak Ada Di Blacklist`".format(text))
     else:
-        await rmbl.edit("`Blacklist` **{}** `was deleted successfully`".format(text))
+        await rmbl.edit("`Berhasil Menghapus` **{}** `Di Blacklist`".format(text))
 
 
 CMD_HELP.update({"blacklist": ">`.listbl`"
-                 "\nUsage: Lists all active userbot blacklist in a chat."
-                 "\n\n>`.addbl <keyword>`"
-                 "\nUsage: Saves the message to the 'blacklist keyword'."
-                 "\nThe bot will delete to the message whenever 'blacklist keyword' is mentioned."
-                 "\n\n>`.rmbl <keyword>`"
-                 "\nUsage: Stops the specified blacklist."})
+                 "\nUsage: Melihat daftar blacklist yang aktif di obrolan."
+                 "\n\n>`.addbl <kata>`"
+                 "\nUsage: Memasukan pesan ke blacklist 'kata blacklist'."
+                 "\nlord bot akan otomatis menghapus 'kata blacklist'."
+                 "\n\n>`.rmbl <kata>`"
+                 "\nUsage: Menghapus kata blacklist."})
