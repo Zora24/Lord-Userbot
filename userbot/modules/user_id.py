@@ -9,16 +9,16 @@ async def _(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("`Mohon Balas Ke Pesan Lord`")
+        await event.edit("`Mohon Balas Ke Pesan Sayang`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.text:
-        await event.edit("```Mohon Balas Ke Pesan Lord```")
+        await event.edit("```Mohon Balas Ke Pesan Sayang```")
         return
     chat = "@getidsbot"
     reply_message.sender
     if reply_message.sender.bot:
-        await event.edit("`Mohon Balas Ke Pesan Lord`")
+        await event.edit("`Mohon Balas Ke Pesan Sayang`")
         return
     await event.edit("`Mencari ID.......`")
     async with bot.conversation(chat) as conv:
