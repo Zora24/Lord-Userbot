@@ -8,7 +8,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.lordhelp$")
+@register(outgoing=True, pattern="^.gabuthelp$")
 async def usit(e):
     await e.edit(
         f"**Hai Bos {DEFAULTUSER} Kalo Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `.help` Atau Bisa Minta Bantuan Ke:\n"
@@ -17,17 +17,17 @@ async def usit(e):
         "\n[Instagram](Instagram.com/hendraputraaaaaa)")
 
 
-@register(outgoing=True, pattern="^.lordvar$")
+@register(outgoing=True, pattern="^.gabutvar$")
 async def var(m):
     await m.edit(
         f"**Disini Daftar Vars Dari {DEFAULTUSER}:**\n"
-        "\n[DAFTAR VARS](https://raw.githubusercontent.com/Ependelope53/Lord-Userbot/Lord-Userbot/varshelper.txt)")
+        "\n[DAFTAR VARS](https://raw.githubusercontent.com/Ependelope53/GabutC-UBot/Lord-Userbot/varshelper.txt)")
 
 
 CMD_HELP.update({
-    "lordhelper":
-    "`.lordhelp`\
+    "gabuthelper":
+    "`.gabuthelp`\
 \nUsage: Bantuan Untuk GabutC-UBot.\
-\n`.lordvar`\
+\n`.gabutvar`\
 \nUsage: Melihat Daftar Vars."
 })
