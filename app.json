@@ -1,7 +1,7 @@
 {
   "name": "GabutC-UBot",
-  "description": "[GabutC-UBot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
-  "logo": "https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg",
+  "description": "[GabutC-UBot] USERBOT YANG DIKHUSUSKAN UNTUK KEPUASAN DALAM MENGGUNAKAN TELEGRAM.",
+  "logo": "https://telegra.ph/file/971320cca78b5ed555eee.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -23,7 +23,7 @@
       "required": true
     },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya @liualvinas di telegram",
+      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya @AkuUserBot di telegram",
       "required": true
     },
     "HEROKU_APP_NAME": {
@@ -194,7 +194,7 @@
     },
     "WEATHER_DEFCITY": {
       "description": "Set the default city for the userbot's weather module.",
-      "value": "Batam",
+      "value": "Jakarta",
       "required": false
     },
     "LOGSPAMMER": {
