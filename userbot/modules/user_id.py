@@ -33,7 +33,7 @@ async def _(event):
             await event.reply("`Bot Sedang Error`")
             return
         if response.text.startswith("Forward"):
-            await event.edit("`Lord Orang Ini Tidak Mempunyai ID`")
+            await event.edit("`Lapor Bos Orang Ini Tidak Mempunyai ID`")
         else:
             await event.edit(f"{response.message.message}")
 
