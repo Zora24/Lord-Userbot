@@ -24,8 +24,8 @@ from userbot.events import register
 
 
 KANGING_STR = [
-    "Mengambil Sticker Ini Ke Pack Lord",
-    "Lord Mengambil Sticker Ini Ke Pack",
+    "Mengambil Sticker Ini Ke Pack Mu Sayang",
+    "Bos Mengambil Sticker Ini Ke Pack",
 ]
 
 
@@ -69,9 +69,9 @@ async def kang(args):
             is_anim = True
             photo = 1
         else:
-            return await args.edit("`File Tidak Didukung Lord!`")
+            return await args.edit("`File Tidak Didukung Bos!`")
     else:
-        return await args.edit("`Maaf Lord, Saya Gagal Mengambil Sticker Ini!`")
+        return await args.edit("`Maaf Bos, Saya Gagal Mengambil Sticker Ini!`")
 
     if photo:
         splat = args.text.split()
@@ -174,8 +174,8 @@ async def kang(args):
                         await bot.send_read_acknowledge(conv.chat_id)
                         return await args.edit(
                             "`Sticker ditambahkan ke pack yang berbeda !"
-                            "\nIni pack yang baru saja Lord buat!"
-                            f"\nTekan [Lord Sticker](t.me/addstickers/{packname}) Untuk Melihat Sticker Lord",
+                            "\nIni pack yang baru saja Bos buat!"
+                            f"\nTekan [Gabut Sticker](t.me/addstickers/{packname}) Untuk Melihat Sticker Mu Sayang",
                             parse_mode="md",
                         )
                 if is_anim:
@@ -217,7 +217,7 @@ async def kang(args):
                 rsp = await conv.get_response()
                 if "Sorry, the file type is invalid." in rsp.text:
                     return await args.edit(
-                        "`Mohon Maaf Lord, Saya Gagal Menambahkan Sticker, Gunakan` @Stickers ` Bot Untuk Menambahkan Sticker.`"
+                        "`Mohon Maaf Bos, Saya Gagal Menambahkan Sticker, Gunakan` @Stickers ` Bot Untuk Menambahkan Sticker.`"
                     )
                 await conv.send_message(emoji)
                 # Ensure user doesn't get spamming notifications
@@ -242,7 +242,7 @@ async def kang(args):
                 await bot.send_read_acknowledge(conv.chat_id)
 
         await args.edit(
-            f"**Berhasil Menambahkan Sticker Ke Pack, Tekan** **[Lord Sticker](t.me/addstickers/{packname})** **Untuk Melihat Pack Anda**",
+            f"**Berhasil Menambahkan Sticker Ke Pack, Tekan** **[Gabut Sticker](t.me/addstickers/{packname})** **Untuk Melihat Pack Anda**",
             parse_mode="md",
         )
 
