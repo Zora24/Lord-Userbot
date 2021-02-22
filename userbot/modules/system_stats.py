@@ -217,13 +217,13 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=r"^\.(?:lordalive|lordon)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:calive|lordon)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
     output = (
-        f" **┗┓LORD USERBOT┏┛** \n"
-        f"✘ __Lord__ \n"
+        f" **┗┓GabutC-UBot┏┛** \n"
+        f"✘ __SAYANG__ \n"
         f": `{DEFAULTUSER}` \n"
         f"✘ __Username__ \n"
         f": `@{user.username}` \n"
@@ -298,13 +298,13 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f" **GabutC-UBot** \n\n"
-        f"💪 **Lord:** \n"
+        f"💪 **BOS:** \n"
         f"𐛐`{DEFAULTUSER}` \n"
         f"💘 **Username:** \n"
         f"❅ `@{user.username}` \n\n"
-        f"**GabutC-UBot Adalah Userbot Khusus**"
-        f"__Yang Digunakan Untuk Bersenang-Senang__ "
-        f"__Di Telegram__ __Versi Bot Yang Digunakan__ `{BOT_VER}` "
+        f"**GabutC-UBot Adalah Userbot Khusus **"
+        f"**Yang Digunakan Untuk Bersenang-Senang** "
+        f"**Di Telegram** **Versi Bot Yang Digunakan** `{BOT_VER}` "
         f"__Jumlah Modul Dalam GabutC-UBot__ `{len(modules)}` \n\n"
         f"❃ **Repo Userbot:** [GabutC-UBot](https://github.com/Ependelope53/GabutC-UBot)\n❃ **Grup Userbot: **[Tekan](t.me/LordUserbot_Group)\n❃ **Pemilik:** [Hendra](t.me/AkuUserBot)\n")
     if ALIVE_LOGO:
