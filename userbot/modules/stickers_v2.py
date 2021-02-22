@@ -43,11 +43,11 @@ async def _(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("`Mohon Balas Ke Sticker Lord`")
+        await event.edit("`Mohon Balas Ke Sticker Ya Sayang`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("`Mohon Balas Ke Sticker Lord`")
+        await event.edit("`Mohon Balas Ke Sticker Ya Sayang`")
         return
     chat = "@stickers_to_image_bot"
     await event.edit("`Mengubah Menjadi Gambar....`")
@@ -63,7 +63,7 @@ async def _(event):
             await event.reply("Buka Blokir @stickers_to_image_bot Lalu Coba Lagi")
             return
         if response.text.startswith("I understand only stickers"):
-            await event.edit("`Maaf Lord, Saya Tidak Bisa Mengubah Ini Menjadi Gambar, Periksa Kembali Apakah Itu Sticker Animasi?`")
+            await event.edit("`Maaf Sayang, Saya Tidak Bisa Mengubah Ini Menjadi Gambar, Periksa Kembali Apakah Itu Sticker Animasi?`")
         else:
             response = conv.wait_event(
                 events.NewMessage(
@@ -92,7 +92,7 @@ async def sticker_to_png(sticker):
 
     img = await sticker.get_reply_message()
     if not img.document:
-        await sticker.edit("`Maaf Lord, Ini Bukan Sticker`")
+        await sticker.edit("`Maaf Sayang, Ini Bukan Sticker`")
         return False
 
     await sticker.edit("`Berhasil Mengambil Sticker!`")
