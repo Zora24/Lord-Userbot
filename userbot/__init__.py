@@ -163,7 +163,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Lord-Userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "GabutC-UBot")
 
 # Bot version
 BOT_VER = os.environ.get("BOT_VER", "4.0")
@@ -176,7 +176,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/971320cca78b5ed555eee.jpg"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
