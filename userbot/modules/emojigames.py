@@ -54,7 +54,7 @@ async def _(event):
                 await r.delete()
                 r = await event.reply(file=InputMediaDice('🏀'))
         except BaseException:
-            passpass
+            pass
 
 CMD_HELP.update({
     "emojigames":
