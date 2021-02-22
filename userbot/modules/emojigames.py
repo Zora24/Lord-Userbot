@@ -56,7 +56,6 @@ async def _(event):
         except BaseException:
             passpass
 
-
 CMD_HELP.update({
     "emojigames":
     "`.dice` 1-6 or `.dart`1-6 or `.ball`1-5\
