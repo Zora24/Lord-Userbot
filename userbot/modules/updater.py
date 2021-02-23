@@ -194,7 +194,7 @@ async def upstream(event):
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**✣ Pembaruan Untuk GabutC-UBot [{ac_br}]:\n\n✣ Pembaruan:**\n`{changelog}`'
+        changelog_str = f'**✣ Pembaruan Untuk GabutC-UBot:\n\n✣ Pembaruan:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -219,7 +219,7 @@ async def upstream(event):
         await event.edit('`✲ Proses Update GabutC-UBot, Loading....35%`')
         await event.edit('`✲ Proses Update GabutC-UBot, Loading....77%`')
         await event.edit('`✲ Proses Update GabutC-UBot, Updating...90%`')
-        await event.edit('`✲ Proses Update GabutC-UBot, Mohon Menunggu Lord....100%`')
+        await event.edit('`✲ Proses Update GabutC-UBot, Mohon Menunggu Sayang....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
