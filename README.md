@@ -15,12 +15,12 @@
 <p align="center">&nbsp;</p>
 
 ### Repo GabutC-UBot
-Repo Fork dari [Alvin](https://t.me/liualvinas) Yang Dikelola Oleh [Hendra](https://t.me/AkuUserBot) 
+Repo Fork Yang Dikelola Oleh [Hendra](https://t.me/AkuUserBot) 
 
 
 ### CARA MENDAPATKAN STRING SESSON
 
-Caranya Pergi Ke Grup Support di Lord-Userbot Lalu Ketik #String [TEKAN DISINI](https://t.me/LordUserbot_Group) Untuk Masuk Ke Grup Support
+Caranya Pergi Ke Grup Support di Userbot Lalu Ketik #String [TEKAN DISINI](https://t.me/LordUserbot_Group) Untuk Masuk Ke Grup Support
 
 ## Bagaimana Cara Deploy?
 
@@ -37,7 +37,6 @@ Caranya Pergi Ke Grup Support di Lord-Userbot Lalu Ketik #String [TEKAN DISINI](
 
   > Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy :)
 ```
-Atau Bisa Gabung Ke Grup Lord Userbot Untuk Enjoy -> [TEKAN DISINI](https://t.me/LordUserbot_Group)
 ## <p align="center">DEPLOY GabutC-UBot</p>
 
 
