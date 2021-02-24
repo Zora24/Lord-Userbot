@@ -27,12 +27,12 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
     "**▬▬▬▬▬▬❙۩♛۩❙▬▬▬▬▬▬**\n"
-    f"**Welcome To Room Chat** **{DEFAULTUSER}**\n"
-    f"__Saya Adalah Bot Yang Menjaga Room Chat__ **Bos {DEFAULTUSER}.** "
-    "__Mohon Jangan Melakukan Spam Ke Room Chat Bos__ "
-    "__Karna Jika Anda Melakukan Itu Saya Akan Otomatis__ "
-    f"**Memblokir Anda**, __Tunggulah Sampai__ **Bos {DEFAULTUSER}** "
-    "__Menerima__ **Pesan Anda**, __Terimakasih ヅ__\n\n"
+    f"**Welcome To Room Chat** **{DEFAULTUSER} 🤗**\n"
+    f"**Saya Adalah Bot Yang Menjaga Room Chat** **Bos {DEFAULTUSER}💀.** "
+    "**Mohon Jangan Melakukan Spam Di Room Chat Bos😈** "
+    "**Karna Jika Anda Melakukan Itu Saya Akan Otomatis** "
+    f"**Memblokir Anda🙌**, **Tunggulah Sampai** **Bos {DEFAULTUSER}** "
+    "**Menerima** **Pesan Anda🙂**, **Terimakasih ヅ**\n\n"
     "**PESAN OTOMATIS**"
     "\n━━━━━━━━━━━━━━━"
     "\n**▬▬▬▬▬▬❙۩★۩❙▬▬▬▬▬▬**")
@@ -122,7 +122,7 @@ async def permitpm(event):
                         + "](tg://user?id="
                         + str(event.chat_id)
                         + ")"
-                        + " Terblokir Karna Melakukan Spamming Ke Room Chat",
+                        + " Terblokir Karna Melakukan Spamming Di Room Chat",
                     )
 
 
