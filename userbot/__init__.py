@@ -102,7 +102,7 @@ UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
     "https://github.com/Ependelope53/GabutC-UBot.git")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Lord-Userbot")
+    "UPSTREAM_REPO_BRANCH", "GabutC-UBot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -315,7 +315,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```『GabutC-UBot Telah Aktif』```")
+    await bot.send_message(BOTLOG_CHATID, "```⚔GabutC-UBot Telah Aktif⚔```")
     return
 
 with bot:
@@ -408,7 +408,7 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Lord✗Userbot ",
+                    "Bantuan GabutC-UBot ",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
@@ -423,7 +423,7 @@ with bot:
                                 "https://github.com/Ependelope53/GabutC-UBot"),
                             custom.Button.url(
                                 "Pemilik Repo",
-                                "t.me/liualvinas")],
+                                "t.me/AkuUserBot")],
                     ],
                     link_preview=False,
                 )
@@ -492,7 +492,7 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = f"Harap Deploy Lord Userbot Anda Sendiri, Jangan Menggunakan Milik Lord {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy GabutC-UBot Anda Sendiri, Jangan Menggunakan Milik Bos {ALIVE_NAME} ツ"
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
