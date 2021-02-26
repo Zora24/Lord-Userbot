@@ -71,12 +71,13 @@ async def handler(tele):
                                 tele.chat_id, guser.id, view_messages=False
                             )
                             await tele.reply(
-                                f"** Pengguna Gbanned Telah Bergabung** \n"
+                                f"**Lord, Pengguna Gban Telah Bergabung** \n"
                                 f"**Pengguna**: [{guser.id}](tg://user?id={guser.id})\n"
                                 f"**Aksi**  : `Banned`"
                             )
                         except BaseException:
                             return
+
 
 
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
