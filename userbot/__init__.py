@@ -3,6 +3,7 @@
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 # inline credit @keselekpermen69
+# Pengguna Lord-Userbot
 """ Userbot initialization. """
 
 import os
@@ -145,6 +146,9 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
+
+# Default .alive name
+LORD_TEKS_KUSTOM = os.environ.get("LORD_TEKS_KUSTOM", None)
 
 # Default .alive name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
@@ -498,9 +502,8 @@ with bot:
 
     except BaseException:
         LOGS.info(
-            "Support for inline is disabled on your bot. "
-            "To enable it, define a bot token and enable inline mode on your bot. "
-            "If you think there is a problem other than this, contact us.")
+            "Mode Inline Bot Mu Nonaktif. "
+            "Untuk Mengaktifkan Pergi Ke @BotFather, lalu settings bot > pilih mode inline > Turn On. ")
     try:
         bot.loop.run_until_complete(check_botlog_chatid())
     except BaseException:
