@@ -158,6 +158,10 @@
       "description": "Nama untuk menunjukan pesan .alive",
       "required": false
     },
+    "LORD_TEKS_KUSTOM": {
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .lordalive (Isi Terserah)",
+      "required": false
+    },
     "S_PACK_NAME": {
       "description": "Nama Sticker Pack Mu",
       "required": false
