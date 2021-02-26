@@ -2,7 +2,6 @@
 # Ported For Lord-Userbot By liualvinas/Alvin
 # If You Kang It Don't Delete / Warning!! Jangan Hapus Ini!!!
 
-from lordvars import Config
 from userbot import CMD_HELP
 from userbot.events import register
 
@@ -19,7 +18,9 @@ async def _(event):
     await tap[0].click(event.chat_id)
     await event.delete()
 
-# Alvin Gans 
+# Alvin Gans
+
+
 @register(outgoing=True, pattern=r"^\.wp(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
@@ -33,6 +34,8 @@ async def _(event):
     await event.delete()
 
 # Alvin Gans
+
+
 @register(outgoing=True, pattern=r"^\.mod(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
