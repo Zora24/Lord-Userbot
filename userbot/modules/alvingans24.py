@@ -98,19 +98,6 @@ async def _(event):
             await event.edit(animation_chars[i % 103])
 
 
-@register(outgoing=True, pattern='^.nah(?: |$)(.*)')
-async def typewriter(typew):
-    typew.pattern_match.group(1)
-    await typew.edit("`\n(\\_/)`"
-                     "`\n(●_●)`"
-                     "`\n />💖 *Ini Buat Kamu`")
-    sleep(2)
-    await typew.edit("`\n(\\_/)`"
-                     "`\n(●_●)`"
-                     "`\n💖<\\  *Tapi Bo'ong`")
-# Alpinnnn Gans
-
-
 @bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 async def _(event):
 
@@ -141,12 +128,57 @@ async def _(event):
             await asyncio.sleep(animation_interval)
 
             await event.edit(animation_chars[i % 11])
+
+
+@register(outgoing=True, pattern='^.nah(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("`\n(\\_/)`"
+                     "`\n(●_●)`"
+                     "`\n />💖 *Ini Buat Kamu`")
+    sleep(2)
+    await typew.edit("`\n(\\_/)`"
+                     "`\n(●_●)`"
+                     "`\n💖<\\  *Tapi Bo'ong`")
+# Alpinnnn Gans
+
+
+@bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+async def _(event):
+
+    if event.fwd_from:
+
+        return
+
+    animation_interval = 1
+
+    animation_ttl = range(0, 11)
+
+    input_str = event.pattern_match.group(1)
+
+    if input_str == "owner":
+
+        await event.edit(input_str)
+
+        animation_chars = [
+            "⬛⬛⬛⬛⬛⬛\n⬛⬜⬜⬜⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬜⬜⬜⬛\n⬛⬜⬛⬜⬛⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬛⬛⬛⬛⬛",
+            "⬛⬛⬛⬛⬛⬛\n⬛⬜⬜⬜⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬜⬜⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬛⬛⬛⬛⬛",
+            "⬛⬛⬛⬛⬛⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬛⬜⬜⬛⬛\n⬛⬛⬛⬛⬛⬛",
+            "⬛⬛⬛⬛⬛⬛\n⬛⬜⬜⬜⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬜⬜⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬛⬛⬛⬛⬛",
+            "⬛⬛⬛⬛⬛⬛\n⬛⬜⬜⬜⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬛⬛⬛⬛⬛",
+            "⬛⬛⬛⬛⬛⬛\n⬛⬜⬜⬜⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬜⬜⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬜⬛⬛⬜⬛\n⬛⬛⬛⬛⬛⬛"]
+
+        for i in animation_ttl:
+
+            await asyncio.sleep(animation_interval)
+
+            await event.edit(animation_chars[i % 11])
 # Alvin Imut
 # Alvin Gans
-
+# Lord
 CMD_HELP.update({
     "animasi":
-    "`.nah` ; `.huh`\
+    "`.nah` ; `.huh` ; `.owner`\
     \nUsage: cobain.\
     \n\n`.bunga` ; `.buah`\
     \nUsage: animasi.\
