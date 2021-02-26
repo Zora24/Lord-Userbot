@@ -3,7 +3,7 @@
 
 from telethon import events
 from userbot.events import register
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 
 PRINTABLE_ASCII = range(0x21, 0x7F)
 
