@@ -220,7 +220,7 @@ async def pipcheck(pip):
 @register(outgoing=True, pattern=r"^\.(?:lordalive|lordon)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
-    uptime = await get_readable_time((time.time() - StartTime))
+    await get_readable_time((time.time() - StartTime))
     output = (
         f" **┗┓LORD USERBOT┏┛** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
