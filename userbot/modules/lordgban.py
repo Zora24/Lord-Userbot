@@ -47,7 +47,8 @@ async def get_user_from_id(user, event):
         await event.edit(str(err))
         return None
     return user_obj
-## Ported For Lord-Userbot by liualvinas/Alvin
+# Ported For Lord-Userbot by liualvinas/Alvin
+
 
 @bot.on(ChatAction)
 async def handler(tele):
