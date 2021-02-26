@@ -79,7 +79,6 @@ async def handler(tele):
                             return
 
 
-
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
 async def gben(userbot):
     dc = userbot
