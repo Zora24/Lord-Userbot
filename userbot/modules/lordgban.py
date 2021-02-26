@@ -1,6 +1,7 @@
 # by:koala @mixiologist
 # Lord Userbot
 
+from telethon.events import ChatAction
 from userbot import ALIVE_NAME, CMD_HELP
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from userbot.events import register
@@ -46,6 +47,37 @@ async def get_user_from_id(user, event):
         await event.edit(str(err))
         return None
     return user_obj
+
+
+@bot.on(ChatAction)
+async def handler(tele):
+    if tele.user_joined or tele.user_added:
+        try:
+            from userbot.modules.sql_helper.gmute_sql import is_gmuted
+
+            guser = await tele.get_user()
+            gmuted = is_gmuted(guser.id)
+        except BaseException:
+            return
+        if gmuted:
+            for i in gmuted:
+                if i.sender == str(guser.id):
+                    chat = await tele.get_chat()
+                    admin = chat.admin_rights
+                    creator = chat.creator
+                    if admin or creator:
+                        try:
+                            await client.edit_permissions(
+                                tele.chat_id, guser.id, view_messages=False
+                            )
+                            await tele.reply(
+                                f"** Pengguna Gbanned Telah Bergabung** \n"
+                                f"**Pengguna**: [{guser.id}](tg://user?id={guser.id})\n"
+                                f"**Aksi**  : `Banned`"
+                            )
+                        except BaseException:
+                            return
+
 
 
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
