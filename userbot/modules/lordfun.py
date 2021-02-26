@@ -1,7 +1,6 @@
 # Based Plugins
 # Ported For Lord-Userbot By liualvinas/Alvin
 # If You Kang It Don't Delete / Warning!! Jangan Hapus Ini!!!
-import os
 from userbot import CMD_HELP, bot
 from userbot.events import register
 
