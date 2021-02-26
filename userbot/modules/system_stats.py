@@ -13,7 +13,7 @@ import time
 from datetime import datetime
 import psutil
 
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, StartTime, bot
+from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, LORD_TEKS_KUSTOM, CMD_HELP, StartTime, bot
 from userbot.events import register
 
 
@@ -223,20 +223,17 @@ async def amireallyalive(alive):
     uptime = await get_readable_time((time.time() - StartTime))
     output = (
         f" **┗┓LORD USERBOT┏┛** \n"
-        f"✘ __Lord__ \n"
-        f": `{DEFAULTUSER}` \n"
-        f"✘ __Username__ \n"
-        f": `@{user.username}` \n"
-        f"✘ __Telethon__ \n"
-        f": `Versi {version.__version__}` \n"
-        f"✘ __Python__ \n"
-        f": `Versi {python_version()}` \n"
-        f"✘ __Versi Bot__ \n"
-        f": `{BOT_VER}` \n"
-        f"✘ __Uptime__ \n"
-        f": `{uptime}` \n"
-        f"✘ __Modul__ \n"
-        f": `{len(modules)}` \n")
+        f"\n__**{LORD_TEKS_KUSTOM}**__\n"
+        f"**━━━━━━━━━━━━━━━━━━━━━**\n"
+        f"**♛ Lord** \n"
+        f" ➥ `{DEFAULTUSER}` \n"
+        f"**𒆜 Username** \n"
+        f" ➥ `@{user.username}` \n"
+        f"__Lord-Userbot Adalah Userbot Khusus__ "
+        f"__Yang Digunakan Untuk Bersenang-Senang__ "
+        f"__Di Telegram__ __Versi Bot Yang Digunakan__ `{BOT_VER}` "
+        f"__Jumlah Modul Dalam Lord Userbot__ `{len(modules)}` \n\n"
+        f"𖣘 **Repo Userbot:** [Lord-Userbot](https://github.com/Zora24/Lord-Userbot)\n𖣘 **Grup Userbot: **[Tekan](t.me/LordUserbot_Group)\n𖣘 **Pemilik:** [Alvin](t.me/liualvinas)\n")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
