@@ -25,7 +25,7 @@ else:
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
-PM_ON_OFF = Config.PM_DATA
+PM_ON_OFF = __init__.PM_DATA
 
 DEFAULTUSER = (
     str(ALIVE_NAME) if ALIVE_NAME else "Lord, Mohon setel ALIVE_NAME di Heroku"
@@ -42,7 +42,7 @@ USER_BOT_NO_WARN = (
     "**Mohon Tunggu Dan Pilih Alasan Yang Diberikan Di Bawah Ini Untuk Apa Anda Datang. Jika Anda Mencoba Spam Maka Saya Akan Memastikan Bahwa Anda Akan Terblokir.** \n\n"
 )
 
-if Config.BOTLOG_CHATID is not None:
+if __init__.BOTLOG_CHATID is not None:
 
     @register(outgoing=True, pattern=r"^\.(?:setuju|ok)\s?(.)?")
     async def approvepm(apprvpm):
@@ -162,7 +162,7 @@ if Config.BOTLOG_CHATID is not None:
         if pmpermit_sql.is_approved(chat_ids):
             return
         if not pmpermit_sql.is_approved(chat_ids):
-            # pm permit
+            # pm permit lord
             await do_pm_permit_action(chat_ids, event)
 
     async def do_pm_permit_action(chat_ids, event):
@@ -193,7 +193,7 @@ if Config.BOTLOG_CHATID is not None:
                 return
             except BaseException:
                 return
-        botusername = Config.BOT_USERNAME
+        botusername = __init__.BOT_USERNAME
         tap = await bot.inline_query(botusername, USER_BOT_NO_WARN)
         sed = await tap[0].click(event.chat_id)
         PM_WARNS[chat_ids] += 1
