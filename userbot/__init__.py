@@ -79,7 +79,7 @@ BOTLOG = sb(os.environ.get("BOTLOG", "True"))
 LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 
 # Userbot logging feature switch.
-PM_DATA = sb(os.environ.get("PM_DATA", "ENABLE"))
+PM_DATA = sb(os.environ.get("PM_DATA", ""))
 
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
