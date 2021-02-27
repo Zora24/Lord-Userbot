@@ -78,6 +78,9 @@ BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", ""))
 BOTLOG = sb(os.environ.get("BOTLOG", "True"))
 LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 
+# Userbot logging feature switch.
+PM_DATA = sb(os.environ.get("PM_DATA", "ENABLE"))
+
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
@@ -149,6 +152,13 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
 # untuk perintah .lordalive
 LORD_TEKS_KUSTOM = os.environ.get("LORD_TEKS_KUSTOM", None)
+
+# untuk kustom pm msg
+CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
+
+# untuk kustom pm msg
+PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
+
 
 # Default .alive name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
