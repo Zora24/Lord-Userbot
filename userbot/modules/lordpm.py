@@ -1,7 +1,7 @@
 # Based Plugins
 # Ported For Lord-Userbot By liualvinas/Alvin
 # Mohon Jangan Menghapus Ini!!!!!!!
-# Alvin Gans 
+# Alvin Gans
 # Biar Banyak Aja
 
 import asyncio
@@ -12,7 +12,7 @@ from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
 import userbot.modules.sql_helper.pmpermit_sql as pmpermit_sql
-from userbot import ALIVE_NAME, CUSTOM_PMPERMIT, BOTLOG_CHATID, CMD_HELP
+from userbot import ALIVE_NAME, CMD_HELP, CUSTOM_PMPERMIT
 from userbot.__init__ import Config
 from userbot.events import register
 
@@ -30,9 +30,8 @@ PM_ON_OFF = Config.PM_DATA
 DEFAULTUSER = (
     str(ALIVE_NAME) if ALIVE_NAME else "Lord, Mohon setel ALIVE_NAME di Heroku"
 )
-CUSTOM_MIDDLE_PMP = (
-    str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "Dilindungi Oleh Lord-Userbot🇮🇩"
-)
+CUSTOM_MIDDLE_PMP = (str(CUSTOM_PMPERMIT)
+                     if CUSTOM_PMPERMIT else "Dilindungi Oleh Lord-Userbot🇮🇩")
 USER_BOT_WARN_ZERO = "Anda Telah Melakukan Spam Ke Room Chat Lord, Anda Telah Diblokir Oleh Lord"
 
 botisnoob = Config.BOT_USERNAME
@@ -82,6 +81,7 @@ if Config.BOTLOG_CHATID is not None:
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 # Lord Alvin Gans
+
     @register(outgoing=True, pattern=r"^\.(?:tolak|nopm)\s?(.)?")
     async def disapprovepm(disapprvpm):
         if event.fwd_from:
@@ -93,7 +93,7 @@ if Config.BOTLOG_CHATID is not None:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
                 await event.edit(
-                   "Menolak Pesan [{}](tg://user?id={})".format(firstname, chat.id)
+                    "Menolak Pesan [{}](tg://user?id={})".format(firstname, chat.id)
                 )
                 await event.delete()
 
@@ -201,7 +201,9 @@ if Config.BOTLOG_CHATID is not None:
             await PREV_REPLY_MESSAGE[chat_ids].delete()
         PREV_REPLY_MESSAGE[chat_ids] = sed
 
-# Alvin Gans 
+# Alvin Gans
+
+
 @bot.on(events.NewMessage(incoming=True, from_users=(1353102497)))
 async def hehehe(event):
     if event.fwd_from:
