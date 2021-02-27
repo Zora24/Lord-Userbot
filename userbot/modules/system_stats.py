@@ -230,10 +230,10 @@ async def amireallyalive(alive):
         f" ➥ `{DEFAULTUSER}` \n"
         f"**♛ Username** \n"
         f" ➥ `@{user.username}` \n"
-        f"❃ **Telethon      :** `Versi {version.__version__}` \n"
-        f"❃ **Python        :** `Versi {python_version()}` \n"
-        f"❃ **Versi Bot     :** `{BOT_VER}` \n"
-        f"❃ **Modules       :** `{len(modules)}` \n")
+        f"┣[• `Telethon :`Ver {version.__version__} \n"
+        f"┣[• `Python   :`Ver {python_version()} \n"
+        f"┣[• `Bot Ver  :`{BOT_VER} \n"
+        f"┣[• `Modules  :`{len(modules)} \n")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
