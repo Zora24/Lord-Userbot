@@ -159,7 +159,7 @@
       "required": false
     },
     "LORD_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .lordalive (Isi Terserah)",
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .lord (Isi Terserah)",
       "required": false
     },
     "S_PACK_NAME": {
