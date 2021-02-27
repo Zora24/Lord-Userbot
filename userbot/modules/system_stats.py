@@ -1,4 +1,5 @@
-# Ya
+# System Stats Lord-Userbot
+
 import asyncio
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
@@ -224,16 +225,15 @@ async def amireallyalive(alive):
     output = (
         f" **┗┓LORD USERBOT┏┛** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
-        f"**━━━━━━━━━━━━━━━━━━━━━**\n"
+        f"**━━━━━━━━━━━━━━━━━━━**\n"
         f"**♛ Lord** \n"
         f" ➥ `{DEFAULTUSER}` \n"
         f"**𒆜 Username** \n"
         f" ➥ `@{user.username}` \n"
-        f"__Lord-Userbot Adalah Userbot Khusus__ "
-        f"__Yang Digunakan Untuk Bersenang-Senang__ "
-        f"__Di Telegram__ __Versi Bot Yang Digunakan__ `{BOT_VER}` "
-        f"__Jumlah Modul Dalam Lord Userbot__ `{len(modules)}` \n\n"
-        f"𖣘 **Repo Userbot:** [Lord-Userbot](https://github.com/Zora24/Lord-Userbot)\n𖣘 **Grup Userbot: **[Tekan](t.me/LordUserbot_Group)\n𖣘 **Pemilik:** [Alvin](t.me/liualvinas)\n")
+        f"❃ **Telethon**    : `Versi {version.__version__}` \n"
+        f"❃ **Python**      : `Versi {python_version()}` \n"
+        f"❃ **Versi Bot**   : `{BOT_VER}` \n"
+        f"❃ **Modul**       : `{len(modules)}` \n")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
