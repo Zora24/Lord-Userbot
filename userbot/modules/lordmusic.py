@@ -104,6 +104,7 @@ async def getmusicvideo(cat):
     command = 'youtube-dl -f "[filesize<50M]" --merge-output-format mp4 ' + video_link
     os.system(command)
 
+
 def getmusic(get, DEFAULT_AUDIO_QUALITY):
     search = get
 
@@ -129,6 +130,7 @@ def getmusic(get, DEFAULT_AUDIO_QUALITY):
         " " +
         video_link)
     os.system(command)
+
 
 async def getmusic(cat):
     video_link = ""
@@ -323,7 +325,6 @@ async def _(event):
     os.system("rm -rf *.mkv")
     os.system("rm -rf *.mp4")
     os.system("rm -rf *.webm")
-
 
 
 @register(outgoing=True, pattern=r"^\.smd(?: |$)(.*)")
