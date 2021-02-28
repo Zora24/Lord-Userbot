@@ -26,16 +26,13 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    "**▬▬▬▬▬▬❙۩♛۩❙▬▬▬▬▬▬**\n"
-    f"**Welcome To Room Chat** **{DEFAULTUSER}**\n"
-    f"__Saya Adalah Bot Yang Menjaga Room Chat__ **Lord {DEFAULTUSER}.** "
-    "__Mohon Jangan Melakukan Spam Ke Room Chat Lord__ "
-    "__Karna Jika Anda Melakukan Itu Saya Akan Otomatis__ "
-    f"**Memblokir Anda**, __Tunggulah Sampai__ **Lord {DEFAULTUSER}** "
-    "__Menerima__ **Pesan Anda**, __Terimakasih ヅ__\n\n"
-    "**PESAN OTOMATIS**"
-    "\n━━━━━━━━━━━━━━━"
-    "\n**▬▬▬▬▬▬❙۩★۩❙▬▬▬▬▬▬**")
+    f"__**ROOM CHAT LORD || {DEFAULTUSER}**__\n"
+    "━━━━━━━━━━━━━━━━━━━━\n"
+    f"__HALLO SELAMAT DATANG, SAYA ADALAH BOT YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
+    "┏━━━━━━━━━━━━━━━━━━━\n"
+    "┣[• `PESAN OTOMATIS`\n"
+    "┣[• `BY LORD USERBOT`\n"
+    "┗━━━━━━━━━━━━━━━━━━━")
 # =================================================================
 
 
@@ -91,7 +88,7 @@ async def permitpm(event):
             else:
                 COUNT_PM[event.chat_id] = COUNT_PM[event.chat_id] + 1
 
-            if COUNT_PM[event.chat_id] > 8:
+            if COUNT_PM[event.chat_id] > 5:
                 await event.respond(
                     "`Anda Telah Di Blokir Karna Melakukan Spam Pesan`\n"
                     "`Ke Room Chat Lord ツ`\n"
