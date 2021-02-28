@@ -127,7 +127,7 @@ async def lord(e):
             await rkp.edit(
                 f"**Menjalankan Terminal...**\n\n• Menambahkan `{s}` Orang \n• Gagal Menambahkan `{f}` Orang\n\n**× Kesalahan:** `{error}`"
             )
-        except Exception as e:
+        except Exception:
             error = str(e)
             f = f + 1
     return await rkp.edit(
