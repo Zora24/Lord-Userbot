@@ -225,15 +225,17 @@ async def amireallyalive(alive):
     output = (
         f" **┗┓LORD USERBOT┏┛** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
-        f"**━━━━━━━━━━━━━━━━━━━**\n"
+        f"**━━━━━━━━━━━━━━━━━━━━**\n"
         f"**♛ Lord** \n"
         f" ➥ `{DEFAULTUSER}` \n"
         f"**♛ Username** \n"
         f" ➥ `@{user.username}` \n"
+        f"┏━━━━━━━━━━━━━━━━━━━\n"
         f"┣[• `Telethon :`Ver {version.__version__} \n"
         f"┣[• `Python   :`Ver {python_version()} \n"
         f"┣[• `Bot Ver  :`{BOT_VER} \n"
-        f"┣[• `Modules  :`{len(modules)} \n")
+        f"┣[• `Modules  :`{len(modules)} \n"
+        f"┗━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
