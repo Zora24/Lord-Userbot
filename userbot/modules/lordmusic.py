@@ -17,7 +17,6 @@ from hachoir.parser import createParser
 from pylast import User
 from selenium import webdriver
 from telethon import events
-from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo
 
@@ -44,19 +43,19 @@ def bruh(name):
 async def port_song(event):
     if event.fwd_from:
         return
-    
+
     cmd = event.pattern_match.group(1)
     if len(cmd) < 1:
-        await event.edit("`Sedang Mencari Musik Yang Anda Cari`") 
+        await event.edit("`Sedang Mencari Musik Yang Anda Cari`")
 
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
-        
-    await event.edit("`Mendapatkan Musik Anda...`")  
-    dosya = os.getcwd() 
+
+    await event.edit("`Mendapatkan Musik Anda...`")
+    dosya = os.getcwd()
     os.system(f"spotdl --song {cmd} -f {dosya}")
-    await event.edit("`Sedang Mendownload Musik`")    
+    await event.edit("`Sedang Mendownload Musik`")
 
     l = glob.glob("*.mp3")
     if len(l) >= 1:
@@ -70,11 +69,10 @@ async def port_song(event):
         )
         await event.delete()
     else:
-        await event.edit("`Lord, Musik Yang Anda Cari Tidak Dapat Ditemukan`")   
-        return 
+        await event.edit("`Lord, Musik Yang Anda Cari Tidak Dapat Ditemukan`")
+        return
     os.system("rm -rf *.mp3")
-    subprocess.check_output("rm -rf *.mp3",shell=True)
-
+    subprocess.check_output("rm -rf *.mp3", shell=True)
 
 
 async def getmusicvideo(cat):
