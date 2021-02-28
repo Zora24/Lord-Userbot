@@ -17,6 +17,7 @@ from hachoir.parser import createParser
 from pylast import User
 from selenium import webdriver
 from telethon import events
+from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo
 
@@ -39,30 +40,41 @@ def bruh(name):
     os.system("instantmusic -q -s " + name)
 
 
-@register(outgoing=True, pattern=r"^.song (.*)")
-async def _(event):
+@register(outgoing=True, pattern="^.song(?: |$)(.*)")
+async def port_song(event):
     if event.fwd_from:
         return
+    
     cmd = event.pattern_match.group(1)
+    if len(cmd) < 1:
+        await event.edit("`Sedang Mencari Musik Yang Anda Cari`") 
+
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
-    await event.edit("`Sedang Mencari Lagu Anda, Mohon Menunggu Lord...`")
-    bruh(str(cmd))
+        
+    await event.edit("`Mendapatkan Musik Anda...`")  
+    dosya = os.getcwd() 
+    os.system(f"spotdl --song {cmd} -f {dosya}")
+    await event.edit("`Sedang Mendownload Musik`")    
+
     l = glob.glob("*.mp3")
-    loa = l[0]
-    await event.edit("`Mengirim Lagu Anda....`")
-    await event.client.send_file(
-        event.chat_id,
-        loa,
-        force_document=True,
-        allow_cache=False,
-        caption=cmd,
-        reply_to=reply_to_id,
-    )
+    if len(l) >= 1:
+        await event.edit("`Mengunggah Musik Anda...`")
+        await event.client.send_file(
+            event.chat_id,
+            l[0],
+            force_document=True,
+            allow_cache=False,
+            reply_to=reply_to_id
+        )
+        await event.delete()
+    else:
+        await event.edit("`Lord, Musik Yang Anda Cari Tidak Dapat Ditemukan`")   
+        return 
     os.system("rm -rf *.mp3")
-    subprocess.check_output("rm -rf *.mp3", shell=True)
-    await event.delete()
+    subprocess.check_output("rm -rf *.mp3",shell=True)
+
 
 
 async def getmusicvideo(cat):
