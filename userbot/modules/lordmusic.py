@@ -39,39 +39,49 @@ def bruh(name):
     os.system("instantmusic -q -s " + name)
 
 
-@register(outgoing=True, pattern="^.song(?: |$)(.*)")
-async def port_song(event):
-    if event.fwd_from:
-        return
-
-    cmd = event.pattern_match.group(1)
-    if len(cmd) < 1:
-        await event.edit("`Sedang Mencari Musik Yang Anda Cari`")
-
+@register(outgoing=True, pattern=r"^\.song (.*)")
+async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
-
-    await event.edit("`Mendapatkan Musik Anda...`")
-    dosya = os.getcwd()
-    os.system(f"spotdl --song {cmd} -f {dosya}")
-    await event.edit("`Sedang Mendownload Musik`")
-
-    l = glob.glob("*.mp3")
-    if len(l) >= 1:
-        await event.edit("`Mengunggah Musik Anda...`")
-        await event.client.send_file(
-            event.chat_id,
-            l[0],
-            force_document=True,
-            allow_cache=False,
-            reply_to=reply_to_id
-        )
-        await event.delete()
+    reply = await event.get_reply_message()
+    if event.pattern_match.group(1):
+        query = event.pattern_match.group(1)
+        await event.edit("`Sedang Mencari Lagu Anda....`")
+    elif reply.message:
+        query = reply.message
+        await event.edit("`Sedang Mencari Lagu Anda....`")
     else:
-        await event.edit("`Lord, Musik Yang Anda Cari Tidak Dapat Ditemukan`")
+        await event.edit("`Apa Yang Harus Saya Cari Lord?`")
         return
+
+    getmusic(str(query), "320k")
+    l = glob.glob("*.mp3")
+    loa = l[0]
+    img_extensions = ["webp", "jpg", "jpeg", "webp"]
+    img_filenames = [
+        fn_img
+        for fn_img in os.listdir()
+        if any(fn_img.endswith(ext_img) for ext_img in img_extensions)
+    ]
+    thumb_image = img_filenames[0]
+    await event.edit("`Sedang Mengunggah Lagu Anda Lord....`")
+    c_time = time.time()
+    await event.client.send_file(
+        event.chat_id,
+        loa,
+        force_document=True,
+        thumb=thumb_image,
+        allow_cache=False,
+        caption=query,
+        reply_to=reply_to_id,
+        progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
+            progress(d, t, event, c_time, "[UPLOAD]", loa)
+        ),
+    )
+    await event.delete()
     os.system("rm -rf *.mp3")
+    os.remove(thumb_image)
     subprocess.check_output("rm -rf *.mp3", shell=True)
 
 
@@ -94,6 +104,31 @@ async def getmusicvideo(cat):
     command = 'youtube-dl -f "[filesize<50M]" --merge-output-format mp4 ' + video_link
     os.system(command)
 
+def getmusic(get, DEFAULT_AUDIO_QUALITY):
+    search = get
+
+    headers = {
+        "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+    }
+
+    html = requests.get(
+        "https://www.youtube.com/results?search_query=" +
+        search,
+        headers=headers).text
+    soup = BeautifulSoup(html, "html.parser")
+    for link in soup.find_all("a"):
+        if "/watch?v=" in link.get("href"):
+            # May change when Youtube Website may get updated in the future.
+            video_link = link.get("href")
+            break
+
+    video_link = "http://www.youtube.com/" + video_link
+    command = (
+        "youtube-dl --write-thumbnail --extract-audio --audio-format mp3 --audio-quality " +
+        DEFAULT_AUDIO_QUALITY +
+        " " +
+        video_link)
+    os.system(command)
 
 async def getmusic(cat):
     video_link = ""
@@ -108,15 +143,22 @@ async def getmusic(cat):
     os.system(command)
 
 
-async def getmusicvideo(cat):
-    video_link = ""
+def getmusicvideo(cat):
     search = cat
-    driver = await chrome()
-    driver.get("https://www.youtube.com/results?search_query=" + search)
-    user_data = driver.find_elements_by_xpath('//*[@id="video-title"]')
-    for i in user_data:
-        video_link = i.get_attribute("href")
-        break
+    headers = {
+        "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+    }
+    html = requests.get(
+        "https://www.youtube.com/results?search_query=" +
+        search,
+        headers=headers).text
+    soup = BeautifulSoup(html, "html.parser")
+    for link in soup.find_all("a"):
+        if "/watch?v=" in link.get("href"):
+            # May change when Youtube Website may get updated in the future.
+            video_link = link.get("href")
+            break
+    video_link = "http://www.youtube.com/" + video_link
     command = 'youtube-dl -f "[filesize<50M]" --merge-output-format mp4 ' + video_link
     os.system(command)
 
@@ -225,65 +267,63 @@ async def _(event):
     reply = await event.get_reply_message()
     if event.pattern_match.group(1):
         query = event.pattern_match.group(1)
-        await event.edit("`Sedang Mencari Musik Video`")
-    elif reply:
-        query = str(reply.message)
-        await event.edit("`Sedang Mencari Musik Video`")
+        await event.edit("`Mohon Menunggu, Sedang Mencari Video Anda....`")
+    elif reply.message:
+        query = reply.message
+        await event.edit("`Mohon Menunggu, Sedang Mencari Video Anda....`")
     else:
-        await event.edit("`Apa yang harus saya cari?`")
+        await event.edit("`Apa Yang Harus Saya Temukan?`")
         return
-    await getmusicvideo(query)
+    getmusicvideo(query)
     l = glob.glob(("*.mp4")) + glob.glob(("*.mkv")) + glob.glob(("*.webm"))
     if l:
-        await event.edit("`Video Musik Di Temukan`")
+        await event.edit("`Yaps.. Saya Menemukannya...`")
     else:
-        await event.edit(f"`Maaf Saya Tidak dapat Menemukan` **{query}**")
-        return
-    try:
-        loa = l[0]
-        metadata = extractMetadata(createParser(loa))
-        duration = 0
-        width = 0
-        height = 0
-        if metadata.has("duration"):
-            duration = metadata.get("duration").seconds
-        if metadata.has("width"):
-            width = metadata.get("width")
-        if metadata.has("height"):
-            height = metadata.get("height")
-        os.system("cp *mp4 thumb.mp4")
-        os.system("ffmpeg -i thumb.mp4 -vframes 1 -an -s 480x360 -ss 5 thumb.jpg")
-        thumb_image = "thumb.jpg"
-        c_time = time.time()
-        await event.client.send_file(
-            event.chat_id,
-            loa,
-            force_document=False,
-            thumb=thumb_image,
-            allow_cache=False,
-            caption=query,
-            supports_streaming=True,
-            reply_to=reply_to_id,
-            attributes=[
-                DocumentAttributeVideo(
-                    duration=duration,
-                    w=width,
-                    h=height,
-                    round_message=False,
-                    supports_streaming=True,
-                )
-            ],
-            progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(d, t, event, c_time, "[UPLOAD]", loa)
-            ),
-        )
-        await event.edit(f"**{query}** `Berhasil Diunggah`")
-        os.remove(thumb_image)
-        os.system("rm *.mkv *.mp4 *.webm")
-    except BaseException:
-        os.remove(thumb_image)
-        os.system("rm *.mkv *.mp4 *.webm")
-        return
+        await event.edit(f"Maaf..! Saya Tidak Menemukan Apapun Pencarian `{query}`")
+    loa = l[0]
+    metadata = extractMetadata(createParser(loa))
+    duration = 0
+    width = 0
+    height = 0
+    if metadata.has("duration"):
+        duration = metadata.get("duration").seconds
+    if metadata.has("width"):
+        width = metadata.get("width")
+    if metadata.has("height"):
+        height = metadata.get("height")
+    await event.edit("`Mengunggah Video.. Mohon Menunggu..`")
+    os.system("cp *mp4 thumb.mp4")
+    os.system("ffmpeg -i thumb.mp4 -vframes 1 -an -s 480x360 -ss 5 thumb.jpg")
+    thumb_image = "thumb.jpg"
+    c_time = time.time()
+    await event.client.send_file(
+        event.chat_id,
+        loa,
+        force_document=False,
+        thumb=thumb_image,
+        allow_cache=False,
+        caption=query,
+        supports_streaming=True,
+        reply_to=reply_to_id,
+        attributes=[
+            DocumentAttributeVideo(
+                duration=duration,
+                w=width,
+                h=height,
+                round_message=False,
+                supports_streaming=True,
+            )
+        ],
+        progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
+            progress(d, t, event, c_time, "[UPLOAD]", loa)
+        ),
+    )
+    await event.delete()
+    os.remove(thumb_image)
+    os.system("rm -rf *.mkv")
+    os.system("rm -rf *.mp4")
+    os.system("rm -rf *.webm")
+
 
 
 @register(outgoing=True, pattern=r"^\.smd(?: |$)(.*)")
