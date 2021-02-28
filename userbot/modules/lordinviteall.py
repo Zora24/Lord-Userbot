@@ -97,8 +97,8 @@ def user_full_name(user):
     return full_name
 
 
-@bot.on(events.NewMessage(pattern=r"\.culik(.*)", outgoing=True))
-async def _(event):
+@register(outgoing=True, pattern="^.culik?*()$")
+async def lord(e):
     sender = await event.get_sender()
     me = await event.client.get_me()
     if not sender.id == me.id:
