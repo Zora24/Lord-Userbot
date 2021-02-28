@@ -1,10 +1,8 @@
 # CREDITS TEAM DARK COBRA
 # PORTED FOR LORD USERBOT BY liualvinas/Alvin
 
-import os
 
 from userbot import *
-from userbot.events import register
 
 from pytz import country_names as c_n
 from pytz import country_timezones as c_tz
@@ -35,7 +33,7 @@ async def get_chatinfo(event):
             chat = event.chat_id
     try:
         chat_info = await event.client(GetFullChatRequest(chat))
-    except:
+    except BaseException:
         try:
             chat_info = await event.client(GetFullChannelRequest(chat))
         except ChannelInvalidError:
