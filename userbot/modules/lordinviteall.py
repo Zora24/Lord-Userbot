@@ -3,7 +3,6 @@
 
 
 from userbot import *
-from userbot import CMD_HELP, bot
 from userbot.events import register
 from pytz import country_names as c_n
 from pytz import country_timezones as c_tz
