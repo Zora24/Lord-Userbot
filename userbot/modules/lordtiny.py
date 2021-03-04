@@ -1,10 +1,9 @@
 # Based From Plugins
 # Ported For Lord-Userbot By liualvinas/Alvin
 
-import asyncio
 import os
 from userbot.events import register
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 from PIL import Image
 
 from . import *
