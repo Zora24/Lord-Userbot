@@ -3,7 +3,6 @@
 
 import os
 from userbot.events import register
-from telethon import events
 from userbot import CMD_HELP
 from PIL import Image
 
