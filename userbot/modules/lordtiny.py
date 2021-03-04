@@ -4,9 +4,6 @@
 import os
 from userbot.events import register
 from userbot import CMD_HELP
-import os
-
-import cv2
 from PIL import Image
 
 from . import *
