@@ -6,6 +6,7 @@ from userbot.events import register
 from userbot import CMD_HELP
 from PIL import Image
 
+
 @register(outgoing=True, pattern="^.tiny(?: |$)(.*)", disable_errors=True)
 async def ultiny(event):
     reply = await event.get_reply_message()
