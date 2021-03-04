@@ -1,6 +1,7 @@
 # Based From Plugins
 # Ported For Lord-Userbot By liualvinas/Alvin
 
+import asyncio
 import os
 from userbot.events import register
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
