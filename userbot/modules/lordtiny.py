@@ -3,7 +3,7 @@
 
 import os
 from userbot.events import register
-from userbot import CMD_HELP
+from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
 from PIL import Image
 
 from . import *
