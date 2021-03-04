@@ -11,11 +11,11 @@ from PIL import Image
 async def ultiny(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
-        await eor(event, "`Reply To Media`")
+        await eor(event, "`Balas Ke Media`")
         return
-    xx = await eor(event, "`processing...`")
+    xx = await eor(event, "`Memproses...`")
     ik = await userbot.download_media(reply)
-    im1 = Image.open("resources/extras/ultroid_blank.png")
+    im1 = Image.open("LordUserbot/lorduserbot.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply, "ult.tgs")
         os.system("lottie_convert.py ult.tgs json.json")
