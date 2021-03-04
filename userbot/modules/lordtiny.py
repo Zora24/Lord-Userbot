@@ -4,7 +4,7 @@
 import asyncio
 import os
 from userbot.events import register
-from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
+from userbot import CMD_HELP, bot
 from PIL import Image
 
 from . import *
