@@ -176,7 +176,7 @@ async def gunben(userbot):
     except BaseException:
         return await dark.edit("`Terjadi Kesalahan ヅ`")
     if user:
-        if user.id == 1353102497, 1073848376:
+        if user.id == 1353102497:
             return await dark.edit("**Lord Pengguna Tidak Bisa Terkena Perintah Ini, Karna Dia Pembuatku ヅ**")
         try:
             from userbot.modules.sql_helper.gmute_sql import ungmute
