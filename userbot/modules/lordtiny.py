@@ -4,23 +4,13 @@
 import os
 from userbot.events import register
 from userbot import CMD_HELP
-import asyncio
-import io
 import os
-import random
-import re
-import urllib.request
-from os import remove
 
 import cv2
-import numpy as np
-from PIL import Image, ImageDraw
-from telethon.errors import (ChatSendInlineForbiddenError,
-                             ChatSendStickersForbiddenError)
-from telethon.tl.types import (DocumentAttributeFilename,
-                               DocumentAttributeSticker, MessageMediaPhoto)
+from PIL import Image
 
 from . import *
+
 
 @register(outgoing=True, pattern="^.tiny(?: |$)(.*)", disable_errors=True)
 async def ultiny(event):
