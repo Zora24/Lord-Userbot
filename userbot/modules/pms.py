@@ -88,10 +88,10 @@ async def permitpm(event):
             else:
                 COUNT_PM[event.chat_id] = COUNT_PM[event.chat_id] + 1
 
-            if COUNT_PM[event.chat_id] > 5:
+            if COUNT_PM[event.chat_id] > 4:
                 await event.respond(
                     "`Anda Telah Di Blokir Karna Melakukan Spam Pesan`\n"
-                    "`Ke Room Chat Lord ツ`\n"
+                    "`Ke Room Chat Lord ツ`"
                 )
 
                 try:
@@ -101,10 +101,9 @@ async def permitpm(event):
                     if BOTLOG:
                         await event.client.send_message(
                             BOTLOG_CHATID,
-                            "Terjadi Masalah Saat Menghitung Pesan Pribadi, Mohon Restart Bot!",
+                            "Lord, Terjadi Masalah Saat Menghitung Private Message, Mohon Restart Bot!",
                         )
-                    return LOGS.info(
-                        "Penghitungan Pesan Pribadi Terjadi Kesalahan")
+                    return LOGS.info("CountPM wen't rarted boi")
 
                 await event.client(BlockRequest(event.chat_id))
                 await event.client(ReportSpamRequest(peer=event.chat_id))
@@ -119,7 +118,7 @@ async def permitpm(event):
                         + "](tg://user?id="
                         + str(event.chat_id)
                         + ")"
-                        + " Terblokir Karna Melakukan Spamming Ke Room Chat",
+                        + " Telah Diblokir Karna Melakukan Spam Ke Room Chat",
                     )
 
 
