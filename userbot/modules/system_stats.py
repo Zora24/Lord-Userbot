@@ -296,16 +296,16 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f" **LORD USERBOT || {DEFAULTUSER}** \n"
-        f"┏━━━━━━━━━━━━━━━━━━━\n"
-        f"┣[• `Lord     :`{DEFAULTUSER}\n"
-        f"┣[• `Username :`@{user.username}\n"
+        f"**LORD USERBOT || {DEFAULTUSER}** \n"
+        f"┏━━━━━━━━━━━━━━━━━━━ \n"
+        f"┣[• `Lord     :`{DEFAULTUSER} \n"
+        f"┣[• `Username :`@{user.username} \n"
         f"┣[• `Telethon :`Ver {version.__version__} \n"
         f"┣[• `Python   :`Ver {python_version()} \n"
-        f"┣[• `Branch   :`{UPSTREAM_REPO_BRANCH}\n"
+        f"┣[• `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
         f"┣[• `Bot Ver  :`{BOT_VER} \n"
-        f"┣[• `Modules  :`{len(modules)} Modules\n"
-        f"┗━━━━━━━━━━━━━━━━━━━\n"
+        f"┣[• `Modules  :`{len(modules)} Modules \n"
+        f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
         f"[Repo](https://github.com/Zora24/Lord-Userbot) | [Grup Support](t.me/LordUserbot_Group) | [Owner](t.me/liualvinas)")
     if ALIVE_LOGO:
         try:
