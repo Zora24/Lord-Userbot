@@ -305,7 +305,7 @@ async def amireallyalive(alive):
         f"┣[• `Branch   :`{UPSTREAM_REPO_BRANCH}\n"
         f"┣[• `Bot Ver  :`{BOT_VER} \n"
         f"┣[• `Modules  :`{len(modules)} Modules\n"
-        f"┗━━━━━━━━━━━━━━━━━━━")
+        f"┗━━━━━━━━━━━━━━━━━━━"
         f"[Repo Lord](https://github.com/Zora24/Lord-Userbot) | [Grup Support](t.me/LordUserbot_Group) | [Pemilik Repo](t.me/liualvinas)\n")
     if ALIVE_LOGO:
         try:
