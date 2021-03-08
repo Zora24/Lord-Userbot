@@ -46,10 +46,10 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**★ PING ★**")
-    await pong.edit("**★✫ PING ★✫**")
-    await pong.edit("**★✫★ PING ★✫★**")
-    await pong.edit("**★✫★✫ PING ★✫★✫**")
+    await pong.edit("**★ OINKK ★**")
+    await pong.edit("**★✫ OINKK ★✫**")
+    await pong.edit("**★✫★ OINKK ★✫★**")
+    await pong.edit("**★✫★✫ OINKK ★✫★✫**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**𖣘 Aku dipanggil** "
@@ -63,10 +63,10 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("`Love Ping..............`")
+    await pong.edit("`Love Ping..............❤️`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**✣ PONG!**\n"
+    await pong.edit(f"**✣ KUNTUL!**\n"
                     f"❦ **Ping:** "
                     f"`%sms` \n"
                     f"❦ **Uptime:** "
@@ -78,10 +78,10 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("`Ping..............`")
+    await pong.edit("`Berubah..............`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**⌖ Pong!**\n"
+    await pong.edit(f"**⌖ Ultraman!**\n"
                     f"➠ __Ping:__ "
                     f"`%sms` \n"
                     f"➠ __Uptime:__ "
@@ -104,7 +104,7 @@ async def pingme(pong):
                     f"`%sms` \n"
                     f"❃ **Uptime:** "
                     f"`{uptime}` \n"
-                    f"**✦҈͜͡➳ My Lord:** `{ALIVE_NAME}`" % (duration))
+                    f"**✦҈͜͡➳ Cintaku:** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.speed$")
