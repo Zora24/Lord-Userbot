@@ -24,10 +24,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"**Maaf Lord {ALIVE_NAME} Sedang AFK!**",
-    f"**Maaf Lord {ALIVE_NAME} Sedang AFK\n Tunggu Sampai Dia Kembali Online!**",
-    f"**Lord {ALIVE_NAME} Sedang AFK\n Tunggulah Sampai Online**",
-    f"**Maaf Lord {ALIVE_NAME} Sedang AFK!**",
+    f"**Maaf Gaiss {ALIVE_NAME} Lagi Stres!**",
+    f"**Maaf Gaiss {ALIVE_NAME} Lagi stress\n Tunggu Sampai Dia Kembali Waras!**",
+    f"**Tuan {ALIVE_NAME} Lagi Stress\n Tunggulah Sampai Waras**",
+    f"**Maaf Gaiss {ALIVE_NAME} Lagi Stress!**",
 ]
 
 
@@ -42,9 +42,9 @@ afk_start = {}
 # =================================================================
 
 
-@register(outgoing=True, pattern="^.afk(?: |$)(.*)", disable_errors=True)
+@register(outgoing=True, pattern="^.dhlh(?: |$)(.*)", disable_errors=True)
 async def set_afk(afk_e):
-    """ For .afk command, allows you to inform people that you are afk when they message you """
+    """ For .dhlh command, allows you to inform people that you are afk when they message you """
     message = afk_e.text  # pylint:disable=E0602
     string = afk_e.pattern_match.group(1)
     global ISAFK
@@ -62,16 +62,16 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"**✘ AFK!**\n**Lord Telah AFK**\
+        await afk_e.edit(f"**✘ GILA!**\n**Gua Lagi Stress**\
         \n☛ **Alasan:** `{string}`")
     else:
-        await afk_e.edit("**✘ AFK!**\n**Lord Telah AFK**")
+        await afk_e.edit("**✘ GILA!**\n**Gua  Lagi  Stress**")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "【AFK】"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "【STRES】"))
     else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="【AFK】"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="【STRES】"))
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**Lord Telah AFK!**")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**Gua Lagi Stress!**")
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
@@ -90,7 +90,7 @@ async def type_afk_is_not_true(notafk):
     global afk_end
     user = await bot.get_me()  # pylint:disable=E0602
     last = user.last_name
-    if last and last.endswith("【AFK】"):
+    if last and last.endswith("【STRESS】"):
         last1 = last[:-12]
     else:
         last1 = ""
@@ -98,7 +98,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("**Lord Telah Kembali!**")
+        msg = await notafk.respond("**Akhirnya Gua Waras!**")
         time.sleep(3)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
@@ -106,7 +106,7 @@ async def type_afk_is_not_true(notafk):
             await notafk.client.send_message(
                 BOTLOG_CHATID,
                 "Anda Mendapatkan " + str(COUNT_MSG) + " Pesan Dari " +
-                str(len(USERS)) + " Obrolan Saat Anda AFK",
+                str(len(USERS)) + " Obrolan Saat Anda Stress",
             )
             for i in USERS:
                 name = await notafk.client.get_entity(i)
@@ -175,7 +175,7 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"**✘ Lord Masih AFK** {afk_since} **Yang Lalu.**\
+                        await mention.reply(f"**✘ Gua Masih Stress** {afk_since} **Yang Lalu.**\
                             \n☛ **Alasan:** `{AFKREASON}`")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
