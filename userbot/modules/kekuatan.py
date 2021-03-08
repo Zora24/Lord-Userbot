@@ -5,9 +5,9 @@ from userbot.events import register
 from userbot import bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HELP
 
 
-@register(outgoing=True, pattern=r'^.kekuatan(:? |$)([1-8])?')
+@register(outgoing=True, pattern=r'^.jurus(:? |$)([1-8])?')
 async def _(fry):
-    await fry.edit("`Lord Mengaktifkan Kekuatan Telegram...👾`")
+    await fry.edit("`Sigoblok Mengeluarkan Kesaktian Telegram...👾`")
     level = fry.pattern_match.group(2)
     if fry.fwd_from:
         return
