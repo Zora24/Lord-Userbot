@@ -12,14 +12,14 @@ async def _(fry):
     if fry.fwd_from:
         return
     if not fry.reply_to_msg_id:
-        await fry.edit("`Mohon Balas Di Sticker Lord`")
+        await fry.edit("`Mohon Balas Di Sticker Sayang`")
         return
     reply_message = await fry.get_reply_message()
     if not reply_message.media:
         await fry.edit("`Gambar tidak di dukung`")
         return
     if reply_message.sender.bot:
-        await fry.edit("`Mohon Balas Di Sticker Lord`")
+        await fry.edit("`Mohon Balas Di Sticker Sayang`")
         return
     chat = "@image_deepfrybot"
     message_id_to_reply = fry.message.reply_to_msg_id
@@ -74,14 +74,14 @@ async def _(fry):
     if fry.fwd_from:
         return
     if not fry.reply_to_msg_id:
-        await fry.edit("`Mohon Balas Di Sticker Lord`")
+        await fry.edit("`Mohon Balas Di Sticker Sayang`")
         return
     reply_message = await fry.get_reply_message()
     if not reply_message.media:
-        await fry.edit("`Mohon Balas Di Sticker Lord`")
+        await fry.edit("`Mohon Balas Di Sticker Sayang`")
         return
     if reply_message.sender.bot:
-        await fry.edit("`Mohon Balas Di Sticker Lord`")
+        await fry.edit("`Mohon Balas Di Sticker Sayang`")
         return
     chat = "@image_deepfrybot"
     message_id_to_reply = fry.message.reply_to_msg_id
