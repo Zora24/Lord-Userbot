@@ -130,7 +130,7 @@ async def _(fry):
 
 
 CMD_HELP.update({
-    "kekuatan":
-    "`.kekuatan` or `.kekuatan` [level(1-8)]"
+    "jurus":
+    "`.jurus` or `.jurus` [level(1-8)]"
     "\nUsage: untuk mengubah foto/sticker."
 })
