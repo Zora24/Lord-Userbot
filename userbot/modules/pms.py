@@ -26,12 +26,12 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    f"__**ROOM CHAT || {DEFAULTUSER}**__\n"
+    f"ROOM CHAT || {DEFAULTUSER}\n"
     "━━━━━━━━━━━━━━━━━━━━\n"
-    f"__HALLO SELAMAT DATANG, SAYA ADALAH BOT YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
+    f"HALLO SELAMAT DATANG, SAYA ADALAH GUARDIAN BOT YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI LORD {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
     "┏━━━━━━━━━━━━━━━━━━━\n"
     "┣[• `PESAN OTOMATIS`\n"
-    "┣[• `BY LORD USERBOT`\n"
+    "┣[• `BY 404 NOTFOUND`\n"
     "┗━━━━━━━━━━━━━━━━━━━")
 # =================================================================
 
@@ -91,7 +91,7 @@ async def permitpm(event):
             if COUNT_PM[event.chat_id] > 4:
                 await event.respond(
                     "`Anda Telah Di Blokir Karna Melakukan Spam Pesan`\n"
-                    "`Ke Room Chat Lord ツ`"
+                    "`Ke Room Chat Lord ✞`"
                 )
 
                 try:
@@ -230,9 +230,9 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima ツ`")
+        return await apprvpm.edit("`✞ Oke Pesan Anda Sudah Diterima Oleh Lord Saya ✞`")
 
-    await apprvpm.edit(f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima ツ`")
+    await apprvpm.edit(f"`Hai` [{name0}](tg://user?id={uid}) `⛧ Pesan Anda Sudah Diterima ⛧`")
     await apprvpm.delete(getmsg)
     await message.delete()
 
@@ -282,12 +282,12 @@ async def blockpm(block):
         aname = replied_user.id
         name0 = str(replied_user.first_name)
         await block.client(BlockRequest(aname))
-        await block.edit("`Anda Telah Diblokir!`")
+        await block.edit("`Anda Telah Diblokir Oleh Saya !`")
         uid = replied_user.id
     else:
         await block.client(BlockRequest(block.chat_id))
         aname = await block.client.get_entity(block.chat_id)
-        await block.edit("`Anda Telah Diblokir!`")
+        await block.edit("`Anda Telah Diblokir Oleh Saya !`")
         name0 = str(aname.first_name)
         uid = block.chat_id
 
@@ -318,7 +318,7 @@ async def unblockpm(unblock):
     if BOTLOG:
         await unblock.client.send_message(
             BOTLOG_CHATID,
-            f"[{name0}](tg://user?id={replied_user.id})" " Tidak Lagi Diblokir.",
+            f"[{name0}](tg://user?id={replied_user.id})" "Anda Tidak Lagi Diblokir.",
         )
 
 
@@ -360,7 +360,7 @@ async def add_pmsg(cust_msg):
 
         if BOTLOG:
             await cust_msg.client.send_message(
-                BOTLOG_CHATID, f"**{status} PM Yang Tersimpan Dalam Room Chat Anda:** \n\n{msg}"
+                BOTLOG_CHATID, f"**{status} PM Yang Tersimpan Dalam Room Chat Anda Lord:** \n\n{msg}"
             )
 
     if conf.lower() == "reset":
@@ -368,6 +368,7 @@ async def add_pmsg(cust_msg):
             sql.delgvar("unapproved_msg")
             await cust_msg.edit("`Anda Telah Menghapus Pesan Custom PM Ke Default`")
         else:
+
             await cust_msg.edit("`Pesan PM Anda Sudah Default Sejak Awal`")
 
     if conf.lower() == "get":
