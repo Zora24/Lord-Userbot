@@ -354,22 +354,22 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Terkadang`")
     sleep(1)
-    await typew.edit("`Mencintai Seseorang`")
+    await typew.edit("`Mencintai Seseorang yang ga pasti`")
     sleep(1)
-    await typew.edit("`Hanya Akan Membuang Waktumu`")
+    await typew.edit("`Hanya Akan Menyakiti hatimu`")
     sleep(1)
-    await typew.edit("`Ketika Waktumu Habis`")
+    await typew.edit("`Ketika dia sudah menemukan yang baru`")
     sleep(1)
-    await typew.edit("`Tambah Aja 5000`")
+    await typew.edit("`KAMU DI GHOSTING`")
     sleep(1)
-    await typew.edit("`Bercanda`")
+    await typew.edit("`MAMPUS`")
 # Create by myself @localheart
 
 
 @register(outgoing=True, pattern="^.mf$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("`mf g dl` **ミ(ノ;_ _)ノ=3** ")
+        await e.edit("`MAAF GADULU YA` **ミ(ノ;_ _)ノ=3** ")
 
 
 @bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
