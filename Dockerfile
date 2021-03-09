@@ -4,7 +4,7 @@ FROM liualvinas24/docker:groovy
 #
 # Clone repo and prepare working directory
 #
-RUN git clone -b Lord-Userbot https://github.com/Zora24/Lord-Userbot /root/userbot
+RUN git clone -b Lord-Userbot https://github.com/KENZO-420/404-Userbot /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
