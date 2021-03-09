@@ -25,8 +25,8 @@ from userbot.events import register
 # ========================= CONSTANTS ============================
 AFKSTR = [
     f"**Maaf Gaiss {ALIVE_NAME} Sedang Depresi!**",
-    f"**Maaf Gaiss {ALIVE_NAME} Sedang Depresi\n Tunggu Sampai Dia Kembali Online!**",
-    f"**Tuan {ALIVE_NAME} Sedang Depresi\n Tunggulah Sampai Online**",
+    f"**Maaf Gaiss {ALIVE_NAME} Sedang Depresi\n Tunggu Sampai Dia Kembali Waras!**",
+    f"**Tuan {ALIVE_NAME} Sedang Depresi\n Tunggulah Sampai Waras**",
     f"**Maaf Gaiss {ALIVE_NAME} Sedang Depresi!**",
 ]
 
@@ -98,7 +98,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("**Lord Telah Kembali!**")
+        msg = await notafk.respond("**Gua Udah Santuy!**")
         time.sleep(3)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
@@ -106,7 +106,7 @@ async def type_afk_is_not_true(notafk):
             await notafk.client.send_message(
                 BOTLOG_CHATID,
                 "Anda Mendapatkan " + str(COUNT_MSG) + " Pesan Dari " +
-                str(len(USERS)) + " Obrolan Saat Anda AFK",
+                str(len(USERS)) + " Obrolan Saat Anda Depresi",
             )
             for i in USERS:
                 name = await notafk.client.get_entity(i)
