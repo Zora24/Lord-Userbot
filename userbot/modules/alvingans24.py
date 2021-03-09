@@ -139,7 +139,7 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`\n(\\_/)`"
                      "`\n(●_●)`"
-                     "`\n💖<\\  *Tapi Bo'ong`")
+                     "`\n💖<\\  *Tapi Bo'ong Hiyahiyahiya`")
 # Alpinnnn Gans
 
 
