@@ -17,7 +17,10 @@
 <p align="center">&nbsp;</p>
 
 ### Repo Lord Userbot
-Repo Yang Dibuat [Alvin](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github 
+
+Repo Yang Dibuat [Alvin](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github
+
+Edited Repo 404-NOTFOUND by [KENZO](https://t.me/SyndicateTwenty4) 
 
 
 ### CARA MENDAPATKAN STRING SESSON
