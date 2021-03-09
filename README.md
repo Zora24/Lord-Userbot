@@ -10,13 +10,13 @@
   </a>
 </p>  
 
-# Lord Userbot
-![Lord Userbot Logo](https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg)
+# 404 Userbot
+![404 Userbot Logo](https://telegra.ph/file/9e31f857bc747bc04ba5e.jpg)
 
 <h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
 <p align="center">&nbsp;</p>
 
-### Repo Lord Userbot
+### Ini adalah Repo Lord Userbot yang telah di commit oleh 404.
 
 Repo Yang Dibuat [Alvin](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github
 
