@@ -88,7 +88,7 @@ async def type_afk_is_not_true(notafk):
     global afk_end
     user = await bot.get_me()  # pylint:disable=E0602
     last = user.last_name
-    if last and last.endswith("【⚒OFF⚒】"):
+    if last and last.endswith("【🥴GILA🥴】"):
         last1 = last[:-12]
     else:
         last1 = ""
@@ -104,7 +104,7 @@ async def type_afk_is_not_true(notafk):
             await notafk.client.send_message(
                 BOTLOG_CHATID,
                 "Anda Mendapatkan " + str(COUNT_MSG) + " Pesan Dari " +
-                str(len(USERS)) + " Obrolan Saat Anda OFF",
+                str(len(USERS)) + " Obrolan Saat Anda GILA",
             )
             for i in USERS:
                 name = await notafk.client.get_entity(i)
@@ -164,7 +164,7 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"**✥ {ALIVE_NAME} Sedang OFF** {afk_since} **Yang Lalu.**\
+                    await mention.reply(f"**✥ {ALIVE_NAME} UDAH GILA** {afk_since} **Yang Lalu.**\
                         \n➥ **Alasan:** `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -173,7 +173,7 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"**✥ {ALIVE_NAME} Masih OFF** {afk_since} **Yang Lalu.**\
+                        await mention.reply(f"**✥ {ALIVE_NAME} MASIH GILA** {afk_since} **Yang Lalu.**\
                             \n➥ **Alasan:** `{AFKREASON}`")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
