@@ -22,10 +22,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"**Maaf {ALIVE_NAME} Sedang OFF!**",
-    f"**Maaf {ALIVE_NAME} Sedang OFF\n Tunggu Sampai Online!**",
-    f"**{ALIVE_NAME} Sedang OFF\n Tunggulah Sampai Online**",
-    f"**Maaf {ALIVE_NAME} Sedang OFF!**",
+    f"**Maaf Ya {ALIVE_NAME} UDAH GILA!**",
+    f"**Maaf Ya {ALIVE_NAME} UDAH GILA\n Tunggu Sampai WARAS!**",
+    f"**{ALIVE_NAME} Sedang OFF\n Tunggulah Sampai WARAS**",
+    f"**Maaf Ya {ALIVE_NAME} UDAH GILA!**",
 ]
 
 
@@ -40,7 +40,7 @@ afk_start = {}
 # =================================================================
 
 
-@register(outgoing=True, pattern="^.off(?: |$)(.*)", disable_errors=True)
+@register(outgoing=True, pattern="^.gila(?: |$)(.*)", disable_errors=True)
 async def set_afk(afk_e):
     """ For .afk command, allows you to inform people that you are afk when they message you """
     message = afk_e.text  # pylint:disable=E0602
@@ -60,16 +60,16 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"**✥ {ALIVE_NAME} Telah OFF**\
+        await afk_e.edit(f"**✥ {ALIVE_NAME} UDAH GILA**\
         \n➥ **Alasan:** `{string}`")
     else:
-        await afk_e.edit(f"**✥ {ALIVE_NAME} Telah OFF**")
+        await afk_e.edit(f"**✥ {ALIVE_NAME} UDAH GILA**")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "【⚒OFF⚒】"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "【🥴GILAA🥴】"))
     else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="【⚒OFF⚒】"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="【🥴GILA🥴】"))
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#OFF\n**Lord Telah OFF!**")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#OFF\n**TUAN UDAH GILA!**")
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
@@ -96,7 +96,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond(f"**{ALIVE_NAME} Telah Kembali!**")
+        msg = await notafk.respond(f"**{ALIVE_NAME} UDAH WARAS!**")
         time.sleep(7)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
