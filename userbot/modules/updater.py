@@ -53,7 +53,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await event.edit(
                 '`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `'
-                ' untuk dapat deploy perubahan terbaru dari Lord Userbot.`'
+                ' untuk dapat deploy perubahan terbaru dari Bucin Userbot.`'
             )
             repo.__del__()
             return
@@ -63,11 +63,11 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await event.edit(
-                f'{txt}\n`Kredensial Heroku tidak valid untuk deploy Lord Userbot dyno.`'
+                f'{txt}\n`Kredensial Heroku tidak valid untuk deploy Bucin Userbot dyno.`'
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nDyno Lord-Userbot Sedang Dalam Proses, Mohon Menunggu 7-8 Menit`'
+                         '\nDyno Bucin-Userbot Sedang Dalam Proses, Mohon Menunggu 7-8 Menit`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -91,7 +91,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await asyncio.sleep(5)
             return await event.delete()
         else:
-            await event.edit("`Lord-Userbot Berhasil Di Deploy!\n" "Restarting, Mohon Menunggu Lord.....`")
+            await event.edit("`Bucin-Userbot Berhasil Di Deploy!\n" "Restarting, Mohon Menunggu Tuan.....`")
             await asyncio.sleep(15)
             await event.delete()
 
