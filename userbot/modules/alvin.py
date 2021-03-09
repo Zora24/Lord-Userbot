@@ -5,7 +5,7 @@ from telethon import events
 import asyncio
 
 
-@register(outgoing=True, pattern="^.sayang$")
+@register(outgoing=True, pattern="^.sange$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("I LOVEE YOUUU 💕")
@@ -39,7 +39,7 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`DIN DINNN.....`")
     sleep(1)
-    await typew.edit("`DINOOOOSAURUSSSSS!!`")
+    await typew.edit("`ORANG GILAAAAAA!!`")
     sleep(1)
     await typew.edit("`🏃                        🦖`")
     await typew.edit("`🏃                       🦖`")
