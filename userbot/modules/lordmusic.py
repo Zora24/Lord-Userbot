@@ -47,10 +47,10 @@ async def _(event):
     reply = await event.get_reply_message()
     if event.pattern_match.group(1):
         query = event.pattern_match.group(1)
-        await event.edit("`Sedang Mencari Lagu Anda....`")
+        await event.edit("`Sabar anjing lagi nyari lagu....`")
     elif reply.message:
         query = reply.message
-        await event.edit("`Sedang Mencari Lagu Anda....`")
+        await event.edit("`Sabar anjing lagi nyari lagu....`")
     else:
         await event.edit("`Apa Yang Harus Saya Cari Lord?`")
         return
@@ -65,7 +65,7 @@ async def _(event):
         if any(fn_img.endswith(ext_img) for ext_img in img_extensions)
     ]
     thumb_image = img_filenames[0]
-    await event.edit("`Sedang Mengunggah Lagu Anda Lord....`")
+    await event.edit("`Sedang Mengunggah Lagu Anda Lord, Mohon tunggu....`")
     c_time = time.time()
     await event.client.send_file(
         event.chat_id,
@@ -173,10 +173,10 @@ async def _(event):
     reply = await event.get_reply_message()
     if event.pattern_match.group(1):
         query = event.pattern_match.group(1)
-        await event.edit("`Mohon Menunggu Lord, Sedang Mencari Musik Anda ヅ`")
+        await event.edit("`Mohon Menunggu Lord, Sedang Mencari Musik Alay ヅ`")
     elif reply.message:
         query = reply.message
-        await event.edit("`Telah Mendapatkan Musik, Sedang Mengunggah.....ヅ`")
+        await event.edit("`Telah Mendapatkan Musik, Sedang Mengunggah Lagu Jamet.....ヅ`")
     else:
         await event.edit("`Lord, Apa Yang Seharusnya Saya Temukan? ヅ`")
         return
@@ -281,7 +281,7 @@ async def _(event):
     if l:
         await event.edit("`Yaps.. Saya Menemukannya...`")
     else:
-        await event.edit(f"Maaf..! Saya Tidak Menemukan Apapun Pencarian `{query}`")
+        await event.edit(f"Maaf..! Saya Tidak Menemukan Apapun Pencarian, Mungkin HP Lord Kentang. `{query}`")
     loa = l[0]
     metadata = extractMetadata(createParser(loa))
     duration = 0
@@ -333,7 +333,7 @@ async def _(event):
         return
     link = event.pattern_match.group(1)
     chat = "@SpotifyMusicDownloaderBot"
-    await event.edit("```Mendapatkan Musik Anda```")
+    await event.edit("```Mendapatkan Musik Anak Alay```")
     async with bot.conversation(chat) as conv:
         await asyncio.sleep(2)
         await event.edit("`Mendownload Musik Anda, Mohon Menunggu Beberapa Saat...`")
