@@ -170,7 +170,7 @@ async def upstream(event):
     ac_br = repo.active_branch.name
     if ac_br != UPSTREAM_REPO_BRANCH:Lord-Userbot
         await event.edit(
-            '**[UPDATER]:*Bucin-Userbot*\n'
+            '**[UPDATER]:*Lord-Userbot*\n'
             f'`Looks like you are using your own custom branch ({ac_br}). '
             'in that case, Updater is unable to identify '
             'which branch is to be merged. '
