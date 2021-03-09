@@ -157,10 +157,10 @@ async def rem_locks(event):
         what = "Semuanya"
     else:
         if not input_str:
-            await event.edit("`Apa Yang Harus Saya Buka Lord ヅ`")
+            await event.edit("`⛧ Apa Yang Harus Saya Buka Lord ? ⛧`")
             return
         else:
-            await event.edit(f"`Lord Jenis Kunci Yang Mau Anda Buka Tidak Valid` `{input_str}`")
+            await event.edit(f"`⛧ Lord Jenis Kunci Yang Mau Anda Buka Tidak Valid. ⛧` `{input_str}`")
             return
 
     unlock_rights = ChatBannedRights(
@@ -180,10 +180,10 @@ async def rem_locks(event):
         await event.client(
             EditChatDefaultBannedRightsRequest(peer=peer_id,
                                                banned_rights=unlock_rights))
-        await event.edit(f"`Lord Telah Membuka Kunci {what} Untuk Obrolan Ini ヅ`")
+        await event.edit(f"`⛧ Lord Telah Membuka Kunci {what} Untuk Obrolan Ini ⛧`")
     except BaseException as e:
         await event.edit(
-            f"`Apakah Lord Mempunyai Izin Melakukan Itu Disini?`\n**Kesalahan:** {str(e)}")
+            f"`⛧ Apakah Lord Mempunyai Izin Melakukan Itu Disini ? ⛧`\n**Kesalahan:** {str(e)}")
         return
 
 
