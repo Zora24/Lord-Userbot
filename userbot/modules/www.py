@@ -93,10 +93,10 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**Huhu Haha**")
-    await pong.edit("**HUHU HAHA**")
-    await pong.edit("**huhu haha**")
-    await pong.edit("**🐒!**")
+    await pong.edit("**Huhu 🐒 Haha**")
+    await pong.edit("**HUHU 🐒 HAHA**")
+    await pong.edit("**huhu 🐒 haha**")
+    await pong.edit("**🐒🐒🐒!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**♛ Sayang😘 ♛**\n"
@@ -104,7 +104,7 @@ async def pingme(pong):
                     f"`%sms` \n"
                     f"❃ **Uptime:** "
                     f"`{uptime}` \n"
-                    f"**✦҈͜͡➳ Cintaku:** `{ALIVE_NAME}`" % (duration))
+                    f"**✦҈͜͡➳Cintaku:** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.speed$")
@@ -131,7 +131,7 @@ async def speedtst(spd):
                    f"`{result['ping']}` \n"
                    "❃ **ISP:** "
                    f"`{result['client']['isp']}` \n"
-                   "❃ **BOT:** `Lord Userbot`")
+                   "❃ **BOT:** `Bucin Userbot`")
 
 
 def speed_convert(size):
