@@ -1206,7 +1206,7 @@ async def police(chase):
 
 @register(outgoing=True, pattern=r"^\.run$")
 async def runner_lol(run):
-    """ Lari, lari, LARIII! """
+    """ Lari, lari, ADA KANG GHOSTING! """
     await run.edit(choice(RUNS_STR))
 
 
