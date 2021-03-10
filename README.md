@@ -1,4 +1,5 @@
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/5501763.gif" width="473" height="82" alt="STRESS USERBOT" /></a>
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/5511978.gif" width="516" height="211" alt="  STRESS
+USERBOT" /></a>
 
 
 <p align="center">
