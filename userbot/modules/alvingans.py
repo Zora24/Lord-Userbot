@@ -98,7 +98,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.bundir(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Dadah Semuanya...`          \n　　　　　|"
+    await typew.edit("`DIDUGA BUNDIR KARNA DI GHOSTING...`          \n　　　　　|"
                      "\n　　　　　| \n"
                      "　　　　　| \n"
                      "　　　　　| \n"
