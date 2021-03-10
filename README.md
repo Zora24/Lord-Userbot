@@ -15,7 +15,7 @@ USERBOT" /></a>
 # STRESS Userbot
 ![Lord Userbot Logo](https://telegra.ph/file/99fb8faa72c1de0d41ea2.jpg)
 
-<h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
+<h3 align="center">REPO STRESS-USERBOT DIBUAT KARNA RAMADHANI LAGI STRESS KARNA PERANG DUNIA DENGAN KEKASIH TERCINTANYA!!</h3>
 <p align="center">&nbsp;</p>
 
 ### Repo Lord Userbot
