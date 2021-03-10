@@ -369,7 +369,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern="^.mf$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("`MAAF GADULU YA` **ミ(ノ;_ _)ノ=3** ")
+        await e.edit("`MAAF GADULU YA` **😝😜🤪😛** ")
 
 
 @bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
