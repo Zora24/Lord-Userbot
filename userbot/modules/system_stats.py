@@ -218,7 +218,7 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=r"^\.(?:Stres|lordon)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:stres|lordon)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -226,15 +226,15 @@ async def amireallyalive(alive):
         f" **┗┓STRESS USERBOT┏┛** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
-        f"**♛ TUAN** \n"
+        f"**🤑 TUAN** \n"
         f" ➥ `{DEFAULTUSER}` \n"
-        f"**♛ Username** \n"
+        f"**😋 Username** \n"
         f" ➥ `@{user.username}` \n"
         f"┏━━━━━━━━━━━━━━━━━━━\n"
-        f"┣[• `Telethon :`Ver {version.__version__} \n"
-        f"┣[• `Python   :`Ver {python_version()} \n"
-        f"┣[• `Bot Ver  :`{BOT_VER} \n"
-        f"┣[• `Modules  :`{len(modules)} \n"
+        f"┣[• ` 🙈 Telethon :`Ver {version.__version__} \n"
+        f"┣[• `🥴 Python   :`Ver {python_version()} \n"
+        f"┣[• `🤖 Bot Ver  :`{BOT_VER} \n"
+        f"┣[• `✨ Modules  :`{len(modules)} \n"
         f"┗━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
@@ -263,7 +263,7 @@ async def amireallyalive(alive):
     output = (
         f"**▬▬▬▬▬▬❙۩♛۩❙▬▬▬▬▬▬**\n"
         f"     **♕ STRESS USERBOT ♕** \n\n"
-        f"❃ **Lord**     \n   ➥ `{DEFAULTUSER}` \n"
+        f"❃ **Tuan**     \n   ➥ `{DEFAULTUSER}` \n"
         f"❃ **Username** \n   ➥ `@{user.username}` \n"
         f"❃ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
         f"❃ **Python**   \n   ➥ `Versi {python_version()}` \n"
@@ -298,15 +298,15 @@ async def amireallyalive(alive):
     output = (
         f"**♕ STRESS USERBOT** \n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
-        f"┣|• `Lord     :`{DEFAULTUSER} \n"
-        f"┣|• `Username :`@{user.username} \n"
-        f"┣|• `Telethon :`Ver {version.__version__} \n"
-        f"┣|• `Python   :`Ver {python_version()} \n"
-        f"┣|• `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
+        f"┣|• `🤴 Majikan     :`{DEFAULTUSER} \n"
+        f"┣|• `💳 Username :`@{user.username} \n"
+        f"┣|• `👺 Telethon :`Ver {version.__version__} \n"
+        f"┣|• `🐉 Python   :`Ver {python_version()} \n"
+        f"┣|• `Branch   :`{UPSTREAM_REPO_BRANCH} |STRESS-Userbot \n"
         f"┣|• `Bot Ver  :`{BOT_VER} \n"
         f"┣|• `Modules  :`{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
-        f"[Repo](https://github.com/Zora24/Lord-Userbot) | [Grup Support](t.me/LordUserbot_Group) | [Owner](t.me/liualvinas)")
+        f"[Repo](https://github.com/ramadhani892/STRESS-Userbot) | [Grup Support](t.me/LordUserbot_Group) | [Owner](t.me/liualvinas)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
