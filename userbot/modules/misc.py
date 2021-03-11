@@ -81,7 +81,7 @@ async def killdabot(event):
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#RESTARTBOT \n"
-                                        "`Lord-Userbot Telah Di Restart`")
+                                        "`STRESS-Userbot Telah Di Restart`")
     await bot.disconnect()
     # Spin a new instance of bot
     execl(sys.executable, sys.executable, *sys.argv)
@@ -120,7 +120,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "❃ **Repo Userbot:** [Lord-Userbot](https://github.com/Zora24/Lord-Userbot)\n❃ **Pemilik:** [Alvin](t.me/liualvinas)"
+        "❃ **Repo Userbot:** [Lord-Userbot](https://github.com/ramadhani892/STRESS-Userbot)\n❃ **Pemilik:** [Alvin](t.me/Ramadhaniiiiiiiii1)"
     )
 
 
