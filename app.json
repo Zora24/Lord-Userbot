@@ -1,6 +1,6 @@
 {
-  "name": "Lord-Userbot",
-  "description": "[Lord-Userbot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "name": "STRESS-Userbot",
+  "description": "[STRESS-Userbot] USERBOT INI DIBUAT UNTUK ORANG STRESS YANG LAGI GABUT.",
   "logo": "https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg",
   "keywords": [
     "telegram",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Zora24/Lord-Userbot",
-  "telegram": "https://t.me/liualvinas",
-  "success_url": "https://t.me/liualvinasmahaputra",
+  "repository": "https://github.com/ramadhani892/STRESS-Userbot",
+  "telegram": "https://t.me/Ramadhaniiiiiiiii1",
+  "success_url": "https://t.me/berteman_itu_indah",
   "stack": "container",
   "env": {
     "API_KEY": {
