@@ -79,7 +79,7 @@ async def typewriter(typew):
                      "╬═╬ \n"
                      "╬═╬ \n"
                      "╬═╬ \n"
-                     "╬═╬ Hallo Semuanya :) \n"
+                     "╬═╬ Hallo ANAK STRESS :) \n"
                      "╬═╬☻/ \n"
                      "╬═╬/▌ \n"
                      "╬═╬/ \\ \n")
@@ -112,7 +112,7 @@ async def typewriter(typew):
                      "＜ 、･　　|　　＼ \n"
                      "　＼＿＿／∪ _ ∪) \n"
                      "　　　　　 Ｕ Ｕ\n")
-
+                     
 
 @register(outgoing=True, pattern='^.awkwok(?: |$)(.*)')
 async def typewriter(typew):
@@ -121,7 +121,7 @@ async def typewriter(typew):
                      "──▄▀█▄▄▄─────▄▀█▄▄▄\n"
                      "▄▀──█▄▄──────█─█▄▄\n"
                      "─▄▄▄▀──▀▄───▄▄▄▀──▀▄\n"
-                     "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok..`")
+                     "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok Ada kang ghosting..`")
 
 
 @register(outgoing=True, pattern='^.ular(?: |$)(.*)')
@@ -299,7 +299,8 @@ async def typewriter(typew):
     await typew.edit("**LIAT NIH YA GUA GBAN**")
     sleep(1)
     await typew.edit("**TAPI BOONG!!!🤪🤪🤪**")
-
+    sleep(1)
+    await typew.edit("**PAL PALE PAL PALE,MUKE LU MIRIP TOKEK**")
 
 CMD_HELP.update({
     "vip":
