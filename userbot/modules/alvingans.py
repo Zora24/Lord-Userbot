@@ -301,7 +301,8 @@ async def typewriter(typew):
     await typew.edit("**TAPI BOONG!!!🤪🤪🤪**")
     sleep(1)
     await typew.edit("**PAL PALE PAL PALE,MUKE LU MIRIP TOKEK**")
-
+    sleep(1)
+    await typew.edit("**HAYYYYUUUKKKKK,PAM PIPAM PIPAM PIPAM PAM PIPAM PIPAM**")
 CMD_HELP.update({
     "vip":
     "`.bulan` ; `.hati` ; `.bernyanyi`\
