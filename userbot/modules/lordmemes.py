@@ -2869,7 +2869,7 @@ async def _(event):
     if (x == 73):
         await event.edit("**DAH SEGITU AJAH**")
     if (x == 74):
-        await event.edit("**JANGAN BANYAK"**")
+        await event.edit("**JANGAN BANYAK BANYAK**")
     if (x == 75):
         await event.edit("**BABAYY MWAHHH🥰😘**")
 
