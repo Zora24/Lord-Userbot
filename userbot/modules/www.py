@@ -96,10 +96,10 @@ async def pingme(pong):
     await pong.edit("**😘**")
     await pong.edit("**🥰🥰**")
     await pong.edit("**❤️❤️❤️**")
-    await pong.edit("**✦҈͜͡➳Sayang!**")
+    await pong.edit("**✦҈͜͡Sayang!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**♛HALO MWAH😘 ♛**\n"
+    await pong.edit(f"**🐊HALO MWAH😘 🐊**\n"
                     f"❃ **Bucin dikit:** "
                     f"`%sms` \n"
                     f"❃ **Uptime:** "
