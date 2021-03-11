@@ -29,22 +29,22 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "eye":
+    if input_str == "emm":
 
         await event.edit(input_str)
 
         animation_chars = [
 
-            "👁👁\n  👄  =====> Hey, How are you?",
-            "👁👁\n  👅  =====> Everything okay?",
-            "👁👁\n  💋  =====> Why are you staring at this?",
-            "👁👁\n  👄  =====> You idiot",
-            "👁👁\n  👅  =====> Go away",
-            "👁👁\n  💋  =====> Stop laughing",
-            "👁👁\n  👄  =====> It's not funny",
-            "👁👁\n  👅  =====> I guess ur still looking",
-            "👁👁\n  💋  =====> Ok retard 😑",
-            "👁👁\n  👄  =====> I go away then"
+            "Halo,Gimana kabarmu?",
+            "Apa kamu baik baik saja??",
+            "Apa kamu sudah mendapatkan kekasih baru??",
+            "Aku harap kau masih sendiri😊",
+            "Karena selama ini Aku sedang mencarimu🥺",
+            "Aku harap kamu masih mempunyai perasaan dengan ku😣",
+            "Ku Tidak bisa menjalani hidup tanpamu😔",
+            "Aku mohon padamu,untuk menerima ku kembali🥰",
+            "Mau kah kamu menjadi pasangan ku Lagi?🥰",
+            "Tapi ku sudah punya pacar, maukah jadi yg kedua?😁"
         ]
 
         for i in animation_ttl:
