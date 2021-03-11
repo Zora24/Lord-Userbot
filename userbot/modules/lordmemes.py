@@ -1271,24 +1271,24 @@ async def _(event):
         await event.edit(input_str)
 
         animation_chars = [
-            "`Connecting To Telegram Headquarters...`",
-            "`Call Connected.`",
-            "`Telegram: Hello This is Telegram HQ. Who is this?`",
-            f"`Me: Yo this is`@{DEFAULTUSER},`Please Connect me to my lil bro,Pavel Durov`",
-            "`User Authorised.`",
-            "`Calling Pavel Durov`  `At +916969696969`",
-            "`Private  Call Connected...`",
-            "`Me: Hello Sir, Please Ban This Telegram Account.`",
-            "`Pavel: May I Know Who Is This?`",
-            f"`Me: Yo Brah, I Am` @{DEFAULTUSER} ",
-            "`Pavel: OMG!!! Long time no see, Wassup Brother...\nI'll Make Sure That Guy Account Will Get Blocked Within 24Hrs.`",
-            "`Me: Thanks, See You Later Brah.`",
-            "`Pavel: Please Don't Thank Brah, Telegram Is Our's. Just Gimme A Call When You Become Free.`",
-            "`Me: Is There Any Issue/Emergency???`",
-            "`Pavel: Yes Sur, There Is A Bug In Telegram v69.6.9.\nI Am Not Able To Fix It. If Possible, Please Help Fix The Bug.`",
-            "`Me: Send Me The App On My Telegram Account, I Will Fix The Bug & Send You.`",
-            "`Pavel: Sure Sur \nTC Bye Bye :)`",
-            "`Private Call Disconnected.`"]
+            "`Menyambungkan telfon ke telegram...`",
+            "`telfon tersambung.`",
+            "`Telegram: Hallo anjing,ada afa menelfon ku?`",
+            f"`Me: Saya `@{DEFAULTUSER},`Ingin memberitahukan bahwa disini ada babu`",
+            "`Babu nya ngeselin`",
+            "`Aduh pokok nya babu nya goblok`",
+            "`telfon privasi terhubung...`",
+            "`Me: Hello Pulici saya ingin melaporkan bahwa disini ada babu`",
+            "`Pulici: Siapa ini?`",
+            f"`Me: Saya @{DEFAULTUSER} Goblok bgt pulici ",
+            "`Pulici: Oo iyah tenang biar saya urus babunya`",
+            "`Me: Asiappp Makasih pulici.`",
+            "`Pulici: Iya sama sama,telfon saya lagi nanti kalo ada babu`",
+            "`Me: Iya pulici, Saya juga lagi gabut aja nelpon anda`",
+            "`Pulici: oooooasuuuuuu GOBLOK`",
+            "`Me: Awowkwokwkkw Pulici nya goblok`",
+            "`Pulici: Dah lah anying Gajelas`",
+            "`Telpon Nya terputus.....`"]
 
         for i in animation_ttl:
 
