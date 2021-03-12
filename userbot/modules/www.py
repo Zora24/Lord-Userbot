@@ -64,9 +64,10 @@ async def pingme(pong):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await pong.edit("`ADA MONYET..............🐒🐒🐒🐒`")
+    await pong.edit("`HUHU HAHA................🐒🐒🐒🐒`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**✣ HUHU HAHA!**\n"
+    await pong.edit(f"**🐒!**\n"
                     f"❦ **NYET:** "
                     f"`%sms` \n"
                     f"❦ **Uptime:** "
@@ -78,7 +79,8 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("`Jadi gila..............`")
+    await pong.edit("`Jadi gila..............🤪`")
+    await pong.edit("`Jadi Stres.......🥴`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**⌖ ORGIL!**\n"
@@ -96,7 +98,7 @@ async def pingme(pong):
     await pong.edit("**😘**")
     await pong.edit("**🥰🥰**")
     await pong.edit("**❤️❤️❤️**")
-    await pong.edit("**✦҈͜͡Sayang!**")
+    await pong.edit("**Jadi Buaya**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**🐊HALO MWAH😘 🐊**\n"
@@ -104,7 +106,7 @@ async def pingme(pong):
                     f"`%sms` \n"
                     f"❃ **Uptime:** "
                     f"`{uptime}` \n"
-                    f"**✦҈͜͡Tuanku:** `{ALIVE_NAME}`" % (duration))
+                    f"**🤴Tuanku:** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.speed$")
@@ -152,6 +154,8 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     start = datetime.now()
     await pong.edit("`STRESSSS.....🔨`")
+    await pong.edit("`GOBLOKKKKK......😵`")
+    await pong.edit("`TOLOLLLLL.......😡`")
     end = datetime.now()
     duration = (end - start).microseconds / 9000
     await pong.edit("😡 **KALIAN SEMUA GILA!**\n`%sms`" % (duration))
