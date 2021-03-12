@@ -199,7 +199,7 @@ async def typewriter(typew):
     await typew.edit("░░██▓▓██\n")
     await typew.edit("░░██▓▓██\n")
     await typew.edit("░░██▓▓██\n")
-    await typew.edit"░░░██▓▓███\n")
+    await typew.edit("░░░██▓▓███\n")
     await typew.edit("░░░░██▓▓████\n")
     await typew.edit("░░░░░██▓▓█████\n")
     await typew.edit("░░░░░░██▓▓██████\n")
