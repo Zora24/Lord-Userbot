@@ -47,12 +47,19 @@ async def pingme(pong):
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await pong.edit("**🐖 ADA BABI 🐖**")
+    sleep(1)
     await pong.edit("**🐖🐖 OINKK 🐖🐖**")
+    sleep(1)
     await pong.edit("**🐖🐖🐖 OINKK 🐖🐖🐖**")
+    sleep(1)
     await pong.edit("**🐖🐖🐖🐖 OINKK 🐖🐖🐖🐖**")
+    sleep(1)
     await pong.edit("**mana Babi nya si tolol**")
+    sleep(1)
     await pong.edit("**Woi Babiiiii Muncul woi**")
+    sleep(1)
     await pong.edit("**Nah ini dia babinya**")
+    sleep(1)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**🐖NGOK🐖** "
@@ -67,9 +74,13 @@ async def pingme(pong):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await pong.edit("`ADA MONYET..............🐒🐒🐒🐒`")
+    sleep(1)
     await pong.edit("`HUHU HAHA................🐒🐒🐒🐒`")
+    sleep(1)
     await pong.edit("`HUHU HAHA................🐒🐒🐒🐒🐒`")
+    sleep(1)
     await pong.edit("`BERUBAH JADI SUNGGOKONG RAJA MONYET🐒🐒`")
+    sleep(1)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**🐒!**\n"
