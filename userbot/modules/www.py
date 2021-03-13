@@ -48,17 +48,30 @@ async def pingme(pong):
     start = datetime.now()
     await pong.edit("**🐖 ADA BABI 🐖**")
     
+
+
     await pong.edit("**🐖🐖 OINKK 🐖🐖**")
     
+
+
     await pong.edit("**🐖🐖🐖 OINKK 🐖🐖🐖**")
     
+
+
     await pong.edit("**🐖🐖🐖🐖 OINKK 🐖🐖🐖🐖**")
     
+
+
     await pong.edit("**mana Babi nya si tolol**")
     
+
+
     await pong.edit("**Woi Babiiiii Muncul woi**")
     
+
+
     await pong.edit("**Nah ini dia babinya**")
+
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**🐖NGOK🐖** "
@@ -74,11 +87,19 @@ async def pingme(pong):
     start = datetime.now()
     await pong.edit("`ADA MONYET..............🐒🐒🐒🐒`")
     
+
+
+
     await pong.edit("`HUHU HAHA................🐒🐒🐒🐒`")
     
+
+
     await pong.edit("`HUHU HAHA................🐒🐒🐒🐒🐒`")
     
+
+
     await pong.edit("`BERUBAH JADI SUNGGOKONG RAJA MONYET🐒🐒`")
+
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**🐒!**\n"
@@ -95,13 +116,23 @@ async def pingme(pong):
     start = datetime.now()
     await pong.edit("`Jadi gila..............🤪`")
     
+
+
+
     await pong.edit("`Jadi Stres.......🥴`")
     
+
+
     await pong.edit("`Jadi Goblok......❌`")
     
+
+
     await pong.edit("`Bener bener tolol...😝`")
     
+
+
     await pong.edit("`Demi alek DAGLOG....😆`")
+
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**😝 ORGIL!**\n"
@@ -118,19 +149,34 @@ async def pingme(pong):
     start = datetime.now()
     await pong.edit("**😘**")
     
+
+
     await pong.edit("**🥰🥰**")
     
+
+
     await pong.edit("**❤️❤️❤️**")
     
+
+
     await pong.edit("**Jadi Bucin**")
     
+
+
     await pong.edit("**Gapapa kan ya?**")
     
+
+
     await pong.edit("**Gapapalah ah anjing**")
     
+
+
     await pong.edit("**Sayangggggggggg**")
     
+
+
     await pong.edit("**Aku datangggggg**")
+
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**🐊HALO MWAH😘 🐊**\n"
@@ -146,10 +192,16 @@ async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
     await spd.edit("`Melaju Tak Terbatas Dan Melampauinya...🚀`")
     
+
+
     await spd.edit("`Mengebut dengan kecepatan tinggi.......🚀`")
     
+
+
     await spd.edit("`Minggir Tolol Tar Gua tabrak mampus....💩`")
     
+
+
     await spd.edit("`Kalo meninggoy jangan salain gua......☠️`")
     test = Speedtest()
 
