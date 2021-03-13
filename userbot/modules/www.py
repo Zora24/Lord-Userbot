@@ -72,6 +72,10 @@ async def pingme(pong):
 
     await pong.edit("**Nah ini dia babinya**")
 
+
+
+    await pomg.edit("**Buruan babi nongol**")
+
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**🐖NGOK🐖** "
@@ -99,6 +103,7 @@ async def pingme(pong):
 
 
     await pong.edit("`BERUBAH JADI SUNGGOKONG RAJA MONYET🐒🐒`")
+    await pong.edit("**AKU ADALAH RAJA MONYET,KALIAN SEMUA ADALAH MONYET**")
 
     end = datetime.now()
     duration = (end - start).microseconds / 1000
@@ -176,6 +181,7 @@ async def pingme(pong):
 
 
     await pong.edit("**Aku datangggggg**")
+    await pong.edit("**SAYANG AYO NGEWE**")
 
     end = datetime.now()
     duration = (end - start).microseconds / 1000
@@ -250,7 +256,7 @@ async def pingme(pong):
     await pong.edit("`TOLOLLLLL.......😡`")
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit("😡 **KALIAN SEMUA GILA!**\n`%sms`" % (duration))
+    await pong.edit("😡 **ANJENG!**\n`%sms`" % (duration))
 
 CMD_HELP.update(
     {"ping": "`.ping` ; `.lping` ; `.xping` ; `.sping`\
