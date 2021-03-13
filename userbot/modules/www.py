@@ -186,3 +186,9 @@ CMD_HELP.update(
     \n\n`.pong`\
     \nUsage: sama kaya perintah ping."
      })
+CMD_HELP.update(
+    {"sinyal": "`.sinyal`\
+    \nPenjelasan: sama seperti `.ping`."
+     })
+
+
