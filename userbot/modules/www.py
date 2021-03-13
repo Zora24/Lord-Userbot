@@ -126,7 +126,8 @@ async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
     await spd.edit("`Melaju Tak Terbatas Dan Melampauinya...🚀`")
     await spd.edit("`Mengebut dengan kecepatan tinggi.......🚀`")
-    await spd.edit("`Minggir Tolol Tar Gua tabrak mampus....💩"`)
+    await spd.edit("`Minggir Tolol Tar Gua tabrak mampus....💩`")
+    await spd.edit("`Kalo meninggoy jangan salain gua......☠️`")
     test = Speedtest()
 
     test.get_best_server()
