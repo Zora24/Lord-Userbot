@@ -239,4 +239,3 @@ CMD_HELP.update({
     "\nUsage: Memperbarui Lord-Userbot."
     "\n\n.update deploy"
     "\nUsage: Memperbarui Lord-Userbot Dengan Cara Deploy Ulang."
-})

@@ -28,10 +28,10 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 DEF_UNAPPROVED_MSG = (
     f"__**ROOM CHAT || {DEFAULTUSER}**__\n"
     "━━━━━━━━━━━━━━━━━━━━\n"
-    f"__HALLO SELAMAT DATANG, SAYA ADALAH BOT YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
+    f"__HALLO SELAMAT DATANG, SAYA ADALAH BABU YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
     "┏━━━━━━━━━━━━━━━━━━━\n"
     "┣[• `PESAN OTOMATIS`\n"
-    "┣[• `BY LORD USERBOT`\n"
+    "┣[• `BY BUCIN USERBOT`\n"
     "┗━━━━━━━━━━━━━━━━━━━")
 # =================================================================
 
@@ -90,7 +90,7 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > 5:
                 await event.respond(
-                    "`Anda Telah Di Blokir Karna Melakukan Spam Pesan`\n"
+                    "`Dibilang Jangan Spam,Maaf Gua blokir sampe Tuan Membukanya`\n"
                     "`Ke Room Chat Lord ツ`"
                 )
 
