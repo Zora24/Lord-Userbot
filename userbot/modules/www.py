@@ -190,5 +190,3 @@ CMD_HELP.update(
     {"sinyal": "`.sinyal`\
     \nPenjelasan: sama seperti `.ping`."
      })
-
-
