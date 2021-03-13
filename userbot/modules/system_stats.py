@@ -306,7 +306,7 @@ async def amireallyalive(alive):
         f"┣|• `Bot Ver  :`{BOT_VER} \n"
         f"┣|• `Modules  :`{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
-        f"[Repo](https://github.com/ramadhani892/STRESS-Userbot) | [Grup Support](t.me/berteman_itu_indah) | [CHANNEL](t.me/candu_musikk [Owner](t.me/liualvinas)")
+        f"[Repo](https://github.com/ramadhani892/STRESS-Userbot) | [Grup Support](t.me/berteman_itu_indah) | [CHANNEL](t.me/candu_musikk) [Owner](t.me/liualvinas)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
