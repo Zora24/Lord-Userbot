@@ -19,7 +19,7 @@ USERBOT" /></a>
 <p align="center">&nbsp;</p>
 
 ### Repo Lord Userbot
-Repo Yang Dibuat [Alvin](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github 
+Repo Yang Dibuat [Rama](https://t.me/Ramadhaniiiiiiiii1) Dari Berbagai Repo Userbot Github 
 
 
 ### CARA MENDAPATKAN STRING SESSON
