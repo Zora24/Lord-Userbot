@@ -231,7 +231,7 @@ async def amireallyalive(alive):
         f"**😋 Username** \n"
         f" ➥ `@{user.username}` \n"
         f"┏━━━━━━━━━━━━━━━━━━━\n"
-        f"┣[• ` 🙈 Telethon :`Ver {version.__version__} \n"
+        f"┣[• `🙈 Telethon :`Ver {version.__version__} \n"
         f"┣[• `🥴 Python   :`Ver {python_version()} \n"
         f"┣[• `🤖 Bot Ver  :`{BOT_VER} \n"
         f"┣[• `✨ Modules  :`{len(modules)} \n"
@@ -269,7 +269,7 @@ async def amireallyalive(alive):
         f"❃ **Python**   \n   ➥ `Versi {python_version()}` \n"
         f"❃ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
         f"❃ **Modul**    \n   ➥ `{len(modules)}` \n\n"
-        f"❃ **Repo Userbot:** [STRESS-Userbot](https://github.com/ramadhani892/STRESS-Userbot)\n❃ **Grup Userbot: **[Tekan](t.me/LordUserbot_Group)\n❃ **Pemilik:** [RAMA](t.me/Ramadhaniiiiiiiii1)\n"
+        f"❃ **Repo Userbot:** [STRESS-Userbot](https://github.com/ramadhani892/STRESS-Userbot)\n❃ **Grup Userbot: **[Tekan](t.me/berteman_itu_indah)\n❃ [CHANNEL](t.me/candu_musikk)\n❃ **Pemilik:** [RAMA](t.me/Ramadhaniiiiiiiii1)\n"
         f"**▬▬▬▬▬▬❙۩★۩❙▬▬▬▬▬▬**")
     if ALIVE_LOGO:
         try:
@@ -302,11 +302,11 @@ async def amireallyalive(alive):
         f"┣|• `💳 Username :`@{user.username} \n"
         f"┣|• `👺 Telethon :`Ver {version.__version__} \n"
         f"┣|• `🐉 Python   :`Ver {python_version()} \n"
-        f"┣|• `Branch   :`{UPSTREAM_REPO_BRANCH} |STRESS-Userbot \n"
+        f"┣|• `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
         f"┣|• `Bot Ver  :`{BOT_VER} \n"
         f"┣|• `Modules  :`{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
-        f"[Repo](https://github.com/ramadhani892/STRESS-Userbot) | [Grup Support](t.me/LordUserbot_Group) | [Owner](t.me/liualvinas)")
+        f"[Repo](https://github.com/ramadhani892/STRESS-Userbot) | [Grup Support](t.me/berteman_itu_indah) | [CHANNEL](t.me/candu_musikk [Owner](t.me/liualvinas)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
