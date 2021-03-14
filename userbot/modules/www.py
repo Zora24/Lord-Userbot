@@ -74,7 +74,7 @@ async def pingme(pong):
 
 
 
-    await pomg.edit("**Buruan babi nongol**")
+    await pong.edit("**Buruan babi nongol**")
 
     end = datetime.now()
     duration = (end - start).microseconds / 1000
