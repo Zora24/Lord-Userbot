@@ -208,18 +208,18 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**Perintah Untuk Update Lord Userbot**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari Lord Userbot.__')
+        return await event.respond('**Perintah Untuk Update Stress Userbot**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari Lord Userbot.__')
 
     if force_update:
         await event.edit(
             '`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`')
     else:
-        await event.edit('`✲ Proses Update Lord-Userbot, Loading....1%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Loading....20%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Loading....35%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Loading....77%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Updating...90%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Mohon Menunggu Lord....100%`')
+        await event.edit('`✲ Proses Update Stress-Userbot, Loading....1%`')
+        await event.edit('`✲ Proses Update Stress-Userbot, Loading....20%`')
+        await event.edit('`✲ Proses Update Stress-Userbot, Loading....35%`')
+        await event.edit('`✲ Proses Update Stress-Userbot, Loading....77%`')
+        await event.edit('`✲ Proses Update Stress-Userbot, Updating...90%`')
+        await event.edit('`✲ Proses Update Stress-Userbot, Mohon Menunggu Lord....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
