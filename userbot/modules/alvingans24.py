@@ -189,13 +189,18 @@ async def _(event):
 
         await event.edit(input_str)
 
-        animation_chars = 
-   await event.edit("**OWNER STREES USER-BOT ADALAH MANUSIA TERGANTENG DI HATI PEMAKAI NYA KENALAN DULU SAMA OWNER NYA YUK**")
-   await event.edit("**RAMADHANI NAMANYA,ORANG NYA BAIK**")
-   await event.edit("**TINGGAL NYA DI TANGERANG, BTW ORANG TANGERANG GANTENG GANTENG DAN KUAT KUAT AWWHHHH**")
-   await event.edit("**KALO MAU PAKE USERBOT INI,IZIN DULU KE ORANG NYA YA GENGSSS**")
-   await event.edit("**POKOK NYA OWNER NYA THEBEST BANGET SERIUSSSSS**")
-   await event.edit("**UDAH POKOK NYA ITU AJA SIH,INTINYA OWNER NYA GANTENG DAN BAIK PARAH**")
+        animation_chars = ^ 
+   await typew.edit("**OWNER STREES USER-BOT ADALAH MANUSIA TERGANTENG DI HATI PEMAKAI NYA KENALAN DULU SAMA OWNER NYA YUK**")
+   sleep(1)
+   await typew.edit("**RAMADHANI NAMANYA,ORANG NYA BAIK**")
+   sleep(1)
+   await typew.edit("**TINGGAL NYA DI TANGERANG, BTW ORANG TANGERANG GANTENG GANTENG DAN KUAT KUAT AWWHHHH**")
+   sleep(1)
+   await typew.edit("**KALO MAU PAKE USERBOT INI,IZIN DULU KE ORANG NYA YA GENGSSS**")
+   sleep(1)
+   await typew.edit("**POKOK NYA OWNER NYA THEBEST BANGET SERIUSSSSS**")
+   sleep(1)
+   await typew.edit("**UDAH POKOK NYA ITU AJA SIH,INTINYA OWNER NYA GANTENG DAN BAIK PARAH**")
 
         for i in animation_ttl:
 
