@@ -458,8 +458,8 @@ CMD_HELP.update({
     "gabut":
     "`.gabut` ; `.orgil`\
     \nUsage: ntahlah gabut doang.\
-    \n\n`.gombal`\
-    \nUsage: buat bercanda\
+    \n\n`.goblol`\
+    \nUsage: buat ngatain orang\
     \n\n`.cinta`\
     \nUsage: mengirim cintamu ke seseorang.\
     \n\n`.sange`\
