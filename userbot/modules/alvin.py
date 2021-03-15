@@ -436,7 +436,7 @@ async def typewriter(typew):
 
 CMD_HELP.update({
     "gabut":
-    "`.gabut` ; `.dino`\
+    "`.gabut` ; `.orgil`\
     \nUsage: ntahlah gabut doang.\
     \n\n`.gombal`\
     \nUsage: buat bercanda\
