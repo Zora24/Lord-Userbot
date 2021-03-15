@@ -47,34 +47,33 @@ async def pingme(pong):
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await pong.edit("**🐖 ADA BABI 🐖**")
-    await pong.edit("**🐖 OINKKK 🐖**")
-    await pong.edit("**🐖 NGOKKK🐖**")
-    await pong.edit("**🐖 Aku Babi🐖**")
+    await pong.edit("**🐖 ADA BABI 🐖**")
+    await pong.edit("**🐖 ADA BABI 🐖**")
+    await pong.edit("**🐖 LU BABI 🐖**")
     await pong.edit("**🐖🐖 OINKK 🐖🐖**")
-    
-
-
     await pong.edit("**🐖🐖🐖 OINKK 🐖🐖🐖**")
-    
-
-
     await pong.edit("**🐖🐖🐖🐖 OINKK 🐖🐖🐖🐖**")
-    
-
-
     await pong.edit("**mana Babi nya si tolol**")
-    
-
-
     await pong.edit("**Woi Babiiiii Muncul woi**")
-    
-
-
     await pong.edit("**Nah ini dia babinya**")
-
-
-
     await pong.edit("**Buruan babi nongol**")
+    await pong.edit("**.................🐖**")
+    await pong.edit("**................🐖.**")
+    await pong.edit("**...............🐖..**")
+    await pong.edit("**..............🐖...**")
+    await pong.edit("**.............🐖....**")
+    await pong.edit("**............🐖.....**")
+    await pong.edit("**...........🐖......**")
+    await pong.edit("**..........🐖.......**")
+    await pong.edit("**.........🐖........**")
+    await pong.edit("**........🐖.........**")
+    await pong.edit("**.......🐖..........**")
+    await pong.edit("**......🐖...........**")
+    await pong.edit("**.....🐖............**")
+    await pong.edit("**....🐖.............**")
+    await pong.edit("**...🐖..............**")
+    await pong.edit("**..🐖...............**")
+    await pong.edit("**.🐖................**")
 
     end = datetime.now()
     duration = (end - start).microseconds / 1000
