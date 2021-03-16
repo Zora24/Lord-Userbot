@@ -12,7 +12,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.purge$")
+@register(outgoing=True, pattern=r"^\Purge$")
 async def fastpurger(purg):
     chat = await purg.get_input_chat()
     msgs = []
@@ -45,7 +45,7 @@ async def fastpurger(purg):
     await done.delete()
 
 
-@register(outgoing=True, pattern=r"^\.purgeme")
+@register(outgoing=True, pattern=r"^\Purgeme")
 async def purgeme(delme):
     message = delme.text
     count = int(message[9:])
@@ -72,7 +72,7 @@ async def purgeme(delme):
     await smsg.delete()
 
 
-@register(outgoing=True, pattern=r"^\.del$")
+@register(outgoing=True, pattern=r"^\Del$")
 async def delete_it(delme):
     msg_src = await delme.get_reply_message()
     if delme.reply_to_msg_id:
@@ -129,11 +129,11 @@ async def selfdestruct(destroy):
     """
 
 
-CMD_HELP.update({"purge": ">`.purge`"
+CMD_HELP.update({"purge": ">`Purge`"
                  "\nUsage: Membersihkan semua pesan mulai dari pesan yang dibalas.",
-                 "purgeme": ">`.purgeme <angka>`"
+                 "purgeme": ">`Purgeme <angka>`"
                  "\nUsage: Menghapus jumlah pesan anda, yang mau anda hapus.",
-                 "del": ">`.del`"
+                 "del": ">`Del`"
                  "\nUsage: Menghapus pesan, balas ke pesan.",
                  "edit": ">`.edit <pesan baru>`"
                  "\nUsage: Ganti pesan terakhir Anda dengan <pesan baru>.",
