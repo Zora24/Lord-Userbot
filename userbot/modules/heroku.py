@@ -33,7 +33,7 @@ else:
 
 
 @register(outgoing=True,
-          pattern=r"^(get|Del) var(?: |$)(\w*)")
+          pattern=r"^.(get|del) var(?: |$)(\w*)")
 async def variable(var):
     exe = var.pattern_match.group(1)
     if app is None:
@@ -223,6 +223,6 @@ CMD_HELP.update({"heroku": ">.`usage`"
                  "\n\n>`.get var or .get var <VAR>`"
                  "\nUsage: Dapatkan Variabel Yang Ada, Gunakan Hanya Di Grup Privasi Anda!"
                  "\nIni Mengembalikan Semua Informasi Pribadi Anda, Harap berhati-hati."
-                 "\n\n>`Del var <VAR>`"
+                 "\n\n>`.del var <VAR>`"
                  "\nUsage: Menghapus Variabel Yang Ada"
                  "\nSetelah Menghapus Variabel Bot Akan Di Restart."})
