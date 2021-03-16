@@ -25,20 +25,23 @@ async def typewriter(typew):
                      "`\n┻┳|￣  )`"
                      "`\n┳ﾐ(￣ ／`"
                      "`\n┻┳T￣|`"
-                     "\n**Punten**")
+                     "\n**Permisi Aku mau nimbrung**")
 
 
-@register(outgoing=True, pattern='^.pantau(?: |$)(.*)')
+@register(outgoing=True, pattern='^Rama(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`\n┻┳|―-∩`"
-                     "`\n┳┻|     ヽ`"
-                     "`\n┻┳|    ● |`"
-                     "`\n┳┻|▼) _ノ`"
-                     "`\n┻┳|￣  )`"
-                     "`\n┳ﾐ(￣ ／`"
-                     "`\n┻┳T￣|`"
-                     "\n**Masih Ku Pantau**")
+    await typew.edit("**Rama ganteng✅**")
+    await typew.edit("**Rama Ganteng☑️**")
+    sleep(1)
+    await typew.edit("**Rama baik✅**")
+    await typew.edit("**Rama baik☑️**")
+    sleep(2)
+    await typew.edit("**Rama setia✅**")
+    await typew.edit("**Rama setia☑️**")
+    sleep(1)
+    await typew.edit("**Rama Ga galak✅**")
+    await typew.edit("**Rama Ga galak☑️**")
 
 
 # Create by myself @localheart
