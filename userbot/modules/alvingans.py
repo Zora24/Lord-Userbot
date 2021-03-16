@@ -306,7 +306,7 @@ async def typewriter(typew):
     await typew.edit("**HAYYYYUUUKKKKK,PAM PIPAM PIPAM PIPAM PAM PIPAM PIPAM**")
 CMD_HELP.update({
     "vip":
-    "`.bulan` ; `.hati` ; `.bernyanyi`\
+    "`.bulan` ; `.hati` ; `.gbn`\
     \nUsage: liat aja.\
     \n\n`.helikopter` ; `.tank` ; `.tembak`\n`.bundir`\
     \nUsage: liat sendiri\
