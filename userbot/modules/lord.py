@@ -28,20 +28,22 @@ async def typewriter(typew):
                      "\n**Permisi Aku mau nimbrung**")
 
 
-@register(outgoing=True, pattern='^Rama(?: |$)(.*)')
+@register(outgoing=True, pattern='^.rama(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**Rama ganteng✅**")
-    await typew.edit("**Rama Ganteng☑️**")
+    await typew.edit("**Rama ganteng☑️**")
+    await typew.edit("**Rama Ganteng✅**")
     sleep(1)
-    await typew.edit("**Rama baik✅**")
     await typew.edit("**Rama baik☑️**")
+    await typew.edit("**Rama baik✅**")
     sleep(2)
-    await typew.edit("**Rama setia✅**")
     await typew.edit("**Rama setia☑️**")
+    await typew.edit("**Rama setia✅**")
     sleep(1)
-    await typew.edit("**Rama Ga galak✅**")
     await typew.edit("**Rama Ga galak☑️**")
+    await typew.edit("**Rama Ga galak✅**")
+    sleep(1)
+    await typew.edit("**Kalian Semua stress,Kecuali rama😋**")
 
 
 # Create by myself @localheart
