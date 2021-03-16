@@ -12,7 +12,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\Purge$")
+@register(outgoing=True, pattern=r"^\.Purge$")
 async def fastpurger(purg):
     chat = await purg.get_input_chat()
     msgs = []
