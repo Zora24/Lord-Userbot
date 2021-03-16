@@ -166,7 +166,7 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"- 𝗔 𝗙 𝗞 -\n {ALIVE_NAME} ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                    await mention.reply(f"- 𝗔 𝗙 𝗞 -\n `{ALIVE_NAME}` **ᴀꜰᴋ** `{afk_since}` **ʏᴀɴɢ ʟᴀʟᴜ.**\
                         \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -265,8 +265,9 @@ async def afk_on_pm(sender):
 
 CMD_HELP.update({
     "afk":
-    "`.afk` [Alasan]\
-\nPenjelasan: Lakukan ketika ingin OFF.\nSiapapun Yang Balas, Tag, Atau Chat Kamu \
-Mereka Akan Tau Alasan Kamu OFF.\n\nAFK Bisa Dilakukan Dan Dibatalkan Dimanapun.\
+    "**Modules: `AFK`\
+    \n\n**• Perintah:** `.afk`\
+    \n**➥ Penjelasan:** __Siapapun Yang Balas, Tag, Atau Chat Kamu__\
+__Mereka Akan Tau Alasan Kamu OFF__.\n\n**Note:** `AFK Bisa Dilakukan Dan Dibatalkan Dimanapun.`\
 "
 })
