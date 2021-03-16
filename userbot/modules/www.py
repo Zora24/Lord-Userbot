@@ -41,7 +41,7 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(outgoing=True, pattern="^.sping$")
+@register(outgoing=True, pattern="^Sping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     await get_readable_time((time.time() - StartTime))
@@ -82,7 +82,7 @@ async def pingme(pong):
                     f"\n  ➥ `{ALIVE_NAME}` \n" % (duration))
 
 
-@register(outgoing=True, pattern="^.lping$")
+@register(outgoing=True, pattern="^Lping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
@@ -114,7 +114,7 @@ async def pingme(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-@register(outgoing=True, pattern="^.xping$")
+@register(outgoing=True, pattern="^Xping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
@@ -141,7 +141,7 @@ async def pingme(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-@register(outgoing=True, pattern="^.ping$")
+@register(outgoing=True, pattern="^Ping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
@@ -187,7 +187,7 @@ async def pingme(pong):
                     f"**🤴Tuanku:** `{ALIVE_NAME}`" % (duration))
 
 
-@register(outgoing=True, pattern="^.speed$")
+@register(outgoing=True, pattern="^Speed$")
 async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
     await spd.edit("**......................................🏍️**")
@@ -253,7 +253,7 @@ def speed_convert(size):
     return f"{round(size, 2)} {units[zero]}"
 
 
-@register(outgoing=True, pattern="^.pong$")
+@register(outgoing=True, pattern="^Pong$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     start = datetime.now()
@@ -289,10 +289,10 @@ async def pingme(pong):
     await pong.edit("😡 **STRESS!**\n`%sms`" % (duration))
 
 CMD_HELP.update(
-    {"ping": "`.ping` ; `.lping` ; `.xping` ; `.sping`\
+    {"ping": "`Ping` ; `Lping` ; `Xping` ; `Sping`\
     \nUsage: Untuk menunjukkan ping bot.\
-    \n\n`.speed`\
+    \n\n`Speed`\
     \nUsage: Untuk menunjukkan kecepatan.\
-    \n\n`.pong`\
+    \n\n`Pong`\
     \nUsage: sama kaya perintah ping."
      })
