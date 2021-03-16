@@ -6,7 +6,7 @@ from userbot.events import register
 from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern="^.dice(?: |$)(.*)")
+@register(outgoing=True, pattern="^.dadu(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -58,6 +58,6 @@ async def _(event):
 
 CMD_HELP.update({
     "emojigames":
-    "`.dice` 1-6 or `.dart`1-6 or `.ball`1-5\
+    "`.dadu` 1-6 or `.dart`1-6 or `.ball`1-5\
 \nUsage: hahaha just a magic.\nWarning:`Don't use any other values or bot will crash`"
 })
