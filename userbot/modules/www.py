@@ -187,6 +187,6 @@ CMD_HELP.update(
     \nUsage: sama kaya perintah ping."
      })
 CMD_HELP.update(
-    {"sinyal": "`.sinyal`\
-    \nPenjelasan: sama seperti `.ping`."
-     })
+    {"sinyal": "**Modules:** `Sinyal`\
+    \n\n**• Perintah:** `.sinyal`\
+    \n**Penjelasan:** **__Untuk melihat sinyal bot__**"})
