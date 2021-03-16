@@ -33,7 +33,7 @@ else:
 
 
 @register(outgoing=True,
-          pattern=r"^.(get|del) var(?: |$)(\w*)")
+          pattern=r"^(get|Del) var(?: |$)(\w*)")
 async def variable(var):
     exe = var.pattern_match.group(1)
     if app is None:
@@ -124,7 +124,7 @@ async def set_var(var):
 """
 
 
-@register(outgoing=True, pattern=r"^.usage(?: |$)")
+@register(outgoing=True, pattern=r"^Usage(?: |$)")
 async def dyno_usage(dyno):
     """
         Get your account Dyno Usage
@@ -179,7 +179,7 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "**☛ Informasi Dyno**:\n\n╭━┯━━━━━━━━━━━━━━━━┯━╮\n"
+                "**➡️ Nyawa bot lu**:\n\n╭━┯━━━━━━━━━━━━━━━━┯━╮\n"
                 f"✥ `Penggunaan Dyno` **{app.name}**:\n"
                 f"  ❉ **{AppHours} Jam - "
                 f"{AppMinutes} Menit  -  {AppPercentage}%**"
@@ -203,7 +203,7 @@ async def _(dyno):
         return await dyno.reply(
             "`Please make sure your Heroku API Key, Your App name are configured correctly in the heroku var.`"
         )
-    await dyno.edit("`Sedang Mengambil Logs Lord ヅ`")
+    await dyno.edit("`Sedang Mengambil Logs Ya ヅ`")
     with open("logs.txt", "w") as log:
         log.write(app.get_log())
     fd = codecs.open("logs.txt", "r", encoding="utf-8")
@@ -223,6 +223,6 @@ CMD_HELP.update({"heroku": ">.`usage`"
                  "\n\n>`.get var or .get var <VAR>`"
                  "\nUsage: Dapatkan Variabel Yang Ada, Gunakan Hanya Di Grup Privasi Anda!"
                  "\nIni Mengembalikan Semua Informasi Pribadi Anda, Harap berhati-hati."
-                 "\n\n>`.del var <VAR>`"
+                 "\n\n>`Del var <VAR>`"
                  "\nUsage: Menghapus Variabel Yang Ada"
                  "\nSetelah Menghapus Variabel Bot Akan Di Restart."})
