@@ -157,9 +157,9 @@ async def pingme(pong):
     await pong.edit("**S͟͟T͟͟R͟͟E͟͟S͟͟S͟͟ U͟͟S͟͟E͟͟R͟͟B͟͟O͟͟T͟͟**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╸▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣** \n"
-                    f"**        ➪STRESS-Userbot➪** \n"
-                    f"**▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╸▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣** \n"          
+    await pong.edit(f"**▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╸▩⃟ꪾ❁⃟݄ࣾ݃⊣** \n"
+                    f"**      ➪STRESS-Userbot➪** \n"
+                    f"**▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╸▩⃟ꪾ❁⃟݄ࣾ݃⊣** \n"          
                     f"**♛ Sinyal  :** `%sms` \n"
                     f"**♛ Tuanku:** `{ALIVE_NAME}` \n"
                     f"**╼═════════════════╾** \n" % (duration))
