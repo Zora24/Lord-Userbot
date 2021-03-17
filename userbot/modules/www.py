@@ -162,7 +162,7 @@ async def pingme(pong):
                     f"**▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣ ╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╸▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣** \n"          
                     f"**♛ Sinyal:** `%sms` \n"
                     f"**♛ Tuanku:** `{ALIVE_NAME}` \n"
-                    f"**♛ Durasi:** % (duration))
+                    f"**♛ Durasi:** `% (duration))`
                     
 @register(outgoing=True, pattern="^Speed$")
 async def speedtst(spd):
