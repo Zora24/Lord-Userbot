@@ -297,8 +297,8 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**      ╠╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╣** \n"
-        f"**             👿STRESS-USERBOT👿** \n"
-        f"**      ╠╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╣** \n"
+        f"**            👿STRESS-USERBOT👿** \n"
+        f"**    ╠╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╣** \n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
         f"┣|• `🤴 Majikan  :`{DEFAULTUSER} \n"
         f"┣|• `💳 Username :`@{user.username} \n"
