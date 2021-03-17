@@ -179,13 +179,12 @@ async def pingme(pong):
 
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**🐊HALO MWAH😘 🐊**\n"
-                    f"😒 **Bucin dikit:** "
-                    f"`%sms` \n"
-                    f"☠️ **Waktu bucin:** "
-                    f"`{uptime}` \n"
-                    f"**🤴Tuanku:** `{ALIVE_NAME}`" % (duration))
-
+    await pong.edit(f"**▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣ ╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╸▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣** \n"
+                    f"**            ➪STRESS-Userbot➪** \n"
+                    f"** ▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣ ╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╸▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣          
+                    f"**          ♛ Sinyal:** `%sms` \n"
+                    f"**          ♛ Tuanku:** `{ALIVE_NAME}` \n"
+                    f"**          ♛ Durasi:** % (duration))
 
 @register(outgoing=True, pattern="^Speed$")
 async def speedtst(spd):
@@ -266,7 +265,7 @@ async def pingme(pong):
     await pong.edit("**PING PON**")
     await pong.edit("**PING PONG**")
     await pong.edit("`....................🏎️`")
-    await pong.edit("`...................🏎️..")
+    await pong.edit("`...................🏎️.`")
     await pong.edit("`..................🏎️..`")
     await pong.edit("`.................🏎️...`")
     await pong.edit("`................🏎️....`")
