@@ -160,9 +160,9 @@ async def pingme(pong):
     await pong.edit(f"**▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣ ╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╸▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣** \n"
                     f"**            ➪STRESS-Userbot➪** \n"
                     f"**▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣ ╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╸▩⃟꣄ꪾ❁⃟݄ࣾ݃⊣** \n"          
-                    f"**          ♛ Sinyal:** `%sms` \n"
-                    f"**          ♛ Tuanku:** `{ALIVE_NAME}` \n"
-                    f"**          ♛ Durasi:** % (duration))
+                    f"**♛ Sinyal:** `%sms` \n"
+                    f"**♛ Tuanku:** `{ALIVE_NAME}` \n"
+                    f"**♛ Durasi:** \n" % (duration))
 
 @register(outgoing=True, pattern="^Speed$")
 async def speedtst(spd):
