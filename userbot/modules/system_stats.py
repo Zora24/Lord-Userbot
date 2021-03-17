@@ -261,8 +261,8 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**¥▬▬▬▬▬▬❙۩♛۩❙▬▬▬▬▬▬¥**\n"
-        f"     **♕ STRESS USERBOT ♕** \n\n"
+        f"**¥▬▬▬▬▬▬❙۩ᬉིུ֛ ⃝ ꦿꦶ ۩❙▬▬▬▬▬▬¥**\n"
+        f"        **♕ STRESS USERBOT ♕** \n\n"
         f"❃ **Tuan**     \n   ➥ `{DEFAULTUSER}` \n"
         f"❃ **Username** \n   ➥ `@{user.username}` \n"
         f"❃ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
@@ -270,7 +270,7 @@ async def amireallyalive(alive):
         f"❃ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
         f"❃ **Modul**    \n   ➥ `{len(modules)}` \n\n"
         f"❃ **Repo Userbot:** [STRESS-Userbot](https://github.com/ramadhani892/STRESS-Userbot)\n❃ **Grup Userbot: **[Tekan](t.me/cariteman_randomm)\n❃ [CHANNEL](t.me/candu_musikk)\n❃ **Pemilik:** [RAMA](t.me/Ramadhaniiiiiiiii1)\n"
-        f"**▬▬▬▬▬▬❙۩★۩❙▬▬▬▬▬▬**")
+        f"**¥▬▬▬▬▬▬❙۩ᬉིུ֛ ⃝ ꦿꦶ ۩❙▬▬▬▬▬▬¥**")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
