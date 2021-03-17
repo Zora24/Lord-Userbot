@@ -223,19 +223,19 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f" **┗┓STRESS USERBOT┏┛** \n"
+        f" **║ ⬚⃝⃟▐𖣌STRESS-USERBOT𖣌▐⬚⃝⃟  ║** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
         f"**🤑 TUAN** \n"
         f" ➥ `{DEFAULTUSER}` \n"
         f"**😋 Username** \n"
         f" ➥ `@{user.username}` \n"
-        f"┏━━━━━━━━━━━━━━━━━━━\n"
+        f"╭━┯━━━━━━━━━━━━━━━━┯━╮\n"
         f"┣[• `🙈 Telethon :`Ver {version.__version__} \n"
         f"┣[• `🥴 Python   :`Ver {python_version()} \n"
         f"┣[• `🤖 Bot Ver  :`{BOT_VER} \n"
         f"┣[• `✨ Modules  :`{len(modules)} \n"
-        f"┗━━━━━━━━━━━━━━━━━━━")
+        f"╰━┷━━━━━━━━━━━━━━━━┷━╯")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
