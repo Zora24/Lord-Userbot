@@ -223,7 +223,9 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f" **║ ⬚⃝⃟▐𖣌STRESS-USERBOT𖣌▐⬚⃝⃟   ║** \n"
+        f"**╔══════════╣❃ ♕ ❃╠══════════╗** \n"
+        f"**║     ⬚⃝⃟STRESS-USERBOT⬚⃝⃟   ** \n"
+        f"**╚══════════╣❃ ♕ ❃╠══════════╝** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
         f"**🤑 TUAN** \n"
@@ -304,7 +306,7 @@ async def amireallyalive(alive):
         f"┣|• `💳 Username :`@{user.username} \n"
         f"┣|• `👺 Telethon :`Ver {version.__version__} \n"
         f"┣|• `🐉 Python   :`Ver {python_version()} \n"
-        f"┣|• `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
+        f"┣|• `Branch   :`STRESS-USERBOT \n"
         f"┣|• `Bot Ver  :`{BOT_VER} \n"
         f"┣|• `Modules  :`{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
