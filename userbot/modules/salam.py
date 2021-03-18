@@ -47,6 +47,17 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("BACOT DAH LU, GOBLOK!!!!")
 
+
+@register(outgoing=True, pattern='M(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("BHAAAKSSSSSSSSS")
+
+@register(outgoing=True, pattern='Y(?: |$)(.)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("YAUDAH IYAAAAAA ASU")
+
 CMD_HELP.update({
     "salam":
     "`P`\
@@ -58,5 +69,9 @@ CMD_HELP.update({
 \n\n`N`\
 \nUsage: Kalo kesel coba aja mas.\
 \n\n`B`\
-\nUsage: Buat Ngatain Yang Suka Bacot."
+\nUsage: Buat Ngatain Yang Suka Bacot.\
+\n\n`M`\
+\nUsage: Tersedak meledek.\
+\n\n`Y`\
+\nUsage: Buat yang males adu bacot."
 })
