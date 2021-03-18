@@ -18,7 +18,7 @@ USERBOT" /></a>
 <h3 align="center">REPO STRESS-USERBOT DIBUAT KARNA RAMADHANI LAGI STRESS KARNA PERANG DUNIA DENGAN KEKASIH TERCINTANYA!!</h3>
 <p align="center">&nbsp;</p>
 
-### Repo Lord Userbot
+### Repo STRESS Userbot
 Repo Yang Dibuat [Rama](https://t.me/Ramadhaniiiiiiiii1) Dari Berbagai Repo Userbot Github 
 
 
