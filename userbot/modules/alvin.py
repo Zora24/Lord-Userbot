@@ -111,6 +111,28 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`-TAMAT-`")
 
+@register(outgoing=True, pattern='^Ms(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**EFRY GOBLOK!!!**")
+    sleep(1)
+    await typew.edit("**AYYAS BODOH!!!**")
+    sleep(1)
+    await typew.edit("**NADIA BUCIN!!**")
+    sleep(1)
+    await typew.edit("**TIARA STRESS!!**")
+    sleep(1)
+    await typew.edit("**ENJEL GILAA!!**")
+    sleep(1)
+    await typew.edit("**RAKA GA KEREN!!**")
+    sleep(1)
+    await typew.edit("**IQBAL GAYY!!**")
+    sleep(1)
+    await typew.edit("**MUYUN KONTOL!!**")
+    sleep(1)
+    await typew.edit("**RAMA KEREN!!**")
+    sleep(1)
+    await typew.edit("**CUMA RAMA YANG GANTENG, KALIAN STRESSS!!"**)
 
 @register(outgoing=True, pattern="^.gabut$")
 async def koc(e):
