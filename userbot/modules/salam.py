@@ -33,7 +33,7 @@ async def typewriter(typew):
 
 @register(outgoing=True, pattern='^K(?: |$)(.*)')
 async def typewriter(typew):
-    type.pattern_match.group(1)
+    typew.pattern_match.group(1)
     await typew.edit("NGONTOLLLLLL")
 
 
