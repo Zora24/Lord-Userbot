@@ -47,7 +47,7 @@ async def lastname(steal):
             if response.text.startswith("No records") or r.text.startswith(
                 "No records"
             ):
-                await steal.edit("```Saya Tidak Menemukan Informasi Pergantian Nama, Lord Orang Ini Belum Pernah Mengganti Namanya ツ```")
+                await steal.edit("```Masa Gua ga nemu nama awal nya anjing,Si bangsat belom pernah ganti nama nih 😒```")
                 await steal.client.delete_messages(
                     conv.chat_id, [msg.id, r.id, response.id]
                 )
