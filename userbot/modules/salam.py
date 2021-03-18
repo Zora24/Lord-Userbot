@@ -58,11 +58,33 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**YAUDAH IYAAAAAA ASU**")
 
+
 @register(outgoing=True, pattern='^C(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**MUKA LU HINA GAUSAH SOK KERAS YA ANJENGG!!**")
+    await typew.edit("**MUKA LU HINA, GAUSAH SOK KERAS YA ANJENGG!!**")
 
+
+@register(outgoing=True, pattern='^S(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**GAUSAH SOKAP DEH ANJING!!**")
+
+
+@register(outgoing=True, pattern='^N(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**MACAM BAGUS AE LU BEGITU KONTOL!!**")
+
+@register(outgoing=True, pattern='^J(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**JELEK BANGET LU, NAJIS CUIHHHH!!!**")
+
+@register(outgoinnh=True, pattern='^A(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**PASANG PP DULU DEK,BIAR ORANG SEGRUP TAU BETAPA HINA NYA MUKA LU😆**")
 
 CMD_HELP.update({
     "salam":
@@ -79,5 +101,13 @@ CMD_HELP.update({
 \n\n`M`\
 \nUsage: Tersedak meledek.\
 \n\n`Y`\
-\nUsage: Buat yang males adu bacot."
+\nUsage: Buat yang males adu bacot.\
+\n\n`C`\
+\nUsage: Buat menghujat.\
+\n\n`S`\
+\nUsage: Haha sokap.\
+\n\n`N`\
+\nUsage: Hujat Orang caper.\
+\n\n`J`\
+\nUsage: Hujat Jamet."
 })
