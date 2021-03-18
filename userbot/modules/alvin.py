@@ -132,7 +132,7 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("**RAMA KEREN!!**")
     sleep(1)
-    await typew.edit("**CUMA RAMA YANG GANTENG, KALIAN STRESSS!!"**)
+    await typew.edit("**CUMA RAMA YANG GANTENG, KALIAN STRESSS!!**")
 
 @register(outgoing=True, pattern="^.gabut$")
 async def koc(e):
