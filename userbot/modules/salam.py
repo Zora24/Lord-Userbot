@@ -31,10 +31,18 @@ async def typewriter(typew):
     await typew.edit("Wa'alaikumussalam kabar sehat?")
 
 
+@register(outgoing=True, pattern='^K(?: |$)(.*)')
+async def typewriter(typew):
+    type.pattern_match.group(1)
+    await typew.edit("NGONTOLLLLLL")
+
+
 CMD_HELP.update({
     "salam":
     "`P`\
 \nUsage: Untuk Memberi salam.\
 \n\n`L`\
-\nUsage: Untuk Menjawab Salam."
+\nUsage: Untuk Menjawab Salam.\
+\n\n`B`\
+\nUsage: Untuk mengontoli mereka.\
 })
