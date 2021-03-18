@@ -111,7 +111,7 @@ CMD_HELP.update({
 \n\n`N`\
 \nUsage: Hujat Orang caper.\
 \n\n`J`\
-\nUsage: Hujat Jamet.
+\nUsage: Hujat Jamet.\
 \n\n`A`\
 \nUsage: Hujat yang gapunya muka."
 })
