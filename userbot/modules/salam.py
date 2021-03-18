@@ -58,6 +58,11 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**YAUDAH IYAAAAAA ASU**")
 
+@register(outgoing=True, pattern='^C(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**MUKA LU HINA GAUSAH SOK KERAS YA ANJENGG!!**")
+
 
 CMD_HELP.update({
     "salam":
