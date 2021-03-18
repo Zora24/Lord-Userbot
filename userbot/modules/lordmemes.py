@@ -29,22 +29,23 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "emm":
+    if input_str == "ms":
 
         await event.edit(input_str)
 
         animation_chars = [
 
-            "Halo,Gimana kabarmu?",
-            "Apa kamu baik baik saja??",
-            "Apa kamu sudah mendapatkan kekasih baru??",
-            "Aku harap kau masih sendiri😊",
-            "Karena selama ini Aku sedang mencarimu🥺",
-            "Aku harap kamu masih mempunyai perasaan dengan ku😣",
-            "Ku Tidak bisa menjalani hidup tanpamu😔",
-            "Aku mohon padamu,untuk menerima ku kembali🥰",
-            "Mau kah kamu menjadi pasangan ku Lagi?🥰",
-            "Tapi ku sudah punya pacar, maukah jadi yg kedua?😁"
+            "EFRY GILAAAA!!!",
+            "AYASS STRESS",
+            "NADIA NGONTOLLL!!!",
+            "MUYUN HODE!!!!",
+            "ENJEL BAPERAN, IDIHHH!!!",
+            "NADIA BUCINN, CUIHHH!!!!",
+            "RAKA GA KEREN!!",
+            "IQBAL GAYY",
+            "TIARA DEPRESI!!!",
+            "CUMA RAMA YANG WARAS, KALIAN STRESS!!",
+            "RAMA GANTENG NO DEBAT!!!"
         ]
 
         for i in animation_ttl:
