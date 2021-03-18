@@ -71,7 +71,7 @@ async def typewriter(typew):
     await typew.edit("**GAUSAH SOKAP DEH ANJING!!**")
 
 
-@register(outgoing=True, pattern='^N(?: |$)(.*)')
+@register(outgoing=True, pattern='^V(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**MACAM BAGUS AE LU BEGITU KONTOL!!**")
@@ -108,7 +108,7 @@ CMD_HELP.update({
 \nUsage: Buat menghujat.\
 \n\n`S`\
 \nUsage: Haha sokap.\
-\n\n`N`\
+\n\n`V`\
 \nUsage: Hujat Orang caper.\
 \n\n`J`\
 \nUsage: Hujat Jamet.\
