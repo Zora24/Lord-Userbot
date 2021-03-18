@@ -67,7 +67,7 @@ CMD_HELP.update({
 \n\n`K`\
 \nUsage: Untuk mengontoli mereka.\
 \n\n`N`\
-\nUsage: Kalo kesel coba aja mas.\
+\nUsage: Kalo kesel coba aja.\
 \n\n`B`\
 \nUsage: Buat Ngatain Yang Suka Bacot.\
 \n\n`M`\
