@@ -234,7 +234,7 @@ async def amireallyalive(alive):
         f"┣[• `Telethon :`Ver {version.__version__} \n"
         f"┣[• `Python   :`Ver {python_version()} \n"
         f"┣[• `Bot Ver  :`{BOT_VER} \n"
-        f"┣[• `Modules  :`{len(modules)} \n"
+        f"┣[• `Modules  :`{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
@@ -296,7 +296,7 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**♕ LORD USERBOT** \n"
+        f"**♕ LORD USERBOT ♕** \n\n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
         f"┣|• `Lord     :`{DEFAULTUSER} \n"
         f"┣|• `Username :`@{user.username} \n"
