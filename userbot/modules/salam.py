@@ -43,6 +43,6 @@ CMD_HELP.update({
 \nUsage: Untuk Memberi salam.\
 \n\n`L`\
 \nUsage: Untuk Menjawab Salam.\
-\n\n`B`\
-\nUsage: Untuk mengontoli mereka.\
+\n\n`K`\
+\nUsage: Untuk mengontoli mereka."
 })
