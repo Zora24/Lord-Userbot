@@ -37,28 +37,28 @@ async def typewriter(typew):
     await typew.edit("**NGONTOLLLLLL**")
 
 
-@register(outgoing=True, pattern='N(?: |$)(.*)')
+@register(outgoing=True, pattern='^N(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**NGENTOOOOOOOTTTTTTTTTTTT**")
 
-@register(outgoing=True, pattern='B(?: |$)(.*)')
+@register(outgoing=True, pattern='^B(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**BACOT DAH LU, GOBLOK!!!!**")
 
 
-@register(outgoing=True, pattern='M(?: |$)(.*)')
+@register(outgoing=True, pattern='^M(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**BHAAAKSSSSSSSSS**")
 
-@register(outgoing=True, pattern='Y(?: |$)(.*)')
+@register(outgoing=True, pattern='^Y(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**YAUDAH IYAAAAAA ASU**")
 
-@register(outgoing=True, pattern='Ms(?: |$)(.*)')
+@register(outgoing=True, pattern='^Ms(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**EFRY GOBLOKK**")
