@@ -58,28 +58,6 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**YAUDAH IYAAAAAA ASU**")
 
-@register(outgoing=True, pattern='^Ms(?: |$)(.*)')
-async def typewriter(typew):
-    typew.pattern_match.group(1)
-    await typew.edit("**EFRY GOBLOKK**")
-    sleep(1)
-    await typew.edit("**NADIA BUCIN**")
-    sleep(1)
-    await typew.edit("**TIARA GILA**")
-    sleep(1)
-    await typew.edit("**ANGGA DEPRESI**")
-    sleep(1)
-    await typew.edit("**IQBAL NGONTOLL**")
-    sleep(1)
-    await typew.edit("**RAKA GA KEREN**")
-    sleep(1)
-    await typew.edit("**ENJELL BAPERAN**")
-    sleep(1)
-    await typew.edit("**CUMA RAMA YANG KERENN!!!**")
-    sleep(1)
-    await typew.edit("**KALIAN SEMUA NGONTOLL**")
-    sleep(1)
-    await typew.edit("**RAMA GANTENG NODEBAT!**")
 
 CMD_HELP.update({
     "salam":
