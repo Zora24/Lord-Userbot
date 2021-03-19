@@ -99,7 +99,7 @@ async def typewriter(typew):
     await typew.edit("**War War Tai anjing, Ketrigger minta sharelok, Udah di sharelok Ga nyamperin,Keras di sosmed Bhakss...**")
 
 @register(outgoing=True, pattern='^H(?: |$)(.*)')
-async def typewriter(typew)
+async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Lawak Mulu ocehan lu,Ga ngena ke mental, CUIHHHH!!!**")
 
