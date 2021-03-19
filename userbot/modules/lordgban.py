@@ -135,14 +135,14 @@ async def gben(userbot):
             except BaseException:
                 b += 1
     else:
-        await dark.edit(f"`Mohon Balas Ke Pesan Lord`")
+        await dark.edit(f"`Mohon Balas Ke Pesan Sayang`")
     try:
         if gmute(user.id) is False:
             return await dark.edit(f"**Kesalahan! Pengguna Ini Sudah Kena Perintah Global Banned Lord.**")
     except BaseException:
         pass
     return await dark.edit(
-        f"**👹 Tuan telah Gban:** `{ALIVE_NAME}`\n**☠️ Korban banned:** [{user.first_name}](tg://user?id={user.id})\n**🤪 Aksi:** `Global Banned`"
+        f"**👹 Tersangka Gban:** `{ALIVE_NAME}`\n**☠️ Korban banned:** [{user.first_name}](tg://user?id={user.id})\n**🤪 Aksi:** `Global Banned`"
     )
 
 
@@ -213,7 +213,7 @@ async def gunben(userbot):
 CMD_HELP.update({
     "gban": "\
 `.gban`\
-\nUsage: Melakukan Banned Secara Global Ke Semua Grup Dimana Lord Sebagai Admin.\
+\nUsage: Melakukan Banned Secara Global Ke Semua Grup Dimana Tuan Sebagai Admin.\
 \n\n`.ungban`\
 \nUsage: Membatalkan Global Banned"
 })
