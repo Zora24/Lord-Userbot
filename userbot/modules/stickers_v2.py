@@ -92,7 +92,7 @@ async def sticker_to_png(sticker):
 
     img = await sticker.get_reply_message()
     if not img.document:
-        await sticker.edit("`Maaf Lord, Ini Bukan Sticker`")
+        await sticker.edit("`GOBLOK BANGET,ITU BUKAN STIKER GOBLOK`")
         return False
 
     await sticker.edit("`Berhasil Mengambil Sticker!`")
