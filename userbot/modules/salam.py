@@ -88,6 +88,21 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**PASANG PP DULU DEK,BIAR ORANG SEGRUP TAU BETAPA HINA NYA MUKA LU😆**")
 
+@register(outgoing=True, pattern='^X(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**GC SAMPAH, CUIHHHHH!!!!!!!!!!!**")
+
+@register(outgoing=True, pattern='^Z(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**War War Tai anjing, Ketrigger minta sharelok, Udah di sharelok Ga nyamperin,Keras di sosmed Bhakss...**")
+
+@register(outgoing=True, pattern='^H(?: |$)(.*)')
+async ded typewriter(typew)
+    typew.pattern_match.group(1)
+    await typew.edit("**Lawak Mulu ocehan lu,Ga ngena ke mental, CUIHHHH!!!**")
+
 CMD_HELP.update({
     "salam":
     "`P`\
@@ -113,5 +128,11 @@ CMD_HELP.update({
 \n\n`J`\
 \nUsage: Hujat Jamet.\
 \n\n`A`\
-\nUsage: Hujat yang gapunya muka."
+\nUsage: Hujat yang gapunya muka.\
+\n\n`X`\
+\nUsage: Ngatain Grup wkwk.\
+\n\n`Z`\
+\nUsage: teruntuk petarung.\
+\n\n`H`\
+\nUsage: Coba dewek ah."
 })
