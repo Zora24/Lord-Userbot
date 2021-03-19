@@ -64,7 +64,7 @@ async def _(event):
             await event.edit(animation_chars[i % 32])
 
 
-@register(outgoing=True, pattern='^.helikopter(?: |$)(.*)')
+@register(outgoing=True, pattern='^.heli(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("▬▬▬.◙.▬▬▬ \n"
@@ -115,14 +115,14 @@ async def typewriter(typew):
                      "　　　　　 Ｕ Ｕ\n")
                      
 
-@register(outgoing=True, pattern='^.awkwok(?: |$)(.*)')
+@register(outgoing=True, pattern='^.tawa(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("────██──────▀▀▀██\n"
                      "──▄▀█▄▄▄─────▄▀█▄▄▄\n"
                      "▄▀──█▄▄──────█─█▄▄\n"
                      "─▄▄▄▀──▀▄───▄▄▄▀──▀▄\n"
-                     "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok Ada kang ghosting..`")
+                     "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok Dasar Stress..`")
 
 
 @register(outgoing=True, pattern='^.ular(?: |$)(.*)')
@@ -308,11 +308,11 @@ CMD_HELP.update({
     "vip":
     "`.bulan` ; `.hati` ; `.gbn`\
     \nUsage: liat aja.\
-    \n\n`.helikopter` ; `.tank` ; `.tembak`\n`.bundir`\
+    \n\n`.heli` ; `.tank` ; `.tembak`\n`.bundir`\
     \nUsage: liat sendiri\
     \n\n`.y`\
     \nUsage: jempol\
-    \n\n`.awkwok`\
+    \n\n`.tawa`\
     \nUsage: ketawa lari.\
     \n\n`.ular` ; `.babi` ; `.ajg`\
     \nUsage: liat sendiri."
