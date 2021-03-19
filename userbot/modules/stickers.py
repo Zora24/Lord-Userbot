@@ -24,7 +24,7 @@ from userbot.events import register
 
 
 KANGING_STR = [
-    "Gua ambil tikel lu tolol",
+    "GUA AMBIL TIKEL LU TOLOL",
     "GUA IJIN NGAMBIL TIKEL AJG",
 ]
 
@@ -217,7 +217,7 @@ async def kang(args):
                 rsp = await conv.get_response()
                 if "Sorry, the file type is invalid." in rsp.text:
                     return await args.edit(
-                        "`Mohon Maaf Lord, Saya Gagal Menambahkan Sticker, Gunakan` @Stickers ` Bot Untuk Menambahkan Sticker.`"
+                        "`Mohon Maaf Gaiss, Gua Gagal Menambahkan Sticker, Gunakan` @Stickers ` Bot Untuk Menambahkan Sticker.`"
                     )
                 await conv.send_message(emoji)
                 # Ensure user doesn't get spamming notifications
@@ -242,7 +242,7 @@ async def kang(args):
                 await bot.send_read_acknowledge(conv.chat_id)
 
         await args.edit(
-            f"**Berhasil Menambahkan Sticker Ke Pack, Tekan** **[Lord Sticker](t.me/addstickers/{packname})** **Untuk Melihat Pack Anda**",
+            f"**Berhasil Menambahkan Sticker Ke Pack, TEKAN** **[GOBLOK](t.me/addstickers/{packname})** **BIAR LU BISA LIAT PACK LU**",
             parse_mode="md",
         )
 
