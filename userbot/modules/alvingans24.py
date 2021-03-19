@@ -100,7 +100,7 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "ceritacinta":
+    if input_str == "cinta":
 
         await event.edit(input_str)
 
@@ -215,6 +215,6 @@ CMD_HELP.update({
     \nUsage: animasi.\
     \n\n`.hua`\
     \nUsage: nangis.\
-    \n\n`.ceritacinta` ; `.canda`\
+    \n\n`.cinta` ; `.canda`\
     \nUsage: liat sendiri"
 })
