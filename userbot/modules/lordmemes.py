@@ -37,7 +37,7 @@ async def _(event):
 
             "EFRY GILAAAA!!!",
             "AYASS STRESS",
-            "NADIA NGONTOLLL!!!",
+            "ANGGA NGONTOLLL!!!",
             "MUYUN HODE!!!!",
             "ENJEL BAPERAN, IDIHHH!!!",
             "NADIA BUCINN, CUIHHH!!!!",
