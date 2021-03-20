@@ -108,6 +108,11 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**JANGAN MAEN BOT MULU, ALAY LU NGENTOTT,KESANNYA NORAK, CUIHHHH!!!**")
 
+@register(outgoing=True, pattern='^G(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**Gak keren lu begitu tolol, kuburan bapak lu gw gali buat dijadiin kolam renang anak paud.Cuihhhhh!!!**")
+
 CMD_HELP.update({
     "salam":
     "`P`\
@@ -145,5 +150,7 @@ CMD_HELP.update({
 \n\n`.ast`\
 \nUsage: Istighfar 2.\
 \n\n`O`\
-\nUsage: Ngatain org norak."
+\nUsage: Ngatain org norak.\
+\n\n`G`\
+\nUsage: Liat Sendiri."
 })
