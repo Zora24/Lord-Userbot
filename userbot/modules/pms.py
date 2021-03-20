@@ -382,9 +382,10 @@ async def add_pmsg(cust_msg):
                 f"Masih Menggunakan Pesan PM Default: \n\n`{DEF_UNAPPROVED_MSG}`"
             )
 
-
-@bot.on(events.NewMessage(incoming=True, from_users=(1353102497)))
-async def hehehe(event):
+# Ported by Alvin/@liualvinas
+# Lord Userbot
+@register(incoming=True, disable_edited=True, disable_errors=True)
+async def permitpm(event):
     if event.fwd_from:
         return
     chats = await event.get_chat()
