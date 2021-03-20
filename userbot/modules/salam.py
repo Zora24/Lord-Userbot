@@ -103,7 +103,7 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Lawak Mulu ocehan lu,Ga ngena ke mental, CUIHHHH!!!**")
 
-@register(outgoing=True, Pattern='^O(?: |$)(.*)')
+@register(outgoing=True, pattern='^O(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**JANGAN MAEN BOT MULU, ALAY LU NGENTOTT,KESANNYA NORAK, CUIHHHH!!!**")
