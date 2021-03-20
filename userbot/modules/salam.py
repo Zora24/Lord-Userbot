@@ -13,10 +13,10 @@ async def typewriter(typew):
     await typew.edit("Assalamu'alaikum ")
 
 
-@register(outgoing=True, pattern='^.p(?: |$)(.*)')
+@register(outgoing=True, pattern='^.atg(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("Assalamu'alaikum, Gimana Kabar Kalian?")
+    await typew.edit("ASTAGHFIRULLAH.... GOBLOKKKKK!!!!")
 
 
 @register(outgoing=True, pattern='^L(?: |$)(.*)')
@@ -25,10 +25,10 @@ async def typewriter(typew):
     await typew.edit("Wa'alaikumsalam")
 
 
-@register(outgoing=True, pattern='^.l(?: |$)(.*)')
+@register(outgoing=True, pattern='^.ast(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("Wa'alaikumussalam kabar sehat?")
+    await typew.edit("ASTAGHFIRULLAH......")
 
 
 @register(outgoing=True, pattern='^K(?: |$)(.*)')
@@ -103,6 +103,11 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Lawak Mulu ocehan lu,Ga ngena ke mental, CUIHHHH!!!**")
 
+@register(outgoing=True, Pattern='^O(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**JANGAN MAEN BOT MULU, ALAY LU NGENTOTT,KESANNYA NORAK, CUIHHHH!!!**")
+
 CMD_HELP.update({
     "salam":
     "`P`\
@@ -134,5 +139,11 @@ CMD_HELP.update({
 \n\n`Z`\
 \nUsage: teruntuk petarung.\
 \n\n`H`\
-\nUsage: Coba dewek ah."
+\nUsage: Coba dewek ah.\
+\n\n`.atg`\
+\nUsage: Istighfar 1.\
+\n\n`.ast`\
+\nUsage: Istighfar 2.\
+\n\n`O`\
+\nUsage: Ngatain org norak."
 })
