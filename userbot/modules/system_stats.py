@@ -222,13 +222,15 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
+    await alive.edit("`I'M ALIVE!`")
+    await alive.edit("⚡")
     output = (
         f" **┗┓LORD USERBOT┏┛** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
-        f"**♛ Lord** \n"
+        f"**♛ ʟᴏʀᴅ** \n"
         f" ➥ `{DEFAULTUSER}` \n"
-        f"**♛ Username** \n"
+        f"**♛ ᴜsᴇʀɴᴀᴍᴇ** \n"
         f" ➥ `@{user.username}` \n"
         f"┏━━━━━━━━━━━━━━━━━━━\n"
         f"┣[• `Telethon :`Ver {version.__version__} \n"
@@ -295,6 +297,8 @@ async def amireallyalive(alive):
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
+    await alive.edit("`I'M ALIVE!`")
+    await alive.edit("⚡")
     output = (
         f"**♕ LORD USERBOT ♕** \n\n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
