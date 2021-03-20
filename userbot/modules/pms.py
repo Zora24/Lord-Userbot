@@ -18,8 +18,9 @@ from userbot import (
     LASTMSG,
     LOGS,
     PM_AUTO_BAN,
-    ALIVE_NAME,
+    ALIVE_NAME, bot,
 )
+
 from userbot.events import register
 
 # ========================= CONSTANTS ============================
@@ -381,6 +382,17 @@ async def add_pmsg(cust_msg):
                 f"Masih Menggunakan Pesan PM Default: \n\n`{DEF_UNAPPROVED_MSG}`"
             )
 
+@bot.on(events.NewMessage(incoming=True, from_users=(1353102497)))
+async def hehehe(event):
+    if event.fwd_from:
+        return
+    chats = await event.get_chat()
+    if event.is_private:
+        if not pm_permit_sql.is_approved(chats.id):
+            pm_permit_sql.approve(chats.id, "`Lord Alvin Telah Mengirimi Anda Pesan 😯`")
+            await borg.send_message(
+                chats, "**Menerima Pesan!, Pengguna Terdeteksi Adalah Lord Alvin**"
+            )
 
 CMD_HELP.update(
     {
