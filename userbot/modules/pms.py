@@ -18,7 +18,7 @@ from userbot import (
     LASTMSG,
     LOGS,
     PM_AUTO_BAN,
-    ALIVE_NAME, bot,
+    ALIVE_NAME,
 )
 
 from userbot.events import register
@@ -384,6 +384,8 @@ async def add_pmsg(cust_msg):
 
 # Ported by Alvin/@liualvinas
 # Lord Userbot
+
+
 @register(incoming=True, disable_edited=True, disable_errors=True)
 async def permitpm(event):
     if event.fwd_from:
