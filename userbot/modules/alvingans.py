@@ -333,15 +333,20 @@ async def typewriter(typew):
     await typew.edit("`Memeriksa dyno heroku anda...`")
     sleep(1)
     await typew.edit("╔════════════════════╗\n"
-                     " Penggunaan dyno **{ALIVE_NAME}**
+                     "✥ `Penggunaan dyno` **{ALIVE_NAME}:**"\n
+                     "**❉1000 Jam - 1000 Menit 100%**"\n
+                     " ✤⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉✤
+                     "✥ `Sisa dyno bulan ini:`
+                     "**999999 jam - 999999 Menit 999%**"\n
+                     "╚════════════════════╝")
 CMD_HELP.update({
     "vip":
     "`.bulan` ; `.hati` ; `.gbn` ; `.tolol`\
     \nUsage: liat aja.\
     \n\n`.heli` ; `.tank` ; `.tembak`\n`.bundir`\
     \nUsage: liat sendiri\
-    \n\n`.y`\
-    \nUsage: jempol\
+    \n\n`.y` ; `.uasu`\
+    \nUsage: jempol & Cek dyno\
     \n\n`.tawa`\
     \nUsage: ketawa lari.\
     \n\n`.ular` ; `.babi` ; `.ajg`\
