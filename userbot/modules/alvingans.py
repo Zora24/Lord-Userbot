@@ -326,6 +326,14 @@ async def typewriter(typew):
     await typew.edit("`TOLO`")
     await typew.edit("`TOLOL`")
     await typew.edit("`TOLOL!!!!`")
+
+@register(outgoing=True, pattern='^.uasu(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("`Memeriksa dyno heroku anda...`")
+    sleep(1)
+    await typew.edit("╔════════════════════╗\n"
+                     " Penggunaan dyno **{ALIVE_NAME}**
 CMD_HELP.update({
     "vip":
     "`.bulan` ; `.hati` ; `.gbn` ; `.tolol`\
