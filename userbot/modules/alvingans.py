@@ -335,8 +335,8 @@ async def typewriter(typew):
     await typew.edit("╔════════════════════╗\n"
                      "✥ `Penggunaan dyno` **{ALIVE_NAME}:**"\n
                      "**❉1000 Jam - 1000 Menit 100%**"\n
-                     " ✤⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉✤
-                     "✥ `Sisa dyno bulan ini:`
+                     " ✤⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉✤"\n
+                     "✥ `Sisa dyno bulan ini:`"\n
                      "**999999 jam - 999999 Menit 999%**"\n
                      "╚════════════════════╝")
 CMD_HELP.update({
