@@ -304,9 +304,31 @@ async def typewriter(typew):
     await typew.edit("**PAL PALE PAL PALE,MUKE LU MIRIP TOKEK**")
     sleep(1)
     await typew.edit("**HAYYYYUUUKKKKK,PAM PIPAM PIPAM PIPAM PAM PIPAM PIPAM**")
+
+@register(outgoing=True, pattern='^.tolol(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("`TOLOL...`")
+    sleep(2)
+    await typew.edit("`Pertama Kamu tolol....`")
+    sleep(1)
+    await typew.edit("`Kedua Kamu memang tolol...`")
+    sleep(1)
+    await typew.edit("`Ketiga Kamu benar benar tolol..`")
+    sleep(1)
+    await typew.edit("`Dan kamu di lahirkan Dalam keadaan tolol...`")
+    sleep(1)
+    await typew.edit("`Dasar kamu anak TOLOL...`")
+    sleep(1)
+    await typew.edit("`T`")
+    await typew.edit("`TO`")
+    await typew.edit("`TOL`")
+    await typew.edit("`TOLO`")
+    await typew.edit("`TOLOL`")
+    await typew.edit("`TOLOL!!!!`")
 CMD_HELP.update({
     "vip":
-    "`.bulan` ; `.hati` ; `.gbn`\
+    "`.bulan` ; `.hati` ; `.gbn` ; `.tolol`\
     \nUsage: liat aja.\
     \n\n`.heli` ; `.tank` ; `.tembak`\n`.bundir`\
     \nUsage: liat sendiri\
