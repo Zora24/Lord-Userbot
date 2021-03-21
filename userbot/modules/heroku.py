@@ -180,7 +180,7 @@ async def dyno_usage(dyno):
 
             await dyno.edit(
                 "**➡️ Nyawa bot lu**:\n\n╔════════════════════╗\n"
-                f"✥ `Penggunaan Babu` **{app.name}**:\n"
+                f"✥ `Penggunaan Kekuatan Babu` **{app.name}**:\n"
                 f"  ❉ **{AppHours} Jam - "
                 f"{AppMinutes} Menit  -  {AppPercentage}%**"
                 "\n ✤⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉✤\n"
