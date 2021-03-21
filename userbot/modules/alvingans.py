@@ -333,7 +333,7 @@ async def typewriter(typew):
     await typew.edit("`Memeriksa dyno heroku anda...`")
     sleep(1)
     await typew.edit("╔════════════════════╗\n"
-                     "✥`Penggunaan dyno Anda`"\n
+                     "`✥Penggunaan dyno Anda`"\n
                      "**❉1000 Jam - 1000 Menit 100%**"\n
                      " ✤⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉✤"\n
                      "✥ `Sisa dyno bulan ini:`"\n
