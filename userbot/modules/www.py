@@ -148,7 +148,7 @@ async def pingme(pong):
                     f"**      ➪{ALIVE_NAME}➪** \n"
                     f"**⿴⃟۪۪⃕᎒⃟ꕤ╌╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╌▩⃟❁⃟݄ࣾ݃⊣** \n"          
                     f"**♛ Sinyal  :** `%sms` \n"
-                    f"** % (duration)) \n"
+                    f"**♛ Waktu   :** % (duration)) \n"
                     f"**╼═════════════════╾**"
 
                    
