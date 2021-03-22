@@ -149,7 +149,7 @@ async def pingme(pong):
                     f"**⿴⃟۪۪⃕᎒⃟ꕤ╌╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╌▩⃟❁⃟݄ࣾ݃⊣** \n"          
                     f"**♛ Sinyal  :** `%sms` \n"
                     f"** % (duration)) \n"
-                    f"**╼═════════════════╾**
+                    f"**╼═════════════════╾**"
 
                    
 @register(outgoing=True, pattern="^Speed$")
