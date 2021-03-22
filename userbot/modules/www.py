@@ -88,23 +88,10 @@ async def pingme(pong):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await pong.edit("`ADA MONYET..............🐒🐒🐒🐒`")
-    
-
-
-
     await pong.edit("`HUHU HAHA................🐒🐒🐒🐒`")
-    
-
-
     await pong.edit("`HUHU HAHA................🐒🐒🐒🐒🐒`")
-    
-
-
     await pong.edit("`BERUBAH JADI SUNGGOKONG RAJA MONYET🐒🐒`")
-
-
     await pong.edit("**AKU ADALAH RAJA MONYET,KALIAN SEMUA ADALAH MONYET**")
-
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**🐒!**\n"
@@ -158,12 +145,13 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**⿴⃟۪۪⃕᎒⃟ꕤ╌╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╌▩⃟❁⃟݄ࣾ݃⊣** \n"
-                    f"**      ➪STRESS-USERBOT➪** \n"
+                    f"**      ➪{ALIVE_NAME}➪** \n"
                     f"**⿴⃟۪۪⃕᎒⃟ꕤ╌╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╌▩⃟❁⃟݄ࣾ݃⊣** \n"          
                     f"**♛ Sinyal  :** `%sms` \n"
-                    f"**♛ Tuanku:** `{ALIVE_NAME}` \n"
-                    f"**╼═════════════════╾** \n" % (duration))
-                    
+                    f"** % (duration)) \n"
+                    f"**╼═════════════════╾**
+
+                   
 @register(outgoing=True, pattern="^Speed$")
 async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
