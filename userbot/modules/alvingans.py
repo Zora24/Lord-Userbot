@@ -339,16 +339,35 @@ async def typewriter(typew):
                      "✥ `Sisa dyno bulan ini:`\n"
                      "**999999 jam - 999999 Menit 999%**\n"
                      "╚════════════════════╝")
+
+@register(outgoing=True, pattern='^.oy(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**Woi....**")
+    sleep(1)
+    await typew.edit("**Grup banyak anggota yakan**")
+    sleep(1)
+    await typew.edit("**Tapi ga ada yg nimbrung..**")
+    sleep(1)
+    await typew.edit("**Kan tolol bgt, Jadi sepi kan**")
+    sleep(1)
+    await typew.edit("**Nimbrung tololl, Nimbrung!!**")
+    sleep(1)
+    await typew.edit("**Sombong amat punya jempol,Gamau nimbrung**")
+    sleep(1)
+    await typew.edit("**Jempol lu kebas? Apa dah putus?**")
+    sleep(1)
+    await typew.edit("**NIMBRUNGGG GOBLOK!!!!**")
 CMD_HELP.update({
     "vip":
     "`.bulan` ; `.hati` ; `.gbn` ; `.tolol`\
     \nUsage: liat aja.\
     \n\n`.heli` ; `.tank` ; `.tembak`\n`.bundir`\
-    \nUsage: liat sendiri\
+    \nUsage: liat sendiri.\
     \n\n`.y` ; `.uasu`\
     \nUsage: jempol & Cek dyno\
-    \n\n`.tawa`\
-    \nUsage: ketawa lari.\
+    \n\n`.tawa` ; `.oy`\
+    \nUsage: ketawa lari & Nyuruh nimbrung.\
     \n\n`.ular` ; `.babi` ; `.ajg`\
     \nUsage: liat sendiri."
 })
