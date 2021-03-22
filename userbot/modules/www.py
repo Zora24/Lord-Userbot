@@ -152,6 +152,7 @@ async def pingme(pong):
                     f"**╼═════════════════╾**"
           
     
+
 @register(outgoing=True, pattern="^.speed$")
 async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
