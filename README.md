@@ -18,7 +18,7 @@
 <p align="center">&nbsp;</p>
 
 ### Repo Lord Userbot
-Repo Yang Dibuat [Alvin](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github 
+Repo Yang Dibuat [Kanjeng Ingsun](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github 
 
 
 ### CARA MENDAPATKAN STRING SESSON
@@ -40,7 +40,7 @@ Caranya Pergi Ke Grup Support Lord-Userbot Lalu Ketik #String [TEKAN DISINI](htt
 
   > Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy :)
 ```
-Atau Bisa Gabung Ke Grup Lord Userbot -> [TEKAN DISINI](https://t.me/LordUserbot_Group)
+Atau Bisa Gabung Ke Group Chat Kanjeng -> [TEKAN DISINI](https://t.me/cari_temen_onlines)
 ## <p align="center">DEPLOY LORD-USERBOT</p>
 
 
