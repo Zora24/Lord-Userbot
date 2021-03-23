@@ -18,7 +18,7 @@
 <p align="center">&nbsp;</p>
 
 ### Repo Lord Userbot
-Repo Yang Dibuat [Kanjeng Ingsun](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github 
+Repo Yang Dibuat [Kanjeng Ingsun](https://t.me/kanjnegIngsun) Dari Berbagai Repo Userbot Github 
 
 
 ### CARA MENDAPATKAN STRING SESSON
