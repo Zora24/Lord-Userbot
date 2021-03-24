@@ -117,7 +117,7 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
-        "Instagram: [TEKAN](https://www.instagram.com/ramadh211?r=nametag) 
+        "Instagram: [TEKAN](https://www.instagram.com/ramadh211?r=nametag)"
        )
 
 CMD_HELP.update({
