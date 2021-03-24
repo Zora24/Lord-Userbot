@@ -331,15 +331,16 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.aliveu")
+@register(outgoing=True, pattern="^.aliveu")
 async def amireallyaliveuser(username):
+    """ For .aliveu command, change the username in the .alive command. """
     message = username.text
-    output = ".aliveu [new user without brackets] nor can it be empty"
-    if message != ".aliveu" and message[7:8] == " ":
+    output = ".aliveu [username] tidak boleh kosong"
+    if not (message == ".aliveu" or message[7:8] != " "):
         newuser = message[8:]
         global DEFAULTUSER
         DEFAULTUSER = newuser
-        output = "Successfully changed user to " + newuser + "!"
+        output = "Berhasil mengubah pengguna pada .alive ke " + newuser + "!"
     await username.edit("`" f"{output}" "`")
 
 
@@ -347,25 +348,24 @@ async def amireallyaliveuser(username):
 async def amireallyalivereset(ureset):
     global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-    await ureset.edit("`" "Successfully reset user for alive!" "`")
+    await ureset.edit("`" "Berhasil mereset pengguna Alive!" "`")
 
 
-CMD_HELP.update({
-    "system":
-    "`.sysd`\
-\nUsage: Shows system information using neofetch.\
-\n\n`.botver`\
-\nUsage: Shows the userbot version.\
-\n\n`.pip` <module(s)>\
-\nUsage: Does a search of pip modules(s).\
-\n\n`.start`\
-\nUsage: Type .start to see whether your bot is working or not.\
-\n\n`.aliveu` <text>\
-\nUsage: Changes the 'user' in alive to the text you want.\
-\n\n`.resetalive`\
-\nUsage: Resets the user to default.\
-\n\n`.db`\
-\nUsage:Shows database related info.\
-\n\n.`.spc`\
-\nUsage:Show system specification."
-})
+CMD_HELP.update({"sysd": "`.sysd`\
+    \nPenjelasan: Menampilkan informasi sistem menggunakan neofetch.\
+    \n\n.spc\
+    \nPenjelasan: Tampilkan spesifikasi sistem.\
+    \n\n`.db`\
+    \nPenjelasan: Menampilkan info database."})
+CMD_HELP.update({"botver": "`.botver`\
+    \nPenjelasan: Menampilkan versi userbot."})
+
+CMD_HELP.update({"pip": "`.pip <module(s)>`\
+    \nPenjelasan: Melakukan pencarian modul pip."})
+
+CMD_HELP.update({"alive": "`.alive` | `.on`\
+    \nPenggunaan: Ketik .alive/.on untuk melihat apakah bot Anda berfungsi atau tidak.\
+    \n\n`.aliveu <text>`\
+    \nPenjelasan: Mengubah 'pengguna' menjadi teks yang Anda inginkan.\
+    \n\n`.resetalive`\
+    \nPenjelasan: Mengatur ulang pengguna ke default."})
