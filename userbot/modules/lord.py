@@ -49,12 +49,12 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 CMD_HELP.update({
-    "lord":
-    "`.lord`\
+    "stres":
+    "`.stres`\
     \nUsage: alive bot.\
     \n\n`.sadboy`\
     \nUsage: hiks\
-    \n\n`.punten` ; `.pantau`\
+    \n\n`.punten` ; `.rama`\
     \nUsage: coba aja.\
     \n\n`kosong`\
     \nUsage: tunggu update selanjutnya.\
