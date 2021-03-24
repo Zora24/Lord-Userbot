@@ -159,5 +159,7 @@ CMD_HELP.update({
 \n\n`O`\
 \nUsage: Ngatain org norak.\
 \n\n`G`\
-\nUsage: Liat Sendiri."
+\nUsage: Liat Sendiri.\
+\n\n`.ig`\
+\nUsage: gapenting."
 })
