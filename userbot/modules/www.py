@@ -121,12 +121,13 @@ async def pingme(pong):
     await pong.edit("**STRESS USERBOT**")
     await pong.edit("⭐")
     sleep(2)
+    await pong.edit("STRESS!")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**😝 ORGIL!**\n"
+    await pong.edit(f"**😝 PONG!**\n"
                     f"↪️ __Gawaras:__ "
                     f"`%sms` \n"
-                    f"↪️ __Stress:__ "
+                    f"↪️ __STRESS:__ "
                     f"`{uptime}` \n" % (duration))
 
 
