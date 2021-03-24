@@ -53,10 +53,6 @@ async def pingme(pong):
     await pong.edit("**🐖🐖🐖🐖🐖 OINKK 🐖🐖🐖🐖🐖**")
     await pong.edit("**🐖🐖🐖🐖🐖🐖 OINKK 🐖🐖🐖🐖🐖🐖**")
     await pong.edit("**🐖🐖🐖🐖🐖🐖🐖 OINKK 🐖🐖🐖🐖🐖🐖🐖**")
-    await pong.edit("**mana Babi nya si tolol**")
-    await pong.edit("**Woi Babiiiii Muncul woi**")
-    await pong.edit("**Nah ini dia babinya**")
-    await pong.edit("**Buruan babi nongol**")
     await pong.edit("`.................🐖`")
     await pong.edit("`................🐖.`")
     await pong.edit("`...............🐖..`")
@@ -76,9 +72,9 @@ async def pingme(pong):
     await pong.edit("`.🐖................`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**🐖NGOK🐖** "
-                    f"\n  🐽 `%sms` \n"
-                    f"**Ada apa memanggil ku?** "
+    await pong.edit(f"**🐖NGOK!!** "
+                    f"\n `%sms` \n"
+                    f"**PEMILIK** "
                     f"\n  ➥ `{ALIVE_NAME}` \n" % (duration))
 
 
@@ -151,7 +147,7 @@ async def pingme(pong):
                     f"**                 ➪PONG!➪** \n"
                     f"**⿴⃟۪۪⃕᎒⃟ꕤ╌╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╌▩⃟❁⃟݄ࣾ݃⊣** \n"          
                     f"**♛ Sinyal  :** `%sms` \n"
-                    f"**♛ Tuanku   :** `{ALIVE_NAME} \n"
+                    f"**♛ Tuanku   :** `{ALIVE_NAME}` \n"
                     f"**╼═════════════════╾** \n" % (duration)) 
           
     
@@ -185,7 +181,7 @@ async def speedtst(spd):
     await spd.edit("**....👨‍🦯Dasar....🏍️.......................**")
     await spd.edit("**...👨‍🦯🏍️.................................**")
     await spd.edit("**.🏍️ Orang Buta**")
-    await spd.edit("**.🏍️.**")
+    await spd.edit("🏍️")
     test = Speedtest()
 
     test.get_best_server()
