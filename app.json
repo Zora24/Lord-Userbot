@@ -151,7 +151,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "STRESS-USERBOT",
+      "value": "@teman_random",
       "required": false
     },
     "ALIVE_NAME": {
@@ -198,7 +198,7 @@
     },
     "WEATHER_DEFCITY": {
       "description": "Set the default city for the userbot's weather module.",
-      "value": "Batam",
+      "value": "Tangerang",
       "required": false
     },
     "LOGSPAMMER": {
