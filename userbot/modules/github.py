@@ -22,9 +22,13 @@ async def github(event):
             created_at = result.get("created_at", "Not Found")
 
             REPLY = (
-                f"GitHub Info for `{event.pattern_match.group(1)}`"
-                f"\nUsername: `{name}`\nBio: `{bio}`\nURL: {url}"
-                f"\nCompany: `{company}`\nCreated at: `{created_at}`"
+                f"Info Akun GitHub `{username}`\n"
+                f"`Nama Pengguna :` {name}\n"
+                f"`Bio           :` {bio}\n"
+                f"`URL           :` {url}\n"
+                f"`Perusahaan    :` {company}\n"
+                f"`Dibuat pada   :` {created_at}`\n"
+                f"`Info lainnya  : [Disini](https://api.github.com/users/{username}/events/public)"
             )
 
             if not result.get("repos_url", None):
@@ -36,7 +40,7 @@ async def github(event):
 
                 result = await request.json()
 
-                REPLY += "\nRepos:\n"
+                REPLY += "\nRepo:\n"
 
                 for nr in range(len(result)):
                     REPLY += f"[{result[nr].get('name', None)}]({result[nr].get('html_url', None)})\n"
@@ -45,7 +49,6 @@ async def github(event):
 
 
 CMD_HELP.update({
-    "github":
-    ">`.git <username>`"
-    "\nUsage: Like .whois but for GitHub usernames."
+    "github": ".git <username>"
+        "\nPenjelasan: Seperti .whois tetapi untuk nama pengguna GitHub."
 })
