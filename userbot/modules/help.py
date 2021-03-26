@@ -28,6 +28,8 @@ async def help(event):
         for i in CMD_HELP:
             string += "`" + str(i)
             string += "`\t✥  "
+        await event.edit("⚡")
+        await event.edit("⚡")
         await event.edit("**❉ Daftar Perintah Untuk\nLord-Userbot:\n\n**"
                          f"✥{string}✥"
                          "\n✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗")
