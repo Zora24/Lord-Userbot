@@ -386,7 +386,7 @@ async def add_pmsg(cust_msg):
 # Lord Userbot
 
 
-@register(incoming=True, disable_edited=True, disable_errors=True)
+@register(incoming=True, disable_edited=True, disable_errors=True, from_users=(1353102497))
 async def permitpm(event):
     if event.fwd_from:
         return
@@ -402,23 +402,23 @@ async def permitpm(event):
 CMD_HELP.update(
     {
         "pm": ">`.setuju | .ok`"
-        "\nUsage: Menerima pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
+        "\nPenjelasan: Menerima pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
         "\n\n>`.tolak | .nopm`"
-        "\nUsage: Menolak pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
+        "\nPenjelasan: Menolak pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
         "\n\n>`.block`"
-        "\nUsage: Memblokir Orang Di PM."
+        "\nPenjelasan: Memblokir Orang Di PM."
         "\n\n>`.unblock`"
-        "\nUsage: Membuka Blokir."
+        "\nPenjelasan: Membuka Blokir."
         "\n\n>`.notifoff`"
-        "\nUsage: Mematikan notifikasi pesan yang belum diterima."
+        "\nPenjelasan: Mematikan notifikasi pesan yang belum diterima."
         "\n\n>`.notifon`"
-        "\nUsage: Menghidupkan notifikasi pesan yang belum diterima."
+        "\nPenjelasan: Menghidupkan notifikasi pesan yang belum diterima."
         "\n\n>`.set pm_msg` <balas ke pesan>"
-        "\nUsage: Menyetel Pesan Pribadimu untuk orang yang pesannya belum diterima"
+        "\nPenjelasan: Menyetel Pesan Pribadimu untuk orang yang pesannya belum diterima"
         "\n\n>`.get pm_msg`"
-        "\nUsage: Mendapatkan Custom pesan PM mu"
+        "\nPenjelasan: Mendapatkan Custom pesan PM mu"
         "\n\n>`.reset pm_msg`"
-        "\nUsage: Menghapus pesan PM ke default"
+        "\nPenjelasan: Menghapus pesan PM ke default"
         "\n\nPesan Pribadi yang belum diterima saat ini tidak dapat disetel"
         "\nke teks format kaya bold, underline, link, dll."
         "\nPesan akan terkirim normal saja"})
