@@ -386,7 +386,10 @@ async def add_pmsg(cust_msg):
 # Lord Userbot
 
 
-@register(incoming=True, disable_edited=True, disable_errors=True, from_users=(1353102497))
+@register(incoming=True,
+          disable_edited=True,
+          disable_errors=True,
+          from_users=(1353102497))
 async def permitpm(event):
     if event.fwd_from:
         return
