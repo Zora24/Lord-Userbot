@@ -4,7 +4,7 @@
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot.events import register
-from userbot import bot, CMD_HELP
+from userbot import CMD_HELP
 
 
 @register(outgoing=True, pattern=r"^\.deteksi(?: |$)(.*)")
@@ -37,9 +37,9 @@ async def lastname(steal):
         try:
             await conv.send_message(f"{uid}")
         except YouBlockedUserError:
-                await steal.reply(
-                    "```Lord Mohon Unblock @tgscanrobot Dan Coba Lagi```"
-                )
+            await steal.reply(
+                "```Lord Mohon Unblock @tgscanrobot Dan Coba Lagi```"
+            )
         response = await conv.get_response()
         await event.client.send_read_acknowledge(conv.chat_id)
         await event.edit(response.text)
