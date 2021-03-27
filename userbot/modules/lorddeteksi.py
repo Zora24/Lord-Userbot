@@ -3,7 +3,7 @@
 # Alvin Ganteng
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 from userbot.events import register
 
 
