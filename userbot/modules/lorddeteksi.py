@@ -3,12 +3,13 @@
 # Alvin Ganteng
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
+from userbot import CMD_HELP, bot
 from userbot.events import register
-from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern=r"^\.deteksi(?: |$)(.*)")
-async def lastname(steal):
+
+@register(outgoing=True, pattern=r"^\.xogame(?: |$)(.*)")
+async def _(event):
     if event.fwd_from:
         return
     input_str = "".join(event.text.split(maxsplit=1)[1:])
