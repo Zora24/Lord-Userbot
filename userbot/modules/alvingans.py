@@ -301,6 +301,21 @@ async def typewriter(typew):
     await typew.edit("**♪┗ ( ･o･) ┓♪┏ (・o･) ┛♪**")
 
 
+
+@register(outgoing=True, pattern='^.foff(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit(".                       /¯ )\n"
+                     "                      /¯  /\n"
+                     "                    /    /\n"
+                     "              /´¯/'   '/´¯¯`•¸\n"
+                     "          /'/   /    /       /¨¯\\ \n"
+                     "        ('(   (   (   (  ¯~/'  ')\n"
+                     "         \\                        /\n"
+                     "          \\                _.•´\n"
+                     "            \\              (\n"
+                     "              \\  ")
+
 CMD_HELP.update({
     "vip":
     "`.bulan` ; `.hati` ; `.bernyanyi`\
@@ -311,6 +326,6 @@ CMD_HELP.update({
     \nUsage: jempol\
     \n\n`.awkwok`\
     \nUsage: ketawa lari.\
-    \n\n`.ular` ; `.babi` ; `.ajg`\
+    \n\n`.ular` ; `.babi` ; `.foto` ; `.ajg`\
     \nUsage: liat sendiri."
 })
