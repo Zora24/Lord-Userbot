@@ -1,14 +1,11 @@
-# Ported From Cat Userbot For Lord Userbot By Alvin/LiuAlvinas # Jangan Hapus # Jangan Ubah 
+# Ported From Cat Userbot For Lord Userbot By Alvin/LiuAlvinas # Jangan Hapus # Jangan Ubah
 # Based On Plugins
 # Alvin Ganteng
 
-import time
 
-from telethon.tl.custom import Dialog
-from telethon.tl.functions.messages import ImportChatInviteRequest as Get
-from telethon.tl.types import Channel, Chat, User
 from userbot.events import register
-from userbot import bot, CMD_HELP
+from userbot import CMD_HELP
+
 
 @register(outgoing=True, pattern=r"^\.deteksi(?: |$)(.*)")
 async def lastname(steal):
@@ -63,5 +60,3 @@ CMD_HELP.update({
         "`.deteksi`\
           \nPenjelasan: Melihat Riwayat Grup Yang Pernah/Sedang dimasuki."
 })
-
-
