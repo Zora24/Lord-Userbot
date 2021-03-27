@@ -4,7 +4,7 @@
 
 
 from userbot.events import register
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 
 
 @register(outgoing=True, pattern=r"^\.deteksi(?: |$)(.*)")
