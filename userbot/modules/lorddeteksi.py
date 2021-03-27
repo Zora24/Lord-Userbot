@@ -5,7 +5,7 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot import CMD_HELP
 from userbot.events import register
-from userbot import bot
+
 
 @register(outgoing=True, pattern=r"^\.deteksi(?: |$)(.*)")
 async def _(event):
