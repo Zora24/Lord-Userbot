@@ -2,9 +2,9 @@
 # Based On Plugins
 # Alvin Ganteng
 
-
+from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot.events import register
-from userbot import CMD_HELP
+from userbot import bot, CMD_HELP
 
 
 @register(outgoing=True, pattern=r"^\.deteksi(?: |$)(.*)")
@@ -32,15 +32,17 @@ async def lastname(steal):
     else:
         uid = reply_message.sender_id
     chat = "@tgscanrobot"
-    catevent = await edit_or_reply(event, "`Memproses...`")
+    event = await edit_or_reply(event, "`Memproses...`")
     async with event.client.conversation(chat) as conv:
         try:
             await conv.send_message(f"{uid}")
-        except Exception:
-            await edit_delete(catevent, "`Buka Blokir `@tgscanrobot` lalu coba lagi`")
+        except YouBlockedUserError:
+                await steal.reply(
+                    "```Lord Mohon Unblock @tgscanrobot Dan Coba Lagi```"
+                )
         response = await conv.get_response()
         await event.client.send_read_acknowledge(conv.chat_id)
-        await catevent.edit(response.text)
+        await event.edit(response.text)
 
 
 def inline_mention(user):
