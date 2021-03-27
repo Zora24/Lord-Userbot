@@ -3,7 +3,7 @@
 # Alvin Ganteng
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot import CMD_HELP
+from userbot import CMD_HELP, bot
 from userbot.events import register
 
 
@@ -13,11 +13,9 @@ async def _(event):
         return
     input_str = "".join(event.text.split(maxsplit=1)[1:])
     reply_message = await event.get_reply_message()
-    if not input_str and not reply_message:
-        await edit_delete(
-            event,
-            "`Lord, Mohon Balas Ke Pesan Pengguna atau ketik .deteksi (ID/Username) Yang mau Anda deteksi`",
-        )
+    if not steal.reply_to_msg_id:
+        await steal.edit("```Lord, Mohon Balas Ke Pesan Pengguna atau ketik .deteksi (ID/Username) Yang mau Anda deteksi```")
+        return
     if input_str:
         try:
             uid = int(input_str)
