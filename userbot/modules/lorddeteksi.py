@@ -3,11 +3,11 @@
 # Alvin Ganteng
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot import CMD_HELP
+from userbot import CMD_HELP, bot
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.xogame(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.deteksi(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
