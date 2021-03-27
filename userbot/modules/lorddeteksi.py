@@ -2,6 +2,8 @@
 # Based On Plugins
 # Alvin Ganteng
 
+
+from telethon.errors.rpcerrorlist import ValueError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot import CMD_HELP, bot
 from userbot.events import register
