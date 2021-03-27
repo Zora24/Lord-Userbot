@@ -3,7 +3,7 @@
 # Alvin Ganteng
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot import CMD_HELP
+from userbot import CMD_HELP, bot
 from userbot.events import register
 
 
@@ -30,8 +30,8 @@ async def _(event):
     else:
         uid = reply_message.sender_id
     chat = "@tgscanrobot"
-    event = await edit_or_reply(event, "`Memproses...`")
-    async with event.client.conversation(chat) as conv:
+    event = await event.edit("`Mendeteksi...`")
+    async with bot.conversation(chat) as conv:
         try:
             await conv.send_message(f"{uid}")
         except YouBlockedUserError:
