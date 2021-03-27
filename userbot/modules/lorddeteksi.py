@@ -26,7 +26,7 @@ async def _(event):
                 u = await event.client.get_entity(input_str)
             except ValueError:
                 await edit.event("`Lord, Mohon Berikan ID/Username untuk menemukan Riwayat`"
-                )
+                                 )
             uid = u.id
     else:
         uid = reply_message.sender_id
