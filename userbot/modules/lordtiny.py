@@ -1,5 +1,5 @@
 # Port By LiuAlvinas/Alvin For Lord Userbot From Ulttoid
-# Thanks Ultroid
+# Based Plugins
 # Dont Remove
 
 # Alvin Ganteng
@@ -18,10 +18,10 @@ async def _(event):
         await event.edit("`Mohon Balas Ke Sticker Lord`")
         return
     xx = await event.edit("`Memproses...`")
-    ik = await bot.download_media(reply)
+    ik = await bot.download_media(reply_message.media)
     im1 = Image.open("LordUserBot/lorduserbot.png")
     if ik.endswith(".tgs"):
-        await bot.client.download_media(reply, "ult.tgs")
+        await bot.client.download_media(reply_message, "ult.tgs")
         os.system("lottie_convert.py ult.tgs json.json")
         json = open("json.json", "r")
         jsn = json.read()
