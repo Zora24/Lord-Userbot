@@ -80,7 +80,7 @@ async def _(event):
         file = "o.webp"
         os.remove("k.png")
     await event.client.send_file(event.chat_id, file, reply_to=event.reply_to_msg_id)
-    await xx.delete()
+    await event.delete()
     os.remove(file)
     os.remove(ik)
 
