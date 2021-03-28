@@ -90,3 +90,4 @@ wand
 colour
 scipy
 wordcloud
+opencv-python
