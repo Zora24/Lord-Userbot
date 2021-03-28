@@ -7,6 +7,7 @@ from userbot.events import register
 from userbot import CMD_HELP
 # Alvin Ganteng
 
+
 @register(outgoing=True, pattern="^.gcast (.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
