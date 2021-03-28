@@ -7,6 +7,7 @@
 from PIL import Image
 
 import os
+from os import remove
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
