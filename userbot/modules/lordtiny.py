@@ -13,6 +13,8 @@ from userbot.events import register
 from userbot import CMD_HELP, bot
 
 # Ngapain Kesini Ajg Hus
+
+
 @register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)")
 async def _(event):
     reply = await event.get_reply_message()
