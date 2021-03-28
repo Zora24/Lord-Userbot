@@ -2,13 +2,30 @@
 # Thanks Ultroid
 # Dont Remove
 
+# Alvin Ganteng
+import asyncio
+import io
+import os
+import random
+import re
+import urllib.request
+from os import remove
+
+import cv2
+import numpy as np
+from PIL import Image, ImageDraw
+from telethon.errors import (ChatSendInlineForbiddenError,
+                             ChatSendStickersForbiddenError)
+from telethon.tl.types import (DocumentAttributeFilename,
+                               DocumentAttributeSticker, MessageMediaPhoto)
+
 import os
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
 
-@register(outgoing=True, pattern="^.tiny (.*)")
-async def ultiny(event):
+@register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)")
+async def _(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
         await event.edit("`Mohon Balas Ke Sticker Lord`")
