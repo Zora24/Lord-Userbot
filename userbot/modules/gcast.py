@@ -15,7 +15,7 @@ async def gcast(event):
         return await event.edit("`Lord, Mohon Berikan Sebuah Pesan`")
     tt = event.text
     msg = tt[6:]
-    kk = await event.edit("`Sedang Mengirim Pesan Secara Global...`")
+    kk = await event.edit("`📢 Sedang Mengirim Pesan Secara Global...`")
     er = 0
     done = 0
     async for x in bot.iter_dialogs():
@@ -26,11 +26,11 @@ async def gcast(event):
                 await bot.send_message(chat, msg)
             except BaseException:
                 er += 1
-    await kk.edit(f"`Berhasil Mengirim Pesan Ke {done} Obrolan, Gagal Mengirim Ke {er} Obrolan")
+    await kk.edit(f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**")
 
 # Alvin Ganteng
 CMD_HELP.update(
     {
-        "gcast": ".gcast <pesan>\
+        "gcast": "`.gcast <pesan>`\
     \nPenjelasan: Global Broadcast mengirim pesan ke Seluruh Grup yang Lord Masuki."
     })
