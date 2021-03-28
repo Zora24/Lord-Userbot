@@ -3,21 +3,10 @@
 # Dont Remove
 
 # Alvin Ganteng
-import asyncio
-import io
 import os
-import random
-import re
-import urllib.request
-from os import remove
 
 import cv2
-import numpy as np
-from PIL import Image, ImageDraw
-from telethon.errors import (ChatSendInlineForbiddenError,
-                             ChatSendStickersForbiddenError)
-from telethon.tl.types import (DocumentAttributeFilename,
-                               DocumentAttributeSticker, MessageMediaPhoto)
+from PIL import Image
 
 import os
 from userbot.events import register
