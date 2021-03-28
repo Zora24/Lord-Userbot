@@ -15,17 +15,17 @@ from userbot import CMD_HELP, bot
 # Ngapain Kesini Ajg Hus
 
 
-@register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)")
-async def _(event):
+@register(outgoing=True, pattern="^.tiny(?: |$)(.*)", disable_errors=True)
+async def ultiny(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
-        await event.edit("`Mohon Balas Ke Sticker Lord`")
+        await event.edit("`Lord, Mohon Balas Ke Sticker`")
         return
-    xx = await event.edit("`Memproses...`")
-    ik = await bot.download_media(reply_message.media)
-    im1 = Image.open("LordUserBot/lorduserbot.png")
+    xx = await event.edit("`Memproses Tiny....`")
+    ik = await bot.download_media(reply)
+    im1 = Image.open("LordUserbot/lorduserbot.png")
     if ik.endswith(".tgs"):
-        await event.client.download_media(reply_message, "ult.tgs")
+        await event.client.download_media(reply, "ult.tgs")
         os.system("lottie_convert.py ult.tgs json.json")
         json = open("json.json", "r")
         jsn = json.read()
