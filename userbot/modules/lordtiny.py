@@ -1,4 +1,4 @@
-# Port By LiuAlvinas/Alvin For Lord Userbot From Ulttoid
+# Port By LiuAlvinas/Alvin For Lord Userbot From Ultroid, Thanks
 # Based Plugins
 # Fixed By ManusiaRakitann/Koala
 # Dont Remove
@@ -12,7 +12,7 @@ import os
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
-
+# Ngapain Kesini Ajg Hus
 @register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)")
 async def _(event):
     reply = await event.get_reply_message()
