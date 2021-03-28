@@ -7,7 +7,6 @@
 from PIL import Image
 
 import os
-from os import remove
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
@@ -18,7 +17,7 @@ async def _(event):
     if not (reply and (reply.media)):
         await event.edit("`Mohon Balas Ke Sticker Lord`")
         return
-    xx = await event.edit("`Memproses...`")
+    await event.edit("`Memproses...`")
     ik = await bot.download_media(reply)
     im1 = Image.open("LordUserBot/lorduserbot.png")
     if ik.endswith(".tgs"):
