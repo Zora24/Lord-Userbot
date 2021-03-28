@@ -10,7 +10,7 @@ from PIL import Image
 import cv2
 import os
 from userbot.events import register
-from userbot import CMD_HELP
+from userbot import CMD_HELP, bot
 
 
 @register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)")
@@ -20,7 +20,7 @@ async def _(event):
         await event.edit("`Mohon Balas Ke Sticker Lord`")
         return
     xx = await event.edit("`Memproses...`")
-    ik = await event.download_media(reply_message.media)
+    ik = await bot.download_media(reply_message.media)
     im1 = Image.open("LordUserBot/lorduserbot.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply_message, "ult.tgs")
