@@ -3,7 +3,6 @@
 # Dont Remove
 
 # Alvin Ganteng
-import os
 
 import cv2
 from PIL import Image
