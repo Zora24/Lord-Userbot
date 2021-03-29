@@ -10,14 +10,12 @@ Userbot plugin fot CatUserbot
 # PORTED BY ALVIN / @LIUALVINAS FOR LORD-USERBOT
 # BASED PLUGINS FROM CAT
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-
-import asyncio
-from userbot import CMD_HELP
-from userbot.events import register
-from platform import python_version, uname
 from userbot import ALIVE_NAME, bot
-
+from platform import uname
+from userbot.events import register
+from userbot import CMD_HELP
+import asyncio
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 
 @register(outgoing=True, pattern="imposter(|n) (.*)")
@@ -108,6 +106,7 @@ async def _(event):
 # Alvin Gans
 # Ported By Alvin / @LiuAlvinas
 # Dont Remove This Bgst
+
 
 @register(outgoing=True, pattern="timp(|n) (.*)")
 async def _(event):
