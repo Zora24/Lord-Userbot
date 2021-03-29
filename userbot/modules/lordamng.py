@@ -105,6 +105,8 @@ async def _(event):
         await event.client.send_file(event.chat_id, "CAADAQADQAADnjOcH-WOkB8DEctJAg")
 
 # Alvin Gans
+
+
 @register(outgoing=True, pattern="timp(|n) (.*)")
 async def _(event):
     if event.fwd_from:
