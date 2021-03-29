@@ -10,10 +10,10 @@ Userbot plugin fot CatUserbot
 # PORTED BY ALVIN / @LIUALVINAS FOR LORD-USERBOT
 # BASED PLUGINS FROM CAT
 
-from userbot import ALIVE_NAME, bot
+import platform
+from userbot import ALIVE_NAME, CMD_HELP, bot
 from platform import uname
 from userbot.events import register
-from userbot import CMD_HELP
 import asyncio
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
