@@ -10,7 +10,6 @@ Userbot plugin fot CatUserbot
 # PORTED BY ALVIN / @LIUALVINAS FOR LORD-USERBOT
 # BASED PLUGINS FROM CAT
 
-import platform
 from userbot import ALIVE_NAME, CMD_HELP, bot
 from platform import uname
 from userbot.events import register
