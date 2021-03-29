@@ -28,7 +28,7 @@ async def _(event):
     text1 = await event.edit("Uhmm... Ada yang salah disini!")
     await asyncio.sleep(2)
     await text1.delete()
-    stcr1 = await event.client.send_file(
+    stcr1 = await bot.client.send_file(
         event.chat_id, "CAADAQADRwADnjOcH98isYD5RJTwAg"
     )
     text2 = await event.reply(
@@ -37,7 +37,7 @@ async def _(event):
     await asyncio.sleep(3)
     await stcr1.delete()
     await text2.delete()
-    stcr2 = await event.client.send_file(
+    stcr2 = await bot.client.send_file(
         event.chat_id, "CAADAQADRgADnjOcH9odHIXtfgmvAg"
     )
     text3 = await event.reply(
@@ -46,7 +46,7 @@ async def _(event):
     await asyncio.sleep(3)
     await stcr2.delete()
     await text3.delete()
-    stcr3 = await event.client.send_file(
+    stcr3 = await bot.client.send_file(
         event.chat_id, "CAADAQADOwADnjOcH77v3Ap51R7gAg"
     )
     text4 = await event.reply(f"**Orang Lain :** Dimana Dia?? ")
@@ -61,7 +61,7 @@ async def _(event):
     await asyncio.sleep(2)
     await stcr3.delete()
     await text4.delete()
-    stcr4 = await event.client.send_file(
+    stcr4 = await bot.client.send_file(
         event.chat_id, "CAADAQADLwADnjOcH-wxu-ehy6NRAg"
     )
     lord = await event.reply(f"{name} Dikeluarkan.......")
@@ -93,14 +93,14 @@ async def _(event):
         )
         await asyncio.sleep(4)
         await lord.delete()
-        await event.client.send_file(event.chat_id, "CAADAQADLQADnjOcH39IqwyR6Q_0Ag")
+        await bot.client.send_file(event.chat_id, "CAADAQADLQADnjOcH39IqwyR6Q_0Ag")
     elif cmd == "n":
         await lord.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ{name} was not an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         1 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
         await asyncio.sleep(4)
         await lord.delete()
-        await event.client.send_file(event.chat_id, "CAADAQADQAADnjOcH-WOkB8DEctJAg")
+        await bot.client.send_file(event.chat_id, "CAADAQADQAADnjOcH-WOkB8DEctJAg")
 
 # Alvin Gans
 # Ported By Alvin / @LiuAlvinas
