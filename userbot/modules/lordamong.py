@@ -10,6 +10,9 @@ Userbot plugin fot CatUserbot
 # PORTED BY ALVIN / @LIUALVINAS FOR LORD-USERBOT
 # BASED PLUGINS FROM CAT
 
+from textwrap import wrap
+from random import choice, randint
+from requests import get
 from time import sleep
 from userbot import ALIVE_NAME, CMD_HELP
 from platform import uname
@@ -21,7 +24,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 async def _(event):
     if event.fwd_from:
         return
-    lorduser = platform.uname
+    lorduser = bot.uid
     USERNAME = f"tg://user?id={lorduser}"
     name = event.pattern_match.group(2)
     cmd = event.pattern_match.group(1).lower()
