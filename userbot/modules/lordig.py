@@ -1,10 +1,16 @@
+# Koala Ganteng, Kode Dari Koala Bangsul Press F untuk Koala @Manusiarakitann
+# Keredit Motor Eh Maksudnya Kredit Kampang Bot (c) Koala Bgke @ManusiaRakitann
+# Karna Aku Gabut Aku Pasang Keredit Lagi # Keredit
+# Yak Pasang Credit Banyak Banyak Biar Makin Keren
 # Copyright (C) 2021 Alvin / @LiuAlvinas By Lord Userbot
-
 # All rights reserved.
-#
+# Keredit
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
-# Lord Userbot
+# Lord Userbot - From Lord To Lord
+# Yang Gbs Basa Enggres bisa Terjemahkan di atas
+# Ngefork Doang Gak Bintang Anjg
+# Kalo Clone Ini Jangan dihapus ya anjg nanti Koala Ngamuk, Ok Mksh Sma Sma
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot import bot, CMD_HELP
@@ -14,32 +20,48 @@ from userbot.events import register
 # Apin Gansssss Anjjjayy Yahahaha
 
 
-@register(outgoing=True, pattern="^.ig(?: |$)(.*)")
-async def _(event):
+@register(outgoing=True, pattern="^.ig ?(.*)")
+async def insta(event):
     if event.fwd_from:
         return
-    d_link = event.pattern_match.group(1)
-    if ".com" not in d_link:
-        await event.edit("`Mohon Maaf Lord, Saya Membutuhkan Link Media Instagram Untuk Download **/(-_-)\\**")
-    else:
-        await event.edit("```Video Sedang Diproses.....```")
-    chat = "@Instagram_DlRobot"
-    async with bot.conversation(chat) as conv:
+    if not event.reply_to_msg_id:
+        await event.edit("`Lord, Mohon Balas Ke Link`")
+        return
+    reply_message = await event.get_reply_message()
+    if not reply_message.text:
+        await event.edit("`Mohon Maaf Lord, Saya Membutuhkan Link Media Instagram Untuk Download`")
+        return
+    chat = "@SaveAsBot"
+    reply_message.sender
+    if reply_message.sender.bot:
+        await event.edit("`Memproses....`")
+        return
+    await event.edit("`Memproses.....`")
+    async with event.client.conversation(chat) as conv:
         try:
-            msg_start = await conv.send_message("/start")
-            r = await conv.get_response()
-            msg = await conv.send_message(d_link)
-            details = await conv.get_response()
-            video = await conv.get_response()
-            """ - don't spam notif - """
-            await bot.send_read_acknowledge(conv.chat_id)
+            response = conv.wait_event(
+                events.NewMessage(incoming=True, from_users=523131145)
+            )
+            await event.client.send_message(chat, reply_message)
+            response = await response
         except YouBlockedUserError:
-            await event.edit("**Kesalahan:** `Lord Mohon Buka Blokir` @Instagram_DlRobot `Dan Coba Lagi!`")
+            await event.edit("`Lord, Mohon Buka Blokir` @SaveAsbot `Lalu Coba Lagi`")
             return
-        await bot.send_file(event.chat_id, video)
-        await event.client.delete_messages(conv.chat_id,
-                                           [msg_start.id, r.id, msg.id, details.id, video.id])
-        await event.delete()
+        if response.text.startswith("Forward"):
+            await event.edit(
+                "Uhmm Sepertinya Private."
+            )
+        else:
+            await event.delete()
+            await event.client.send_file(
+                event.chat_id,
+                response.message.media,
+                caption=f"**Download By @Lorduserbot_Group**",
+            )
+            await event.client.send_read_acknowledge(conv.chat_id)
+            await bot(functions.messages.DeleteHistoryRequest(peer=chat, max_id=0))
+            await event.delete()
+
 
 # By Lord - Userbot
 # Alvin Gansssssss Mksh Sma Sma
