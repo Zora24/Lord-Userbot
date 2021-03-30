@@ -10,7 +10,7 @@ import os
 import shutil
 import subprocess
 import time
-
+from bs4 import BeautifulSoup
 import deezloader
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
@@ -18,8 +18,8 @@ from pylast import User
 from selenium import webdriver
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo, BeautifulSoup
-
+from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo
+from random import choice
 from userbot import (
     CMD_HELP,
     DEEZER_ARL_TOKEN,
@@ -34,6 +34,8 @@ from userbot.utils import progress
 
 os.system("rm -rf *.mp3")
 
+
+DEFAULT_AUDIO_QUALITY = "320k"
 
 def bruh(name):
     os.system("instantmusic -q -s " + name)
