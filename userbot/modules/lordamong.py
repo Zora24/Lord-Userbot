@@ -10,6 +10,8 @@ Userbot plugin fot CatUserbot
 # PORTED BY ALVIN / @LIUALVINAS FOR LORD-USERBOT
 # BASED PLUGINS FROM CAT
 
+from time import sleep
+import asyncio
 from userbot import ALIVE_NAME, CMD_HELP
 from platform import uname
 from userbot.events import register
@@ -25,7 +27,7 @@ async def _(event):
     name = event.pattern_match.group(2)
     cmd = event.pattern_match.group(1).lower()
     text1 = await event.edit("Uhmm... Ada yang salah disini!")
-    await asyncio.sleep(2)
+    sleep(2)
     await text1.delete()
     stcr1 = await event.client.send_file(
         event.chat_id, "CAADAQADRwADnjOcH98isYD5RJTwAg"
@@ -33,7 +35,7 @@ async def _(event):
     text2 = await event.reply(
         f"**[{DEFAULTUSER}]({USERNAME}) :** Saya harus memanggil untuk Berdiskusi"
     )
-    await asyncio.sleep(3)
+    sleep(3)
     await stcr1.delete()
     await text2.delete()
     stcr2 = await event.client.send_file(
@@ -42,62 +44,62 @@ async def _(event):
     text3 = await event.reply(
         f"**[{DEFAULTUSER}]({USERNAME}) :** Kami harus mengeluarkan si Imposter atau akan kalah "
     )
-    await asyncio.sleep(3)
+    sleep(3)
     await stcr2.delete()
     await text3.delete()
     stcr3 = await event.client.send_file(
         event.chat_id, "CAADAQADOwADnjOcH77v3Ap51R7gAg"
     )
     text4 = await event.reply(f"**Orang Lain :** Dimana Dia?? ")
-    await asyncio.sleep(2)
+    sleep(2)
     await text4.edit(f"**Orang Lain :** Siapa!?? ")
-    await asyncio.sleep(2)
+    sleep(2)
     await text4.edit(
         f"**[{DEFAULTUSER}]({USERNAME}) :** Dia adalah {name}, Aku Melihat {name} Menggunakan Vent,"
     )
-    await asyncio.sleep(3)
+    sleep(3)
     await text4.edit(f"**Orang Lain :**Baiklah... Vote {name} ")
-    await asyncio.sleep(2)
+    sleep(2)
     await stcr3.delete()
     await text4.delete()
     stcr4 = await event.client.send_file(
         event.chat_id, "CAADAQADLwADnjOcH-wxu-ehy6NRAg"
     )
     lord = await event.reply(f"{name} Dikeluarkan.......")
-    await asyncio.sleep(2)
+    sleep(2)
     await lord.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
-    await asyncio.sleep(0.5)
+    sleep(0.5)
     await lord.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
-    await asyncio.sleep(0.5)
+    sleep(0.5)
     await lord.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
-    await asyncio.sleep(0.5)
+    sleep(0.5)
     await lord.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
-    await asyncio.sleep(0.5)
+    sleep(0.5)
     await lord.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
-    await asyncio.sleep(0.5)
+    sleep(0.5)
     await lord.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
-    await asyncio.sleep(0.5)
+    sleep(0.5)
     await lord.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
-    await asyncio.sleep(0.5)
+    sleep(0.5)
     await lord.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
-    await asyncio.sleep(0.5)
+    sleep(0.5)
     await lord.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
-    await asyncio.sleep(0.5)
+    sleep(0.5)
     await lord.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
-    await asyncio.sleep(0.2)
+    sleep(0.2)
     await stcr4.delete()
     if cmd == "":
         await lord.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ{name} was an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         0 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
-        await asyncio.sleep(4)
+        sleep(4)
         await lord.delete()
         await event.client.send_file(event.chat_id, "CAADAQADLQADnjOcH39IqwyR6Q_0Ag")
     elif cmd == "n":
         await lord.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ{name} was not an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         1 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
-        await asyncio.sleep(4)
+        sleep(4)
         await lord.delete()
         await event.client.send_file(event.chat_id, "CAADAQADQAADnjOcH-WOkB8DEctJAg")
 
@@ -113,27 +115,27 @@ async def _(event):
     name = event.pattern_match.group(2)
     cmd = event.pattern_match.group(1).lower()
     lord = await event.edit(f"{name} Dikeluarkan.......")
-    await asyncio.sleep(2)
+    sleep(2)
     await lord.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
-    await asyncio.sleep(0.8)
+    sleep(0.8)
     await lord.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
-    await asyncio.sleep(0.8)
+    sleep(0.8)
     await lord.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
-    await asyncio.sleep(0.8)
+    sleep(0.8)
     await lord.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
-    await asyncio.sleep(0.8)
+    sleep(0.8)
     await lord.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
-    await asyncio.sleep(0.8)
+    sleep(0.8)
     await lord.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
-    await asyncio.sleep(0.8)
+    sleep(0.8)
     await lord.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
-    await asyncio.sleep(0.8)
+    sleep(0.8)
     await lord.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
-    await asyncio.sleep(0.8)
+    sleep(0.8)
     await lord.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
-    await asyncio.sleep(0.8)
+    sleep(0.8)
     await lord.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
-    await asyncio.sleep(0.2)
+    sleep(0.2)
     if cmd == "":
         await lord.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ {name} was an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         0 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
