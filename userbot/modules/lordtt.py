@@ -39,10 +39,10 @@ async def _(event):
                                            [msg_start.id, r.id, msg.id, details.id, video.id])
         await event.delete()
 
-
+# Alvin Gans
 CMD_HELP.update(
     {
-        "tiktok": ">`.tiktok <Link>`"
-        "\nUsage: Download Video Tiktok Tanpa Watermark"
+        "tiktok": "**Modules:** __Tik Tok__\n\n**Perintah:** `.tiktok <Link Tiktok>`"
+        "\n**Penjelasan:** Download Video Tiktok Tanpa Watermark"
     }
 )
