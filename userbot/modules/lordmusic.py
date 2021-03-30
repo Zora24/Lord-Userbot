@@ -19,7 +19,6 @@ from selenium import webdriver
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo
-from random import choice
 from userbot import (
     CMD_HELP,
     DEEZER_ARL_TOKEN,
@@ -36,6 +35,7 @@ os.system("rm -rf *.mp3")
 
 
 DEFAULT_AUDIO_QUALITY = "320k"
+
 
 def bruh(name):
     os.system("instantmusic -q -s " + name)
