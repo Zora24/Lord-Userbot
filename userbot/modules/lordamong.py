@@ -10,9 +10,6 @@ Userbot plugin fot CatUserbot
 # PORTED BY ALVIN / @LIUALVINAS FOR LORD-USERBOT
 # BASED PLUGINS FROM CAT
 
-from textwrap import wrap
-from random import choice, randint
-from requests import get
 from time import sleep
 from userbot import ALIVE_NAME, CMD_HELP, bot
 from platform import uname
