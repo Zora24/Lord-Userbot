@@ -427,24 +427,27 @@ async def _(event):
 CMD_HELP.update({
     "chat":
     "`.getid`\
-\nUsage: Dapatkan ID dari media Telegram mana pun, atau pengguna mana pun\
+\nPenjelasan: Dapatkan ID dari media Telegram mana pun, atau pengguna mana pun\
 \n\n`.getbot`\
-\nUsage: Dapatkan Bot dalam obrolan apa pun.\
+\nPenjelasan: Dapatkan Bot dalam obrolan apa pun.\
 \n\n`.logit`\
-\nUsage: Meneruskan pesan yang telah Anda balas di grup log bot Anda.\
+\nPenjelasan: Meneruskan pesan yang telah Anda balas di grup log bot Anda.\
 \n\n`.kickme`\
-\nUsagw: Keluar dari grup.\
-\n\n`.unmutechat`\
-\nUsage: Membuka obrolan yang dibisukan.\
-\n\n`.mutechat`\
-\nUsage: Memungkinkan Anda membisukan obrolan apa pun.\
+\nPenjelasan: Keluar dari grup.\
 \n\n`.link` <username/userid>: <opsional teks> (atau) balas pesan seseorang dengan .link <teks opsional>\
-\nUsage: Buat tautan permanen ke profil pengguna dengan teks ubahsuaian opsional.\
+\nPenjelasan: Buat tautan permanen ke profil pengguna dengan teks ubahsuaian opsional.\
 \n\n`.regexninja` enable/disabled\
-\nUsage: Mengaktifkan/menonaktifkan modul ninja regex secara global.\
+\nPenjelasan: Mengaktifkan/menonaktifkan modul ninja regex secara global.\
 \nModul Regex Ninja membantu menghapus pesan pemicu bot regex.\
-\n\n`.chatinfo [opsional: <reply/tag/chat id/invite link>]`\
-\nUsage: Mendapatkan info obrolan. Beberapa info mungkin dibatasi karena izin yang hilang..\
+\n\n`.chatinfo [opsional: <reply/tag/chat/id/invite link>]`\
+\nPenjelasan: Mendapatkan info obrolan. Beberapa info mungkin dibatasi karena izin yang hilang..\
 \n\n`.invite` \
-\nUsage: Menambahkan pengguna ke obrolan, bukan ke pesan pribadi. "
+\nPenjelasan: Menambahkan pengguna ke obrolan, bukan ke pesan pribadi. "
 })
+
+# Lord Userbot 
+CMD_HELP.update({"mutechat": "**Modules:** __Mute Chat__\
+\n\n**Perintah:** `.mutechat`\
+\n**Penjelasan:** Memungkinkan Anda Membisukan Obrolan Apapun.\
+\n\n**Perintah:** `.unmutechat`\
+\n**Penjelasan:** Membuka obrolan yang dibisukan."})
