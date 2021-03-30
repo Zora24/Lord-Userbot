@@ -13,13 +13,14 @@ from userbot.events import register
 # Alvin Gans
 # Apin Gansssss Anjjjayy Yahahaha
 
+
 @register(outgoing=True, pattern="^.ig(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
     d_link = event.pattern_match.group(1)
     if ".com" not in d_link:
-        await event.edit("`Mohon Maaf Lord, Saya Membutuhkan Link Media Instagram Untuk Download **/(-_-)\**")
+        await event.edit("`Mohon Maaf Lord, Saya Membutuhkan Link Media Instagram Untuk Download **/(-_-)\\**")
     else:
         await event.edit("```Video Sedang Diproses.....```")
     chat = "@Instagram_DlRobot"
@@ -41,7 +42,7 @@ async def _(event):
         await event.delete()
 
 # By Lord - Userbot
-# Alvin Gansssssss Mksh Sma Sma 
+# Alvin Gansssssss Mksh Sma Sma
 # Alvin Gans
 CMD_HELP.update(
     {
