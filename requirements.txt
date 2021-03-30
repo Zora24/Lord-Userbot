@@ -91,3 +91,6 @@ colour
 scipy
 wordcloud
 opencv-python
+beautifulsoup4
+youtube_dl
+youtube-search-python
