@@ -10,7 +10,6 @@ Userbot plugin fot CatUserbot
 # PORTED BY ALVIN / @LIUALVINAS FOR LORD-USERBOT
 # BASED PLUGINS FROM CAT
 
-from asyncio import sleep
 from userbot import ALIVE_NAME, CMD_HELP
 from platform import uname
 from userbot.events import register
