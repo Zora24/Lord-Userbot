@@ -43,6 +43,4 @@ async def _(event):
 CMD_HELP.update(
     {
         "tiktok": "**Modules:** __Tik Tok__\n\n**Perintah:** `.tiktok <Link Tiktok>`"
-        "\n**Penjelasan:** Download Video Tiktok Tanpa Watermark"
-    }
-)
+        "\n**Penjelasan:** Download Video Tiktok Tanpa Watermark"})
