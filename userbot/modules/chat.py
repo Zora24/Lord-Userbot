@@ -445,7 +445,7 @@ CMD_HELP.update({
 \nPenjelasan: Menambahkan pengguna ke obrolan, bukan ke pesan pribadi. "
 })
 
-# Lord Userbot 
+# Lord Userbot
 CMD_HELP.update({"mutechat": "**Modules:** __Mute Chat__\
 \n\n**Perintah:** `.mutechat`\
 \n**Penjelasan:** Memungkinkan Anda Membisukan Obrolan Apapun.\
