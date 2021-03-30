@@ -21,8 +21,8 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 async def _(event):
     if event.fwd_from:
         return
-    hmm = bot.uid
-    USERNAME = f"tg://user?id={hmm}"
+    lord = platform.uname
+    USERNAME = f"tg://user?id={lord}"
     name = event.pattern_match.group(2)
     cmd = event.pattern_match.group(1).lower()
     text1 = await event.edit("Uhmm... Ada yang salah disini!")
