@@ -18,7 +18,7 @@ from pylast import User
 from selenium import webdriver
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo
+from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo, BeautifulSoup
 
 from userbot import (
     CMD_HELP,
@@ -246,7 +246,7 @@ async def _(event):
                 respond = await conv.get_response()
                 await bot.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.reply("`Mohon Unblock @WooMaiBot Dan Coba Lagi`")
+                await event.reply("`Mohon Buka @WooMaiBot Dan Coba Lagi`")
                 return
             await event.edit("`Mengirim Musik Anda.....`")
             await asyncio.sleep(3)
@@ -463,12 +463,12 @@ async def upload_track(track_location, message):
     duration = 0
     title = ""
     performer = ""
-    if metadata.has("durasi"):
-        duration = metadata.get("durasi").seconds
-    if metadata.has("judul"):
-        title = metadata.get("judul")
-    if metadata.has("judul"):
-        performer = metadata.get("artis")
+    if metadata.has("duration"):
+        duration = metadata.get("duration").seconds
+    if metadata.has("title"):
+        title = metadata.get("title")
+    if metadata.has("title"):
+        performer = metadata.get("artist")
     document_attributes = [
         DocumentAttributeAudio(
             duration=duration,
