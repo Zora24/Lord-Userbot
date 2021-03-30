@@ -10,7 +10,6 @@ Userbot plugin fot CatUserbot
 # PORTED BY ALVIN / @LIUALVINAS FOR LORD-USERBOT
 # BASED PLUGINS FROM CAT
 
-from telethon import events
 from time import sleep
 from userbot import ALIVE_NAME, CMD_HELP, bot
 from userbot.events import register
