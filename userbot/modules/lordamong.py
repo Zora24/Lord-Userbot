@@ -1,18 +1,12 @@
 # LORD - USERBOT PORTED
 # BY ALVIN / @LIUALVINAS / ALVIN GANTENG
-
-"""
-Created by @Jisan7509
-Credit @Infinity20998
-Userbot plugin fot CatUserbot
-"""
-
 # PORTED BY ALVIN / @LIUALVINAS FOR LORD-USERBOT
 # BASED PLUGINS FROM CAT
 
 from time import sleep
 from userbot import ALIVE_NAME, CMD_HELP, bot
 from userbot.events import register
+
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "lord"
 
 
