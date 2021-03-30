@@ -364,7 +364,7 @@ CMD_HELP.update({"pip": "`.pip <module(s)>`\
     \nPenjelasan: Melakukan pencarian modul pip."})
 
 CMD_HELP.update({"alive": "`.alive` | `.on`\
-    \nPenggunaan: Ketik .alive/.on untuk melihat apakah bot Anda berfungsi atau tidak.\
+    \nPenjelasan: Ketik .alive/.on untuk melihat apakah bot Anda berfungsi atau tidak.\
     \n\n`.aliveu <text>`\
     \nPenjelasan: Mengubah 'pengguna' menjadi teks yang Anda inginkan.\
     \n\n`.resetalive`\
