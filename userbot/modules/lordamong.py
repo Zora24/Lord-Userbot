@@ -11,7 +11,6 @@ Userbot plugin fot CatUserbot
 # BASED PLUGINS FROM CAT
 
 from time import sleep
-import asyncio
 from userbot import ALIVE_NAME, CMD_HELP
 from platform import uname
 from userbot.events import register
