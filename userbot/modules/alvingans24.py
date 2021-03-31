@@ -179,13 +179,13 @@ async def _(event):
 CMD_HELP.update({
     "animasi":
     "`.nah` ; `.huh` ; `.owner`\
-    \nUsage: cobain.\
+    \nPenjelasan: cobain.\
     \n\n`.bunga` ; `.buah`\
-    \nUsage: animasi.\
+    \nPenjelasan: animasi.\
     \n\n`.waktu`\
-    \nUsage: animasi.\
+    \nPenjelasan: animasi.\
     \n\n`.hua`\
-    \nUsage: nangis.\
+    \nPenjelasan: nangis.\
     \n\n`.ceritacinta` ; `.canda`\
-    \nUsage: liat sendiri"
+    \nPenjelasan: liat sendiri"
 })
