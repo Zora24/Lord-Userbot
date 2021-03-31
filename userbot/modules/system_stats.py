@@ -273,7 +273,7 @@ async def amireallyalive(alive):
         f"❃ **Python**   \n   ➥ `Versi {python_version()}` \n"
         f"❃ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
         f"❃ **Modul**    \n   ➥ `{len(modules)}` \n\n"
-        f"❃ **Repo Userbot:** [STRESS-Userbot](https://github.com/ramadhani892/STRESS-Userbot)\n❃ **Grup Userbot: **[Tekan](t.me/teman_random)\n❃ [CHANNEL](t.me/candu_musikk)\n❃ **Pemilik:** [RAMA](t.me/Ramadhaniiiiiii1)\n"
+        f"❃ **REPO:** [STRESS-USERBOT](https://github.com/ramadhani892/STRESS-Userbot)\n❃ **GROUP: **[TEKAN](t.me/teman_random)\n❃ **CHANNEL: **[TEKAN](t.me/candu_musikk)\n❃ **PEMILIK:** [RAMA](t.me/Ramadhaniiiiiii1)\n"
         f"**¥▬▬▬▬▬▬❙۩ᬉིུ֛ ⃝ ꦿꦶ ۩❙▬▬▬▬▬▬¥**")
     if ALIVE_LOGO:
         try:
@@ -312,7 +312,7 @@ async def amireallyalive(alive):
         f"┣|• `Bot Ver  :`{BOT_VER} \n"
         f"┣|• `Modules  :`{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
-        f"[REPO](https://github.com/ramadhani892/STRESS-Userbot) | [GROUP](t.me/teman_random) | [CHANNEL](t.me/candu_musikk) | [OWNER](t.me/@Ramadhaniiiiiii1)")
+        f"[REPO](https://github.com/ramadhani892/STRESS-Userbot) | [GROUP](t.me/teman_random) | [CHANNEL](t.me/candu_musikk) | [OWNER](t.me/Ramadhaniiiiiii1)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
