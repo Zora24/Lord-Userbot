@@ -318,13 +318,13 @@ async def typewriter(typew):
 CMD_HELP.update({
     "vip":
     "`.bulan` ; `.hati` ; `.bernyanyi`\
-    \nUsage: liat aja.\
+    \nPenjelasan: liat aja.\
     \n\n`.helikopter` ; `.tank` ; `.tembak`\n`.bundir`\
-    \nUsage: liat sendiri\
+    \nPenjelasan: liat sendiri\
     \n\n`.y`\
-    \nUsage: jempol\
+    \nPenjelasan: jempol\
     \n\n`.awkwok`\
-    \nUsage: ketawa lari.\
+    \nPenjelasan: ketawa lari.\
     \n\n`.ular` ; `.babi` ; `.foto` ; `.ajg`\
-    \nUsage: liat sendiri."
+    \nPenjelasan: liat sendiri."
 })
