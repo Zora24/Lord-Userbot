@@ -54,6 +54,6 @@ async def sticklet(event):
 
 CMD_HELP.update({
     'tks':
-    ".rgb <text>"
+    ".tks <text>"
     "\nUsage: Ubah teks menjadi tikel."
 })
