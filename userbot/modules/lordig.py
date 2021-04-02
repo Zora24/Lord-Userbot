@@ -26,7 +26,7 @@ async def insta(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("`Lord, Mohon Balas Ke Link`")
+        await event.edit("`Lord, Mohon Balas Ke Link Instagram`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.text:
@@ -69,7 +69,7 @@ async def insta(event):
 # Alvin Gans
 CMD_HELP.update(
     {
-        "instagram": "**Modules:** __Instagram__\n\n**Perintah:** `.ig <Link>`"
-        "\n**Penjelasan:** Download Media di Postingan Instagram"
+        "instagram": "**Modules:** __Instagram__\n\n**Perintah:** `.ig`"
+        "\n**Penjelasan:** Download Media di Postingan Instagram, Balas ke link instagram ketik `.ig`"
     }
 )
