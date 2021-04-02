@@ -129,7 +129,7 @@ async def dyno_usage(dyno):
     """
         Get your account Dyno Usage
     """
-    await dyno.edit("`Mendapatkan Informasi Dyno Heroku Anda ヅ`")
+    await dyno.edit("`Dapat informasi dyno lu  ヅ`")
     useragent = (
         'Mozilla/5.0 (Linux; Android 10; SM-G975F) '
         'AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -150,7 +150,7 @@ async def dyno_usage(dyno):
                     f"`{r.reason}`",
                     reply_to=dyno.id
                 )
-                await dyno.edit("`Tidak Bisa Mendapatkan Informasi Dyno ヅ`")
+                await dyno.edit("`Gak bisa nyari informasi dyno lu ヅ`")
                 return False
             result = await r.json()
             quota = result['account_quota']
@@ -172,19 +172,19 @@ async def dyno_usage(dyno):
                         apps.get('quota_used') * 100 / quota)
                     break
             else:
-                AppQuotaUsed = 0
-                AppPercentage = 0
+                AppQuotaUsed = 999
+                AppPercentage = 999
 
             AppHours = math.floor(AppQuotaUsed / 60)
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "**☛ Informasi Dyno**:\n\n╭━┯━━━━━━━━━━━━━━━━┯━╮\n"
-                f"✥ `Penggunaan Dyno` **{app.name}**:\n"
+                "*⚡ Informasi Dyno**:\n\n╭━┯━━━━━━━━━━━━━━━━┯━╮\n"
+                f"✥ `Penggunaan Dyno alay` **{app.name}**:\n"
                 f"  ❉ **{AppHours} Jam - "
                 f"{AppMinutes} Menit  -  {AppPercentage}%**"
                 "\n ✲━─━─━─━─━─━─━─━─━─━✲\n"
-                "✥ `Sisa Dyno Bulan Ini`:\n"
+                "✥ `Sisa Dyno alay Bulan Ini`:\n"
                 f"  ❉ **{hours} Jam - {minutes} Menit  "
                 f"-  {percentage}%**\n"
                 "╰━┷━━━━━━━━━━━━━━━━┷━╯"
