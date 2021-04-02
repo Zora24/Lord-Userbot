@@ -121,28 +121,28 @@ async def remove_all(event):
         pass
     if not removed:  # If API returns False Try to Remove Through System Call.
         subprocess_run("aria2p remove-all")
-    await event.edit("`Clearing on-going downloads... `")
+    await event.edit("`Menghapus unduhan yang sedang berjalan... `")
     await sleep(2.5)
-    await event.edit("`Successfully cleared all downloads.`")
+    await event.edit("`Berhasil menghapus semua unduhan.`")
     await sleep(2.5)
 
 
 @register(outgoing=True, pattern=r"^\.apause(?: |$)(.*)")
 async def pause_all(event):
     # Pause ALL Currently Running Downloads.
-    await event.edit("`Pausing downloads...`")
+    await event.edit("`Menjeda unduhan...`")
     aria2.pause_all(force=True)
     await sleep(2.5)
-    await event.edit("`Successfully paused on-going downloads.`")
+    await event.edit("`Berhasil menjeda unduhan yang sedang berjalan.`")
     await sleep(2.5)
 
 
 @register(outgoing=True, pattern=r"^\.aresume(?: |$)(.*)")
 async def resume_all(event):
-    await event.edit("`Resuming downloads...`")
+    await event.edit("`Melanjutkan unduhan...`")
     aria2.resume_all()
     await sleep(1)
-    await event.edit("`Downloads resumed.`")
+    await event.edit("`Download dilanjutkan.`")
     await sleep(2.5)
     await event.delete()
 
@@ -169,11 +169,11 @@ async def show_all(event):
             + "\n\n"
         )
     if len(msg) <= 4096:
-        await event.edit("`On-going Downloads: `\n" + msg)
+        await event.edit("`Unduhan Sedang Berlangsung: `\n" + msg)
         await sleep(5)
         await event.delete()
     else:
-        await event.edit("`Output is too big, sending it as a file...`")
+        await event.edit("`Output terlalu besar, dikirim sebagai file...`")
         output = "output.txt"
         with open(output, "w") as f:
             f.write(msg)
@@ -257,11 +257,11 @@ async def check_progress_for_dl(gid, event, previous):
 
 CMD_HELP.update(
     {
-        "aria": ">`.aurl [URL]` (or) >`.amag [Magnet Link]` (or) >`.ator [path to torrent file]`"
-        "\nUsage: Downloads the file into your userbot server storage."
+        "aria": ">`.aurl [URL]` (or) >`.amag [Tautan Magnet]` (or) >`.ator [jalur ke file torrent]`"
+        "\nUsage: Unduh file ke penyimpanan server bot pengguna Anda."
         "\n\n>`.apause (or) .aresume`"
-        "\nUsage: Pauses/resumes on-going downloads."
+        "\nUsage: Menjeda / melanjutkan unduhan yang sedang berlangsung."
         "\n\n>`.aclear`"
-        "\nUsage: Clears the download queue, deleting all on-going downloads."
+        "\nUsage: Menghapus antrian unduhan, menghapus semua unduhan yang sedang berjalan."
         "\n\n>`.ashow`"
-        "\nUsage: Shows progress of the on-going downloads."})
+        "\nUsage: Menunjukkan kemajuan unduhan yang sedang berlangsung."})
