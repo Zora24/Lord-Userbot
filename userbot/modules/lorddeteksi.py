@@ -24,19 +24,19 @@ async def _(event):
             try:
                 u = await event.client.get_entity(input_str)
             except ValueError:
-                await edit.event("`Lord, Mohon Berikan ID/Username untuk menemukan Riwayat`"
+                await edit.event("`Bos, Mohon Berikan ID/Username untuk menemukan Riwayat`"
                                  )
             uid = u.id
     else:
         uid = reply_message.sender_id
     chat = "@tgscanrobot"
-    event = await event.edit("`Mendeteksi...`")
+    event = await event.edit("`Mendeteksi,anak bangsat...`")
     async with bot.conversation(chat) as conv:
         try:
             await conv.send_message(f"{uid}")
         except YouBlockedUserError:
             await steal.reply(
-                "```Lord Mohon Unblock @tgscanrobot Dan Coba Lagi```"
+                "```Bos Mohon Unblock @tgscanrobot Dan Coba Lagi```"
             )
         response = await conv.get_response()
         await event.client.send_read_acknowledge(conv.chat_id)
@@ -56,7 +56,7 @@ def user_full_name(user):
 
 # Alvin Ganteng
 CMD_HELP.update({
-    "deteksi":
+    "⚡ deteksi ⚡":
         "`.deteksi`\
           \nPenjelasan: Melihat Riwayat Grup Yang Pernah/Sedang dimasuki."
 })
