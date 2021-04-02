@@ -72,17 +72,17 @@ async def mega_downloader(megadl):
         if "file" in link:
             link = link.replace("#", "!").replace("file/", "#!")
         elif "folder" in link or "#F" in link or "#N" in link:
-            await megadl.edit("`folder download support are removed...`")
+            await megadl.edit("`dukungan unduhan folder dihapus...`")
             return
     except IndexError:
-        await megadl.edit("`MEGA.nz link not found...`")
+        await megadl.edit("`MEGA.nz tautan tidak ditemukan...`")
         return None
     cmd = f"bin/megadown -q -m {link}"
     result = await subprocess_run(megadl, cmd)
     try:
         data = json.loads(result[0])
     except json.JSONDecodeError:
-        await megadl.edit("**JSONDecodeError**: `failed to extract link...`")
+        await megadl.edit("**JSONDecodeError**: `gagal mengekstrak tautan...`")
         return None
     except (IndexError, TypeError):
         return
@@ -167,7 +167,7 @@ async def mega_downloader(megadl):
             return None
     else:
         await megadl.edit(
-            "`Failed to download, " "check heroku Logs for more details.`"
+            "`Gagal mengunduh, " "periksa Log heroku untuk lebih jelasnya.`"
         )
         for e in downloader.get_errors():
             LOGS.info(str(e))
@@ -190,7 +190,7 @@ async def decrypt_file(megadl, file_path, temp_file_path, hex_key, hex_raw_key):
 CMD_HELP.update(
     {
         "mega": ">`.mega <MEGA.nz link>`"
-        "\nUsage: Reply to a MEGA.nz link or paste your MEGA.nz link to "
-        "download the file into your userbot server."
+        "\nUsage: Balas tautan MEGA.nz atau tempel tautan MEGA.nz Anda Ke "
+        "unduh file ke server userbot Anda."
     }
 )
