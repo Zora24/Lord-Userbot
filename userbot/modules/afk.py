@@ -166,7 +166,7 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"- 𝗔 𝗙 𝗞 -\n `{ALIVE_NAME}` **ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                    await mention.reply(f"-⚡ 𝗔 𝗙 𝗞 ⚡-\n `{ALIVE_NAME}` **afk** {afk_since} **yang lalu.**\
                         \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -175,7 +175,7 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"- 𝗔 𝗙 𝗞 -\n **ʟᴏʀᴅ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                        await mention.reply(f"-⚡ 𝗔 𝗙 𝗞 ⚡-\n **bos masih afk** {afk_since} **yang lalu.**\
                             \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
@@ -243,7 +243,7 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)} Detik`"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"- 𝗔 𝗙 𝗞 -\n **ʟᴏʀᴅ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                    await sender.reply(f"-⚡ 𝗔 𝗙 𝗞 ⚡-\n **bos masih afk** {afk_since} **yang lalu.**\
                             \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -252,7 +252,7 @@ async def afk_on_pm(sender):
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"- 𝗔 𝗙 𝗞 -\n **ʟᴏʀᴅ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                        await sender.reply(f"-⚡ 𝗔 𝗙 𝗞 ⚡-\n **bos masih afk** {afk_since} **yang lalu.**\
                             \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
@@ -265,9 +265,9 @@ async def afk_on_pm(sender):
 
 CMD_HELP.update({
     "afk":
-    "**Modules: `AFK`\
-    \n\n**• Perintah:** `.afk`\
-    \n**➥ Penjelasan:** __Siapapun Yang Balas, Tag, Atau Chat Kamu__\
-__Mereka Akan Tau Alasan Kamu OFF__.\n\n**Note:** `AFK Bisa Dilakukan Dan Dibatalkan Dimanapun.`\
+    "**Modules: `⚡ AFK ⚡`\
+    \n\n**•🕊️ Perintah:** `.afk`\
+    \n**➥🕊️ Penjelasan:** __Siapapun Yang Balas, Tag, Atau Chat Kamu__\
+__Mereka Akan Tau Alasan Kamu OFF__.\n\n**Note:** `⚡ AFK Bisa Dilakukan Dan Dibatalkan Dimanapun.`\
 "
 })
