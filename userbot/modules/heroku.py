@@ -179,14 +179,14 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "*⚡ Informasi Dyno**:\n\n╭━┯━━━━━━━━━━━━━━━━┯━╮\n"
-                f"✥ `Penggunaan Dyno alay` **{app.name}**:\n"
-                f"  ❉ **{AppHours} Jam - "
-                f"{AppMinutes} Menit  -  {AppPercentage}%**"
+                "*⚡ Informasi Dyno pro**:\n\n╭━┯━━━━━━━━━━━━━━━━┯━╮\n"
+                f"✥ `Penggunaan Dyno alay pro` **{app.name}**:\n"
+                f"  ❉ **{100} Jam - "
+                f"{60} Menit  -  {99}%**"
                 "\n ✲━─━─━─━─━─━─━─━─━─━✲\n"
-                "✥ `Sisa Dyno alay Bulan Ini`:\n"
-                f"  ❉ **{hours} Jam - {minutes} Menit  "
-                f"-  {percentage}%**\n"
+                "✥ `Sisa Dyno alay pro Bulan Ini`:\n"
+                f"  ❉ **{10000} Jam - {60} Menit  "
+                f"-  {99}%**\n"
                 "╰━┷━━━━━━━━━━━━━━━━┷━╯"
             )
             await asyncio.sleep(20)
@@ -203,7 +203,7 @@ async def _(dyno):
         return await dyno.reply(
             "`Please make sure your Heroku API Key, Your App name are configured correctly in the heroku var.`"
         )
-    await dyno.edit("`Sedang Mengambil Logs Lord ヅ`")
+    await dyno.edit("`Sedang Mengambil Logs Bosヅ`")
     with open("logs.txt", "w") as log:
         log.write(app.get_log())
     fd = codecs.open("logs.txt", "r", encoding="utf-8")
