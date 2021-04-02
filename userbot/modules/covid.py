@@ -22,6 +22,7 @@ async def corona(event):
         output_text += f"`⚰️Meninggal     : {country_data['deaths']} (+{country_data['new_deaths']})`\n"
         output_text += f"`😔Kasus Baru    : {country_data['new_cases']}`\n"
         output_text += f"`😇Sembuh        : {country_data['recovered']}`\n"
+        output_text += f"`Kasihan kan?makannya Istirahat di rumah kontol
         output_text += "`📍Total Tes     : N/A`\n\n"
         output_text += f"Data disediakan oleh [Worldometer](https://www.worldometers.info/coronavirus/country/{country})"
     else:
@@ -44,6 +45,7 @@ async def corona(event):
         output_text += f"`⚰️Meninggal     : {country_data['deaths']} (+{country_data['new_deaths']})`\n"
         output_text += f"`😔Kasus Baru    : {country_data['new_cases']}`\n"
         output_text += f"`😇Sembuh        : {country_data['recovered']}`\n"
+        output_text += f"`Kasihan kan?makannya Istirahat di rumah kontol
         output_text += "`📍Total Tes     : N/A`\n\n"
         output_text += f"Data disediakan oleh [Worldometer](https://www.worldometers.info/coronavirus/country/{country})"
     else:
@@ -52,7 +54,7 @@ async def corona(event):
     await event.edit(f"`Info Virus corona di {country}:`\n\n{output_text}")
 
 
-CMD_HELP.update({"covid": "`.covid` **<negara>**"
+CMD_HELP.update({"⚡ covid ⚡": "`.covid` **<negara>**"
                  "\nPenjelasan: Dapatkan informasi tentang data covid-19 di suatu Negara.`\n\n"
                  "`.covid`"
                  "\nPenjelasan: Dapatkan informasi tentang data covid-19 di Seluruh Dunia.\n"})
