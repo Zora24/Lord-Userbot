@@ -37,7 +37,7 @@ async def koc(e):
 @register(outgoing=True, pattern='^.dino(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`DIN DINNN.....`")
+    await typew.edit("`Bangsat ada dino.....`")
     sleep(1)
     await typew.edit("`DINOOOOSAURUSSSSS!!`")
     sleep(1)
@@ -346,7 +346,7 @@ async def koc(e):
         await e.edit("🚶                              🐢")
         await e.edit("🚶                               🐢")
         await e.edit("🚶                                🐢")
-        await e.edit("`GABUT`")
+        await e.edit("`GABUT doang maap`")
 
 
 @register(outgoing=True, pattern='^.terkadang(?: |$)(.*)')
@@ -435,7 +435,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 CMD_HELP.update({
-    "gabut":
+    "⚡ gabut ⚡":
     "`.gabut` ; `.dino`\
     \nPenjelasan: ntahlah gabut doang.\
     \n\n`.gombal`\
