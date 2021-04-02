@@ -1056,7 +1056,7 @@ CMD_HELP.update({"grab": "**Modules:** __Grab__\n\n**Perintah:** `.grab <jumlah>
 # LORD USERBOT
 CMD_HELP.update(
     {
-        "clone": "**Modules:** __Clone__\n\n**Perintah:** `.clone <username/balas ke pesan>`"
+        "clone": "**Modules:** __Clone__\n\n**Perintah:** `.clone <username/balas pesan>`"
         "\n**Penjelasan:** Clone Akun Seseorang, Tapi Username Tidak di Clone"
         "\n\n**Perintah:** `.rclone`"
         "\n**Penjelasan:** Mengembalikan Akun Anda Seperti Semula"})
