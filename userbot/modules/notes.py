@@ -16,7 +16,7 @@ async def notes_active(svd):
     try:
         from userbot.modules.sql_helper.notes_sql import get_notes
     except AttributeError:
-        return await svd.edit("`Running on Non-SQL mode!`")
+        return await svd.edit("`Berjalan pada mode Non-SQL!`")
     message = "`There are no saved notes in this chat`"
     notes = get_notes(svd.chat_id)
     for note in notes:
@@ -30,26 +30,26 @@ async def notes_active(svd):
 
 @register(outgoing=True, pattern=r"^.clear (\w*)")
 async def remove_notes(clr):
-    """ For .clear command, clear note with the given name."""
+    """ Untuk perintah .clear, hapus catatan dengan nama yang diberikan."""
     try:
         from userbot.modules.sql_helper.notes_sql import rm_note
     except AttributeError:
-        return await clr.edit("`Running on Non-SQL mode!`")
+        return await clr.edit("`Berjalan pada mode Non-SQL!`")
     notename = clr.pattern_match.group(1)
     if rm_note(clr.chat_id, notename) is False:
-        return await clr.edit("`Couldn't find note:` **{}**".format(notename))
+        return await clr.edit("`Tidak dapat menemukan catatan:` **{}**".format(notename))
     else:
         return await clr.edit(
-            "`Successfully deleted note:` **{}**".format(notename))
+            "`Catatan berhasil dihapus:` **{}**".format(notename))
 
 
 @register(outgoing=True, pattern=r"^.save (\w*)")
 async def add_note(fltr):
-    """ For .save command, saves notes in a chat. """
+    """ Untuk perintah .save, simpan catatan dalam obrolan. """
     try:
         from userbot.modules.sql_helper.notes_sql import add_note
     except AttributeError:
-        return await fltr.edit("`Running on Non-SQL mode!`")
+        return await fltr.edit("`Berjalan pada mode Non-SQL!`")
     keyword = fltr.pattern_match.group(1)
     string = fltr.text.partition(keyword)[2]
     msg = await fltr.get_reply_message()
@@ -58,7 +58,7 @@ async def add_note(fltr):
         if BOTLOG_CHATID:
             await fltr.client.send_message(
                 BOTLOG_CHATID, f"#NOTE\nCHAT ID: {fltr.chat_id}\nKEYWORD: {keyword}"
-                "\n\nThe following message is saved as the note's reply data for the chat, please do NOT delete it !!"
+                "\n\nPesan berikut disimpan sebagai data balasan catatan untuk obrolan, JANGAN hapus !!"
             )
             msg_o = await fltr.client.forward_messages(entity=BOTLOG_CHATID,
                                                        messages=msg,
@@ -67,7 +67,7 @@ async def add_note(fltr):
             msg_id = msg_o.id
         else:
             return await fltr.edit(
-                "`Saving media as data for the note requires the BOTLOG_CHATID to be set.`"
+                "`Menyimpan media sebagai data untuk catatan membutuhkan pengaturan BOTLOG_CHATID.`"
             )
     elif fltr.reply_to_msg_id and not string:
         rep_msg = await fltr.get_reply_message()
@@ -114,12 +114,12 @@ async def incom_note(getnt):
 
 @register(outgoing=True, pattern="^.rmbotnotes (.*)")
 async def kick_marie_notes(kick):
-    """ For .rmbotnotes command, allows you to kick all \
-        Marie(or her clones) notes from a chat. """
+    """ Untuk perintah .rmbotnotes, memungkinkan Anda untuk menendang semua \
+        Catatan Marie (atau klonnya) dari obrolan """
     bot_type = kick.pattern_match.group(1).lower()
     if bot_type not in ["marie", "rose"]:
-        return await kick.edit("`That bot is not yet supported!`")
-    await kick.edit("```Will be kicking away all Notes!```")
+        return await kick.edit("`Bot itu belum didukung!`")
+    await kick.edit("```Akan menendang semua Catatan!```")
     await sleep(3)
     resp = await kick.get_reply_message()
     filters = resp.text.split("-")[1:]
@@ -131,19 +131,19 @@ async def kick_marie_notes(kick):
             await kick.reply("/clear %s" % (i.strip()))
         await sleep(0.3)
     await kick.respond(
-        "```Successfully purged bots notes yaay!```\n Gimme cookies!")
+        "```Berhasil membersihkan catatan bot yaay!```\n Beri aku kue!")
     if BOTLOG:
         await kick.client.send_message(
-            BOTLOG_CHATID, "I cleaned all Notes at " + str(kick.chat_id))
+            BOTLOG_CHATID, "Saya membersihkan semua Catatan di " + str(kick.chat_id))
 
 
 CMD_HELP.update({
     "notes":
     "\
 #<notename>\
-\nUsage: Gets the specified note.\
-\n\n`.save` <notename> <notedata> or reply to a message with .save <notename>\
-\nUsage: Saves the replied message as a note with the notename. (Works with pics, docs, and stickers too!)\
+\nUsage: Mendapat catatan yang ditentukan.\
+\n\n`.save` <notename> <notedata> atau membalas pesan dengan .save <notename>\
+\nPenggunaan: Menyimpan pesan yang dibalas sebagai catatan dengan notename. (Bekerja dengan foto, dokumen, dan stiker untuk mu!)\
 \n\n`.notes`\
 \nUsage: Gets all saved notes in a chat.\
 \n\n`.clear` <notename>\
