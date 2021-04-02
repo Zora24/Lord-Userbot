@@ -1053,12 +1053,14 @@ CMD_HELP.update({"undelete": "**Modules:** __Undelete__\n\n**Perintah:** `.undlt
 # LORD USERBOT
 CMD_HELP.update({"grab": "**Modules:** __Grab__\n\n**Perintah:** `.grab <jumlah>`"
                  "\n**Penjelasan:** Mengambil Profil, Bisa Balas Ke Pesan Pengguna Lain Untuk Mengambil Profilnya\n\n**WARN:** JANGAN MENYALAH GUNAKAN PERINTAH INI"})
-# LORD USERBOT 
-CMD_HELP.update({"clone": "**Modules:** __Clone__\n\n**Perintah:** `.clone <username/balas ke pesan>`"
-                 "\n**Penjelasan:** Clone Akun Seseorang, Tapi Username Tidak di Clone"
-                 "\n\n**Perintah:** `.rclone`"
-                 "\n**Penjelasan:** Mengembalikan Akun Anda Seperti Semula"})
-# LORD USERBOT 
+# LORD USERBOT
+CMD_HELP.update(
+    {
+        "clone": "**Modules:** __Clone__\n\n**Perintah:** `.clone <username/balas ke pesan>`"
+        "\n**Penjelasan:** Clone Akun Seseorang, Tapi Username Tidak di Clone"
+        "\n\n**Perintah:** `.rclone`"
+        "\n**Penjelasan:** Mengembalikan Akun Anda Seperti Semula"})
+# LORD USERBOT
 CMD_HELP.update({"glitch": "**Modules:** __Glitch__\n\n**Perintah:** `.glitch <level>`"
                  "\n**Penjelasan:** Balas Ke Media, Memberikan Efek Glicth Ke Media, Level 1 - 8"
                  "\n\n**Perintah:** `.glitchs <level>`"
@@ -1066,5 +1068,3 @@ CMD_HELP.update({"glitch": "**Modules:** __Glitch__\n\n**Perintah:** `.glitch <l
 # LORD USERBOT # ALVIN GANTENG
 CMD_HELP.update({"randomprofil": "**Modules:** __Random Profil__\n\n**Perintah:** `.randompp`"
                  "\n**Penjelasan:** Mengganti Foto Profil Anda Secara Otomatis, Untuk Menghentikan Perintah Ini Gunakan Perintah `.restart`"})
-
-
