@@ -239,7 +239,7 @@ async def _(event):
     if input_str:
         chat = await event.get_chat()
         if not (chat.admin_rights or chat.creator):
-            await event.edit("`You aren't an admin here!`")
+            await event.edit("`Anda Bukan Admin Disini!`")
             return False
     p = 0
     b = 0
@@ -253,7 +253,7 @@ async def _(event):
     o = 0
     q = 0
     r = 0
-    await event.edit("Searching Participant Lists.")
+    await event.edit("`Mencari Daftar Peserta....`")
     async for i in bot.iter_participants(event.chat_id):
         p = p + 1
         #
@@ -384,7 +384,7 @@ async def _(event):
     thumb = None
     if os.path.exists(thumb_image_path):
         thumb = thumb_image_path
-    await event.edit("`Rename & Upload in process 🙄🙇‍♂️🙇‍♂️🙇‍♀️ It might take some time if file size is big`")
+    await event.edit("`Rename Dan Upload Dalam Proses, Ini Akan Memakan Waktu Lama Jika Ukuran File Besar`")
     input_str = event.pattern_match.group(1)
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
@@ -414,11 +414,11 @@ async def _(event):
             end_two = datetime.now()
             os.remove(downloaded_file_name)
             ms_two = (end_two - end).seconds
-            await event.edit("Downloaded in {} seconds. Uploaded in {} seconds.".format(ms_one, ms_two))
+            await event.edit("Download Dalam {} Detik. Upload Dalam {} Detik.".format(ms_one, ms_two))
         else:
-            await event.edit("File Not Found {}".format(input_str))
+            await event.edit("File Tidak ditemukan{}".format(input_str))
     else:
-        await event.edit("Syntax // .rnupload filename.extension as reply to a Telegram media")
+        await event.edit("`Mohon Balas Ke Media Lord`")
 
 
 @register(outgoing=True, pattern="^.grab(?: |$)(.*)")
@@ -1027,37 +1027,44 @@ async def _(event):
     await event.edit("`Berhasil Mengembalikan Akun Anda ツ`")
 
 CMD_HELP.update({
-    "lordmisc":
-    "`.app`\
-\nUsage: ketik `.app namaapp` Dan Dapatkan Detail Informasi App.\
-\n\n`.undlt`\
-\nUsage: urungkan pesan yang dihapus tetapi Anda harus menjadi admin.\
-\n\n`.calc`\
-\nUsage: `.calc <term1><operator><term2>\nUntuk eg .calc 02*02 Atau 99*99 (Angka Nol Penting) (Minimal Dua Suku Dan Dua Digit).\
+    "misc":
+    "`.calc`\
+\nPenjelasan: .calc <term1><operator><term2>\nUntuk eg .calc 02*02 Atau 99*99 (Angka Nol Penting) (Minimal Dua Suku Dan Dua Digit).\
 \n\n`.remove`\
-\nUsage: gunakan di grup .remove d atau y atau m atau w atau o atau q atau r.\n(d=AkunTerhapus y=userstatsempty m=userstatsmonth w=userstatsweek o=userstatsoffline q=userstatsonline r=userstatsrecently).\
+\nPenjelasan: gunakan di grup .remove d atau y atau m atau w atau o atau q atau r.\n(d=AkunTerhapus y=userstatsempty m=userstatsmonth w=userstatsweek o=userstatsoffline q=userstatsonline r=userstatsrecently).\
 \n\n`.xcd`\
-\nUsage: Ketik xcd <query>.ps:Aku Sangat Bosan:v\
-\n\n`.grab` <count>\
-\nUsage: Balas Ke Pesan Pengguna Ketik `.grab` Atau `.grab <count>` Untuk Mengambil Foto Profil.\
+\nPenjelasan: Ketik xcd <query>.ps:Aku Sangat Bosan:v\
 \n\n`.rnupload` filename.extenstion\
-\nUsage: Balas Ke Sticker Dan Ketik .rnupload xyz.jpg\
-\n\n`.clone` @username Dan '.rclone' Untuk Mengembalikan\
-\nUsage: Clone Akun Orang Tapi Username Tidak Di Clone\
+\nPenjelasan: Balas Ke Sticker Dan Ketik .rnupload xyz.jpg\
 \n\n`.res`\
-\nUsage: Ketik Username Akun,Channel,Group Atau Bot Bersama .res Dan Check Batasan\
+\nPenjelasan: Ketik Username Akun,Channel,Group Atau Bot Bersama .res Dan Check Batasan\
 \n\n`.watch` <movie/tv>\
-\nUsage: Mengetahui Detail Tentang Film.\
+\nPenjelasan: Mengetahui Detail Tentang Film.\
 \n\n`.weeb` <text>\
-\nUsage:Teks Weebify\
-\n\nKetik (`.bold <Teks>`,`.cur <Teks>`,`.curbold <Teks>`,`.medi <Teks>`,`.medibold <Teks>`,`.doublestruck <Teks>`)\
-\nUsage: Buat Teks <Bold,Cursive,Cursivebold,Medival,Medivalbold,Gayishbold>\
-\n\n`.randompp`\
-\nUsage: Otomatis Mengganti Foto Profile Mu Untuk Stop ini Ketik .restart.\
-\n\n`.glitch` Balas Ke Media\
-\nUsage: Memberikan Glitch (Gif , Stickers , Gambar, Video) Ke Gif Dan Level Glitch 1 - 8.\
-Jika Tidak Memberikan Level Otomatis Default Ke Level 2\
-\n\n`.glitchs` Balas Ke Media\
-\nUsage: Memberikan Glitch (Gif , Stickers , Gambar, Video) Ke Sticker Dan Level Glitch 1 to 8.\
-Jika Tidak Memberikan Level Otomatis Default Ke Level 2."
-})
+\nPenjelasan: Teks Weebify\
+\n\n(`.bold <Teks>`,`.cur <Teks>`,`.curbold <Teks>`,`.medi <Teks>`,`.medibold <Teks>`,`.doublestruck <Teks>`)\
+\nPenjelasan: Buat Teks <Bold,Cursive,Cursivebold,Medival,Medivalbold,Gayishbold>"})
+# LORD USERBOT
+CMD_HELP.update({"app": "**Modules:** __App__\n\n**Perintah:** `.app <nama app>`"
+                 "\n**Penjelasan:** Dapatkan Detail Informasi Applikasi"})
+# LORD USERBOT
+CMD_HELP.update({"undelete": "**Modules:** __Undelete__\n\n**Perintah:** `.undlt`"
+                 "\n**Penjelasan:** Urungkan Pesan Yang Dihapus Tapi Anda Harus Menjadi Admin"})
+# LORD USERBOT
+CMD_HELP.update({"grab": "**Modules:** __Grab__\n\n**Perintah:** `.grab <jumlah>`"
+                 "\n**Penjelasan:** Mengambil Profil, Bisa Balas Ke Pesan Pengguna Lain Untuk Mengambil Profilnya\n\n**WARN:** JANGAN MENYALAH GUNAKAN PERINTAH INI"})
+# LORD USERBOT 
+CMD_HELP.update({"clone": "**Modules:** __Clone__\n\n**Perintah:** `.clone <username/balas ke pesan>`"
+                 "\n**Penjelasan:** Clone Akun Seseorang, Tapi Username Tidak di Clone"
+                 "\n\n**Perintah:** `.rclone`"
+                 "\n**Penjelasan:** Mengembalikan Akun Anda Seperti Semula"})
+# LORD USERBOT 
+CMD_HELP.update({"glitch": "**Modules:** __Glitch__\n\n**Perintah:** `.glitch <level>`"
+                 "\n**Penjelasan:** Balas Ke Media, Memberikan Efek Glicth Ke Media, Level 1 - 8"
+                 "\n\n**Perintah:** `.glitchs <level>`"
+                 "\n**Penjelasan:** Balas Ke Media, Memberikan Efek Glitch Ke Media, Level 1 - 8\n\n**NOTE:** Jika Tidak Memberikan Level Maka Otomatis Default Memilih Level 2"})
+# LORD USERBOT # ALVIN GANTENG
+CMD_HELP.update({"randomprofil": "**Modules:** __Random Profil__\n\n**Perintah:** `.randompp`"
+                 "\n**Penjelasan:** Mengganti Foto Profil Anda Secara Otomatis, Untuk Menghentikan Perintah Ini Gunakan Perintah `.restart`"})
+
+
