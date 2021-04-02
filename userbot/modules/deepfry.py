@@ -55,14 +55,14 @@ async def deepfryer(event):
         data = await check_media(reply_message)
 
         if isinstance(data, bool):
-            await event.edit("`I can't deep fry that!`")
+            await event.edit("`Aku tidak bisa menggoreng Muka Ini!`")
             return
     else:
-        await event.edit("`Reply to an image or sticker to deep fry it!`")
+        await event.edit("`Balas gambar atau stiker untuk menggoreng Muka!`")
         return
 
     # download last photo (highres) as byte array
-    await event.edit("`Downloading media…`")
+    await event.edit("`Mendownload media…`")
     image = io.BytesIO()
     await event.client.download_media(data, image)
     image = Image.open(image)
@@ -139,8 +139,8 @@ async def check_media(reply_message):
 CMD_HELP.update({
     "deepfry":
     "`.deepfry` or `.deepfry` [level(1-8)]"
-    "\nUsage: deepfry image/sticker from the reply."
+    "\nUsage: Cek Sendiri."
     "\n@image_deepfrybot"
     "\n`.deepfry [level(1-5)]`"
-    "\nUsage: Deepfry image"
+    "\nUsage: Gambar Deep Fry"
 })
