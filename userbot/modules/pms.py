@@ -29,10 +29,10 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 DEF_UNAPPROVED_MSG = (
     f"__**ROOM CHAT || {DEFAULTUSER}**__\n"
     "━━━━━━━━━━━━━━━━━━━━\n"
-    f"__HALLO SELAMAT DATANG, SAYA ADALAH BOT YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
+    f"__HALLO KAMU SELAMAT DATANG, SAYA ADALAH BOT YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
     "┏━━━━━━━━━━━━━━━━━━━\n"
     "┣[• `PESAN OTOMATIS`\n"
-    "┣[• `BY LORD USERBOT`\n"
+    "┣[• `BY ⚡GBX-bot⚡`\n"
     "┗━━━━━━━━━━━━━━━━━━━")
 # =================================================================
 
@@ -92,7 +92,7 @@ async def permitpm(event):
             if COUNT_PM[event.chat_id] > 5:
                 await event.respond(
                     "`Anda Telah Di Blokir Karna Melakukan Spam Pesan`\n"
-                    "`Ke Room Chat Lord ツ`"
+                    "`Ke Room Chat Bosツ`"
                 )
 
                 try:
@@ -102,7 +102,7 @@ async def permitpm(event):
                     if BOTLOG:
                         await event.client.send_message(
                             BOTLOG_CHATID,
-                            "Lord, Terjadi Masalah Saat Menghitung Private Message, Mohon Restart Bot!",
+                            "Bos, Terjadi Masalah Saat Menghitung Private Message, Mohon Restart Bot!",
                         )
                     return LOGS.info("CountPM wen't rarted boi")
 
