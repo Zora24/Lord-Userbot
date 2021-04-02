@@ -111,7 +111,7 @@ async def animepp():
 @register(outgoing=True, pattern="^.randompp(?: |$)(.*)")
 async def main(event):
 
-    await event.edit("`changing your Profile Pic...`\n\n`Check Your DP in 10 seconds.`")
+    await event.edit("`Mengubah Foto Profil Anda...`")
 
     while True:
 
