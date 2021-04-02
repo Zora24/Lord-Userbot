@@ -164,9 +164,9 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**☛**Lord-Userbot Versi:** \n "
+            "**⚡**GBX-Userbot Versi:** \n "
             f"{verout}"
-            "\n**☛**Revisi:**\n "
+            "\n**⚡**Revisi:**\n "
             f"{revout}"
         )
     else:
@@ -181,7 +181,7 @@ async def pipcheck(pip):
         return
     pipmodule = pip.pattern_match.group(1)
     if pipmodule:
-        await pip.edit("`Mencari...`")
+        await pip.edit("`Mencari...🕊️`")
         pipc = await asyncrunapp(
             "pip3",
             "search",
@@ -230,13 +230,13 @@ async def amireallyalive(alive):
     await alive.edit("`I'M ALIVE!`")
     await alive.edit("⚡")
     output = (
-        f" **┗┓LORD USERBOT┏┛** \n"
-        f"\n__**{LORD_TEKS_KUSTOM}**__\n"
+        f" **┗┓⚡GBX-bot⚡┏┛** \n"
+        f"\n__**{GBX_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
-        f"**♛ ʟᴏʀᴅ** \n"
-        f" ➥ `{DEFAULTUSER}` \n"
-        f"**♛ ᴜsᴇʀɴᴀᴍᴇ** \n"
-        f" ➥ `@{user.username}` \n"
+        f"**⚡ GBX** \n"
+        f" ➥🕊️ `{DEFAULTUSER}` \n"
+        f"**⚡ ᴜsᴇʀɴᴀᴍᴇ** \n"
+        f" ➥🕊️ `@{user.username}` \n"
         f"┏━━━━━━━━━━━━━━━━━━━\n"
         f"┣[• `Telethon :`Ver {version.__version__} \n"
         f"┣[• `Python   :`Ver {python_version()} \n"
@@ -269,14 +269,14 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**▬▬▬▬▬▬❙۩♛۩❙▬▬▬▬▬▬**\n"
-        f"     **♕ LORD USERBOT ♕** \n\n"
-        f"❃ **Lord**     \n   ➥ `{DEFAULTUSER}` \n"
-        f"❃ **Username** \n   ➥ `@{user.username}` \n"
-        f"❃ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
-        f"❃ **Python**   \n   ➥ `Versi {python_version()}` \n"
-        f"❃ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
-        f"❃ **Modul**    \n   ➥ `{len(modules)}` \n\n"
-        f"❃ **Repo Userbot:** [Lord-Userbot](https://github.com/Zora24/Lord-Userbot)\n❃ **Grup Userbot: **[Tekan](t.me/LordUserbot_Group)\n❃ **Pemilik:** [Alvin](t.me/liualvinas)\n"
+        f"     **⚡ GBX-bot ⚡** \n\n"
+        f"⚡ **GBX**     \n   ➥ `{DEFAULTUSER}` \n"
+        f"⚡ **Username** \n   ➥ `@{user.username}` \n"
+        f"⚡ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
+        f"⚡**Python**   \n   ➥ `Versi {python_version()}` \n"
+        f"⚡**Versi Bot**\n   ➥ `{BOT_VER}` \n"
+        f"⚡ **Modul**    \n   ➥ `{len(modules)}` \n\n"
+        f"⚡ **Repo Userbot:** [GBX-bot](https://github.com/apisuserbot/Lord-Userbot)\n⚡ **Follow pemilik: **[Tekan](https://www.instagram.com/apis_godboy?r=nametag)\n⚡ **Pemilik:** [Apis](t.me/PacarFerdilla)\n"
         f"**▬▬▬▬▬▬❙۩★۩❙▬▬▬▬▬▬**")
     if ALIVE_LOGO:
         try:
@@ -305,9 +305,9 @@ async def amireallyalive(alive):
     await alive.edit("`I'M ALIVE!`")
     await alive.edit("⚡")
     output = (
-        f"**♕ LORD USERBOT ♕** \n\n"
+        f"**⚡ GBX-bot ⚡** \n\n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
-        f"┣|• `Lord     :`{DEFAULTUSER} \n"
+        f"┣|• `GBX      :`{DEFAULTUSER} \n"
         f"┣|• `Username :`@{user.username} \n"
         f"┣|• `Telethon :`Ver {version.__version__} \n"
         f"┣|• `Python   :`Ver {python_version()} \n"
@@ -315,7 +315,7 @@ async def amireallyalive(alive):
         f"┣|• `Bot Ver  :`{BOT_VER} \n"
         f"┣|• `Modules  :`{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
-        f"[Repo](https://github.com/Zora24/Lord-Userbot) | [Grup Support](t.me/LordUserbot_Group) | [Owner](t.me/liualvinas)")
+        f"[Repo](https://github.com/apisuserbot/Lord-Userbot) | [Follow ig pemilik](https://www.instagram.com/apis_godboy?r=nametag) | [⚡ Owner⚡ ](t.me/PacarFerdilla)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -368,7 +368,7 @@ CMD_HELP.update({"botver": "`.botver`\
 CMD_HELP.update({"pip": "`.pip <module(s)>`\
     \nPenjelasan: Melakukan pencarian modul pip."})
 
-CMD_HELP.update({"alive": "`.alive` | `.on`\
+CMD_HELP.update({"⚡ alive ⚡": "`.alive` | `.on`\
     \nPenjelasan: Ketik .alive/.on untuk melihat apakah bot Anda berfungsi atau tidak.\
     \n\n`.aliveu <text>`\
     \nPenjelasan: Mengubah 'pengguna' menjadi teks yang Anda inginkan.\
