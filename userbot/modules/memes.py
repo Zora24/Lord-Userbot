@@ -1718,53 +1718,53 @@ async def faces(siwis):
     await siwis.edit(reply_text)
 
 
-@register(outgoing=True, pattern="^.koc$")
+@register(outgoing=True, pattern="^.spesial$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("8✊===D")
-        await e.edit("8=✊==D")
-        await e.edit("8==✊=D")
-        await e.edit("8===✊D")
-        await e.edit("8==✊=D")
-        await e.edit("8=✊==D")
-        await e.edit("8✊===D")
-        await e.edit("8=✊==D")
-        await e.edit("8==✊=D")
-        await e.edit("8===✊D")
-        await e.edit("8==✊=D")
-        await e.edit("8=✊==D")
-        await e.edit("8✊===D")
-        await e.edit("8=✊==D")
-        await e.edit("8==✊=D")
-        await e.edit("8===✊D")
-        await e.edit("8==✊=D")
-        await e.edit("8=✊==D")
-        await e.edit("8===✊D💦")
-        await e.edit("8==✊=D💦💦")
-        await e.edit("8=✊==D💦💦💦")
-        await e.edit("8✊===D💦💦💦💦")
-        await e.edit("8===✊D💦💦💦💦💦")
-        await e.edit("8==✊=D💦💦💦💦💦💦")
-        await e.edit("8=✊==D💦💦💦💦💦💦💦")
-        await e.edit("8✊===D💦💦💦💦💦💦💦💦")
-        await e.edit("8===✊D💦💦💦💦💦💦💦💦💦")
-        await e.edit("8==✊=D💦💦💦💦💦💦💦💦💦💦")
-        await e.edit("8=✊==D Lah Kok Habis?")
+        await e.edit("⚡")
+        await e.edit("⚡⚡")
+        await e.edit("⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡=`Duarrrrrr.............`⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡=`Duarrrrr..............`⚡⚡⚡⚡⚡")
+        await e.edit("🔥🔥🔥🔥🔥=`Kebakaran.............`⚠️⚠️⚠️⚠️⚠️")
+        await e.edit("🔥🔥🔥🔥🔥🔥=`Wah anjing............`⚠️⚠️⚠️⚠️⚠️")
+        await e.edit("🕊️===⚡==🔥====`Anjing burungnya mati`⚠️⚠️⚠️⚠️⚠️⚠️")
+        await e.edit("😖=`Anjing gaje banget bangsatlah,autis kontol`😠😠😠")
+        await e.edit("Gleder=⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+        await e.edit("⚡⚡⚡⚡⚡=`Duar kontollll........`🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥")
+        await e.edit("😭`Bentar capek bangsat`")
+        await e.edit("😭 `Istirahat dulu anjing lah`")
+        await e.edit("Capek? Istirahat kontollll")
         await e.edit("😭😭😭😭")
 
 
-@register(outgoing=True, pattern="^.gas$")
+@register(outgoing=True, pattern="^.orgil$")
 async def gas(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("___________________🚑")
-        await e.edit("________________🚑___")
-        await e.edit("______________🚑_____")
-        await e.edit("___________🚑________")
-        await e.edit("________🚑___________")
-        await e.edit("_____🚑______________")
-        await e.edit("__🚑_________________")
-        await e.edit("🚑___________________")
-        await e.edit("_____________________")
+        await e.edit("`ORGILLLLL........`🔥")
+        await e.edit("`YAITU NAPIS`        ")
+        await e.edit("`SAMA RAPA, AWOKAAOK`")
+        await e.edit("MEREKA SANGAT GILAK` ")
+        await e.edit("`AWOKAOWK...........`")
+        await e.edit("`LANGSUNG di bawa...`")
+        await e.edit("__🚑___NGENGGG_______")
+        await e.edit("⚠️___WARNING_________")
+        await e.edit("`Mereka di rawat RSJ`")
         await e.edit(choice(FACEREACTS))
 
 
@@ -1870,7 +1870,7 @@ CMD_HELP.update({
     "\nUsage: Buat keputusan cepat."
     "\n\n> `.nou` `.bot` `.rock` `.gey` `.tf` `.paw` `.tai` `.nih`"
     "\n> `.fag` `.gtfo`; `.stfu` `.lol` `.lool` `.fail` `.leave`"
-    "\n> `.iwi` `.sayhi` `.koc` `.gas` `.earth` `.love` `.rain`"
+    "\n> `.iwi` `.sayhi` `.koc` `.orgil` `.earth` `.love` `.rain`"
     "\n> `.penis` `.emo` `.fuck` `.skull`  `.monyet`\nUsage: Cobain aja"
-    "\n\n\n**Semoga Harimu Menyenangkan**\n➥ `Alvin`"
+    "\n\n\n**Semoga Harimu Menyenangkan**\n➥ `Apis`"
 })
