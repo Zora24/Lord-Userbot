@@ -116,7 +116,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.gi(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("[TEKAN](https://www.instagram.com/ramadh20?r=nametag)")
+    await typew.edit("INSTAGRAM= [TEKAN](https://www.instagram.com/ramadh20?r=nametag)")
 
 CMD_HELP.update({
     "salam":
