@@ -91,7 +91,7 @@ colour
 scipy
 wordcloud
 opencv-python
+youtube-dl>=2021.1.8
+youtube-search-python>=1.3.2
+youtube-search>=1.1.1
 beautifulsoup4
-youtube_dl
-youtube-search-python
-pendulum
