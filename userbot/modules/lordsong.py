@@ -105,7 +105,7 @@ async def download_video(event):
     upteload = """
 Sedang Mengunggah, Mohon Menunggu...
 Judul - {}
-Pencipta - {}
+Artis - {}
 """.format(
         rip_data["title"], rip_data["uploader"]
     )
