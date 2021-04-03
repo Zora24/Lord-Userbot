@@ -1,5 +1,5 @@
 # LORD USERBOT
-FROM liualvinas24/lord:lord
+FROM liualvinas24/lord:groovy
 
 #
 # LORD
