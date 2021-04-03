@@ -1,5 +1,5 @@
 # We're using Ubuntu 20.10
-FROM koala21/kampangbot:buster
+FROM liualvinas24/docker:groovy
 
 #
 # Clone repo and prepare working directory
@@ -11,6 +11,5 @@ WORKDIR /root/userbot
 
 #Install python requirements
 RUN pip3 install -r https://raw.githubusercontent.com/Zora24/Lord-Userbot/Lord-Userbot/requirements.txt
-EXPOSE 80 443
 
 CMD ["python3","-m","userbot"]
