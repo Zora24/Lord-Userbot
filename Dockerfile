@@ -1,8 +1,8 @@
-# We're using Ubuntu 20.10
-FROM liualvinas24/docker:groovy
+# LORD USERBOT
+FROM liualvinas24/lord-docker:Lord
 
 #
-# Clone repo and prepare working directory
+# LORD
 #
 RUN git clone -b Lord-Userbot https://github.com/Zora24/Lord-Userbot /root/userbot
 RUN mkdir /root/userbot/.bin
