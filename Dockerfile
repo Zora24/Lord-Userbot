@@ -1,5 +1,5 @@
 # LORD USERBOT
-FROM liualvinas24/lord-docker:buster
+FROM liualvinas24/lord:lord
 
 #
 # LORD
