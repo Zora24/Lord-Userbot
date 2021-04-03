@@ -36,7 +36,9 @@ async def _(event):
         animation_chars = [
 
             "EFRY GILAAAA!!!",
-            "AYASS STRESS",
+            "AYASS STRESS!!!",
+            "AICHAN ALAYY!!",
+            "PAPIH KONTOL!!",
             "ANGGA NGONTOLLL!!!",
             "MUYUN HODE!!!!",
             "ENJEL BAPERAN, IDIHHH!!!",
