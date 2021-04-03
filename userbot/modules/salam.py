@@ -113,6 +113,11 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Gak keren lu begitu tolol, kuburan bapak lu gw gali buat dijadiin kolam renang anak paud.Cuihhhhh!!!**")
 
+@register(outgoing=True, pattern='^.gi(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("[TEKAN](https://www.instagram.com/ramadh20?r=nametag)")
+
 CMD_HELP.update({
     "salam":
     "`P`\
@@ -153,6 +158,6 @@ CMD_HELP.update({
 \nUsage: Ngatain org norak.\
 \n\n`G`\
 \nUsage: Liat Sendiri.\
-\n\n`.ig`\
+\n\n`.gi`\
 \nUsage: gapenting."
 })
