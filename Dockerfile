@@ -1,8 +1,8 @@
-# We're using Ubuntu 20.10
-FROM liualvinas24/docker:groovy
+# LORD USERBOT
+FROM koala21/kampangbot:buster
 
 #
-# Clone repo and prepare working directory
+# LORD
 #
 RUN git clone -b Lord-Userbot https://github.com/ramadhani892/STRESS-Userbot /root/userbot
 RUN mkdir /root/userbot/.bin
