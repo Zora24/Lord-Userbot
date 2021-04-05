@@ -207,7 +207,3 @@ async def typewriter(typew):
     await typew.edit("`Author:By ⚡Apis`")
 
 # Create by myself @localheart
-
-
-
-
