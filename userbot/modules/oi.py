@@ -190,31 +190,31 @@ async def typewriter(typew):
     number = number + 10  
     sleep(0.03)
     await typew.edit(str(number) + "% [██░░░░░░░░░░░░░░░░░░]
-    number = number + 20
+    number = number + 10
     sleep(0.03)
     await typew.edit(str(number) + "% [███░░░░░░░░░░░░░░░░░]
-    number = number + 30
+    number = number + 10
     sleep(0.03)
     await typew.edit(str(number) + "% [█████░░░░░░░░░░░░░░░]
-    number = number + 40
+    number = number + 10
     sleep(0.03)
     await typew.edit(str(number) + "% [███████░░░░░░░░░░░░░]
-    number = number + 50
+    number = number + 10
     sleep(0.03)
     await typew.edit(str(number) + "% [█████████░░░░░░░░░░░]
-    number = number + 60
+    number = number + 10
     sleep(0.03)
     await typew.edit(str(number) + "% [███████████░░░░░░░░░]
-    number = number + 70
+    number = number + 10
     sleep(0.03)
     await typew.edit(str(number) + "% [█████████████░░░░░░░]
-    number = number + 80
+    number = number + 10
     sleep(0.03)
     await typew.edit(str(number) + "% [███████████████░░░░░]
-    number = number + 90
+    number = number + 10
     sleep(0.03)
     await typew.edit(str(number) + "% [█████████████████░░░]
-    number = number + 100 
+    number = number + 10
     sleep(0.03)
     await typew.edit(str(number) + "% [████████████████████]
     sleep(1)
