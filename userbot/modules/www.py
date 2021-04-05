@@ -77,6 +77,16 @@ async def pingme(pong):
                     f"**PEMILIK** "
                     f"\n  ➥ `{ALIVE_NAME}` \n" % (duration))
 
+@register(outgoing=True, pattern="^.ping$")
+async def pingme(pong):
+    """ For .ping command, ping the userbot from any chat.  """
+    start = datetime.now()
+    await pong.edit("`Pong!`")
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    await pong.edit("`Pong!\n%sms`" % (duration))
+
+
 
 @register(outgoing=True, pattern="^Lping$")
 async def pingme(pong):
