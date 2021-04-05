@@ -186,6 +186,8 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`Siap Siap Lo.....`")
     sleep(3)
+    await typew.edit("%0")
+    number = 1
     await typew.edit(str(number) + "% [░░░░░░░░░░░░░░░░░░░░]
     number = number + 10  
     sleep(0.03)
