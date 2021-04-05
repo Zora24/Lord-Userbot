@@ -199,11 +199,11 @@ async def typewriter(typew):
     await typew.edit("`100%[████████████████████]`")
     await typew.edit("**LOGIN KE AKUN WA BERHASIL**")
     sleep(3)
-    await typew.edit("Informasi Data Akun.....🚀`")
+    await typew.edit("`Informasi Data Akun.....🚀`")
     sleep(3)
     await typew.edit("`🌀 Nomor Telephone Pengguna:+62**********`")
     sleep(3)
-    await typew.edit("**☠️LOGIN BERHASIIL☠️**"`)
+    await typew.edit("**☠️LOGIN BERHASIIL☠️**")
     sleep(3)
     await typew.edit("`Author:By ⚡Apis`")
 
