@@ -274,7 +274,7 @@ async def typewriter(typew):
     await typew.edit("`Proses Global banned...✅`")
     sleep(1)
     await typew.edit("♛Perintah : `{ALIVE_NAME}`\n"
-                     "✣Pengguna :** [{user.first_name}](tg://user?id={user.id})\n**"
+                     "✣Pengguna :**Jamet Tolol!\n**"
                      "✣Aksi     :`Global banned, Boongan wkwkwkwkwk!`")
 
 
