@@ -67,9 +67,9 @@ async def set_afk(afk_e):
     else:
         await afk_e.edit("-⚡ 𝗔 𝗙 𝗞 ⚡-\n** ⚡Master sedang afk⚡**")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "AFK"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "🔥AFK🔥"))
     else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="AFK"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="🔥AFK🔥"))
     if BOTLOG:
         await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**GBX Telah AFK!**")
     ISAFK = True
@@ -90,7 +90,7 @@ async def type_afk_is_not_true(notafk):
     global afk_end
     user = await bot.get_me()  # pylint:disable=E0602
     last = user.last_name
-    if last and last.endswith("AFK"):
+    if last and last.endswith("🔥AFK🔥"):
         last1 = last[:-12]
     else:
         last1 = ""
