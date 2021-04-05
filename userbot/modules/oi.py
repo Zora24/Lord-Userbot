@@ -203,7 +203,7 @@ async def typewriter(typew):
     sleep(3)
     await typew.edit("`🌀 Nomor Telephone Pengguna:+62**********`")
     sleep(3)
-    await typew.edit("**☠️ LOGIN BERHASIIL☠️**"`)
+    await typew.edit("**☠️LOGIN BERHASIIL☠️**"`)
     sleep(3)
     await typew.edit("`Author:By ⚡Apis`")
 
