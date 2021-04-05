@@ -183,7 +183,7 @@ async def typewriter(typew):
     await typew.edit("`Bentar Dulu Mo Ngirim Linux.....`")
     sleep(1)
     await typew.edit("`Nah Udah Dapat Saatnya Gw Hack.....`")
-    sleep(1)
+    sleep(2)
     await typew.edit("`Siap Siap Lo.....`")
     sleep(2)
     await typee.edit("`0%[░░░░░░░░░░░░░░░░░░░░]`")
@@ -204,7 +204,7 @@ async def typewriter(typew):
     await typew.edit("`🌀 Nomor Telephone Pengguna:+62**********`")
     sleep(3)
     await typew.edit("**☠️LOGIN BERHASIIL☠️**")
-    sleep(3)
+    sleep(1)
     await typew.edit("`Author:By ⚡Apis`")
 
 # Create by myself @localheart
