@@ -230,7 +230,7 @@ async def amireallyalive(alive):
     await alive.edit("`GBX-Userbot!`")
     await alive.edit("⚡")
     output = (
-        f" **┗┓⚡ GBX-Userbot⚡┏┛** \n"
+        f" **┗┓⚡ GBX-Userbot ⚡┏┛** \n"
         f"\n__**{GBX_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
         f"**⚡ GBX** \n"
@@ -276,7 +276,7 @@ async def amireallyalive(alive):
         f"⚡**Python**   \n   👉 `Versi {python_version()}` \n"
         f"⚡**Versi Bot**\n   👉 `{BOT_VER}` \n"
         f"⚡ **Modul**    \n   👉 `{len(modules)}` \n\n"
-        f"⚡ **Repo Userbot:** [GBX-bot](https://github.com/apisuserbot/Lord-Userbot)\n⚡ **Follow pemilik: **[Tekan](https://www.instagram.com/apis_godboy?r=nametag)\n⚡ **Pemilik:** [Apis](t.me/PacarFerdilla)\n"
+        f"⚡ **Repo Userbot:** [GBX-bot](https://github.com/apisuserbot/Lord-Userbot)\n **Follow Bos: **[Tekan](https://www.instagram.com/apis_godboy?r=nametag)\n **Bos:** [Apis](t.me/PacarFerdilla)\n"
         f"**▬▬▬▬▬▬❙۩★۩❙▬▬▬▬▬▬**")
     if ALIVE_LOGO:
         try:
