@@ -325,7 +325,7 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Woi....**")
-    sleep(1)
+    sleep(3)
     await typew.edit("**Grup banyak anggota yakan**")
     sleep(1)
     await typew.edit("**Tapi ga ada yg nimbrung..**")
@@ -337,11 +337,11 @@ async def typewriter(typew):
     await typew.edit("**Sombong amat punya jempol,Gamau nimbrung**")
     sleep(1)
     await typew.edit("**Jempol lu kebas? Apa dah putus?**")
-    sleep(1)
+    sleep(2)
     await typew.edit("**NIMBRUNGGG GOBLOK!!!!**")
 CMD_HELP.update({
     "vip":
-    "`.bulan` ; `.hati` ; `.gbn` ; `.tolol`\
+    "`.bulan` ; `.hati` ; `.gbn` ; `.tolol` ; `.gmt`\
     \nUsage: liat aja.\
     \n\n`.heli` ; `.tank` ; `.tembak`\n`.bundir`\
     \nUsage: liat sendiri.\
