@@ -102,12 +102,27 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
-    await typew.edit("`..BACOTTTTT.....KAU....KONTOLLLL..🔥`")
+    await typew.edit("`..BACOTTT....KONTOLLL..🔥`")
     sleep(3)
-    await typew.edit("`..GAK....USAH REP ASWWW.....🔥`")
+    await typew.edit("`..GAK..USAH..REP..ASW.....🔥`")
     sleep(1)
-    await typew.edit("`KALO.....GAK....SUKA....BETUMBUK....KITA.......🔥`")
+    await typew.edit("`..SOKAP..BAT..LU..ANJING.....🔥`")
     sleep(1)
-    await typew.edit("`.....SINI...KU....TAMPUNG...KAU.....🔥`")
+    await typew.edit("`.....SINI..KETEMUAN..KUY........🔥`")
 # Create by myself @localheart
+
+
+@register(outgoing=True, pattern='^.hantu(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(3)
+    await typew.edit("`..HANTUUUU!!!!!.....`")
+    sleep(3)
+    await typew.edit("`...ANJNG GMN NIH!!!!....`")
+    sleep(1)
+    await typew.edit("`..DAHLAH,.. MENDING..LARI..AE....`")
+    sleep(1)
+    await typew.edit("`...`")
+# Create by myself @localheart
+
 
