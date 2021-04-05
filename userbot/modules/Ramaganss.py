@@ -273,9 +273,16 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`Proses Global banned...✅`")
     sleep(1)
-    await typew.edit("♛Perintah : `{ALIVE_NAME}`\n"
+    await typew.edit("♛Perintah : `Tuan Ku`\n"
                      "✣Pengguna :**Jamet Tolol!\n**"
                      "✣Aksi     :`Global banned!`")
+
+@register(outgoing=True, pattern='^.gmt(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("`Memulai proses Global mute...`")
+    sleep(3)
+    await typew.edit("`Pengguna berhasil di Global mute bosss...!`")
 
 
 @register(outgoing=True, pattern='^.tolol(?: |$)(.*)')
