@@ -110,14 +110,15 @@ async def pingme(pong):
     await pong.edit("**..MUKA..LU..ITEM.......⚡**")
     await pong.edit("**..HAHHAHAHA...ANJING.....⚡**")
     await pong.edit("**⚡TOLOL!**")
+    sleep(1)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**⚡ GBX Ping ⚡**\n"
                     f"⚡**Ping:** "
                     f"`%sms` \n"
-                    f"👉**Uptime:** "
+                    f"👉 **Uptime:** "
                     f"`{uptime}` \n"
-                    f"**👉Master:** `{ALIVE_NAME}`" % (duration))
+                    f"**👉 Master:** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.sinyal$")
@@ -207,4 +208,4 @@ CMD_HELP.update(
 CMD_HELP.update(
     {"sinyal": "**Modules:** `Sinyal bot`\
     \n\n**• Perintah :** `.sinyal bot`\
-    \n  ➥ **Penjelasan :** __Untuk melihat sinyal bot__"})
+    \n  👉 **Penjelasan :** __Untuk melihat sinyal bot__"})
