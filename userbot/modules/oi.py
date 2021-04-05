@@ -2,15 +2,15 @@ from time import sleep
 from userbot.events import register
 
 
-@register(outgoing=True, pattern='^.alvin(?: |$)(.*)')
+@register(outgoing=True, pattern='^.apis(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
-    await typew.edit("`Hai Perkenalkan Namaku Alvin`")
+    await typew.edit("`Hai Perkenalkan Namaku Apis`")
     sleep(3)
-    await typew.edit("`17 Tahun`")
+    await typew.edit("`14 Tahun`")
     sleep(1)
-    await typew.edit("`Tinggal Dibatam, Salam Kenal:)`")
+    await typew.edit("`Tinggal Di Jakarta, Salam Kenal:)`")
 # Create by myself @localheart
 
 
@@ -65,3 +65,34 @@ async def typewriter(typew):
     await typew.edit("`Ternyata mantan minta balikan`")
 # Create by myself @localheart
 
+
+@register(outgoing=True, pattern='^.kamu(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(3)
+    await typew.edit("`teruntuk kamu`")
+    sleep(3)
+    await typew.edit("`yang selalu ada buat aku`")
+    sleep(1)
+    await typew.edit("`aku punya sesuatu buat kamu`")
+    sleep(1)
+    await typew.edit("`Lihat yah:)`")
+    sleep(3)
+    await typew.edit("`..hanya..ini...🎁........`")
+    await typew.edit("`...1.....2....3....`")
+    await typew.edit("`...ini......")
+    sleep(3)
+    await typew.edit("`Jangan pernah pergi yah ☹️`")
+    sleep(3)
+    await typew.edit("`maafin aku jika selalu membuat kamu nangis 😔`")
+    sleep(3)
+    await typew.edit("`dan juga membuat kamu selalu beban pikiran karna kesalahan aku 😔`")
+    sleep(3)
+    await typew.edit("`kamu adalah cinta terindah di hidupku  😚`")
+    sleep(3)
+    await typew.edit("`bagiku kamu seperti malaikat hidupku 😚`")
+    sleep(3) 
+    await typew.edit("`jangan pernah nangis lagi yah , aku tau kok ini salahku 😔`")
+    sleep(3)
+    await typew.edit("`I LOVE YOU MAYBE❤️`")
+# Create by myself @localheart
