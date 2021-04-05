@@ -91,7 +91,7 @@ async def gben(userbot):
     else:
         dark = await dc.edit("`Lagi proses global banned Si jamet...!`")
     me = await userbot.client.get_me()
-    await dark.edit(f"`Global Banned Akan Segeral di laksanakan Tuan {AlIVE_NAME}`")
+    await dark.edit(f"`Global Banned Akan Segeral di laksanakan Tuan...!`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
