@@ -174,3 +174,40 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
+@register(outgoing=True, pattern='^.wa(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(3)
+    await typew.edit("`Mau Gw Hack Wa Lo?`")
+    sleep(3)
+    await typew.edit("`Bentar Dulu Mo Ngirim Linux.....`")
+    sleep(1)
+    await typew.edit("`Nah Udah Dapat Saatnya Gw Hack.....`")
+    sleep(1)
+    await typew.edit("`Siap Siap Lo.....`")
+    sleep(1)
+    await typee.edit("`0%[░░░░░░░░░░░░░░░░░░░░]`")
+    await typew.edit("`10%[██░░░░░░░░░░░░░░░░░░]`")
+    await typew.edit("`20%[███░░░░░░░░░░░░░░░░░]`")
+    await typew.edit("`30%[█████░░░░░░░░░░░░░░░]`")
+    await typew.edit("`40%[███████░░░░░░░░░░░░░]`")
+    await typew.edit("`50%[█████████░░░░░░░░░░░]`")
+    await typew.edit("`60%[███████████░░░░░░░░░]`")
+    await typew.edit("`70%[█████████████░░░░░░░]`")
+    await typew.edit("`80%[███████████████░░░░░]`")
+    await typew.edit("`90%[█████████████████░░░]`")
+    await typew.edit("`100%[████████████████████]`")
+    await typew.edit("**LOGIN KE AKUN WA BERHASIL**")
+    sleep(3)
+    await typew.edit("Informasi Data Akun.....🚀`")
+    sleep(3)
+    await typew.edit("`🌀 Nomor Telephone Pengguna:+62**********`")
+    sleep(3)
+    await typew.edit("**☠️ LOGIN BERHASIIL☠️**"`)
+    await typew.edit("`Author:By ⚡Apis`")
+
+# Create by myself @localheart
+
+
+
+
