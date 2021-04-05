@@ -52,3 +52,16 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
+@register(outgoing=True, pattern='^.pantun(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(3)
+    await typew.edit("`Ajak pacar pergi ke restoran`")
+    sleep(3)
+    await typew.edit("`Bertemu mantan yang sekarang teman`")
+    sleep(1)
+    await typew.edit("`Hati bingung dan gak karuan`")
+    sleep(1)
+    await typew.edit("`Ternyata mantan minta balikan`")
+# Create by myself @localheart
+
