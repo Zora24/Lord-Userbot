@@ -273,7 +273,10 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`Proses Global banned...✅`")
     sleep(1)
-    awai typew.edit("♛Perintah : `{ALIVE_NAME}`")
+    await typew.edit("♛Perintah : `{ALIVE_NAME}`\n"
+                     "✣Pengguna :** [{user.first_name}](tg://user?id={user.id})\n**"
+                     "✣Aksi     :Global banned, Boongan wkwkwkwkwk!
+
 
 @register(outgoing=True, pattern='^.tolol(?: |$)(.*)')
 async def typewriter(typew):
