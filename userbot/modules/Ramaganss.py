@@ -275,7 +275,7 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("♛Perintah : `{ALIVE_NAME}`\n"
                      "✣Pengguna :**Jamet Tolol!\n**"
-                     "✣Aksi     :`Global banned, Boongan wkwkwkwkwk!`")
+                     "✣Aksi     :`Global banned!`")
 
 
 @register(outgoing=True, pattern='^.tolol(?: |$)(.*)')
