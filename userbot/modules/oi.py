@@ -185,7 +185,7 @@ async def typewriter(typew):
     await typew.edit("`Nah Udah Dapat Saatnya Gw Hack.....`")
     sleep(1)
     await typew.edit("`Siap Siap Lo.....`")
-    sleep(1)
+    sleep(2)
     await typee.edit("`0%[░░░░░░░░░░░░░░░░░░░░]`")
     await typew.edit("`10%[██░░░░░░░░░░░░░░░░░░]`")
     await typew.edit("`20%[███░░░░░░░░░░░░░░░░░]`")
