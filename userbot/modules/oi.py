@@ -96,3 +96,18 @@ async def typewriter(typew):
     sleep(3)
     await typew.edit("`I LOVE YOU MAYBE❤️`")
 # Create by myself @localheart
+
+
+@register(outgoing=True, pattern='^.bacot(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(3)
+    await typew.edit("`..BACOTTTTT.....KAU....KONTOLLLL..🔥`")
+    sleep(3)
+    await typew.edit("`..GAK....USAH REP ASWWW.....🔥`")
+    sleep(1)
+    await typew.edit("`KALO.....GAK....SUKA....BETUMBUK....KITA.......🔥`")
+    sleep(1)
+    await typew.edit("`.....SINI...KU....TAMPUNG...KAU.....🔥`")
+# Create by myself @localheart
+
