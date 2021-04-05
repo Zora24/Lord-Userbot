@@ -22,10 +22,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"**Maaf {ALIVE_NAME} Sedang OFF!**",
-    f"**Maaf {ALIVE_NAME} Sedang OFF\n Tunggu Sampai Online!**",
-    f"**{ALIVE_NAME} Sedang OFF\n Tunggulah Sampai Online**",
-    f"**Maaf {ALIVE_NAME} Sedang OFF!**",
+    f"**⚡Maaf {ALIVE_NAME} Sedang OFF!⚡**",
+    f"**⚡Maaf {ALIVE_NAME} Sedang OFF\n Tunggu Sampai Online!⚡**",
+    f"**⚡{ALIVE_NAME} Sedang OFF\n Tunggulah Sampai Online⚡**",
+    f"**⚡Maaf {ALIVE_NAME} Sedang OFF!⚡**",
 ]
 
 
@@ -65,9 +65,9 @@ async def set_afk(afk_e):
     else:
         await afk_e.edit(f"**⚡ {ALIVE_NAME} Telah OFF ⚡**")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "[LAGI OFF TOD]"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "🔥OFF🔥"))
     else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="[LAGI OFF TOD]"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="🔥OFF🔥"))
     if BOTLOG:
         await afk_e.client.send_message(BOTLOG_CHATID, "#OFF\n**GBX Telah OFF!**")
     ISAFK = True
@@ -88,7 +88,7 @@ async def type_afk_is_not_true(notafk):
     global afk_end
     user = await bot.get_me()  # pylint:disable=E0602
     last = user.last_name
-    if last and last.endswith("[LAGI OFF TOD]"):
+    if last and last.endswith("🔥OFF🔥"):
         last1 = last[:-12]
     else:
         last1 = ""
