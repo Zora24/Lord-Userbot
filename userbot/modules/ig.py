@@ -15,10 +15,16 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot.events import register
-from userbot import bot, CMD_HELP
+from userbot import bot, CMD_HELP, ALIVE_NAME
 
 # Alvin Gans
 # Apin Gansssss Anjjjayy Yahahaha
+
+
+# Rama ganteng mks sm sm
+# ================= CONSTANT =================
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname()
+# ============================================
 
 
 @register(outgoing=True, pattern="^.ig ?(.*)")
