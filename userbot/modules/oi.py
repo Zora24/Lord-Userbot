@@ -80,7 +80,7 @@ async def typewriter(typew):
     sleep(3)
     await typew.edit("`..hanya..ini...🎁........`")
     await typew.edit("`...1.....2....3....`")
-    await typew.edit("`...ini......")
+    await typew.edit("`...ini......`")
     sleep(3)
     await typew.edit("`Jangan pernah pergi yah ☹️`")
     sleep(3)
@@ -496,5 +496,14 @@ async def typewriter(typew):
     await typew.edit("**☠️LOGIN BERHASIIL☠️**")
     sleep(1)
     await typew.edit("`Author:By ⚡Apis`")
+# Create by myself @localheart
 
+
+@register(outgoing=True, pattern="^.userbot$")
+async def repo_is_here(wannasee):
+    """ For .repo command, just returns the repo URL. """
+    await wannasee.edit(
+        "⚡ **Userbot:[Lord-Userbot](https://github.com/Zora24/Lord-Userbot)
+                      [GBX-Userbot](https://github.com/apisuserbot/GBX-Userbot)
+    )
 # Create by myself @localheart
