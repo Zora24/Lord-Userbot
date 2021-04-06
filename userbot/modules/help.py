@@ -20,7 +20,7 @@ async def help(event):
         if args in CMD_HELP:
             await event.edit(str(CMD_HELP[args]))
         else:
-            await event.edit("**Maaf Lord, Saya Tidak Punya Perintah Itu ツ**")
+            await event.edit("**⚡ Maaf Master, Saya Tidak Punya Perintah Itu ⚡**")
             await asyncio.sleep(200)
             await event.delete()
     else:
@@ -28,10 +28,10 @@ async def help(event):
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
-            string += "`\t✥  "
-        await event.edit("**❉ Daftar Perintah Untuk\nLord-Userbot:\n\n**"
-                         f"✥{string}✥"
-                         "\n✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗✗")
+            string += "`\t⚡  "
+        await event.edit("**🌀 Daftar Perintah Untuk\nGBX-Userbot:\n\n**"
+                         f"⚡{string}⚡"
+                         "\n🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥")
         await event.reply(f"\n**Ketik Contoh** `.help afk` **Untuk Informasi Perintah**")
         await asyncio.sleep(1000)
         await event.delete()
