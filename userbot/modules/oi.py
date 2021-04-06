@@ -499,11 +499,11 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
+
 @register(outgoing=True, pattern="^.userbot$")
-async def repo_is_here(wannasee):
-    """ For .repo command, just returns the repo URL. """
-    await wannasee.edit(
-        "⚡ **Userbot:[Lord-Userbot](https://github.com/Zora24/Lord-Userbot)
-                      [GBX-Userbot](https://github.com/apisuserbot/GBX-Userbot)
-    )
+async def reedme(e):
+    await e.edit(
+        "Beberapa Userbot Github:\n"
+        "\n[Lord-Userbot Repo](https://github.com/Zora24/Lord-Userbot/blob/Lord-Userbot/README.md)"
+        "\n[GBX-Userbot Repo](https://github.com/apisuserbot/GBX-Userbot/blob/GBX-Userbot/README.md)"
 # Create by myself @localheart
