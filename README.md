@@ -1,4 +1,4 @@
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/5501763.gif" width="250" height="83" alt="Apis Userbot" /></a>
+<a href="https://r70.cooltext.com/d.php?renderid=380882507313806&extension=gif"GBX Userbot" /></a>
 
 
 <p align="center">
