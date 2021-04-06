@@ -8,7 +8,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.lhelp$")
+@register(outgoing=True, pattern="^.ghelp$")
 async def usit(e):
     await e.edit(
         f"**Hai Master {DEFAULTUSER} Kalau Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `.help` Atau Bisa Minta Bantuan Ke:\n"
@@ -25,9 +25,9 @@ async def var(m):
 
 
 CMD_HELP.update({
-    "lordhelper":
-    "`.lordhelp`\
-\nPenjelasan: Bantuan Untuk Lord-Userbot.\
-\n`.lordvar`\
+    "gbxhelper":
+    "`.gbxhelp`\
+\nPenjelasan: Bantuan Untuk GBX-Userbot.\
+\n`.gbxvar`\
 \nPenjelasan: Untuk Melihat Beberapa Daftar Vars."
 })
