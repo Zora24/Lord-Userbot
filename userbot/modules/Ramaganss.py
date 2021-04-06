@@ -339,6 +339,21 @@ async def typewriter(typew):
     await typew.edit("**Jempol lu kebas? Apa dah putus?**")
     sleep(2)
     await typew.edit("**NIMBRUNGGG GOBLOK!!!!**")
+
+
+@register(outgoing=True, pattern='^.fck(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit(".                       /¯ )\n"
+                     "                      /¯  /\n"
+                     "                    /    /\n"
+                     "              /´¯/'   '/´¯¯`•¸\n"
+                     "          /'/   /    /       /¨¯\\ \n"
+                     "        ('(   (   (   (  ¯~/'  ')\n"
+                     "         \\                        /\n"
+                     "          \\                _.•´\n"
+                     "            \\              (\n"
+                     "              \\  ")
 CMD_HELP.update({
     "vip":
     "`.bulan` ; `.hati` ; `.gbn` ; `.tolol` ; `.gmt`\
@@ -347,8 +362,8 @@ CMD_HELP.update({
     \nUsage: liat sendiri.\
     \n\n`.y` ; `.uasu`\
     \nUsage: jempol & Cek dyno\
-    \n\n`.tawa` ; `.oy`\
-    \nUsage: ketawa lari & Nyuruh nimbrung.\
+    \n\n`.tawa` ; `.oy` ; `.fck`\
+    \nUsage: ketawa lari , Nyuruh nimbrung, fuck.\
     \n\n`.ular` ; `.babi` ; `.ajg`\
     \nUsage: liat sendiri."
 })
