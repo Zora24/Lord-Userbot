@@ -181,11 +181,11 @@ async def dyno_usage(dyno):
             await dyno.edit(
                 "**🚀 Informasi Dyno**:\n\n╭━┯━━━━━━━━━━━━━━━━┯━╮\n"
                 f"👤 `Penggunaan Dyno` **{app.name}**:\n"
-                f"  ⚡ **{AppHours} Jam - "
+                f"   **{AppHours} Jam - "
                 f"{AppMinutes} Menit  -  {AppPercentage}%**"
                 "\n ✲━─━─━─━─━─━─━─━─━─━✲\n"
                 "🌀 `Sisa Dyno Bulan Ini`:\n"
-                f"  ⚡ **{hours} Jam - {minutes} Menit  "
+                f"   **{hours} Jam - {minutes} Menit  "
                 f"-  {percentage}%**\n"
                 "╰━┷━━━━━━━━━━━━━━━━┷━╯"
             )
