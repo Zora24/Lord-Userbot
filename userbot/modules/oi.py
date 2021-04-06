@@ -505,4 +505,3 @@ async def reedme(e):
         "Beberapa Userbot Github:\n"
         "\n[Lord-Userbot Repo](https://github.com/Zora24/Lord-Userbot/blob/Lord-Userbot/README.md)"
         "\n[GBX-Userbot Repo](https://github.com/apisuserbot/GBX-Userbot/blob/GBX-Userbot/README.md)"
-# Create by myself @localheart
