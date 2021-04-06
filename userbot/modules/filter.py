@@ -60,7 +60,7 @@ async def add_new_filter(new_handler):
         if BOTLOG_CHATID:
             await new_handler.client.send_message(
                 BOTLOG_CHATID, f"#FILTER\nID OBROLAN: {new_handler.chat_id}\nTRIGGER: {keyword}"
-                "\n\n`Pesan Berikut Disimpan Sebagai Data Balasan Filter Untuk Obrolan, Mohon Jangan Menghapusnya bos`"
+                "\n\n`Pesan Berikut Disimpan Sebagai Data Balasan Filter Untuk Obrolan, Mohon Jangan Menghapusnya Master`"
             )
             msg_o = await new_handler.client.forward_messages(
                 entity=BOTLOG_CHATID,
@@ -91,10 +91,10 @@ async def remove_a_filter(r_handler):
         return await r_handler.edit("`Berjalan Pada Mode Non-SQL!`")
     filt = r_handler.pattern_match.group(1)
     if not remove_filter(r_handler.chat_id, filt):
-        await r_handler.edit("`Filter` **{}** `Tidak Ada Disini ⚡`.".format(filt))
+        await r_handler.edit("`Filter` **{}** `Tidak Ada Disini`.".format(filt))
     else:
         await r_handler.edit(
-            "` Anda berhasil menghapus Filter` **{}** `Disini ⚡`.".format(filt))
+            "` Anda berhasil menghapus Filter` **{}** `Disini`.".format(filt))
 
 
 @register(outgoing=True, pattern="^.bersihkanbotfilter (.*)")
