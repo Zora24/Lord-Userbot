@@ -499,9 +499,15 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern="^.userbot$")
-async def reedme(e):
-    await e.edit(
-        "Beberapa Userbot Github:\n"
-        "\n[Lord-Userbot Repo](https://github.com/Zora24/Lord-Userbot/blob/Lord-Userbot/README.md)"
-        "\n[GBX-Userbot Repo](https://github.com/apisuserbot/GBX-Userbot/blob/GBX-Userbot/README.md)"
+@register(outgoing=True, pattern='^.root(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(3)
+    await typew.edit("`Apis Gans 😎`")
+    sleep(3)
+    await typew.edit("`Napis buaya 🐊`")
+    sleep(1)
+    await typew.edit("`Zend Ngehode 😂`")
+    sleep(1)
+    await typew.edit("`Rapa fakebooy 🖕`")
+# Create by myself @localheart
