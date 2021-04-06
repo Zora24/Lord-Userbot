@@ -119,7 +119,7 @@ async def update(event, repo, ups_rem, ac_br):
     await asyncio.sleep(1)
     await event.edit('**✥ STRESS-Userbot** `Di Restart....`')
     await asyncio.sleep(1)
-    await event.edit('`Mohon Menunggu Beberapa Detik Lord ツ`')
+    await event.edit('`Mohon Menunggu Beberapa Detik Jing ツ`')
     await asyncio.sleep(10)
     await event.delete()
 
@@ -194,7 +194,7 @@ async def upstream(event):
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**✣ Pembaruan Untuk STRESS-Userbot [{ac_br}]:\n\n✣ Pembaruan:**\n`{changelog}`'
+        changelog_str = f'**✣ Pembaruan Untuk STRESS-Userbot [STRESS-USERBOT]:\n\n✣ Pembaruan:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -208,7 +208,7 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**Perintah Untuk Update Stress Userbot**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari Lord Userbot.__')
+        return await event.respond('**Perintah Untuk Update Stress Userbot**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari STRESS Userbot.__')
 
     if force_update:
         await event.edit(
@@ -219,7 +219,7 @@ async def upstream(event):
         await event.edit('`✲ Proses Update Stress-Userbot, Loading....35%`')
         await event.edit('`✲ Proses Update Stress-Userbot, Loading....77%`')
         await event.edit('`✲ Proses Update Stress-Userbot, Updating...90%`')
-        await event.edit('`✲ Proses Update Stress-Userbot, Mohon Menunggu Lord....100%`')
+        await event.edit('`✲ Proses Update Stress-Userbot, Mohon Menunggu Anjeeng....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
