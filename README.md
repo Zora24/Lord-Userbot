@@ -1,24 +1,24 @@
-<a href="https://r70.cooltext.com/d.php?renderid=380882507313806&extension=gif"GBX Userbot" /></a>
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/5519347.gif" width="432" height="91" alt="GBX Userbot" /></a>
 
 
 <p align="center">
-  <a href="https://github.com/Zora24/Lord-Userbot/fork">
-    <img src="https://img.shields.io/github/forks/Zora24/Lord-Userbot?label=Fork&style=social">
+  <a href="https://github.com/apisuserbot/GBX-Userbot/fork">
+    <img src="https://img.shields.io/github/forks/apisuserbot/GBX-Userbot?label=Fork&style=social">
     
   </a>
   <a href="https://github.com/Zora24/Lord-Userbot">
-    <img src="https://img.shields.io/github/stars/Zora24/Lord-Userbot?style=social">
+    <img src="https://img.shields.io/github/stars/apisuserbot/GBX-Userbot?style=social">
   </a>
 </p>  
 
-# Lord Userbot
-![Lord Userbot Logo](https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg)
+# GBX Userbot
+![GBX Userbot Logo](https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg)
 
 <h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
 <p align="center">&nbsp;</p>
 
-### Repo Lord Userbot
-Repo Yang Dibuat [Alvin](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github 
+### Repo GBX Userbot
+Repo Yang Dibuat [Apis](https://t.me/PacarFerdilla) Dari Berbagai Repo Userbot Github 
 
 
 ### CARA MENDAPATKAN STRING SESSON
