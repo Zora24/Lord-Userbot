@@ -39,7 +39,7 @@ Caranya Pergi Ke Grup Support GBX-Userbot Lalu Ketik #String [TEKAN DISINI](http
   > Isi Datanya Lalu Tekan Deploy Lagi
 
   > Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy :)
-
+```
 Atau Bisa Gabung Ke Grup GBX Userbot -> [TEKAN DISINI](https://t.me/X_project_userbot)
 ## <p align="center">DEPLOY GBX-USERBOT</p>
 
