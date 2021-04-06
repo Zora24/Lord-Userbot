@@ -12,7 +12,7 @@
 </p>  
 
 # GBX Userbot
-![GBX Userbot Logo](https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg)
+![GBX Userbot Logo](https://telegra.ph/file/90bc93babb01ca32ed795.jpg)
 
 <h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
 <p align="center">&nbsp;</p>
@@ -23,7 +23,7 @@ Repo Yang Dibuat [Apis](https://t.me/PacarFerdilla) Dari Berbagai Repo Userbot G
 
 ### CARA MENDAPATKAN STRING SESSON
 
-Caranya Pergi Ke Grup Support Lord-Userbot Lalu Ketik #String [TEKAN DISINI](https://t.me/LordUserbot_Group) Untuk Masuk Ke Grup Support
+Caranya Pergi Ke Grup Support GBX-Userbot Lalu Ketik #String [TEKAN DISINI](https://t.me/X_project_userbot) Untuk Masuk Ke Grup Support
 
 ## Bagaimana Cara Deploy?
 
@@ -39,12 +39,12 @@ Caranya Pergi Ke Grup Support Lord-Userbot Lalu Ketik #String [TEKAN DISINI](htt
   > Isi Datanya Lalu Tekan Deploy Lagi
 
   > Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy :)
-```
-Atau Bisa Gabung Ke Grup Lord Userbot -> [TEKAN DISINI](https://t.me/LordUserbot_Group)
-## <p align="center">DEPLOY LORD-USERBOT</p>
+
+Atau Bisa Gabung Ke Grup GBX Userbot -> [TEKAN DISINI](https://t.me/X_project_userbot)
+## <p align="center">DEPLOY GBX-USERBOT</p>
 
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Zora24/Lord-Userbot/tree/Lord-Userbot"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/apisuserbot/GBX-Userbot/tree/GBX-Userbot"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 <br>
 </p>
