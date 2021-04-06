@@ -21,13 +21,13 @@ from userbot.events import register
 @register(outgoing=True, pattern=r"^\.(wc)$")
 async def _(event):
     if not event.reply_to_msg_id:
-        await event.edit("`Mohon Balas Ke Media Apapun Lord`")
+        await event.edit("`Mohon Balas Ke Media Apapun Master`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("`Mohon Balas Ke Gambar/Sticker/Video Lord`")
+        await event.edit("`Mohon Balas Ke Gambar/Sticker/Video Master`")
         return
-    await event.edit("`Mendownload Media.....`")
+    await event.edit("`Mendownload Media.....🚀`")
     if reply_message.photo:
         await bot.download_media(
             reply_message,
@@ -55,7 +55,7 @@ async def _(event):
             "wc.png",
         )
     try:
-        await event.edit("`Sedang Memproses....`")
+        await event.edit("`Sedang Memproses....🚀`")
         text = open("userbot/utils/styles/alice.txt", encoding="utf-8").read()
         image_color = np.array(Image.open("wc.png"))
         image_color = image_color[::1, ::1]

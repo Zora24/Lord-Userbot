@@ -58,7 +58,7 @@ async def glitch(event):
             raise ValueError
     except ValueError:
         value = 2
-    await event.edit("```Melakukan Glitch Pada Media Ini ツ```")
+    await event.edit("```Melakukan Glitch Pada Media Ini....🚀```")
     await asyncio.sleep(2)
     file_name = "glitch.png"
     to_download_directory = TEMP_DOWNLOAD_DIRECTORY
@@ -81,7 +81,7 @@ async def glitch(event):
         duration=DURATION,
         loop=LOOP,
     )
-    await event.edit("`Sedang Mengunggah Media Yang Telah Di Glitch ツ`")
+    await event.edit("`Sedang Mengunggah Media Yang Telah Di Glitch....🚀`")
     c_time = time.time()
     nosave = await event.client.send_file(
         event.chat_id,

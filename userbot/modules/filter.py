@@ -60,7 +60,7 @@ async def add_new_filter(new_handler):
         if BOTLOG_CHATID:
             await new_handler.client.send_message(
                 BOTLOG_CHATID, f"#FILTER\nID OBROLAN: {new_handler.chat_id}\nTRIGGER: {keyword}"
-                "\n\n`Pesan Berikut Disimpan Sebagai Data Balasan Filter Untuk Obrolan, Mohon Jangan Menghapusnya Lord`"
+                "\n\n`Pesan Berikut Disimpan Sebagai Data Balasan Filter Untuk Obrolan, Mohon Jangan Menghapusnya Master`"
             )
             msg_o = await new_handler.client.forward_messages(
                 entity=BOTLOG_CHATID,
@@ -75,7 +75,7 @@ async def add_new_filter(new_handler):
     elif new_handler.reply_to_msg_id and not string:
         rep_msg = await new_handler.get_reply_message()
         string = rep_msg.text
-    success = "`Berhasil Menambahkan Filter` **{}** `{}`."
+    success = "` Berhasil Menambahkan Filter ` **{}** `{}`."
     if add_filter(str(new_handler.chat_id), keyword, string, msg_id) is True:
         await new_handler.edit(success.format(keyword, 'Disini'))
     else:
@@ -94,7 +94,7 @@ async def remove_a_filter(r_handler):
         await r_handler.edit("`Filter` **{}** `Tidak Ada Disini`.".format(filt))
     else:
         await r_handler.edit(
-            "`Berhasil Menghapus Filter` **{}** `Disini`.".format(filt))
+            "` Anda berhasil menghapus Filter` **{}** `Disini`.".format(filt))
 
 
 @register(outgoing=True, pattern="^.bersihkanbotfilter (.*)")
@@ -116,7 +116,7 @@ async def kick_marie_filter(event):
             await event.reply("/stop %s" % (i.strip()))
         await sleep(0.3)
     await event.respond(
-        "```Berhasil Menghapus Semua Filter Bot!```")
+        "``` Berhasil Menghapus Semua Filter Bot!```")
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID, "Saya Membersihkan Semua Filter Bot Di " + str(event.chat_id))
@@ -133,10 +133,10 @@ async def filters_active(event):
     filters = get_filters(event.chat_id)
     for filt in filters:
         if transact == "`Tidak Ada Filter Apapun Disini.`":
-            transact = "**❃ Daftar Filter Lord Yang Aktif Disini:**\n"
-            transact += " ➥ `{}`\n".format(filt.keyword)
+            transact = "**⚡ Daftar Filter GBX-Userbot Yang Aktif Disini:**\n"
+            transact += " 👉 `{}`\n".format(filt.keyword)
         else:
-            transact += " ➥ `{}`\n".format(filt.keyword)
+            transact += " 👉 `{}`\n".format(filt.keyword)
 
     await event.edit(transact)
 
@@ -144,7 +144,7 @@ async def filters_active(event):
 CMD_HELP.update({
     "filter":
     "`.filters`\
-    \nUsage: Melihat filter lord userbot yang aktif di obrolan.\
+    \nUsage: Melihat filter GBX userbot yang aktif di obrolan.\
     \n\n`.filter` <keyword> <balasan> atau balas ke pesan ketik .filter <keyword>\
     \nUsage: Membuat filter di obrolan.\
     \nBot Akan Membalas Jika Ada Yang Menyebut 'keyword' yang dibuat.\

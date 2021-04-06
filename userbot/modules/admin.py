@@ -36,17 +36,17 @@ from userbot.events import register
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`Gambar Terlalu Kecil`"
 PP_ERROR = "`Gagal Memproses Gambar`"
-NO_ADMIN = "`Lord Bukan Admin:)`"
-NO_PERM = "`Lord Tidak Mempunyai Izin!`"
+NO_ADMIN = "`Master Bukan Admin:)`"
+NO_PERM = "`Master Tidak Mempunyai Izin!`"
 NO_SQL = "`Berjalan Pada Mode Non-SQL`"
 
 CHAT_PP_CHANGED = "`Berhasil Mengubah Profil Grup`"
 CHAT_PP_ERROR = (
     "`Ada Masalah Dengan Memperbarui Foto,`"
-    "`Mungkin Karna Lord Bukan Admin,`"
+    "`Mungkin Karna Master Bukan Admin,`"
     "`Atau Tidak Mempunyai Izin.`"
 )
-INVALID_MEDIA = "`Media Tidak Valid`"
+INVALID_MEDIA = "`Media Tidak Valid Bangsat`"
 
 BANNED_RIGHTS = ChatBannedRights(
     until_date=None,
@@ -80,7 +80,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 @register(outgoing=True, pattern=r"^\.setgpic$")
 async def set_group_photo(gpic):
     if not gpic.is_group:
-        await gpic.edit("`Lord Mohon Lakukan Perintah Ini Di Grup.`")
+        await gpic.edit("`Master Mohon Lakukan Perintah Ini Di Grup.`")
         return
     replymsg = await gpic.get_reply_message()
     chat = await gpic.get_chat()
@@ -585,7 +585,7 @@ async def rm_deletedacc(show):
 async def get_admin(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
-    mentions = f"<b>✥ Daftar Admin Grup {title}:</b> \n"
+    mentions = f"<b>⚡ Daftar Admin Grup {title}:</b> \n"
     try:
         async for user in show.client.iter_participants(
             show.chat_id, filter=ChannelParticipantsAdmins
@@ -806,7 +806,7 @@ async def get_usersdel(show):
         await show.edit(mentions)
     except MessageTooLongError:
         await show.edit(
-            "Lord, Grup Ini Terlalu Besar, Mengunggah Daftar Akun Terhapus Sebagai File."
+            "Master, Grup Ini Terlalu Besar, Mengunggah Daftar Akun Terhapus Sebagai File."
         )
         file = open("daftarpengguna.txt", "w+")
         file.write(mentions)
@@ -890,7 +890,7 @@ async def get_bots(show):
     try:
         await show.edit(mentions, parse_mode="html")
     except MessageTooLongError:
-        await show.edit("Lord, Terlalu Banyak Bot Di Grup Ini, Mengunggah Daftar Bot Sebagai File.")
+        await show.edit("Master, Terlalu Banyak Bot Di Grup Ini, Mengunggah Daftar Bot Sebagai File.")
         file = open("botlist.txt", "w+")
         file.write(mentions)
         file.close()

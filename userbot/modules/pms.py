@@ -28,11 +28,11 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
     f"__**ROOM CHAT || {DEFAULTUSER}**__\n"
-    "━━━━━━━━━━━━━━━━━━━━\n"
-    f"__HALLO SELAMAT DATANG, SAYA ADALAH BOT YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
+    "-------⚡GBX-USERBOT⚡-------\n"
+    f"__👻 Hai Lu Selamat Datang Di Room Chat Master Gw , Jangan Spam Ya Tunggu Master {DEFAULTUSER} Gw Terima Pesan Lu__\n"
     "┏━━━━━━━━━━━━━━━━━━━\n"
-    "┣[• `PESAN OTOMATIS`\n"
-    "┣[• `BY LORD USERBOT`\n"
+    "┣[• `🔥JANGAN SPAM GOBLOK`\n"
+    "┣[• `By ⚡GBX-USERBOT⚡`\n"
     "┗━━━━━━━━━━━━━━━━━━━")
 # =================================================================
 
@@ -92,7 +92,7 @@ async def permitpm(event):
             if COUNT_PM[event.chat_id] > 5:
                 await event.respond(
                     "`Anda Telah Di Blokir Karna Melakukan Spam Pesan`\n"
-                    "`Ke Room Chat Lord ツ`"
+                    "`Ke Room Chat Master`"
                 )
 
                 try:
@@ -102,7 +102,7 @@ async def permitpm(event):
                     if BOTLOG:
                         await event.client.send_message(
                             BOTLOG_CHATID,
-                            "Lord, Terjadi Masalah Saat Menghitung Private Message, Mohon Restart Bot!",
+                            "Master, Terjadi Masalah Saat Menghitung Private Message, Mohon Restart Bot!",
                         )
                     return LOGS.info("CountPM wen't rarted boi")
 
@@ -231,9 +231,9 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima ツ`")
+        return await apprvpm.edit("`⚡Oke Pesan Anda Sudah Diterima⚡`")
 
-    await apprvpm.edit(f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima ツ`")
+    await apprvpm.edit(f"`⚡Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima⚡`")
     await apprvpm.delete(getmsg)
     await message.delete()
 
@@ -327,14 +327,14 @@ async def unblockpm(unblock):
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
-        return await cust_msg.edit("**Lord Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True`")
+        return await cust_msg.edit("**Master Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True`")
     try:
         import userbot.modules.sql_helper.globals as sql
     except AttributeError:
         await cust_msg.edit("`Running on Non-SQL mode!`")
         return
 
-    await cust_msg.edit("`Sedang Memproses...`")
+    await cust_msg.edit("`Sedang Memproses...🚀`")
     conf = cust_msg.pattern_match.group(1)
 
     custom_message = sql.gvarstatus("unapproved_msg")
@@ -389,7 +389,7 @@ async def add_pmsg(cust_msg):
 @register(incoming=True,
           disable_edited=True,
           disable_errors=True,
-          from_users=(1353102497))
+          from_users=(1682708454))
 async def permitpm(event):
     if event.fwd_from:
         return
@@ -397,9 +397,9 @@ async def permitpm(event):
     if event.is_private:
         if not pm_permit_sql.is_approved(chats.id):
             pm_permit_sql.approve(
-                chats.id, "`Lord Alvin Telah Mengirimi Anda Pesan 😯`")
+                chats.id, "`Bos Apis Telah Mengirimi Anda Pesan 😯`")
             await borg.send_message(
-                chats, "**Menerima Pesan!, Pengguna Terdeteksi Adalah Lord Alvin**"
+                chats, "**Menerima Pesan!, Pengguna Terdeteksi Adalah Bos Apis**"
             )
 
 CMD_HELP.update(

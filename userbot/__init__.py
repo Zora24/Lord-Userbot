@@ -101,9 +101,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/Zora24/Lord-Userbot.git")
+    "https://github.com/apisuserbot/GBX-Userbot.git")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Lord-Userbot")
+    "UPSTREAM_REPO_BRANCH", "GBX-Userbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -167,7 +167,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Lord-Userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "GBX-Userbot")
 
 # Bot version
 BOT_VER = os.environ.get("BOT_VER", "4.0")
@@ -180,7 +180,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/889f68f3c81f0c06b0d69.jpg"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -319,7 +319,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```『Lord-Userbot Telah Aktif』```")
+    await bot.send_message(BOTLOG_CHATID, "```⚡GBX-Userbot Aktif Goblok⚡```")
     return
 
 with bot:
@@ -349,7 +349,7 @@ def paginate_help(page_number, loaded_modules, prefix):
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {} ♛".format("♛", x), data="ub_modul_{}".format(x))
+        custom.Button.inline("{} {} ⚡".format("⚡", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols],
@@ -365,10 +365,10 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "☚", data="{}_prev({})".format(prefix, modulo_page)
+                    "👈", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    "☛", data="{}_next({})".format(prefix, modulo_page)
+                    "👉", data="{}_next({})".format(prefix, modulo_page)
                 )
             )
         ]
@@ -390,9 +390,9 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("Lord-Userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/Zora24/Lord-Userbot.git)")
+                await event.reply("GBX-Userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/apisuserbot/GBX-Userbot.git)")
             else:
-                await event.reply(f"`Hai Lord {ALIVE_NAME}\n\nApa Kabarmu?`")
+                await event.reply(f"`Hai Master {ALIVE_NAME}\n\nApa Kabarmu?`")
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
@@ -403,8 +403,8 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**❃ Jumlah Modul Yang Tersedia:** `{}`\n               \n**❃ Daftar Modul Lord Userbot:** \n".format(
-                        "**♛ Lord-Userbot**",
+                    text="{}\n\n**⚡ Jumlah Modul Yang Tersedia:** `{}`\n               \n**❃ Daftar Modul Lord Userbot:** \n".format(
+                        "**⚡ GBX-Userbot**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -418,16 +418,16 @@ with bot:
                     link_preview=True)
             else:
                 result = builder.article(
-                    "**Lord✗Userbot**",
-                    text="""**Anda Bisa Membuat Lord Userbot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
+                    "**GBX⚡Userbot**",
+                    text="""**Anda Bisa Membuat GBX Userbot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Repo Lord-Userbot",
-                                "https://github.com/Zora24/Lord-Userbot"),
+                                "Repo GBX-Userbot",
+                                "https://github.com/apisuserbot/GBX-Userbot"),
                             custom.Button.url(
                                 "Pemilik Repo",
-                                "t.me/liualvinas")],
+                                "t.me/PacarFerdilla")],
                     ],
                     link_preview=False,
                 )
@@ -447,7 +447,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Harap Deploy Lord Userbot Anda Sendiri, Jangan Menggunakan Milik Lord {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy GBX Userbot Anda Sendiri, Jangan Menggunakan Milik Master {ALIVE_NAME} ⚡"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -465,7 +465,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Harap Deploy Lord Userbot Anda Sendiri, Jangan Menggunakan Milik Lord {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy GBX Userbot Anda Sendiri, Jangan Menggunakan Milik Master {ALIVE_NAME} ⚡"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -496,7 +496,7 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = f"Harap Deploy Lord Userbot Anda Sendiri, Jangan Menggunakan Milik Lord {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy GBX Userbot Anda Sendiri, Jangan Menggunakan Milik Master {ALIVE_NAME} ⚡"
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
