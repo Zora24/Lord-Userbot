@@ -28,11 +28,11 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
     f"__**ROOM CHAT || {DEFAULTUSER}**__\n"
-    "━━━━━━⚡GBX-Userbot⚡━━━━━━━━━━━━\n"
-    f"__👻 HALLO KAMU SELAMAT DATANG, SAYA ADALAH BOT YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
+    "-------⚡GBX-USERBOT⚡-------\n"
+    f"__👻 Hai Lu Selamat Datang Di Room Chat Master Gw , Jangan Spam Ya Tunggu Master {DEFAULTUSER} Gw Terima Pesan Lu__\n"
     "┏━━━━━━━━━━━━━━━━━━━\n"
-    "┣[• `🔥JANGAN SPAM GOBLOK🔥`\n"
-    "┣[• `By Apis`\n"
+    "┣[• `🔥JANGAN SPAM GOBLOK`\n"
+    "┣[• `By ⚡GBX-USERBOT⚡`\n"
     "┗━━━━━━━━━━━━━━━━━━━")
 # =================================================================
 
@@ -231,9 +231,9 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`⚡ Oke Pesan Anda Sudah Diterima ⚡`")
+        return await apprvpm.edit("`⚡Oke Pesan Anda Sudah Diterima⚡`")
 
-    await apprvpm.edit(f"`⚡ Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima ⚡`")
+    await apprvpm.edit(f"`⚡Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima⚡`")
     await apprvpm.delete(getmsg)
     await message.delete()
 
