@@ -499,7 +499,6 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-
 @register(outgoing=True, pattern="^.userbot$")
 async def reedme(e):
     await e.edit(
