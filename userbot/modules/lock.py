@@ -69,10 +69,10 @@ async def locks(event):
         what = "Semuanya"
     else:
         if not input_str:
-            await event.edit("`Mohon Maaf Bos, Apa Yang Harus Saya Kunci? ヅ`")
+            await event.edit("`Mohon Maaf Master, Apa Yang Harus Saya Kunci?`")
             return
         else:
-            await event.edit(f"`Bos Jenis Yang Mau Anda Kunci Tidak Valid` `{input_str}`")
+            await event.edit(f"`Master Jenis Yang Mau Anda Kunci Tidak Valid` `{input_str}`")
             return
 
     lock_rights = ChatBannedRights(
@@ -92,10 +92,10 @@ async def locks(event):
         await event.client(
             EditChatDefaultBannedRightsRequest(peer=peer_id,
                                                banned_rights=lock_rights))
-        await event.edit(f"`Bos Telah Mengunci {what} Untuk Obrolan Ini ヅ`")
+        await event.edit(f"`Master Telah Mengunci {what} Untuk Obrolan Ini`")
     except BaseException as e:
         await event.edit(
-            f"`Apakah Bos Mempunyai Izin Melakukan Itu Disini?`\n**Kesalahan:** {str(e)}")
+            f"`Apakah Master Mempunyai Izin Melakukan Itu Disini?`\n**Kesalahan:** {str(e)}")
         return
 
 
@@ -157,10 +157,10 @@ async def rem_locks(event):
         what = "Semuanya"
     else:
         if not input_str:
-            await event.edit("`Apa Yang Harus Saya Buka Bos ヅ`")
+            await event.edit("`Apa Yang Harus Saya Buka Master`")
             return
         else:
-            await event.edit(f"`Bos Jenis Kunci Yang Mau Anda Buka Tidak Valid` `{input_str}`")
+            await event.edit(f"`Master Jenis Kunci Yang Mau Anda Buka Tidak Valid` `{input_str}`")
             return
 
     unlock_rights = ChatBannedRights(
@@ -180,15 +180,15 @@ async def rem_locks(event):
         await event.client(
             EditChatDefaultBannedRightsRequest(peer=peer_id,
                                                banned_rights=unlock_rights))
-        await event.edit(f"`Lord Telah Membuka Kunci {what} Untuk Obrolan Ini ヅ`")
+        await event.edit(f"`Master Telah Membuka Kunci {what} Untuk Obrolan Ini`")
     except BaseException as e:
         await event.edit(
-            f"`Apakah Bos Mempunyai Izin Melakukan Itu Disini?`\n**Kesalahan:** {str(e)}")
+            f"`Apakah Master Mempunyai Izin Melakukan Itu Disini?`\n**Kesalahan:** {str(e)}")
         return
 
 
 CMD_HELP.update({
-    "⚡ locks ⚡":
+    "locks":
     "`.lock <all atau Jenis>` atau `.unlock <all atau Jenis>`\
 \nUsage: Memungkinkan anda kunci atau membuka kunci, beberapa jenis pesan dalam obrolan.\
 \n[Anda Harus Jadi Admin Grup Untuk Menggunakan Perintah!]\
