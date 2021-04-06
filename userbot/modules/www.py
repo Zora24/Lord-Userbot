@@ -59,7 +59,7 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**⚡ PING** "
-                    f"\n  👉 `%sms` \n"
+                    f"\n  🚀 `%sms` \n"
                     f"**⚡ GBX** "
                     f"\n  👉 `{ALIVE_NAME}` \n" % (duration))
 
@@ -80,7 +80,7 @@ async def pingme(pong):
     await pong.edit(f"**⚡GBX Ping⚡**\n"
                     f"⚡ **Ping:** "
                     f"`%sms` \n"
-                    f"👉 **Online:** "
+                    f"🚀 **Online:** "
                     f"`{uptime}` \n" % (duration))
 
 
@@ -97,7 +97,7 @@ async def pingme(pong):
     await pong.edit(f"**⚡ Userbot!**\n"
                     f"⚡ __Ping:__ "
                     f"`%sms` \n"
-                    f"👉 __Uptime:__ "
+                    f"🚀 __Uptime:__ "
                     f"`{uptime}` \n" % (duration))
 
 
@@ -115,7 +115,7 @@ async def pingme(pong):
     await pong.edit(f"**⚡ GBX Ping ⚡**\n"
                     f"⚡**Ping:** "
                     f"`%sms` \n"
-                    f"👉 **Uptime:** "
+                    f"🚀 **Uptime:** "
                     f"`{uptime}` \n"
                     f"**👉 Master:** `{ALIVE_NAME}`" % (duration))
 
@@ -137,10 +137,24 @@ async def pingme(pong):
     await pong.edit(f"-⚡ G B X ⚡-\n"
                     f"**⚡ Sinyal  :** "
                     f"`%sms` \n"
-                    f"**👉 Online  :** "
+                    f"**🚀 Online  :** "
                     f"`{uptime}` \n"
                     f"**👉 Master  :** `{ALIVE_NAME}`" % (duration))
 
+@register(outgoing=True, pattern="^.zping$")
+async def pingme(pong):
+    """ For .ping command, ping the userbot from any chat.  """
+    uptime = await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
+    await pong.edit("**...ZPONG.....⚡....**")
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    await pong.edit(f"**☠️ Kentot ☠️**\n"
+                    f"🖕 **Tolol:** "
+                    f"`%sms` \n"
+                    f"🖕 **Lag Ajg:** "
+                    f"`{uptime}` \n"
+                    f"**👉 Anak Tolol:** `{ALIVE_NAME}`" % (duration))
 
 @register(outgoing=True, pattern="^.speed$")
 async def speedtst(spd):
