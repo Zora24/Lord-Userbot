@@ -511,3 +511,31 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("`Rapa fakebooy 🖕`")
 # Create by myself @localheart
+
+
+@register(outgoing=True, pattern='^.ff(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(3)
+    await typew.edit("`Game Burik`")
+    sleep(3)
+    await typew.edit("`Nomor Satu Di Play Store`")
+    sleep(1)
+    await typew.edit("`Tapi Cuman Di Indonesia`")
+    sleep(1)
+    await typew.edit("`Gak Ada Pintu Lagi,awokawokawok`")
+# Create by myself @localheart
+
+
+@register(outgoing=True, pattern='^.pubg(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(3)
+    await typew.edit("`Game Hd`")
+    sleep(3)
+    await typew.edit("`Grafik Bagus`")
+    sleep(1)
+    await typew.edit("`Ada Pintunya Lagi`")
+    sleep(1)
+    await typew.edit("`Tapi Sepi Yang Main,awokawokawok`")
+# Create by myself @localheart
