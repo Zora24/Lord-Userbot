@@ -30,7 +30,7 @@ async def mim(event):
         return
     else:
         await event.edit(
-            "```Saatnya ubah stiker orang,hahahaha bangsat ツ ```"
+            "```Saatnya ubah stiker orang,mwhahaha tunggu tolol ```"
         )
         await asyncio.sleep(5)
         text = event.pattern_match.group(1)
@@ -186,7 +186,7 @@ async def mim(event):
         return
     else:
         await event.edit(
-            "```Saatnya ubah stiker orang,hahahaha bangsat ツ ```"
+            "```Saatnya ubah stiker orang,mwhahaha tunggu tolol  ```"
         )
         await asyncio.sleep(5)
         text = event.pattern_match.group(1)
@@ -318,7 +318,7 @@ async def draw_meme_text(image_path, text):
 
 
 CMD_HELP.update({
-    "⚡ memify ⚡":
+    "memify":
         "`.mmf Teks Atas ; Teks Bawah`\
         \nUsage: Balas Ke Sticker/Gambar/Gif.\n"
         "`.mmf2 Teks Atas ; Teks Bawah`\
