@@ -27,12 +27,12 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    f"__**ROOM CHAT || {DEFAULTUSER}**__\n"
+    f"__**🤖 ROOM CHAT || {DEFAULTUSER}**__\n"
     "-----⚡GBX-USERBOT⚡-----\n"
     f"__👻 Hai Lu Selamat Datang Di Room Chat Master Gw , Jangan Spam Ya Tunggu Master {DEFAULTUSER} Gw Terima Pesan Lu__\n"
     "┏━━━━━━━━━━━━━━━━━━━\n"
-    "┣[• `🔥JANGAN SPAM GOBLOK`\n"
-    "┣[• `By ⚡[Apis](t.me//PacarFerdilla)⚡`\n"
+    "┣[• `🔥JANGAN SPAM GOBLOK🔥`\n"
+    "┣[• `By ⚡Apis⚡`\n"
     "┗━━━━━━━━━━━━━━━━━━━")
 # =================================================================
 
