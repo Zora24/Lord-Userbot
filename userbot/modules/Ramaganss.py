@@ -354,6 +354,44 @@ async def typewriter(typew):
                      "          \\                _.•´\n"
                      "            \\              (\n"
                      "              \\  ")
+
+@register(outgoing=True, pattern='^.tr(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**INTINYA JANGAN LUPA MASUK!!**\n\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM\n"
+                     "@TEMAN_RANDOM")
 CMD_HELP.update({
     "vip":
     "`.bulan` ; `.hati` ; `.gbn` ; `.tolol` ; `.gmt`\
@@ -362,8 +400,8 @@ CMD_HELP.update({
     \nUsage: liat sendiri.\
     \n\n`.y` ; `.uasu`\
     \nUsage: jempol & Cek dyno\
-    \n\n`.tawa` ; `.oy` ; `.fck`\
-    \nUsage: ketawa lari , Nyuruh nimbrung, fuck.\
+    \n\n`.tawa` ; `.oy` ; `.fck` ; `.tr`\
+    \nUsage: ketawa lari , Nyuruh nimbrung, fuck, Coba sendiri.\
     \n\n`.ular` ; `.babi` ; `.ajg`\
     \nUsage: liat sendiri."
 })
