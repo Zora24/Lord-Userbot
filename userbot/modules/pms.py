@@ -31,7 +31,7 @@ DEF_UNAPPROVED_MSG = (
     "ㅤ  “Selamat Datang Di Room Chat.”\n"
     "╭┈─╼━━━━━━━━━━━━━━━━━━╾─┈╯\n"
     "│❗𝘿𝙄𝙇𝘼𝙍𝘼𝙉𝙂 𝙈𝙀𝙇𝘼𝙆𝙐𝙆𝘼𝙉 𝙎𝙋𝘼𝙈❗\n│\n"
-    f"Tunggu {DEFAULTUSER} Menerima Pesan Anda │\n"
+    f"Tunggu {DEFAULTUSER} Menerima Pesan Anda ya😠 │\n"
     "╰┈─────────────────────┈─➤\n"
     "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n"
     "┣[○› PESAN OTOMATIS\n"
