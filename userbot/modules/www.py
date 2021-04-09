@@ -149,6 +149,34 @@ async def pingme(pong):
                     f"`{uptime}` \n"
                     f"**👤 Anak Tolol:** `{ALIVE_NAME}`" % (duration))
 
+@register(outgoing=True, pattern="^.cping$")
+async def redis(pong):
+    """ For .ping command, ping the userbot from any chat.  """
+    uptime = await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
+    await pong.edit("__Connecting to data center.__")
+    await pong.edit("__Connecting to data center..__")
+    await pong.edit("__Connecting to data center...__")
+    await pong.edit("__Connecting to data center.__")
+    await pong.edit("__Connecting to data center..__")
+    await pong.edit("__Connecting to data center...__")
+    await pong.edit("__Connecting to data center.__")
+    await pong.edit("__Connecting to data center..__")
+    await pong.edit("__Connecting to data center...__")
+    await pong.edit("⚡")
+    await asyncio.sleep(2)
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    await pong.edit(f"**╭─━━━━━━━━━━━━━━━─╮** \n"
+                    f"**       ⚡GBX-Userbot⚡** \n"
+                    f"**╭─━━━━━━━━━━━━━━━─╯** \n"
+                    f"**│⊙  Signal   :** "
+                    f"`%sms` \n"
+                    f"**│⊙  Uptime  :** "
+                    f"`{uptime}` \n"
+                    f"**│⊙  Master   :** `{ALIVE_NAME}` \n"
+                    f"**╰━━━━━━━━━━━━━━━━━╯**" % (duration))
+
 @register(outgoing=True, pattern="^.speed$")
 async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
