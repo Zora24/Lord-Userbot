@@ -22,7 +22,7 @@ async def get_full_user(event):
         if user.isnumeric():
             user = int(user)
         if not user:
-            await event.edit("`Lord, Ini Tidak Mungkin Tanpa ID Pengguna`")
+            await event.edit("`Master, Ini Tidak Mungkin Tanpa ID Pengguna`")
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
@@ -34,7 +34,7 @@ async def get_full_user(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("`Terjadi Kesalahan... Mohon Lapor Ke Master' @PacarFerdilla", str(err))
+            return await event.edit("`Terjadi Kesalahan... Mohon Lapor Ke Mastah' @PacarFerdilla", str(err))
     return user_obj, extra
 
 
@@ -72,9 +72,9 @@ async def handler(tele):
                                 tele.chat_id, guser.id, view_messages=False
                             )
                             await tele.reply(
-                                f"**⚡GBX⚡, Pengguna Gban Telah Bergabung** \n"
-                                f"**👤Pengguna**: [{guser.id}](tg://user?id={guser.id})\n"
-                                f"**⚠️Aksi**  : `Banned`"
+                                f"**GBX, Pengguna Gban Telah Bergabung** \n"
+                                f"**Pengguna**: [{guser.id}](tg://user?id={guser.id})\n"
+                                f"**Aksi**  : `Banned`"
                             )
                         except BaseException:
                             return
@@ -142,7 +142,7 @@ async def gben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**⚡ Perintah GBX:** `{ALIVE_NAME}`\n**👤 Pengguna:** [{user.first_name}](tg://user?id={user.id})\n**⚠️ Aksi:** ` Global Banned `"
+        f"**⚡ Perintah Master:** `{ALIVE_NAME}`\n**👤 Pengguna:** [{user.first_name}](tg://user?id={user.id})\n**⚠️ Aksi:** ` Global Banned `"
     )
 
 
@@ -206,7 +206,7 @@ async def gunben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**⚡ Perintah GBX:** `{ALIVE_NAME}`\n**👤 Pengguna:** [{user.first_name}](tg://user?id={user.id})\n**⚠️ Aksi:** `Membatalkan Global Banned`"
+        f"**⚡ Perintah Master:** `{ALIVE_NAME}`\n**👤 Pengguna:** [{user.first_name}](tg://user?id={user.id})\n**⚠️ Aksi:** `Membatalkan Global Banned`"
     )
 
 
