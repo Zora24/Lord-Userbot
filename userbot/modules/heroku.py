@@ -182,13 +182,13 @@ async def dyno_usage(dyno):
                 "╭┈─╼━━━━━━━━━━━━━━━╾─┈╮ \n"
                 "│      ⇱ ⚡GBX Userbot⚡ ⇲ \n"
                 "╭┈─╼━━━━━━━━━━━━━━━╾─┈╮ \n"
-                "│📱◈ Penggunaan Kuota Anda : \n"
+                "│📱◈ **Penggunaan Kuota Anda** : \n"
                f"│⏳◈ {AppHours} Jam - {AppMinutes} Menit. \n"
-               f"│⚡◈ Persentase : {AppPercentage}% \n"
+               f"│⚡◈ **Persentase** : {AppPercentage}% \n"
                 "╰┈───────────────────┈╮ \n"
-                 "│📱◈ Sisa Kuota Bulan Ini : \n"
+                 "│📱◈ **Sisa Kuota Bulan Ini** : \n"
                 f"│⏳◈ {hours} Jam - {minutes} Menit. \n"
-                f"│⚡◈ Persantase : {percentage}% Lagi. \n"
+                f"│⚡◈ **Persantase** : {percentage}% Lagi. \n"
                 "╰┈───────────────────┈╯ \n"             
             )
             await asyncio.sleep(20)
