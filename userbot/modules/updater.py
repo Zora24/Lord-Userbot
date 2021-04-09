@@ -115,9 +115,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('**⚡ GBX-Userbot** `Berhasil Di Update!`')
+    await event.edit('**🛠GBX-Userbot** `Berhasil Di Update!`')
     await asyncio.sleep(1)
-    await event.edit('**⚡ GBX-Userbot** `Di Restart....🚀`')
+    await event.edit('**🛠GBX-Userbot** `Di Restart....🚀`')
     await asyncio.sleep(1)
     await event.edit('`Mohon Menunggu Beberapa Detik Master....🚀`')
     await asyncio.sleep(10)
@@ -139,7 +139,7 @@ async def update(event, repo, ups_rem, ac_br):
 @ register(outgoing=True, pattern=r"^.update(?: |$)(now|deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
-    await event.edit("`Mengecek Pembaruan, Silakan Menunggu....`")
+    await event.edit("`Mengecek Pembaruan, Silakan Menunggu....🚀`")
     conf = event.pattern_match.group(1)
     off_repo = UPSTREAM_REPO_URL
     force_update = False
@@ -188,13 +188,13 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n**⚡ GBX-Userbot Sudah Versi Terbaru**\n')
+            f'\n**🛠GBX-Userbot Sudah Versi Terbaru**\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**⚡ Pembaruan Untuk GBX-Userbot [{ac_br}]:\n\n⚡ Pembaruan:**\n`{changelog}`'
+        changelog_str = f'**⛏️Pembaruan Untuk GBX-Userbot [{ac_br}]:\n\n⛏️Pembaruan:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -214,12 +214,12 @@ async def upstream(event):
         await event.edit(
             '`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....🚀`')
     else:
-        await event.edit('`⚡ Proses Update GBX-Userbot, Loading....1%`')
-        await event.edit('`⚡ Proses Update GBX-Userbot, Loading....20%`')
-        await event.edit('`⚡ Proses Update GBX-Userbot, Loading....35%`')
-        await event.edit('`⚡ Proses Update GBX-Userbot, Loading....77%`')
-        await event.edit('`⚡ Proses Update GBX-Userbot, Updating...90%`')
-        await event.edit('`⚡ Proses Update GBX-Userbot, Mohon Menunggu Master....100%`')
+        await event.edit('`🛠 Proses Update GBX-Userbot, Loading....1%`')
+        await event.edit('`🛠 Proses Update GBX-Userbot, Loading....20%`')
+        await event.edit('`🛠 Proses Update GBX-Userbot, Loading....35%`')
+        await event.edit('`🛠 Proses Update GBX-Userbot, Loading....77%`')
+        await event.edit('`🛠 Proses Update GBX-Userbot, Updating...90%`')
+        await event.edit('`🛠 Proses Update GBX-Userbot, Mohon Menunggu Master....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
