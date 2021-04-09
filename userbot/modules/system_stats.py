@@ -227,16 +227,16 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("`GBX-Userbot!`")
+    await alive.edit("`🛠Sistem Menyala🛠!`")
     await alive.edit("⚡")
     output = (
         f" **┗┓⚡ GBX-Userbot ⚡┏┛** \n"
         f"\n__**{GBX_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
         f"**⚡ GBX** \n"
-        f" 👉 `{DEFAULTUSER}` \n"
+        f" ➾ `{DEFAULTUSER}` \n"
         f"**⚡ ᴜsᴇʀɴᴀᴍᴇ** \n"
-        f" 👉 `@{user.username}` \n"
+        f" ➾ `@{user.username}` \n"
         f"┏━━━━━━━━━━━━━━━━━━━\n"
         f"┣[• `Telethon :`Ver {version.__version__} \n"
         f"┣[• `Python   :`Ver {python_version()} \n"
@@ -268,16 +268,15 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**▬▬▬▬▬▬❙۩♛۩❙▬▬▬▬▬▬**\n"
-        f"    **⚡ GBX-Userbot ⚡** \n\n"
-        f"⚡ **GBX**     \n   👉 `{DEFAULTUSER}` \n"
-        f"⚡ **Username** \n   👉 `@{user.username}` \n"
-        f"⚡ **Telethon** \n   👉 `Versi {version.__version__}` \n"
-        f"⚡**Python**   \n   👉 `Versi {python_version()}` \n"
-        f"⚡**Versi Bot**\n   👉 `{BOT_VER}` \n"
-        f"⚡ **Modul**    \n   👉 `{len(modules)}` \n\n"
-        f"⚡ **Repo Userbot:** [GBX-bot](https://github.com/apisuserbot/Lord-Userbot)\n **Follow Bos: **[Tekan](https://www.instagram.com/apis_godboy?r=nametag)\n **Bos:** [Apis](t.me/PacarFerdilla)\n"
-        f"**▬▬▬▬▬▬❙۩★۩❙▬▬▬▬▬▬**")
+        f"╭┈──────────────────┈╮ \n"
+        f"**        ⚡G B X  - U S E R B O T💢  **\n"
+        f"╭┈──────────────────┈╯ \n"
+        f"**➾ Master       :  **{DEFAULTUSER}\n"
+        f"**➾ Attitude    :  **Ver {version.__version__} \n"
+        f"**➾ Dewasa    :  **Ver {python_version()} \n"
+        f"**➾ Akhlak      :  **{BOT_VER} \n"
+        f"**➾ Pahala      :  **{len(modules)} \n"
+        f"╰┈────────────────┈─➤")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -302,7 +301,7 @@ async def amireallyalive(alive):
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("`GBX-Userbot!`")
+    await alive.edit("`🛠Sistem Menyala🛠!`")
     await alive.edit("⚡")
     output = (
         f"**⚡ GBX-Userbot ⚡** \n\n"
