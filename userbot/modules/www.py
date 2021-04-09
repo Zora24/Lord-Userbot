@@ -164,7 +164,6 @@ async def redis(pong):
     await pong.edit("__Connecting to data center..__")
     await pong.edit("__Connecting to data center...__")
     await pong.edit("⚡")
-    await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**╭─━━━━━━━━━━━━━━━─╮** \n"
