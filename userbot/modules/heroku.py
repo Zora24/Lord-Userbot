@@ -189,8 +189,7 @@ async def dyno_usage(dyno):
                  "│📱◈ Sisa Kuota Bulan Ini : \n"
                 f"│⏳◈ {hours} Jam - {minutes} Menit. \n"
                 f"│⚡◈ Persantase : {percentage}% Lagi. \n"
-                "╰┈───────────────────┈╯ \n"
-                f"👤 Master  : {ALIVE_NAME} \n"
+                "╰┈───────────────────┈╯ \n"             
             )
             await asyncio.sleep(20)
             await event.delete()
