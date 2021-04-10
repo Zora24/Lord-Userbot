@@ -98,7 +98,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("**⚡Master telah kembali!!⚡**")
+        msg = await notafk.respond("**⚡{ALIVE_NAME} telah kembali!!⚡**")
         time.sleep(3)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
@@ -166,8 +166,8 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"-⚡ 𝗔 𝗙 𝗞 ⚡-\n `{ALIVE_NAME}` **Afk** {afk_since} **Yang Lalu.**\
-                        \n**👉 ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
+                    await mention.reply(f"**! 𝗔𝗙𝗞  ⚡**\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Sibuk **\nLama 𝗔𝗙𝗞 : {afk_since}.\
+                        \n𝘼𝙡𝙖𝙨𝙖𝙣: `{AFKREASON}`\n╰✠╼━━━━━━❖━━━━━━━✠╯")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
                 USERS.update({mention.sender_id: 1})
@@ -175,8 +175,8 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"-⚡ 𝗔 𝗙 𝗞 ⚡-\n ** Master Masih Afk** {afk_since} **Yang Lalu.**\
-                            \n**👉 ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
+                        await mention.reply(f"**! 𝗔𝗙𝗞  ⚡**\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Sibuk **\nLama 𝗔𝗙𝗞 : {afk_since}.\
+                        \n𝘼𝙡𝙖𝙨𝙖𝙣: `{AFKREASON}`\n╰✠╼━━━━━━❖━━━━━━━✠╯")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
