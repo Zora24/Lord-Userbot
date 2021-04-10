@@ -140,17 +140,18 @@ async def filters_active(event):
 
     await event.edit(transact)
 
-
+# LORD USERBOT
+# @LORDUSERBOT_GROUP
 CMD_HELP.update({
     "filter":
     "`.filters`\
-    \nUsage: Melihat filter lord userbot yang aktif di obrolan.\
+    \nPenjelasan: Melihat filter lord userbot yang aktif di obrolan.\
     \n\n`.filter` <keyword> <balasan> atau balas ke pesan ketik .filter <keyword>\
-    \nUsage: Membuat filter di obrolan.\
+    \nPenjelasan: Membuat filter di obrolan.\
     \nBot Akan Membalas Jika Ada Yang Menyebut 'keyword' yang dibuat.\
     \nBisa dipake ke media/sticker/vn/file.\
     \n\n`.stop` <keyword>\
-    \nUsage: Untuk Nonaktifkan Filter.\
-    \n\n`.bersihkanbotfilter` <marie/rose>\
-    \nUsage: Menghapus semua filter yang ada di bot grup (Saat ini bot yang didukung: Marie, Rose.) dalam obrolan."
+    \nPenjelasan: Untuk Nonaktifkan Filter.\
+    \n\n`.bersihkanbotfilter` <rose>\
+    \nPenjelasan: Menghapus semua filter yang ada di bot grup (Saat ini bot yang didukung: Rose.) dalam obrolan."
 })
