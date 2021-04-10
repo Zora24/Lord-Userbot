@@ -403,8 +403,8 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**⚡ Jumlah Modul Yang Tersedia:** `{}`\n               \n**❃ Daftar Modul Lord Userbot:** \n".format(
-                        "**⚡ GBX-Userbot**",
+                    text="{}\n\n**⚡Jumlah Modul Yang Tersedia:** `{}`\n               \n**❃ Daftar Modul Lord Userbot:** \n".format(
+                        "**⚡GBX-Userbot**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -412,7 +412,7 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Lord✗Userbot ",
+                    "Bantuan GBX⚡Userbot ",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
