@@ -24,10 +24,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"**•⚡Maaf kawan Master gw {ALIVE_NAME} Sedang Afk!⚡**",
-    f"**•⚡Maaf kawan Master gw {ALIVE_NAME} Sedang Afk\n • 😠 Gak usah spam tunggu dia online ajg!⚡**",
-    f"**•⚡Master {ALIVE_NAME} Sedang Afk!\n • 🔥 Jan spam ya tod!⚡**",
-    f"**•⚡Maaf kawan Master gw {ALIVE_NAME} Sedang Afk!⚡**",
+    f"**⚡Maaf kawan Master gw {ALIVE_NAME} Sedang Afk!⚡**",
+    f"**⚡Maaf kawan Master gw {ALIVE_NAME} Sedang Afk\n • 😠 Gak usah spam tunggu dia online ajg!⚡**",
+    f"**⚡Master {ALIVE_NAME} Sedang Afk!\n • 🔥 Jan spam ya tod!⚡**",
+    f"**⚡Maaf kawan Master gw {ALIVE_NAME} Sedang Afk!⚡**",
 ]
 
 
@@ -65,11 +65,11 @@ async def set_afk(afk_e):
         await afk_e.edit(f"**! 𝗔𝗙𝗞  ⚡**\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Sibuk Dulu Gw...\
         \n𝘼𝙡𝙖𝙨𝙖𝙣: `{string}`\n╰✠╼━━━━━━❖━━━━━━━✠╯")
     else:
-        await afk_e.edit("-⚡ 𝗔 𝗙 𝗞 ⚡-\n** ⚡Master sedang afk⚡**")
+        await afk_e.edit(f"**! 𝗔𝗙𝗞  ⚡**\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Sibuk Dulu Gw...\n╰✠╼━━━━━━❖━━━━━━━✠╯")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "🔥AFK🔥"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "⚡MATI⚡"))
     else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="🔥AFK🔥"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="⚡MATI⚡"))
     if BOTLOG:
         await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**GBX Telah AFK!**")
     ISAFK = True
@@ -90,7 +90,7 @@ async def type_afk_is_not_true(notafk):
     global afk_end
     user = await bot.get_me()  # pylint:disable=E0602
     last = user.last_name
-    if last and last.endswith("🔥AFK🔥"):
+    if last and last.endswith("⚡MATI⚡"):
         last1 = last[:-12]
     else:
         last1 = ""
