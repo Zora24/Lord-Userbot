@@ -67,7 +67,7 @@ async def virtex(event):
     await asyncio.sleep(3)
     await event.edit("`...Termux...`")
     await asyncio.sleep(3)
-    await event.edit("`virtex to : 62+********`)
+    await event.edit("`virtex to : 62+********`")
     await asyncio.sleep(3)
     await event.edit("`Sukses Mengirim Pesan Virtex....`")
     await asyncio.sleep(3)
