@@ -6,20 +6,20 @@
 # requires: deezloader hachoir Pillow
 # Ported from UniBorg by AnggaR96s
 
-import deezloader
 import os
 import shutil
 import time
 
-from userbot.events import register
-from userbot import DEEZER_ARL_TOKEN, TEMP_DOWNLOAD_DIRECTORY
+import deezloader
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from telethon.tl.types import DocumentAttributeAudio
 
+from userbot import CMD_HELP, DEEZER_ARL_TOKEN, TEMP_DOWNLOAD_DIRECTORY
+from userbot.events import register
 
-@register(outgoing=True,
-          pattern=r"^\.deezload (.+?|) (FLAC|MP3\_320|MP3\_256|MP3\_128)")
+# LORD USERBOT
+@register(outgoing=True, pattern=r"^\.deez (.+?|) (FLAC|MP3\_320|MP3\_256|MP3\_128)")
 async def _(event):
     """DeezLoader by @An0nimia
     Ported for UniBorg by @SpEcHlDe"""
@@ -28,12 +28,13 @@ async def _(event):
 
     strings = {
         "name": "DeezLoad",
-        "arl_token_cfg_doc": "ARL Token for Deezer",
-        "invalid_arl_token": "please set the required variables for this module",
-        "wrong_cmd_syntax": "bruh, now i think how far should we go. please terminate my Session 🥺",
-        "server_error": "We're experiencing technical difficulties.",
-        "processing": "`Downloading...`",
-        "uploading": "`Uploading...`"}
+        "arl_token_cfg_doc": "ARL Token untuk Deezer",
+        "invalid_arl_token": "tolong setel variabel yang dibutuhkan untuk modul ini",
+        "wrong_cmd_syntax": "bruh, sekarang saya pikir seberapa jauh kita harus melangkah. tolong hentikan Sesi saya!",
+        "server_error": "Terjadi kesalahan teknis.",
+        "processing": "`Sedang Mendownload..`",
+        "uploading": "`Sedang Mengunggah...`",
+    }
 
     ARL_TOKEN = DEEZER_ARL_TOKEN
 
@@ -64,7 +65,7 @@ async def _(event):
                 quality=required_qty,
                 recursive_quality=True,
                 recursive_download=True,
-                not_interface=True
+                not_interface=True,
             )
             await event.edit(strings["uploading"])
             await upload_track(required_track, event)
@@ -79,10 +80,10 @@ async def _(event):
                 recursive_quality=True,
                 recursive_download=True,
                 not_interface=True,
-                zips=False
+                zips=False,
             )
+            await event.edit(strings["uploading"])
             for required_track in reqd_albums:
-                await event.edit(strings["uploading"])
                 await upload_track(required_track, event)
             shutil.rmtree(temp_dl_path)
             await event.delete()
@@ -95,7 +96,7 @@ async def _(event):
                 quality=required_qty,
                 recursive_quality=True,
                 recursive_download=True,
-                not_interface=True
+                not_interface=True,
             )
             await event.edit(strings["uploading"])
             await upload_track(required_track, event)
@@ -110,10 +111,10 @@ async def _(event):
                 recursive_quality=True,
                 recursive_download=True,
                 not_interface=True,
-                zips=False
+                zips=False,
             )
+            await event.edit(strings["uploading"])
             for required_track in reqd_albums:
-                await event.edit(strings["uploading"])
                 await upload_track(required_track, event)
             shutil.rmtree(temp_dl_path)
             await event.delete()
@@ -121,7 +122,7 @@ async def _(event):
     else:
         await event.edit(strings["wrong_cmd_syntax"])
 
-
+# LORD - USERBOT
 async def upload_track(track_location, message):
     metadata = extractMetadata(createParser(track_location))
     duration = 0
@@ -139,7 +140,7 @@ async def upload_track(track_location, message):
             voice=False,
             title=title,
             performer=performer,
-            waveform=None
+            waveform=None,
         )
     ]
     supports_streaming = True
@@ -155,3 +156,13 @@ async def upload_track(track_location, message):
         attributes=document_attributes,
     )
     os.remove(track_location)
+
+# LORD USERBOT
+# @LORDUSERBOT_GROUP
+CMD_HELP.update(
+    {
+        "deezload": "**Modules:** __Deezload__\n\n**Perintah:** `.deez <spotify/deezer link> <Format>`"
+        "\n**Penjelasan:** Unduh musik dari deezer."
+        "\n\n *Format= `FLAC`, `MP3_320`, `MP3_256`, `MP3_128`."
+    }
+)
