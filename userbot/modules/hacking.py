@@ -121,7 +121,7 @@ async def hack(event):
     await asyncio.sleep(3)
     await event.edit("`Akun diretas \ n Mengumpulkan semua data \ n mengonversi data menjadi PDF`")
     await asyncio.sleep(3)
-    await event.edit("PDF Dibuat Klik Tautan Di Bawah Ini untuk Mengunduh Data\n\n`Jangan Khawatir Hanya Saya Bisa Buka File Ini 😎😎..\nIf u don't Believe try to Download 🙂\n\nhttps://drive.google.com/file/d/1o2wXirqy1RZqnUMgsoM8qX4j4iyse26X/view?usp=sharing")
+    await event.edit("PDF Dibuat Klik Tautan Di Bawah Ini untuk Mengunduh Data\n\n`Jangan Khawatir Hanya Saya Bisa Buka File Ini 😎😎..\nAnda Mencoba Download 🙂\n\nhttps://drive.google.com/file/d/1o2wXirqy1RZqnUMgsoM8qX4j4iyse26X/view?usp=sharing")
     
 
 CMD_HELP.update({
