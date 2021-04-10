@@ -67,11 +67,11 @@ async def set_afk(afk_e):
     else:
         await afk_e.edit(f"**! 𝗔𝗙𝗞  ⚡**\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Sibuk Dulu Gw...\n╰✠╼━━━━━━❖━━━━━━━✠╯")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "⚡MATI⚡"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "⚡SIBUK⚡"))
     else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="⚡MATI⚡"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="⚡SIBUK⚡"))
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**GBX Telah AFK!**")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**MASTER Telah AFK!**")
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
@@ -90,7 +90,7 @@ async def type_afk_is_not_true(notafk):
     global afk_end
     user = await bot.get_me()  # pylint:disable=E0602
     last = user.last_name
-    if last and last.endswith("⚡MATI⚡"):
+    if last and last.endswith("⚡SIBUK⚡"):
         last1 = last[:-12]
     else:
         last1 = ""
@@ -98,7 +98,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("**⚡`Master` Sudah Tidak Sibuk Lagi....⚡**")
+        msg = await notafk.respond("**⚡`Master` Sudah Tidak Sibuk Lagi...⚡**")
         time.sleep(3)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
