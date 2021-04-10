@@ -243,8 +243,8 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)} Detik`"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"-⚡ 𝗔 𝗙 𝗞 ⚡-\n **Master Masih Afk** {afk_since} **Yang Lalu.**\
-                            \n**👉 ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
+                    await sender.reply(f"**! 𝗔𝗙𝗞  ⚡**\n╭✠╼━━━━━━❖━━━━━━━✠╮\nMohon Maaf `{ALIVE_NAME}` Lagi Sibuk...**\nLama 𝗔𝗙𝗞 : {afk_since}.\
+                        \n𝘼𝙡𝙖𝙨𝙖𝙣: `{AFKREASON}`\n╰✠╼━━━━━━❖━━━━━━━✠╯")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
                 USERS.update({sender.sender_id: 1})
@@ -252,8 +252,8 @@ async def afk_on_pm(sender):
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"-⚡ 𝗔 𝗙 𝗞 ⚡-\n **Master Masih Afk** {afk_since} **Yang Lalu.**\
-                            \n**👉 ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
+                        await sender.reply(f"**! 𝗔𝗙𝗞  ⚡**\n╭✠╼━━━━━━❖━━━━━━━✠╮\nMohon Maaf `{ALIVE_NAME}` Lagi Sibuk... Sebentar!!**\nLama 𝗔𝗙𝗞 : {afk_since}.\
+                        \n𝘼𝙡𝙖𝙨𝙖𝙣: `{AFKREASON}`\n╰✠╼━━━━━━❖━━━━━━━✠╯")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
