@@ -98,7 +98,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("**⚡{ALIVE_NAME} telah kembali!!⚡**")
+        msg = await notafk.respond("**⚡`{ALIVE_NAME}` Telah Bangkit Dari Kematian....⚡**")
         time.sleep(3)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
@@ -134,7 +134,7 @@ async def mention_afk(mention):
     user = await bot.get_me()  # pylint:disable=E0602
     back_alivee = datetime.now()
     afk_end = back_alivee.replace(microsecond=0)
-    afk_since = "**Terakhir Aktif**"
+    afk_since = "**𝙏𝙚𝙧𝙖𝙠𝙝𝙞𝙧 𝙊𝙣𝙡𝙞𝙣𝙚**"
     if mention.message.mentioned and not (await mention.get_sender()).bot:
         if ISAFK:
             now = datetime.now()
@@ -148,7 +148,7 @@ async def mention_afk(mention):
             time %= 60
             seconds = time
             if days == 1:
-                afk_since = "**Kemarin**"
+                afk_since = "**𝙆𝙚𝙢𝙖𝙧𝙞𝙣**"
             elif days > 1:
                 if days > 6:
                     date = now + \
@@ -202,7 +202,7 @@ async def afk_on_pm(sender):
     user = await bot.get_me()  # pylint:disable=E0602
     back_alivee = datetime.now()
     afk_end = back_alivee.replace(microsecond=0)
-    afk_since = "**Belum Lama**"
+    afk_since = "**𝙏𝙚𝙧𝙖𝙠𝙝𝙞𝙧 𝙊𝙣𝙡𝙞𝙣𝙚**"
     if sender.is_private and sender.sender_id != 777000 and not (
             await sender.get_sender()).bot:
         if PM_AUTO_BAN:
@@ -225,7 +225,7 @@ async def afk_on_pm(sender):
             time %= 60
             seconds = time
             if days == 1:
-                afk_since = "**Kemarin**"
+                afk_since = "**𝙆𝙚𝙢𝙖𝙧𝙞𝙣**"
             elif days > 1:
                 if days > 6:
                     date = now + \
@@ -267,7 +267,7 @@ CMD_HELP.update({
     "afk":
     "**Modules: ` AFK`\
     \n\n**• Perintah:** `.afk`\
-    \n**👉 Penjelasan:** __Siapapun Yang Balas, Tag, Atau Chat Kamu__\
+    \n**• Penjelasan:** __Siapapun Yang Balas, Tag, Atau Chat Kamu__\
 __Mereka Akan Tau Alasan Kamu OFF__.\n\n**Note:** `AFK Bisa Dilakukan Dan Dibatalkan Dimanapun.`\
 "
 })
