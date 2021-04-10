@@ -44,18 +44,18 @@ async def subprocess_run(megadl, cmd):
     exitCode = subproc.returncode
     if exitCode != 0:
         await megadl.edit(
-            "**An error was detected while running subprocess.**\n"
+            "**Kesalahan terdeteksi saat menjalankan subproses.**\n"
             f"exitCode : `{exitCode}`\n"
-            f"stdout : `{stdout.decode().strip()}`\n"
-            f"stderr : `{stderr.decode().strip()}`"
+            f"stdout   : `{stdout.decode().strip()}`\n"
+            f"stderr   : `{stderr.decode().strip()}`"
         )
         return exitCode
     return stdout.decode().strip(), stderr.decode().strip(), exitCode
 
 
-@register(outgoing=True, pattern=r"^\.mega(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.mega(?: |$)(.*)")
 async def mega_downloader(megadl):
-    await megadl.edit("`Collecting information...`")
+    await megadl.edit("`Mengumpulkan informasi...`")
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
     msg_link = await megadl.get_reply_message()
@@ -65,7 +65,7 @@ async def mega_downloader(megadl):
     elif msg_link:
         link = msg_link.text
     else:
-        return await megadl.edit("Usage: `.mega` **<MEGA.nz link>**")
+        return await megadl.edit("Gunakan: `.mega` **<MEGA.nz link>**")
     try:
         link = re.findall(r"\bhttps?://.*mega.*\.nz\S+", link)[0]
         """ - Mega changed their URL again - """
@@ -75,7 +75,7 @@ async def mega_downloader(megadl):
             await megadl.edit("`dukungan unduhan folder dihapus...`")
             return
     except IndexError:
-        await megadl.edit("`MEGA.nz tautan tidak ditemukan...`")
+        await megadl.edit("`MEGA.nz link tidak ditemukan...`")
         return None
     cmd = f"bin/megadown -q -m {link}"
     result = await subprocess_run(megadl, cmd)
@@ -91,13 +91,11 @@ async def mega_downloader(megadl):
     hex_key = data["hex_key"]
     hex_raw_key = data["hex_raw_key"]
     temp_file_name = file_name + ".temp"
-    temp_file_path = TEMP_DOWNLOAD_DIRECTORY + temp_file_name
-    file_path = TEMP_DOWNLOAD_DIRECTORY + file_name
+    temp_file_path = os.path.join(TEMP_DOWNLOAD_DIRECTORY, temp_file_name)
+    file_path = os.path.join(TEMP_DOWNLOAD_DIRECTORY, file_name)
     if os.path.isfile(file_path):
         try:
-            raise FileExistsError(
-                errno.EEXIST, os.strerror(
-                    errno.EEXIST), file_path)
+            raise FileExistsError(errno.EEXIST, os.strerror(errno.EEXIST), file_path)
         except FileExistsError as e:
             await megadl.edit(f"`{str(e)}`")
             return None
@@ -118,23 +116,24 @@ async def mega_downloader(megadl):
         estimated_total_time = round(downloader.get_eta())
         progress_str = "`{0}` | [{1}{2}] `{3}%`".format(
             status,
-            "".join(["█" for i in range(math.floor(percentage / 10))]),
-            "".join(["░" for i in range(10 - math.floor(percentage / 10))]),
+            "".join(["■" for i in range(math.floor(percentage / 10))]),
+            "".join(["▨" for i in range(10 - math.floor(percentage / 10))]),
             round(percentage, 2),
         )
         diff = time.time() - start
         try:
             current_message = (
-                f"`{file_name}`\n"
+                f"`{file_name}`\n\n"
+                "Status\n"
                 f"{progress_str}\n"
-                f"`Size:` {humanbytes(downloaded)} of {humanbytes(total_length)}\n"
-                f"`Speed:` {speed}\n"
-                f"`ETA:` {time_formatter(estimated_total_time)}\n"
-                f"`Duration:` {time_formatter(round(diff))}")
-            if round(
-                    diff %
-                    15.00) == 0 and (
-                    display_message != current_message or total_length == downloaded):
+                f"`{humanbytes(downloaded)} of {humanbytes(total_length)}"
+                f" @ {speed}`\n"
+                f"`ETA` -> {time_formatter(estimated_total_time)}\n"
+                f"`Duration` -> {time_formatter(round(diff))}"
+            )
+            if round(diff % 15.00) == 0 and (
+                display_message != current_message or total_length == downloaded
+            ):
                 await megadl.edit(current_message)
                 await asyncio.sleep(0.2)
                 display_message = current_message
@@ -161,13 +160,13 @@ async def mega_downloader(megadl):
         else:
             await megadl.edit(
                 f"`{file_name}`\n\n"
-                f"Successfully downloaded in: '`{file_path}`'.\n"
+                f"Berhasil diunduh di: `{file_path}`.\n"
                 f"Download took: {time_formatter(download_time)}."
             )
             return None
     else:
         await megadl.edit(
-            "`Gagal mengunduh, " "periksa Log heroku untuk lebih jelasnya.`"
+            "`Gagal mengunduh, " "cek log heroku untuk lebih detail.`"
         )
         for e in downloader.get_errors():
             LOGS.info(str(e))
@@ -181,16 +180,17 @@ async def decrypt_file(megadl, file_path, temp_file_path, hex_key, hex_raw_key):
     if await subprocess_run(megadl, cmd):
         os.remove(temp_file_path)
     else:
-        raise FileNotFoundError(
-            errno.ENOENT, os.strerror(
-                errno.ENOENT), file_path)
+        raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), file_path)
     return
 
+# LORD USERBOT
+
+# @LORDUSERBOT_GROUP
 
 CMD_HELP.update(
     {
-        "mega": ">`.mega <MEGA.nz link>`"
-        "\nUsage: Balas tautan MEGA.nz atau tempel tautan MEGA.nz Anda Ke "
-        "unduh file ke server userbot Anda."
+        "mega": "**Modules:** __Mega__\n\n**Perintah:** `.mega <MEGA.nz link>`"
+        "\n**Penjelasan:** Balas tautan MEGA.nz atau tempel tautan MEGA.nz Anda "
+        "untuk mengunduh file ke server userbot Anda."
     }
 )
