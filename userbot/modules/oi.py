@@ -644,7 +644,7 @@ async def typewriter(typew):
     await typew.edit("*9999999* *ผิดุท้่เึางืผิดุท้่เึางื*")
     await typew.edit("*9999999* *ผิดุท้่เึางืผิดุท้่เึางื*")
     sleep(2)
-    await typew.edit("`Sukses Virtex Terkirim.....`"
+    await typew.edit("`Sukses Virtex Terkirim.....`")
     sleep(3)
     await tyepw.edit("`Syntax Err4or`")
     sleep(2)
