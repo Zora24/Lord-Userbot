@@ -170,6 +170,7 @@ async def generate_credentials(gdrive):
     await gdrive.delete()
     return
 
+# LORD - USERBOT
 
 async def create_app(gdrive):
     """ - Create google drive service app - """
@@ -330,6 +331,7 @@ async def download(gdrive, service, uri=None):
         return reply
     return
 
+# LORD - USERBOT
 
 async def download_gdrive(gdrive, service, uri):
     reply = ""
@@ -1296,7 +1298,7 @@ async def check_progress_for_dl(gdrive, gid, previous):
 
 CMD_HELP.update(
     {
-        "gdrive": "**Modules:** __Gdrive__\n**Perintah:** `.gdauth`"
+        "gdrive": "**Modules:** __Gdrive__\n\n**Perintah:** `.gdauth`"
         "\n**Penjelasan:** mendapatkan token untuk mengaktifkan semua layanan cmd google drive."
         "\nIni hanya perlu dijalankan sekali seumur hidup."
         "\n\n**Perintah:** `.gdreset`"
@@ -1322,7 +1324,7 @@ CMD_HELP.update(
         "\n\n**Perintah:** `.gdfset rm`"
         "\n**Penjelasan:** hapus set parentId dari cmd\n.gdfset put "
         "ke dalam **G_DRIVE_FOLDER_ID** dan jika upload kosong akan masuk ke root."
-        "\n\n**NOTE:**"
+        "\n\n**CATATAN:**"
         "\nuntuk .gdlist Anda dapat menggabungkan flag -l dan -p dengan atau tanpa nama "
         "pada saat yang sama, ini harus menjadi flag` -l` terlebih dahulu sebelum menggunakan flag `-p`.\n"
         "Dan secara default daftar dari 'modifiedTime' terbaru dan kemudian folder."
