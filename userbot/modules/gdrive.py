@@ -47,6 +47,9 @@ from userbot.modules.aria import aria2, check_metadata
 from userbot.utils import human_to_bytes, humanbytes, progress, time_formatter
 from userbot.utils.exceptions import CancelProcess
 
+# LORD USERBOT
+# @LORDUSERBOT_GROUP
+# ALVIN GANTENG
 # =========================================================== #
 #                          STATIC                             #
 # =========================================================== #
@@ -100,7 +103,7 @@ if __ is not None:
 logger = logging.getLogger("googleapiclient.discovery")
 logger.setLevel(logging.ERROR)
 # =========================================================== #
-#                                                             #
+# @LORDUSERBOT_GROUP                                                            #
 # =========================================================== #
 
 # LORD USERBOT
