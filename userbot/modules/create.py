@@ -1,4 +1,13 @@
-# lorduserbot
+# Copyright (C) 2019 The Raphielscape Company LLC.
+#
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
+# you may not use this file except in compliance with the License.
+#
+# (c) Spechide - UniBorg
+# Port From UniBorg to UserBot by @afdulfauzan
+
+# LORD - USERBOT
+
 from telethon.tl import functions
 from userbot.events import register
 from userbot import CMD_HELP
@@ -24,32 +33,32 @@ async def telegraphs(grop):
                 result = await grop.client(functions.messages.ExportChatInviteRequest(
                     peer=created_chat_id,
                 ))
-                await grop.edit("Grup/Channel {} Berhasil Dibuat. Tekan [{}]({}) Untuk Melihatnya".format(group_name, group_name, result.link))
+                await grop.edit("Lord, Grup/Channel {} Berhasil Dibuat. Tekan [{}]({}) Untuk Melihatnya".format(group_name, group_name, result.link))
             except Exception as e:  # pylint:disable=C0103,W0703
                 await grop.edit(str(e))
         elif type_of_group == "g" or type_of_group == "c":
             try:
                 r = await grop.client(functions.channels.CreateChannelRequest(  # pylint:disable=E0602
                     title=group_name,
-                    about="`Selamat Datang Di Channel Ini!`",
+                    about="`Welcome!`",
                     megagroup=False if type_of_group == "c" else True
                 ))
                 created_chat_id = r.chats[0].id
                 result = await grop.client(functions.messages.ExportChatInviteRequest(
                     peer=created_chat_id,
                 ))
-                await grop.edit("Grup/Channel {} Berhasil Dibuat. Tekan [{}]({}) Untuk Melihatnya".format(group_name, group_name, result.link))
+                await grop.edit("Lord, Grup/Channel {} Berhasil Dibuat. Tekan [{}]({}) Untuk Melihatnya".format(group_name, group_name, result.link))
             except Exception as e:  # pylint:disable=C0103,W0703
                 await grop.edit(str(e))
 
 CMD_HELP.update({
     "membuat": "\
 Membuat\
-\nUsage: Untuk membuat Channel, Grup dan Grup bersama Bot.\
+\nPenjelasan: Untuk membuat Channel, Grup dan Grup bersama Bot.\
 \n\n`.buat g` <nama grup>\
-\nUsage: Membuat grup mu.\
+\nPenjelasan: Membuat grup mu.\
 \n\n`.buat gb` <nama grup>\
-\nUsage: Membuat Grup bersama bot.\
+\nPenjelasan: Membuat Grup bersama bot.\
 \n\n`.buat c` <nama channel>\
-\nUsage: Membuat sebuah Channel.\
+\nPenjelasan: Membuat sebuah Channel.\
 "})
