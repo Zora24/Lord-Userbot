@@ -4,6 +4,8 @@
 # you may not use this file except in compliance with the License.
 #
 
+# LORD - USERBOT
+
 import io
 import math
 import random
@@ -345,16 +347,14 @@ async def sticker_to_png(sticker):
             await sticker.delete()
     return
 
+# LORD - USERBOT
 
 CMD_HELP.update(
     {
-        "stickers": ">`.kang | .tikel [emoji('s)]?`"
-        "\nUsage: Balas .tikel Ke Sticker Atau Gambar Untuk Menambahkan Ke Pack Mu "
-        "\nBisa Memilih Emoji Sesuai Pilihanmu."
-        "\n\n>`.kang | .tikel  (emoji['s]]?` [nomer]?"
-        "\nUsage: Ambil Sticker/Gambar Ke Pack Baru Mu "
-        "Dan Bisa Pilih Emoji Sticker Mu."
-        "\n\n>`.stkrinfo`"
-        "\nUsage: Dapatkan Informasi Pack Sticker."
-        "\n\n>`.getsticker`"
-        "\nUsage: Balas Ke Stcker Untuk Mendapatkan File 'PNG' Sticker."})
+        "stickers": "**Modules:** __Stickers__\n\n**Perintah:** `.kang` | `.tikel (emoji) [nomer]`"
+        "\n**Penjelasan:** Balas ke sticker atau gambar `.tikel`  untuk menjadikannya sebagai sticker Anda "
+        "\nBisa memilih emoji sesuai pilihan Anda, dan bisa memilih nomer pack."
+        "\n\n**Perintah:** `.stkrinfo`"
+        "\n**Penjelasan:** Balas ke sticker, untuk mendapatkan informasi pack sticker."
+        "\n\n**Perintah:**`.getsticker`"
+        "\n**Penjelasan:** Balas ke sticker untuk mendapatkan File 'PNG' Sticker."})
