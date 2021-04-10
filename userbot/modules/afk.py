@@ -62,8 +62,8 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"-⚡ 𝗔 𝗙 𝗞 ⚡-\n** ⚡Master sedang afk⚡**\
-        \n**👉 ᴀʟᴀꜱᴀɴ :** `{string}`")
+        await afk_e.edit(f"**! 𝗔𝗙𝗞  ⚡**\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Sibuk Dulu Gw...\
+        \n𝘼𝙡𝙖𝙨𝙖𝙣: `{string}`\n╰✠╼━━━━━━❖━━━━━━━✠╯")
     else:
         await afk_e.edit("-⚡ 𝗔 𝗙 𝗞 ⚡-\n** ⚡Master sedang afk⚡**")
     if user.last_name:
