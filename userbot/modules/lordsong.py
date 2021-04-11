@@ -31,7 +31,7 @@ async def download_video(event):
     a = event.text
     if a[5] == "s":
         return
-    await event.edit("Searching...")
+    await event.edit("`Bismillah cari musik...`")
     url = event.pattern_match.group(1)
     if not url:
         return await event.edit("**Error**\nUsage - `.song <song name>`")
@@ -42,9 +42,9 @@ async def download_video(event):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await event.edit("`No matching song found...`")
+        return await event.edit("`Tidak dapat menemukan musik...`")
     type = "audio"
-    await event.edit(f"`Preparing to download {url}...`")
+    await event.edit(f"`Persiapan mendownload {url}...`")
     if type == "audio":
         opts = {
             "format": "bestaudio",
@@ -65,7 +65,7 @@ async def download_video(event):
             "logtostderr": False,
         }
     try:
-        await event.edit("`Getting info...`")
+        await event.edit("`Mendapatkan info...`")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
@@ -102,14 +102,14 @@ async def download_video(event):
     else:
         thumb = None
     upteload = """
-Uploading...
+Dikit lagi selesai download...
 Song name - {}
 By - {}
 """.format(
         rip_data["title"], rip_data["uploader"]
     )
     await event.edit(f"`{upteload}`")
-    CAPT = f"⫸ Song - {rip_data['title']}\n⫸ By - {rip_data['uploader']}\n"
+    CAPT = f"╭┈──────────────────┈ \n➥ Song - {rip_data['title']}\n➥ By - {rip_data['uploader']}\n╭┈──────────────────┈╯\n➥ [Quotes Tele](t.me/QuotesTele) | [Canda Anda](t.me/CandaAnda)\n╰┈────────────────┈─➤"
     await event.client.send_file(
         event.chat_id,
         f"{rip_data['id']}.mp3",
@@ -137,7 +137,7 @@ async def original(event):
     if not event.pattern_match.group(1):
         return await event.edit("give query to search.")
     vcky = event.pattern_match.group(1)
-    event = await event.edit("Getting lyrics..")
+    event = await event.edit("`Mencari lirik lagu...`")
     dc = random.randrange(1, 3)
     if dc == 1:
         fromvt = "AIzaSyAyDBsY3WRtB5YPC6aB_w8JAy6ZdXNc6FU"
