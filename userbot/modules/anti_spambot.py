@@ -182,7 +182,7 @@ async def ANTI_SPAMBOTS(welcm):
                         await welcm.client.send_message(
                             BOTLOG_CHATID,
                             "#ANTI_SPAMBOT REPORT\n"
-                            f"Pengguna    : [{check_user.first_name}](tg://user?id={check_user.id})\n"
+                            f"Pengguna    : [{users.first_name}](tg://user?id={check_user.id})\n"
                             f"ID Pengguna : `{check_user.id}`\n"
                             f"Pengguna    : {welcm.chat.title}\n"
                             f"ID Pesan    : `{welcm.chat_id}`\n"
