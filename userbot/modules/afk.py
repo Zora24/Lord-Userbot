@@ -64,7 +64,7 @@ async def set_afk(afk_e):
         AFKREASON = string
         await afk_e.edit(f"-\n** • ╭┈─────── ೄྀ࿐ ˊˎ-LORD °ANO°
 ╰┈➤❝ [ Afk ] ❞**\
-        \n**•ᴀʟᴀꜱᴀɴ :** `{string}`")
+        \n**• ᴀʟᴀꜱᴀɴ :** `{string}`")
     else:
         await afk_e.edit("-\n**• ╭┈─────── ೄྀ࿐ ˊˎ-
 LORD °ANO°
