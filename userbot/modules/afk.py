@@ -62,7 +62,7 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"-\n**• ╭┈─────── ೄྀ࿐ ˊˎ-LORD °ANO°
+        await afk_e.edit(f"-\n** • ╭┈─────── ೄྀ࿐ ˊˎ-LORD °ANO°
 ╰┈➤❝ [ Afk ] ❞**\
         \n**• ᴀʟᴀꜱᴀɴ :** `{string}`")
     else:
