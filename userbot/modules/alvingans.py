@@ -304,16 +304,16 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.foff(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit(".                       /¯ )\n"
-                     "                      /¯  /\n"
-                     "                    /    /\n"
-                     "              /´¯/'   '/´¯¯`•¸\n"
-                     "          /'/   /    /       /¨¯\\ \n"
-                     "        ('(   (   (   (  ¯~/'  ')\n"
-                     "         \\                        /\n"
-                     "          \\                _.•´\n"
-                     "            \\              (\n"
-                     "              \\  ")
+    await typew.edit(".                       /¯ )")
+    await typew.edit(".                       /¯ )\n                      /¯  /")
+    await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /")
+    await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸")
+    await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ ")
+    await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')")
+    await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /")
+    await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´")
+    await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (")
+    await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (\n              \\  ")
 
 CMD_HELP.update({
     "vip":
@@ -325,6 +325,6 @@ CMD_HELP.update({
     \nPenjelasan: jempol\
     \n\n`.awkwok`\
     \nPenjelasan: ketawa lari.\
-    \n\n`.ular` ; `.babi` ; `.foto` ; `.ajg`\
+    \n\n`.ular` ; `.babi` ; `.foff` ; `.foto` ; `.ajg`\
     \nPenjelasan: liat sendiri."
 })
