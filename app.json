@@ -1,7 +1,7 @@
 {
-  "name": "STRESS-Userbot",
-  "description": "[STRESS-Userbot] USERBOT INI DIBUAT UNTUK ORANG STRESS YANG LAGI GABUT.",
-  "logo": "https://telegra.ph/file/0dc3c39123da3bac9ffa0.jpg",
+  "name": "GEMBEL-ELITE",
+  "description": "[GEMBEL-ELITE] USERBOT INI DIBUAT UNTUK PARA GEMBEL YANG GADA KERJAAN.",
+  "logo": "https://telegra.ph/file/70ceb9eb8300d4b58f84a.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/ramadhani892/STRESS-Userbot",
-  "telegram": "https://t.me/Ramadhaniiiiiiiii1",
-  "success_url": "https://t.me/teman_random",
+  "repository": "https://github.com/jerryadisaputra/GEMBEL-ELITE",
+  "telegram": "https://t.me/Bacot_anjingg",
+  "success_url": "https://t.me/ALGTRR",
   "stack": "container",
   "env": {
     "API_KEY": {
