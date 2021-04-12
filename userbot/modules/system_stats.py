@@ -218,7 +218,7 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=r"^\.(?:stres|lordon)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:gembel|lordon)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -226,13 +226,13 @@ async def amireallyalive(alive):
     await alive.edit("⭐")
     output = (
         f"**╔══════════╣❃ ♕ ❃╠══════════╗** \n" 
-        f"**       ۩       ⬚⃝⃟    STRESS-USERBOT ⬚⃝⃟          ۩ ** \n"
+        f"**          ۩𝙶𝙴𝙼𝙱𝙴𝙻 𝙴𝙻𝙸𝚃𝙴۩ ** \n"
         f"**╚══════════╣❃ ♕ ❃╠══════════╝** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
-        f"**🤑 TUAN** \n"
+        f"**🤠 Presiden** \n"
         f" ➥ `{DEFAULTUSER}` \n"
-        f"**😋 Username** \n"
+        f"**🤠 Username** \n"
         f" ➥ `@{user.username}` \n"
         f"╭━┯━━━━━━━━━━━━━━━━┯━╮\n"
         f"┣[• `🙈 Telethon :`Ver {version.__version__} \n"
@@ -266,14 +266,14 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**¥▬▬▬▬▬▬❙۩ᬉིུ֛ ⃝ ꦿꦶ ۩❙▬▬▬▬▬▬¥**\n"
-        f"           **♕ STRESS USERBOT ♕** \n\n"
-        f"❃ **Tuan**     \n   ➥ `{DEFAULTUSER}` \n"
+        f"       **♕ GEMBEL-ELITE ♕** \n\n"
+        f"❃ **Presiden** \n   ➥ `{DEFAULTUSER}` \n"
         f"❃ **Username** \n   ➥ `@{user.username}` \n"
         f"❃ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
         f"❃ **Python**   \n   ➥ `Versi {python_version()}` \n"
         f"❃ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
         f"❃ **Modul**    \n   ➥ `{len(modules)}` \n\n"
-        f"❃ **REPO:** [STRESS-USERBOT](https://github.com/ramadhani892/STRESS-Userbot)\n❃ **GROUP: **[TEKAN](t.me/teman_random)\n❃ **CHANNEL: **[TEKAN](t.me/candu_musikk)\n❃ **PEMILIK:** [RAMA](t.me/Ramadhaniiiiiii1)\n"
+        f"❃ **REPO:** [GEMBEL-ELITE](https://github.com/jerryadisaputra/GEMBEL-ELITE)\n❃ **GROUP: **[TEKAN](t.me/ALGTRR)\n❃ **CHANNEL: **[TEKAN](t.me/Gmbl_ELITE)\n❃ **PEMILIK:** [JEJE](t.me/Bacot_anjingg)\n"
         f"**¥▬▬▬▬▬▬❙۩ᬉིུ֛ ⃝ ꦿꦶ ۩❙▬▬▬▬▬▬¥**")
     if ALIVE_LOGO:
         try:
@@ -301,18 +301,18 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**╠╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╣** \n"
-        f"**      👿STRESS-USERBOT👿** \n"
+        f"**    🥱𝙶𝙴𝙼𝙱𝙴𝙻 𝙴𝙻𝙸𝚃𝙴🥱 ** \n"
         f"**╠╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╣** \n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
-        f"┣|• `🤴 Majikan  :`{DEFAULTUSER} \n"
-        f"┣|• `💳 Username :`@{user.username} \n"
-        f"┣|• `👺 Telethon :`Ver {version.__version__} \n"
-        f"┣|• `🐉 Python   :`Ver {python_version()} \n"
-        f"┣|• `Branch   :`STRESS-USERBOT \n"
-        f"┣|• `Bot Ver  :`{BOT_VER} \n"
-        f"┣|• `Modules  :`{len(modules)} Modules \n"
+        f"┣|• `🤴 Presidenku  :`{DEFAULTUSER} \n"
+        f"┣|• `💳 Username    :`@{user.username} \n"
+        f"┣|• `👺 Telethon    :`Ver {version.__version__} \n"
+        f"┣|• `🐉 Python      :`Ver {python_version()} \n"
+        f"┣|• `Branch         :`GEMBEL-ELITE \n"
+        f"┣|• `Bot Ver        :`{BOT_VER} \n"
+        f"┣|• `Modules        :`{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
-        f"[REPO](https://github.com/ramadhani892/STRESS-Userbot) | [GROUP](t.me/teman_random) | [CHANNEL](t.me/candu_musikk) | [OWNER](t.me/Ramadhaniiiiiii1)")
+        f"[REPO](https://github.com/jerryadisaputra/GEMBEL-ELITE) | [GROUP](t.me/ALGTRR) | [CHANNEL](t.me/gmbl_ELITE) | [OWNER](t.me/Bacot_anjingg)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
