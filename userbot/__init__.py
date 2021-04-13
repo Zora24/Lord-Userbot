@@ -180,7 +180,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/99fb8faa72c1de0d41ea2.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/5f783e2abbc414fcffec8.jpg"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -319,7 +319,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```✓STRESS-Userbot Telah Aktif✓```")
+    await bot.send_message(BOTLOG_CHATID, "```✓GEMBEL-ELITE Userbot Telah Aktif✓```")
     return
 
 with bot:
@@ -390,7 +390,7 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("STRESS-Userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/ramadhani892/STRESS-Userbot.git)")
+                await event.reply("GEMBEL-ELITE Userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/jerryadisaputra/GEMBEL-ELITE.git)")
             else:
                 await event.reply(f"`Hai Orang stres {ALIVE_NAME}\n\nApa Kabarmu?`")
 
@@ -403,7 +403,7 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**🤪 Jumlah Modul Yang Tersedia:** `{}`\n               \n**🤪 Daftar Modul STRESS Userbot:** \n".format(
+                    text="{}\n\n**🤪 Jumlah Modul Yang Tersedia:** `{}`\n               \n**🤪 Daftar Modul GEMBEL-ELITE Userbot:** \n".format(
                         "**🥴 GEMBEL-ELITE Userbot**",
                         len(dugmeler),
                     ),
@@ -447,7 +447,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Harap Deploy Stress Userbot Anda Sendiri, Jangan Menggunakan Milik Lord {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy GEMBEL-ELIT Userbot Anda Sendiri, Jangan Menggunakan Milik Lord {ALIVE_NAME} ツ"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
