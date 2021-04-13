@@ -11,14 +11,14 @@
   </a>
 </p>  
 
-# Lord Userbot
+# Feri Userbot
 ![Lord Userbot Logo](https://telegra.ph/file/a8b3c53436c6afce8417b.jpg)
 
 <h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
 <p align="center">&nbsp;</p>
 
-### Repo Pribadi Userbot
-Repo Yang Dibuat [Feri](https://t.me/xflicks) Dari Berbagai Repo Userbot Github 
+### Repo Feri Userbot
+Repo Yang Dibuatnya [Feri](https://t.me/xflicks) Dari Berbagai Repo Userbot Github 
 
 
 ### CARA MENDAPATKAN STRING SESSON
