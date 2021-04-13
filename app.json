@@ -10,8 +10,8 @@
     "productivity"
   ],
   "repository": "https://github.com/ferikunn/Feri-Userbot",
-  "telegram": "https://t.me/liualvinas",
-  "success_url": "https://t.me/liualvinasmahaputra",
+  "telegram": "https://t.me/xflicks",
+  "success_url": "https://t.me/xflicks",
   "stack": "container",
   "env": {
     "API_KEY": {
