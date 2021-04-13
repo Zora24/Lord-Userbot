@@ -1,5 +1,5 @@
 <a href="https://cooltext.com"><img src="https://images.cooltext.com/5521154.gif" width="362" height="91" alt="FERI BOT" /></a>
-<br />Image by <a
+<br />
 
 
 <p align="center">
