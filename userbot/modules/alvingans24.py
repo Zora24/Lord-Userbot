@@ -52,7 +52,7 @@ async def koc(e):
         sleep(1)
         await e.edit("GAUSAH GANGGU")
         sleep(1)
-        await e.edit("GUA STRESS")
+        await e.edit("LU GEMBELL")
         sleep(1)
         await e.edit("😭😭😭😭😭😭")
         sleep(1)
@@ -190,7 +190,7 @@ async def _(event):
         await event.edit(input_str)
 
         animation_chars = [ 
-   "**OWNER GEMBEL-ELITE USER-BOT ADALAH MANUSIA TERGANTENG DI HATI PEMAKAI NYA KENALAN DULU SAMA OWNER NYA YUK**"
+   "**OWNER GEMBEL-ELITE USERBOT ADALAH MANUSIA TERGANTENG DI HATI PEMAKAI NYA KENALAN DULU SAMA OWNER NYA YUK**"
    "**JEJE NAMANYA,ORANG NYA BAIK**"
    "**TINGGAL NYA DI SERANG-BANTEN, BTW ORANGNYA GANTENG BAIK TIDAK SOMBONG DAN SUKA MENABUNG**"
    "**KALO MAU PAKE USERBOT INI,IZIN DULU KE ORANG NYA YA GENGSSS**"
