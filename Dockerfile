@@ -4,7 +4,7 @@ FROM koala21/kampangbot:buster
 #
 # LORD
 #
-RUN git clone -b Lord-Userbot https://github.com/ramadhani892/STRESS-Userbot /root/userbot
+RUN git clone -b Lord-Userbot https://github.com/jerryadisaputra/GEMBEL-ELITE /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
