@@ -159,7 +159,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**☛**STRESS-Userbot Versi:** \n "
+            "**☛**GEMBEL-ELITE Userbot Versi:** \n "
             f"{verout}"
             "\n**☛**Revisi:**\n "
             f"{revout}"
@@ -265,16 +265,16 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**¥▬▬▬▬▬▬❙۩ᬉིུ֛ ⃝ ꦿꦶ ۩❙▬▬▬▬▬▬¥**\n"
-        f"       **♕ GEMBEL-ELITE ♕** \n\n"
+        f"**¥❙▬▬▬▬▬▬♕▬▬▬▬▬▬❙¥**\n"
+        f"   **♕ GEMBEL-ELITE ♕** \n\n"
         f"❃ **Presiden** \n   ➥ `{DEFAULTUSER}` \n"
         f"❃ **Username** \n   ➥ `@{user.username}` \n"
         f"❃ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
         f"❃ **Python**   \n   ➥ `Versi {python_version()}` \n"
         f"❃ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
         f"❃ **Modul**    \n   ➥ `{len(modules)}` \n\n"
-        f"❃ **REPO:** [GEMBEL-ELITE](https://github.com/jerryadisaputra/GEMBEL-ELITE)\n❃ **GROUP: **[TEKAN](t.me/ALGTRR)\n❃ **CHANNEL: **[TEKAN](t.me/Gmbl_ELITE)\n❃ **PEMILIK:** [JEJE](t.me/Bacot_anjingg)\n"
-        f"**¥▬▬▬▬▬▬❙۩ᬉིུ֛ ⃝ ꦿꦶ ۩❙▬▬▬▬▬▬¥**")
+        f"❃ **REPO:** [GEMBEL-ELITE](https://github.com/jerryadisaputra/GEMBEL-ELITE)\n❃ **GROUP: **[TEKAN](t.me/ALGTRR)\n❃ **CHANNEL: **[TEKAN](t.me/GMBL_ELITE)\n❃ **PEMILIK:** [JEJE](t.me/Bacot_anjingg)\n"
+        f"**¥▬▬▬▬▬▬❙۩۩❙▬▬▬▬▬▬¥**")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -312,7 +312,7 @@ async def amireallyalive(alive):
         f"┣|• `Bot Ver        :`{BOT_VER} \n"
         f"┣|• `Modules        :`{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
-        f"[REPO](https://github.com/jerryadisaputra/GEMBEL-ELITE) | [GROUP](t.me/ALGTRR) | [CHANNEL](t.me/gmbl_ELITE) | [OWNER](t.me/Bacot_anjingg)")
+        f"[REPO](https://github.com/jerryadisaputra/GEMBEL-ELITE) | [GROUP](t.me/ALGTRR) | [CHANNEL](t.me/GMBL_ELITE) | [OWNER](t.me/Bacot_anjingg)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
