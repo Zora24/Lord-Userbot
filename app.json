@@ -151,7 +151,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "@teman_random",
+      "value": "@ALGTRR",
       "required": false
     },
     "ALIVE_NAME": {
@@ -159,7 +159,7 @@
       "required": false
     },
     "LORD_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .lord (Isi Terserah)",
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .gembel (Isi Terserah)",
       "required": false
     },
     "S_PACK_NAME": {
