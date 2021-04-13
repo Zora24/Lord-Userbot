@@ -17,8 +17,8 @@
 <h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
 <p align="center">&nbsp;</p>
 
-### Repo Lord Userbot
-Repo Yang Dibuat [Alvin](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github 
+### Repo Pribadi Userbot
+Repo Yang Dibuat [Feri](https://t.me/xflicks) Dari Berbagai Repo Userbot Github 
 
 
 ### CARA MENDAPATKAN STRING SESSON
