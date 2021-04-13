@@ -1,4 +1,5 @@
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/5501763.gif" width="473" height="82" alt="FERI USERBOT" /></a>
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/5521154.gif" width="362" height="91" alt="FERI BOT" /></a>
+<br />Image by <a
 
 
 <p align="center">
