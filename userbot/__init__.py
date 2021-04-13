@@ -101,7 +101,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/ramadhani892/STRESS-Userbot.git")
+    "https://github.com/jerryadisaputra/GEMBEL-ELITE.git")
 UPSTREAM_REPO_BRANCH = os.environ.get(
     "UPSTREAM_REPO_BRANCH", "Lord-Userbot")
 
@@ -404,7 +404,7 @@ with bot:
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
                     text="{}\n\n**🤪 Jumlah Modul Yang Tersedia:** `{}`\n               \n**🤪 Daftar Modul STRESS Userbot:** \n".format(
-                        "**🥴 STRESS-Userbot**",
+                        "**🥴 GEMBEL-ELITE Userbot**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -412,22 +412,22 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan STRESS🤪Userbot ",
+                    "Bantuan GEMBEL-ELITE🤪Userbot ",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    "**Stress🤪Userbot**",
-                    text="""**Anda Bisa Membuat STRESS Userbot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
+                    "**GEMBEL-ELITE🤪Userbot**",
+                    text="""**Anda Bisa Membuat GEMBEL-ELITE Userbot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Repo STRESS-Userbot",
-                                "https://github.com/ramadhani892/STRESS-Userbot"),
+                                "Repo GEMBEL-ELITE",
+                                "https://github.com/jerryadisaputra/GEMBEL-ELITE"),
                             custom.Button.url(
                                 "Pemilik Repo",
-                                "t.me/Ramadhaniiiiiiiii1")],
+                                "t.me/Bacot_anjingg")],
                     ],
                     link_preview=False,
                 )
@@ -496,7 +496,7 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = f"Harap Deploy STRESS Userbot Anda Sendiri, Jangan Menggunakan Milik Lord {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy GEMBEL-ELITE Userbot Anda Sendiri, Jangan Menggunakan Milik Lord {ALIVE_NAME} ツ"
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
