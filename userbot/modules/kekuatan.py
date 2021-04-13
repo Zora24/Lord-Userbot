@@ -5,9 +5,9 @@ from userbot.events import register
 from userbot import bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HELP
 
 
-@register(outgoing=True, pattern=r'^.jurus(:? |$)([1-8])?')
+@register(outgoing=True, pattern=r'^.tampar(:? |$)([1-8])?')
 async def _(fry):
-    await fry.edit("`LIAT NIH MUKE LU JELEK BANGET NIH...🤮🤮🤮`")
+    await fry.edit("`LIAT NIH MUKE GEMBEL LU GUA TAMPAR ...🤮🤮🤮`")
     level = fry.pattern_match.group(2)
     if fry.fwd_from:
         return
@@ -131,6 +131,6 @@ async def _(fry):
 
 CMD_HELP.update({
     "kekuatan":
-    "`.jurus` or `.jurus` [level(1-8)]"
+    "`.tampar` or `.tampar` [level(1-8)]"
     "\nUsage: untuk mengubah foto/sticker."
 })
