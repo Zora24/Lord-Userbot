@@ -45,7 +45,7 @@ Atau Bisa Gabung Ke Grup Lord Feribot -> [TEKAN DISINI](https://t.me/joinchat/TP
 ## <p align="center">DEPLOY LORD-USERBOT</p>
 
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.cohttps://github.com/ferikunn/Feri-Userbot"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/ferikunn/Feri-Userbot"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 <br>
 </p>
