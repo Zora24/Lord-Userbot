@@ -79,7 +79,7 @@ async def typewriter(typew):
                      "╬═╬ \n"
                      "╬═╬ \n"
                      "╬═╬ \n"
-                     "╬═╬ Hallo ANAK STRESS,AKU DATANG :) \n"
+                     "╬═╬ Hallo PARA GEMBEL,AKU DATANG :) \n"
                      "╬═╬☻/ \n"
                      "╬═╬/▌ \n"
                      "╬═╬/ \\ \n")
@@ -99,7 +99,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.bundir(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`DIDUGA BUNDIR KARNA DI GHOSTING...`          \n　　　　　|"
+    await typew.edit("`DADAH GEMBEL AKU MATI DULU...`          \n　　　　　|"
                      "\n　　　　　| \n"
                      "　　　　　| \n"
                      "　　　　　| \n"
@@ -122,7 +122,7 @@ async def typewriter(typew):
                      "──▄▀█▄▄▄─────▄▀█▄▄▄\n"
                      "▄▀──█▄▄──────█─█▄▄\n"
                      "─▄▄▄▀──▀▄───▄▄▄▀──▀▄\n"
-                     "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok Dasar Stress..`")
+                     "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok Dasar DASAR GEMBELL..`")
 
 
 @register(outgoing=True, pattern='^.ular(?: |$)(.*)')
@@ -273,8 +273,8 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`Proses Global banned...✅`")
     sleep(1)
-    await typew.edit("♛Perintah : `Tuan Ku`\n"
-                     "✣Pengguna :**Jamet Tolol!\n**"
+    await typew.edit("♛Perintah : `PRESIDEN`\n"
+                     "✣Pengguna :**SI GEMBEL!\n**"
                      "✣Aksi     :`Global banned!`")
 
 @register(outgoing=True, pattern='^.gmt(?: |$)(.*)')
@@ -317,7 +317,7 @@ async def typewriter(typew):
                      "`✥Penggunaan dyno Anda:`\n"
                      "**❉1000 Jam - 1000 Menit 100%**\n"
                      " ✤⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉✤\n"
-                     "✥ `Sisa dyno bulan ini:`\n"
+                     "✥ `Sisa NgeGembel Bulan ini:`\n"
                      "**999999 jam - 999999 Menit 999%**\n"
                      "╚════════════════════╝")
 
@@ -359,39 +359,39 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**INTINYA JANGAN LUPA MASUK!!**\n\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM\n"
-                     "@TEMAN_RANDOM")
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR\n"
+                     "@ALGTRR")
 CMD_HELP.update({
     "vip":
     "`.bulan` ; `.hati` ; `.gbn` ; `.tolol` ; `.gmt`\
