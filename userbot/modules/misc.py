@@ -76,12 +76,12 @@ async def killdabot(event):
 
 @register(outgoing=True, pattern="^.restart$")
 async def killdabot(event):
-    await event.edit("`Restarting Lord-Userbot...`")
+    await event.edit("`Restarting GEMBEL-ELITE...`")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#RESTARTBOT \n"
-                                        "`STRESS-Userbot Telah Di Restart`")
+                                        "`GEMBEL-ELITE Telah Di Restart`")
     await bot.disconnect()
     # Spin a new instance of bot
     execl(sys.executable, sys.executable, *sys.argv)
@@ -120,7 +120,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "♨ **Repo:** [GEMBEL-ELIT](https://github.com/jerryadisaputra/GEMBEL-ELIT)\n♨ **Pemilik:** [JEJE](t.me/Bacot_anjingg)\n♨ **CHANNEL:** [GEMBEL-ELIT](t.me/GMBL_ELITE)\n♨ **GROUP:** [ALLIGATOR](t.me/ALGTRR)"
+        "♨ **Repo:** [GEMBEL-ELITE](https://github.com/jerryadisaputra/GEMBEL-ELITE)\n♨ **Pemilik:** [JEJE](t.me/Bacot_anjingg)\n♨ **CHANNEL:** [GEMBEL-ELITE](t.me/GMBL_ELITE)\n♨ **GROUP:** [ALLIGATOR](t.me/ALGTRR)"
     )
 
 
@@ -159,7 +159,7 @@ async def okgoogle(img):
         photo = io.BytesIO()
         await bot.download_media(message, photo)
     else:
-        await img.edit("`Harap Balas Di Gambar Lord`")
+        await img.edit("`Harap Balas Di Gambar GEMBEL`")
         return
 
     if photo:
