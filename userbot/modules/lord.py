@@ -28,33 +28,33 @@ async def typewriter(typew):
                      "\n**Permisi Aku mau nimbrung**")
 
 
-@register(outgoing=True, pattern='^.rama(?: |$)(.*)')
+@register(outgoing=True, pattern='^.jeje(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**Rama ganteng☑️**")
-    await typew.edit("**Rama Ganteng✅**")
+    await typew.edit("**jeje ganteng☑️**")
+    await typew.edit("**jeje Ganteng✅**")
     sleep(1)
-    await typew.edit("**Rama baik☑️**")
-    await typew.edit("**Rama baik✅**")
+    await typew.edit("**deep gembel☑️**")
+    await typew.edit("**deep tolol✅**")
     sleep(2)
-    await typew.edit("**Rama setia☑️**")
-    await typew.edit("**Rama setia✅**")
+    await typew.edit("**tepen haram☑️**")
+    await typew.edit("**tepen pecundang✅**")
     sleep(1)
-    await typew.edit("**Rama Ga galak☑️**")
-    await typew.edit("**Rama Ga galak✅**")
+    await typew.edit("**oyee anak kontol☑️**")
+    await typew.edit("**oyee kepala botak✅**")
     sleep(1)
-    await typew.edit("**Kalian Semua stress,Kecuali rama😋**")
+    await typew.edit("**Kalian Semua GEMBEL,Kecuali JEJE😋**")
 
 
 # Create by myself @localheart
 
 CMD_HELP.update({
     "stres":
-    "`.stres`\
+    "`.gembel`\
     \nUsage: alive bot.\
     \n\n`.sadboy`\
     \nUsage: hiks\
-    \n\n`.punten` ; `.rama`\
+    \n\n`.punten` ; `.jeje`\
     \nUsage: coba aja.\
     \n\n`kosong`\
     \nUsage: tunggu update selanjutnya.\
