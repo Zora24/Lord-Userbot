@@ -31,7 +31,7 @@ DEF_UNAPPROVED_MSG = (
     f"__HALLO SELAMAT DATANG, SAYA ADALAH BABU YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
     "┏━━━━━━━━━━━━━━━━━━━\n"
     "┣[• `PESAN OTOMATIS`\n"
-    "┣[• `BY STRESS USERBOT`\n"
+    "┣[• `BY GEMBEL-ELITE`\n"
     "┗━━━━━━━━━━━━━━━━━━━")
 # =================================================================
 
