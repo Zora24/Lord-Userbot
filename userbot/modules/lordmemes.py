@@ -29,25 +29,25 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "ms":
+    if input_str == "ALG":
 
         await event.edit(input_str)
 
         animation_chars = [
 
-            "EFRY GILAAAA!!!",
-            "AYASS STRESS!!!",
-            "AICHAN ALAYY!!",
-            "PAPIH KONTOL!!",
-            "ANGGA NGONTOLLL!!!",
-            "MUYUN HODE!!!!",
-            "ENJEL BAPERAN, IDIHHH!!!",
-            "NADIA BUCINN, CUIHHH!!!!",
-            "RAKA GA KEREN!!",
-            "IQBAL GAYY",
-            "TIARA DEPRESI!!!",
-            "CUMA RAMA YANG WARAS, KALIAN STRESS!!",
-            "RAMA GANTENG NO DEBAT!!!"
+            "STEVEN GILAAAA!!!",
+            "DEEPZ AUTISS!!!",
+            "UPIN GEMBEL!!",
+            "CICA KONTOL!!",
+            "RAHMA NGONTOLLL!!!",
+            "ARRA TETE GEDE!!!!",
+            "OJAN ALAY, BUCINN!!!",
+            "CICA BUCINN, CUIHHH!!!!",
+            "DEEPZ SO GABTENG!!",
+            "STEVEN GAYY",
+            "SALSA ALOPYU!!!",
+            "CUMA JEJE YANG SEMPURNA, KALIAN GEMBELL!",
+            "JEJE PALING GANTENG NO DEBAT!!!"
         ]
 
         for i in animation_ttl:
@@ -211,7 +211,7 @@ async def _(event):
             "------------------>",
             "------>;(^。^)ノ",
             "(￣ー￣) MENINGGOY",
-            "**Mati Lu Anjing 😵😵**",
+            "**Mati Lu GEMBELL😵😵**",
         ]
 
         for i in animation_ttl:
