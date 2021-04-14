@@ -273,7 +273,7 @@ async def amireallyalive(alive):
         f"❃ **Python**   \n   ➥ `Versi {python_version()}` \n"
         f"❃ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
         f"❃ **Modul**    \n   ➥ `{len(modules)}` \n\n"
-        f"**¥▬▬▬▬▬▬❙۩۩❙▬▬▬▬▬▬¥**"
+        f"**¥▬▬▬▬▬▬❙۩۩❙▬▬▬▬▬▬¥**\n"
         f"❃ **REPO:** [GEMBEL-ELITE](https://github.com/jerryadisaputra/GEMBEL-ELITE)\n❃ **GROUP: **[TEKAN](t.me/ALGTRR)\n❃ **CHANNEL: **[TEKAN](t.me/GMBL_ELITE)\n❃ **PEMILIK:** [JEJE](t.me/Bacot_anjingg)\n"
     if ALIVE_LOGO:
         try:
