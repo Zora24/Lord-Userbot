@@ -225,9 +225,9 @@ async def amireallyalive(alive):
     await alive.edit("`Perkenalan diri...`")
     await alive.edit("⭐")
     output = (
-        f"**╔══════════╣╠══════════╗** \n" 
-        f"**        ۩𝙶𝙴𝙼𝙱𝙴𝙻 𝙴𝙻𝙸𝚃𝙴۩ ** \n"
-        f"**╚══════════╣╠══════════╝** \n"
+        f"**════════════════════** \n" 
+        f"**     𝙶𝙴𝙼𝙱𝙴𝙻 𝙴𝙻𝙸𝚃𝙴      ** \n"
+        f"**════════════════════** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
         f"**🤠 Presiden** \n"
@@ -266,15 +266,15 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**¥❙▬▬▬▬▬▬♕▬▬▬▬▬▬❙¥**\n"
-        f"    **♕ GEMBEL-ELITE ♕** \n\n"
+        f"       **♕ GEMBEL-ELITE ♕** \n\n"
         f"❃ **Presiden** \n   ➥ `{DEFAULTUSER}` \n"
         f"❃ **Username** \n   ➥ `@{user.username}` \n"
         f"❃ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
         f"❃ **Python**   \n   ➥ `Versi {python_version()}` \n"
         f"❃ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
         f"❃ **Modul**    \n   ➥ `{len(modules)}` \n\n"
+        f"**¥▬▬▬▬▬▬❙۩۩❙▬▬▬▬▬▬¥**"
         f"❃ **REPO:** [GEMBEL-ELITE](https://github.com/jerryadisaputra/GEMBEL-ELITE)\n❃ **GROUP: **[TEKAN](t.me/ALGTRR)\n❃ **CHANNEL: **[TEKAN](t.me/GMBL_ELITE)\n❃ **PEMILIK:** [JEJE](t.me/Bacot_anjingg)\n"
-        f"**¥▬▬▬▬▬▬❙۩۩❙▬▬▬▬▬▬¥**")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -303,13 +303,13 @@ async def amireallyalive(alive):
         f"**╠╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╣** \n"
         f"**      🥱𝙶𝙴𝙼𝙱𝙴𝙻 𝙴𝙻𝙸𝚃𝙴🥱 ** \n"
         f"**╠╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╣** \n"
-        f"┣|• `🤴 Presidenku  :`{DEFAULTUSER} \n"
-        f"┣|• `💳 Username    :`@{user.username} \n"
-        f"┣|• `👺 Telethon    :`Ver {version.__version__} \n"
-        f"┣|• `🐉 Python      :`Ver {python_version()} \n"
-        f"┣|• `Branch         :`GEMBEL-ELITE \n"
-        f"┣|• `Bot Ver        :`{BOT_VER} \n"
-        f"┣|• `Modules        :`{len(modules)} Modules \n"
+        f"• 🤴 Presiden :`{DEFAULTUSER} \n"
+        f"• 💳 Username :`@{user.username} \n"
+        f"• 👺 Telethon :`Ver {version.__version__} \n"
+        f"• 🐉 Python   :`Ver {python_version()} \n"
+        f"• Branch      :`GEMBEL-ELITE \n"
+        f"• Bot Ver     :`{BOT_VER} \n"
+        f"• Modules     :`{len(modules)} Modules \n"
         f"[REPO](https://github.com/jerryadisaputra/GEMBEL-ELITE) | [GROUP](t.me/ALGTRR) | [CHANNEL](t.me/GMBL_ELITE) | [OWNER](t.me/Bacot_anjingg)")
     if ALIVE_LOGO:
         try:
