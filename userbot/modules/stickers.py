@@ -24,8 +24,8 @@ from userbot.events import register
 
 
 KANGING_STR = [
-    "GUA AMBIL TIKEL LU TOLOL",
-    "GUA IJIN NGAMBIL TIKEL AJG",
+    "GUA COLONG TIKEL LU BANGSAT",
+    "GUA IJIN NGAMBIL TIKEL GEMBEL",
 ]
 
 
@@ -69,7 +69,7 @@ async def kang(args):
             is_anim = True
             photo = 1
         else:
-            return await args.edit("`FILE GA KEDUKUNG GOBLOK!`")
+            return await args.edit("`FILE GA KEDUKUNG GEMBEL!`")
     else:
         return await args.edit("`SUDAH NASIB MU NAK TIDAK BISA MENGAMBIL STIKER INI!`")
 
@@ -242,7 +242,7 @@ async def kang(args):
                 await bot.send_read_acknowledge(conv.chat_id)
 
         await args.edit(
-            f"**Berhasil Menambahkan Sticker Ke Pack, TEKAN** **[GOBLOK](t.me/addstickers/{packname})** **BIAR LU BISA LIAT PACK LU**",
+            f"**Berhasil Menambahkan Sticker Ke Pack, TEKAN** **[GEMBEL](t.me/addstickers/{packname})** **BIAR LU BISA LIAT STIKER YANG LU COLONG**",
             parse_mode="md",
         )
 
