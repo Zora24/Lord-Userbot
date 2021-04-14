@@ -107,31 +107,31 @@ async def pingme(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-@register(outgoing=True, pattern="^Xping$")
+@register(outgoing=True, pattern="^Gping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**S**")
-    await pong.edit("**ST**")
-    await pong.edit("**STR**")
-    await pong.edit("**STRE**")
-    await pong.edit("**STRES**")
-    await pong.edit("**STRESS**")
-    await pong.edit("**STRESS U**")
-    await pong.edit("**STRESS US**")
-    await pong.edit("**STRESS USE**")
-    await pong.edit("**STRESS USER**")
-    await pong.edit("**STRESS USERB**")
-    await pong.edit("**STRESS USERBO**")
-    await pong.edit("**STRESS USERBOT**")
-    await pong.edit("STRESS!")
+    await pong.edit("**G**")
+    await pong.edit("**GE**")
+    await pong.edit("**GEM**")
+    await pong.edit("**GEMB**")
+    await pong.edit("**GEMBE**")
+    await pong.edit("**GEMBEL**")
+    await pong.edit("**GEMBEL E**")
+    await pong.edit("**GEMBEL EL**")
+    await pong.edit("**GEMBEL ELI**")
+    await pong.edit("**GEMBEL ELIT**")
+    await pong.edit("**GEMBEL ELITE**")
+    await pong.edit("**GEMBEL ELITE User**")
+    await pong.edit("**GEMBEL ELITE userbot**")
+    await pong.edit("GEMBELL!")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**😝 PONG!**\n"
                     f"↪️ __Gawaras:__ "
                     f"`%sms` \n"
-                    f"↪️ __STRESS:__ "
+                    f"↪️ __GEMBEL:__ "
                     f"`{uptime}` \n" % (duration))
 
 
@@ -142,20 +142,20 @@ async def pingme(pong):
     start = datetime.now()
     await pong.edit("**P̤̈Ï̤N̤̈G̤̈**")
     await pong.edit("**p̲̅o̲̅n̲̅g̲̅**")
-    await pong.edit("**ᎦᎿᖇᏋᎦᎦ**")
-    await pong.edit("**UྂSྂEྂRྂBྂOྂTྂ**")
+    await pong.edit("**۰۪۫G۪۫۰۰۪۫E۪۫۰۰۪۫M۪۫۰۰۪۫B۪۫۰۰۪۫E۪۫۰۰۪۫L۪۫۰**")
+    await pong.edit("**ⒺⓁⒾⓉⒺ**")
     await pong.edit("**P̥ͦI̥ͦN̥ͦG̥ͦ**")
     await pong.edit("**P̥ͦO̥ͦN̥ͦG̥ͦ**")
     await pong.edit("**P̆ĬN̆Ğ**")
     await pong.edit("**P̆ŎN̆Ğ**")
-    await pong.edit("**S͟͟T͟͟R͟͟E͟͟S͟͟S͟͟ U͟͟S͟͟E͟͟R͟͟B͟͟O͟͟T͟͟**")
+    await pong.edit("**۰۪۫G۪۫۰۰۪۫E۪۫۰۰۪۫M۪۫۰۰۪۫B۪۫۰۰۪۫E۪۫۰۰۪۫L۪۫۰-۰۪۫E۪۫۰۰۪۫L۪۫۰۰۪۫I۪۫۰۰۪۫T۪۫۰۰۪۫E۪۫۰ Userbot**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**⿴⃟۪۪⃕᎒⃟ꕤ╌╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╌▩⃟❁⃟݄ࣾ݃⊣** \n"
                     f"**                 ➪PONG!➪** \n"
                     f"**⿴⃟۪۪⃕᎒⃟ꕤ╌╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╌▩⃟❁⃟݄ࣾ݃⊣** \n"          
-                    f"**♛ Sinyal  :** `%sms` \n"
-                    f"**♛ Tuanku   :** `{ALIVE_NAME}` \n"
+                    f"**♛ Sinyal     :** `%sms` \n"
+                    f"**♛ Preside    :** `{ALIVE_NAME}` \n"
                     f"**╼═════════════════╾** \n" % (duration)) 
           
     
@@ -210,7 +210,7 @@ async def speedtst(spd):
                    f"`{result['ping']}` \n"
                    "✺ **ISP:** "
                    f"`{result['client']['isp']}` \n"
-                   "✺ **BOT:** `STRESS Userbot`")
+                   "✺ **BOT:** `GEMBEL-ELITE`")
 
 
 def speed_convert(size):
@@ -259,10 +259,10 @@ async def pingme(pong):
     await pong.edit("`DUARRRR KONTOLL.....💥🤯💣`")
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit("😡 **STRESS!**\n`%sms`" % (duration))
+    await pong.edit("😡 **GEMBEL!**\n`%sms`" % (duration))
 
 CMD_HELP.update(
-    {"ping": "`Ping` ; `Lping` ; `Xping` ; `Sping`\
+    {"ping": "`Ping` ; `Lping` ; `Gping` ; `Sping`\
     \nUsage: Untuk menunjukkan ping bot.\
     \n\n`Speed`\
     \nUsage: Untuk menunjukkan kecepatan.\
