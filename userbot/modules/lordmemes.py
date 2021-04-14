@@ -43,9 +43,9 @@ async def _(event):
             "ARRA TETE GEDE!!!!",
             "OJAN ALAY, BUCINN!!!",
             "CICA BUCINN, CUIHHH!!!!",
-            "DEEPZ SO GABTENG!!",
-            "STEVEN GAYY",
-            "SALSA ALOPYU!!!",
+            "DEEPZ SO GANTENG!!",
+            "MICIN GAYY",
+            "SALSA ALOPYU❤❤❤❤!!!",
             "CUMA JEJE YANG SEMPURNA, KALIAN GEMBELL!",
             "JEJE PALING GANTENG NO DEBAT!!!"
         ]
