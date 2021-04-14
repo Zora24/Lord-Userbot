@@ -225,9 +225,9 @@ async def amireallyalive(alive):
     await alive.edit("`Perkenalan diri...`")
     await alive.edit("⭐")
     output = (
-        f"**╔══════════╣❃ ♕ ❃╠══════════╗** \n" 
-        f"**          ۩𝙶𝙴𝙼𝙱𝙴𝙻 𝙴𝙻𝙸𝚃𝙴۩ ** \n"
-        f"**╚══════════╣❃ ♕ ❃╠══════════╝** \n"
+        f"**╔══════════╣╠══════════╗** \n" 
+        f"**        ۩𝙶𝙴𝙼𝙱𝙴𝙻 𝙴𝙻𝙸𝚃𝙴۩ ** \n"
+        f"**╚══════════╣╠══════════╝** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
         f"**🤠 Presiden** \n"
@@ -266,7 +266,7 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**¥❙▬▬▬▬▬▬♕▬▬▬▬▬▬❙¥**\n"
-        f"   **♕ GEMBEL-ELITE ♕** \n\n"
+        f"    **♕ GEMBEL-ELITE ♕** \n\n"
         f"❃ **Presiden** \n   ➥ `{DEFAULTUSER}` \n"
         f"❃ **Username** \n   ➥ `@{user.username}` \n"
         f"❃ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
@@ -301,9 +301,8 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**╠╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╣** \n"
-        f"**    🥱𝙶𝙴𝙼𝙱𝙴𝙻 𝙴𝙻𝙸𝚃𝙴🥱 ** \n"
+        f"**      🥱𝙶𝙴𝙼𝙱𝙴𝙻 𝙴𝙻𝙸𝚃𝙴🥱 ** \n"
         f"**╠╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╣** \n"
-        f"┏━━━━━━━━━━━━━━━━━━━ \n"
         f"┣|• `🤴 Presidenku  :`{DEFAULTUSER} \n"
         f"┣|• `💳 Username    :`@{user.username} \n"
         f"┣|• `👺 Telethon    :`Ver {version.__version__} \n"
@@ -311,7 +310,6 @@ async def amireallyalive(alive):
         f"┣|• `Branch         :`GEMBEL-ELITE \n"
         f"┣|• `Bot Ver        :`{BOT_VER} \n"
         f"┣|• `Modules        :`{len(modules)} Modules \n"
-        f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
         f"[REPO](https://github.com/jerryadisaputra/GEMBEL-ELITE) | [GROUP](t.me/ALGTRR) | [CHANNEL](t.me/GMBL_ELITE) | [OWNER](t.me/Bacot_anjingg)")
     if ALIVE_LOGO:
         try:
