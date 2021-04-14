@@ -91,7 +91,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await asyncio.sleep(5)
             return await event.delete()
         else:
-            await event.edit("`STRESS-Userbot Berhasil Di Deploy!\n" "Restarting, Mohon Menunggu Lord.....`")
+            await event.edit("`GEMBEL-ELITE Userbot Berhasil Di Deploy!\n" "Restarting, Mohon Menunggu PAK.....`")
             await asyncio.sleep(15)
             await event.delete()
 
@@ -115,18 +115,18 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('**✥ STRESS-Userbot** `Berhasil Di Update!`')
+    await event.edit('**✥ GEMBEL-ELITE Userbot** `Berhasil Di Update!`')
     await asyncio.sleep(1)
-    await event.edit('**✥ STRESS-Userbot** `Di Restart....`')
+    await event.edit('**✥ GEMBEL-ELITE Userbot** `Di Restart....`')
     await asyncio.sleep(1)
-    await event.edit('`Mohon Menunggu Beberapa Detik Jing ツ`')
+    await event.edit('`Mohon Menunggu Beberapa Detik Ya Kontol ツ`')
     await asyncio.sleep(10)
     await event.delete()
 
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID, "#BOT \n"
-            "**Lord-Userbot Telah Di Perbarui ツ**")
+            "**GEMBEL-ELITE Userbot Telah Di Perbarui ツ**")
         await asyncio.sleep(100)
         await event.delete()
 
@@ -144,7 +144,7 @@ async def upstream(event):
     off_repo = UPSTREAM_REPO_URL
     force_update = False
     try:
-        txt = "`Maaf Lord Pembaruan Tidak Dapat Di Lanjutkan Karna "
+        txt = "`Maaf PAK Pembaruan Tidak Dapat Di Lanjutkan Karna "
         txt += "Beberapa Masalah Terjadi`\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
@@ -188,13 +188,13 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n**✣ STRESS-Userbot Sudah Versi Terbaru**\n')
+            f'\n**✣ GEMBEL-ELITE Userbot Sudah Versi ELITE**\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**✣ Pembaruan Untuk STRESS-Userbot [STRESS-USERBOT]:\n\n✣ Pembaruan:**\n`{changelog}`'
+        changelog_str = f'**✣ Pembaruan Untuk GEMBEL-ELITE Userbot [GEMBEL-ELITE Userbot]:\n\n✣ Pembaruan:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -208,18 +208,18 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**Perintah Untuk Update Stress Userbot**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari STRESS Userbot.__')
+        return await event.respond('**Perintah Untuk Update GEMBEL-ELITE Userbot**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari GEMBEL-ELITE Userbot.__')
 
     if force_update:
         await event.edit(
             '`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`')
     else:
-        await event.edit('`✲ Proses Update Stress-Userbot, Loading....1%`')
-        await event.edit('`✲ Proses Update Stress-Userbot, Loading....20%`')
-        await event.edit('`✲ Proses Update Stress-Userbot, Loading....35%`')
-        await event.edit('`✲ Proses Update Stress-Userbot, Loading....77%`')
-        await event.edit('`✲ Proses Update Stress-Userbot, Updating...90%`')
-        await event.edit('`✲ Proses Update Stress-Userbot, Mohon Menunggu Anjeeng....100%`')
+        await event.edit('`✲ Proses Update GEMBEL-ELITE Userbot, Loading....1%`')
+        await event.edit('`✲ Proses Update GEMBEL-ELITE Userbot, Loading....20%`')
+        await event.edit('`✲ Proses Update GEMBEL-ELITE Userbot, Loading....35%`')
+        await event.edit('`✲ Proses Update GEMBEL-ELITE Userbot, Loading....77%`')
+        await event.edit('`✲ Proses Update GEMBEL-ELITE Userbot, Updating...90%`')
+        await event.edit('`✲ Proses Update GEMBEL-ELITE Userbot, Mohon Menunggu YA GEMBEL....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
@@ -234,9 +234,9 @@ async def upstream(event):
 CMD_HELP.update({
     'update':
     ".update"
-    "\nUsage: Untuk Melihat Pembaruan Terbaru STRESS-Userbot."
+    "\nUsage: Untuk Melihat Pembaruan Terbaru GEMBEL-ELITE Userbot."
     "\n\n.update now"
-    "\nUsage: Memperbarui STRESS-Userbot."
+    "\nUsage: Memperbarui GEMBEL-ELITE Userbot."
     "\n\n.update deploy"
-    "\nUsage: Memperbarui STRESS-Userbot Dengan Cara Deploy Ulang."
+    "\nUsage: Memperbarui GEMBEL-ELITE Userbot Dengan Cara Deploy Ulang."
 })
