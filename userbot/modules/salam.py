@@ -45,7 +45,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^B(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**BACOT DAH LU, GOBLOK!!!!**")
+    await typew.edit("**BACOT DAH LU, GEMBEL!!!!**")
 
 
 @register(outgoing=True, pattern='^M(?: |$)(.*)')
@@ -80,13 +80,13 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^J(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**JELEK BANGET LU, NAJIS CUIHHHH!!!**")
+    await typew.edit("**JELEK BANGET MUKA GEMBEL LOE, NAJIS ANAK HARAM!!!**")
 
 
 @register(outgoing=True, pattern='^A(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**PASANG PP DULU DEK,BIAR ORANG SEGRUP TAU BETAPA HINA NYA MUKA LU😆**")
+    await typew.edit("**ANAK HARAM BELAGU BET DAH,LAHIR DARI RAHIM GEMBEL JADI JANGAN SO SO NINGGI KATA KATA LOE😆**")
 
 @register(outgoing=True, pattern='^X(?: |$)(.*)')
 async def typewriter(typew):
