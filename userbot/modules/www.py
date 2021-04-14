@@ -155,7 +155,7 @@ async def pingme(pong):
                     f"**                 ➪PONG!➪** \n"
                     f"**⿴⃟۪۪⃕᎒⃟ꕤ╌╌╌╌╌╼⃘۪۪❁⃘̸۪۪⃗╾╌╌╌╌╌▩⃟❁⃟݄ࣾ݃⊣** \n"          
                     f"**♛ Sinyal     :** `%sms` \n"
-                    f"**♛ Preside    :** `{ALIVE_NAME}` \n"
+                    f"**♛ Presiden   :** `{ALIVE_NAME}` \n"
                     f"**╼═════════════════╾** \n" % (duration)) 
           
     
@@ -256,7 +256,7 @@ async def pingme(pong):
     await pong.edit("`...🏎️.................`")
     await pong.edit("`..🏎️..................`")
     await pong.edit("`.🏎️...................`")
-    await pong.edit("`DUARRRR KONTOLL.....💥🤯💣`")
+    await pong.edit("`DUARRRR GEMBEL.....💥🤯💣`")
     end = datetime.now()
     duration = (end - start).microseconds / 9000
     await pong.edit("😡 **GEMBEL!**\n`%sms`" % (duration))
