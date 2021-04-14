@@ -326,7 +326,7 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Woi....**")
     sleep(3)
-    await typew.edit("**Grup banyak anggota yakan**")
+    await typew.edit("**Grup Alligator banyak anggota yakan**")
     sleep(1)
     await typew.edit("**Tapi ga ada yg nimbrung..**")
     sleep(1)
