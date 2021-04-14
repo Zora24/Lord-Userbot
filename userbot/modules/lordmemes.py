@@ -35,19 +35,20 @@ async def _(event):
 
         animation_chars = [
 
-            "STEVEN GILAAAA!!!",
-            "DEEPZ AUTISS!!!",
-            "UPIN GEMBEL!!",
-            "CICA KONTOL!!",
-            "RAHMA NGONTOLLL!!!",
-            "ARRA TETE GEDE!!!!",
-            "OJAN ALAY, BUCINN!!!",
+            "ALLIGATOR NIHHH BOS!!!",
+            "STEVEN GANTENG TAPI PAKBOY!!!",
+            "DEEPZ GANTENG CAP BUAYA!!!",
+            "UPIN GANTENG HOBY COLI!!",
+            "CICA CANTIK SUKA OPEN BO!!!",
+            "RAHMA CANTIK SUKA VCS!!!",
+            "ARRA CANTIK SUKA VCS!!!!",
+            "MICIN GANTENG TAPI PAWANG!!!",
             "CICA BUCINN, CUIHHH!!!!",
-            "DEEPZ SO GANTENG!!",
-            "MICIN GAYY",
-            "SALSA ALOPYU❤❤❤❤!!!",
-            "CUMA JEJE YANG SEMPURNA, KALIAN GEMBELL!",
-            "JEJE PALING GANTENG NO DEBAT!!!"
+            "NAH ITU HIGH CLASS ALG!!",
+            "NEXT OWNER",
+            "SALSA PUNYA JEJE ALOPYU❤❤❤❤!!!",
+            "OWNER ALG PALING TAMPAN, KALIAN SEMUA GEMBELL!",
+            "NAH ITU TADI STAFF ALLIGATOR YANG DIDIRIKAN OLEH JEJE!!!"
         ]
 
         for i in animation_ttl:
