@@ -35,20 +35,20 @@ async def _(event):
 
         animation_chars = [
 
-            "ALLIGATOR NIHHH BOS!!!",
-            "SEMUA MEMBER DAN STAFF NYA CAKEP!!!",
-            "DEEPZ GANTENG CAP BUAYA!!!",
-            "UPIN GANTENG HOBY COLI!!",
-            "CICA CANTIK SUKA OPEN BO!!!",
-            "RAHMA CANTIK SUKA VCS!!!",
-            "ARRA CANTIK SUKA VCS!!!!",
-            "MICIN GANTENG TAPI PAWANG!!!",
-            "STEVEN GANTENG TAPI PAKBOY!!!!",
-            "SALSA PUNYA JEJE ALOPYU❤❤❤!!",
-            "NAH ITU PARA STAFF NYA",
-            "NAH INI PENDIRI/OWNERNYA !!!",
-            "KENALIN NIH OWNER PALING TAMPAN, DIBANDING STAFF NYA!",
-            "NAMA GUA JEJE, GUA PERWAKILAN DARI ALLIGATOR MENGUCAPKAN KALIAN GEMBEL!!!"
+            "ALLIGATOR LEWAT NIH NIHHH!!!",
+            "AYEE, RAHMA, MICIN!!!",
+            "JEN, FAREL, SALMA!!!",
+            "ARRA, KENN, NOR!!",
+            "CICA, IKBAL, SEREIN!!!",
+            "RARA, UPIN, BABY!!!",
+            "PIANA, CHI, OPAL!!!!",
+            "BIE, GITA, JEHA!!!",
+            "AIN, AW, MARIA!!!!",
+            "GIN, RYL, CECE!!",
+            "YAJUJ, RAFI",
+            "5 PARTAI ALG!!!",
+            "JEJE, DEEPZ, RIOO, STEVEN, UPIN/OYEE!",
+            "CIRCLE ALLIGATOR LEWAT NIHH!!!"
         ]
 
         for i in animation_ttl:
