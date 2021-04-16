@@ -77,10 +77,10 @@ async def typewriter(typew):
     await typew.edit("**MACAM BAGUS AE LU BEGITU GEMBEL, AJAK BAPAK LU SINI RIBUT SAMA GUA!!**")
 
 
-@register(outgoing=True, pattern='^J(?: |$)(.*)')
+@register(outgoing=True, pattern='^ALG(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**JELEK BANGET MUKA GEMBEL LOE, NAJIS ANAK HARAM!!!**")
+    await typew.edit("**ALLIGATOR LEWAT NIH TOD!!!**")
 
 
 @register(outgoing=True, pattern='^A(?: |$)(.*)')
@@ -140,7 +140,7 @@ CMD_HELP.update({
 \nUsage: Haha sokap.\
 \n\n`V`\
 \nUsage: Hujat Orang caper.\
-\n\n`J`\
+\n\n`ALG`\
 \nUsage: Hujat Jamet.\
 \n\n`A`\
 \nUsage: Hujat yang gapunya muka.\
