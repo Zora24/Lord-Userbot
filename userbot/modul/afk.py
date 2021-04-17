@@ -24,10 +24,10 @@ dari userbot.events import register
 
 # ========================= KONSTAN ======================= =====
 AFKSTR = [
-    f "** Maaf {ALIVE_NAME} Sedang Depresi! **",
-    f "** Maaf {ALIVE_NAME} Sedang Depresi \ n Tunggu Sampai Dia Kembali Online! **",
-    f "** LORD {ALIVE_NAME} Sedang Depresi \ n Tunggulah Sampai Online **",
-    f "** Maaf {ALIVE_NAME} Sedang Depresi! **",
+    f "** Rama {ALIVE_NAME} Sedang AFK! **",
+    f "** Rama {ALIVE_NAME} Sedang AFK \ n Tunggu Sampai Dia Kembali Online! **",
+    f "** Rama {ALIVE_NAME} Sedang AFK \ n Tunggulah Sampai Online **",
+    f "** Rama {ALIVE_NAME} Sedang AFK! **",
 ]
 
 
@@ -62,16 +62,17 @@ async def set_afk (afk_e):
     afk_start = start_1.replace (mikrodetik = 0)
     jika string:
         AFKREASON = string
-        tunggu afk_e.edit (f "** ✘ SORRY! ** \ n ** Gua Lagi Stress! ** \
-        \ n☛ ** Alasan: ** `{string}` ")
+        tunggu afk_e.edit (f "** ✘ Rama ** \ n ** sedang AFK! ** \
+        \ n☛ ** ✘
+✦҈͜͡➳ Alasan: ** `{string}` ")
     lain:
-        tunggu afk_e.edit ("** ✘ SORRY! ** \ n ** Gua Lagi Stress! **")
+        tunggu afk_e.edit ("** ✘ Rama ** \ n ** sedang AFK! **")
     jika user.last_name:
-        menunggu afk_e.client (UpdateProfileRequest (first_name = user.first_name, last_name = user.last_name + "【STRES】"))
+        menunggu afk_e.client (UpdateProfileRequest (first_name = user.first_name, last_name = user.last_name + "【OFF】"))
     lain:
-        menunggu afk_e.client (UpdateProfileRequest (first_name = user.first_name, last_name = "【STRES】"))
+        menunggu afk_e.client (UpdateProfileRequest (first_name = user.first_name, last_name = "【OFF】"))
     jika BOTLOG:
-        tunggu afk_e.client.send_message (BOTLOG_CHATID, "#SORRY! \ n ** Gua Lagi Stress! **")
+        tunggu afk_e.client.send_message (BOTLOG_CHATID, "#Rama \ n ** sedang AFK! **")
     ISAFK = Benar
     afk_time = datetime.now () # pylint: nonaktifkan = E0602
     naikkan StopPropagation
@@ -90,7 +91,7 @@ asinkron def type_afk_is_not_true (notafk):
     afk_end global
     pengguna = menunggu bot.get_me () # pylint: nonaktifkan = E0602
     last = user.last_name
-    jika terakhir dan terakhir. akhiran dengan ("【STRES】"):
+    jika terakhir dan terakhir. akhiran dengan ("【OFF】"):
         last1 = terakhir [: - 12]
     lain:
         last1 = ""
@@ -166,8 +167,9 @@ async def mention_afk (sebutkan):
                 afk_since = f "` {int (detik)} Detik` "
             jika mention.sender_id tidak ada di USERS:
                 jika AFKREASON:
-                    tunggu mention.reply (f "** ✘ RAMA {ALIVE_NAME} Lagi stress ** {afk_since} ** Yang Lalu. ** \
-                        \ n☛ ** Alasan: ** `{AFKREASON}` ")
+                    tunggu mention.reply (f "** ✘ Rama {ALIVE_NAME} sedang AFK ** {afk_since} ** Yang Lalu. ** \
+                        \ n☛ ** ✘
+✦҈͜͡➳ Alasan: ** `{AFKREASON}` ")
                 lain:
                     menunggu mention.reply (str (choice (AFKSTR)))
                 USERS.update ({mention.sender_id: 1})
@@ -175,8 +177,9 @@ async def mention_afk (sebutkan):
             elif mention.sender_id di USERS:
                 jika PENGGUNA [mention.sender_id]% randint (2, 4) == 0:
                     jika AFKREASON:
-                        tunggu mention.reply (f "** ✘ Lord Masih AFK ** {afk_since} ** Yang Lalu. ** \
-                            \ n☛ ** Alasan: ** `{AFKREASON}` ")
+                        tunggu mention.reply (f "** ✘ Rama Masih AFK ** {afk_since} ** Yang Lalu. ** \
+                            \ n☛ ** ✘
+✦҈͜͡➳ Alasan: ** `{AFKREASON}` ")
                     lain:
                         menunggu mention.reply (str (choice (AFKSTR)))
                     PENGGUNA [mention.sender_id] = PENGGUNA [mention.sender_id] + 1
@@ -243,8 +246,9 @@ async def afk_on_pm (pengirim):
                 afk_since = f "` {int (detik)} Detik` "
             jika sender.sender_id tidak ada di USERS:
                 jika AFKREASON:
-                    menunggu sender.reply (f "✘ ** Lord Sedang AFK ** {afk_since} ** Yang Lalu **. \
-                        \ n☛ ** Alasan **: `{AFKREASON}` ")
+                    menunggu sender.reply (f "** ✘ Rama Sedang AFK ** {afk_since} ** Yang Lalu **. \
+                        \ n☛ ** ✘
+✦҈͜͡➳ Alasan **: `{AFKREASON}` ")
                 lain:
                     menunggu pengirim.reply (str (pilihan (AFKSTR)))
                 USERS.update ({sender.sender_id: 1})
@@ -252,8 +256,9 @@ async def afk_on_pm (pengirim):
             elif apprv dan sender.sender_id di PENGGUNA:
                 jika PENGGUNA [sender.sender_id]% randint (2, 4) == 0:
                     jika AFKREASON:
-                        menunggu sender.reply (f "✘ ** Lord Sedang AFK ** {afk_since} ** Yang Lalu. ** \
-                            \ n☛ ** Alasan **: `{AFKREASON}` ")
+                        menunggu sender.reply (f "**✘ Rama Sedang AFK ** {afk_since} ** Yang Lalu. ** \
+                            \ n☛ ** ✘
+✦҈͜͡➳ Alasan **: `{AFKREASON}` ")
                     lain:
                         menunggu pengirim.reply (str (pilihan (AFKSTR)))
                     PENGGUNA [sender.sender_id] = PENGGUNA [sender.sender_id] + 1
