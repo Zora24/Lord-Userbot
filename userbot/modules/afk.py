@@ -1,13 +1,13 @@
-""" Userbot module which contains afk-related commands """
+"" "Modul Userbot yang berisi perintah yang berhubungan dengan afk" ""
 
-from datetime import datetime
-import time
-from random import choice, randint
+dari datetime import datetime
+waktu impor
+dari pilihan impor acak, randint
 
-from telethon.events import StopPropagation
-from telethon.tl.functions.account import UpdateProfileRequest
+dari telethon.events impor StopPropagation
+dari telethon.tl.functions.account impor UpdateProfileRequest
 
-from userbot import (  # noqa pylint: disable=unused-import isort:skip
+dari userbot import (# noqa pylint: disable = unused-import isort: skip
     AFKREASON,
     BOTLOG,
     BOTLOG_CHATID,
@@ -16,258 +16,262 @@ from userbot import (  # noqa pylint: disable=unused-import isort:skip
     COUNT_MSG,
     ISAFK,
     PM_AUTO_BAN,
-    USERS,
+    PENGGUNA,
     PM_AUTO_BAN,
     bot,
 )
-from userbot.events import register
+dari userbot.events import register
 
-# ========================= CONSTANTS ============================
+# ========================= KONSTAN ======================= =====
 AFKSTR = [
-    f"**• ᴍᴀᴀꜰ ʟᴏʀᴅ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!**",
-    f"**• ᴍᴀᴀꜰ ʟᴏʀᴅ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n • ᴛᴜɴɢɢᴜ ꜱᴀᴍᴘᴀɪ ᴅɪᴀ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ!**",
-    f"**• ʟᴏʀᴅ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!\n • ᴛᴜɴɢɢᴜʟᴀʜ ꜱᴀᴍᴘᴀɪ ᴏɴʟɪɴᴇ!**",
-    f"**• ᴍᴀᴀꜰ ʟᴏʀᴅ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!**",
+    f "** Rama {ALIVE_NAME} Sedang AFK! **",
+    f "** Rama {ALIVE_NAME} Sedang AFK \ n Tunggu Sampai Dia Kembali Online! **",
+    f "** Rama {ALIVE_NAME} Sedang AFK \ n Tunggulah Sampai Online **",
+    f "** Rama {ALIVE_NAME} Sedang AFK! **",
 ]
 
 
-global USER_AFK  # pylint:disable=E0602
-global afk_time  # pylint:disable=E0602
-global afk_start
-global afk_end
+global USER_AFK # pylint: nonaktifkan = E0602
+global afk_time # pylint: nonaktifkan = E0602
+afk_start global
+afk_end global
 USER_AFK = {}
-afk_time = None
+afk_time = Tidak ada
 afk_start = {}
 
-# =================================================================
+# ================================================= ================
 
 
-@register(outgoing=True, pattern="^.afk(?: |$)(.*)", disable_errors=True)
-async def set_afk(afk_e):
-    """ For .afk command, allows you to inform people that you are afk when they message you """
-    message = afk_e.text  # pylint:disable=E0602
-    string = afk_e.pattern_match.group(1)
-    global ISAFK
-    global AFKREASON
-    global USER_AFK  # pylint:disable=E0602
-    global afk_time  # pylint:disable=E0602
-    global afk_start
-    global afk_end
-    user = await bot.get_me()  # pylint:disable=E0602
-    global reason
+@register (outgoing = True, pattern = "^. dhlh (?: | $) (. *)", disable_errors = True)
+async def set_afk (afk_e):
+    "" "Untuk perintah .afk, memungkinkan Anda memberi tahu orang-orang bahwa Anda afk saat mereka mengirimi Anda pesan" ""
+    pesan = afk_e.text # pylint: nonaktifkan = E0602
+    string = afk_e.pattern_match.group (1)
+    ISAFK global
+    AFKREASON global
+    global USER_AFK # pylint: nonaktifkan = E0602
+    global afk_time # pylint: nonaktifkan = E0602
+    afk_start global
+    afk_end global
+    pengguna = menunggu bot.get_me () # pylint: nonaktifkan = E0602
+    alasan global
     USER_AFK = {}
-    afk_time = None
+    afk_time = Tidak ada
     afk_end = {}
-    start_1 = datetime.now()
-    afk_start = start_1.replace(microsecond=0)
-    if string:
+    start_1 = datetime.now ()
+    afk_start = start_1.replace (mikrodetik = 0)
+    jika string:
         AFKREASON = string
-        await afk_e.edit(f"- 𝗔 𝗙 𝗞 -\n**• ʟᴏʀᴅ ᴛᴇʟᴀʜ ᴀꜰᴋ**\
-        \n**• ᴀʟᴀꜱᴀɴ :** `{string}`")
-    else:
-        await afk_e.edit("- 𝗔 𝗙 𝗞 -\n**• ʟᴏʀᴅ ᴛᴇʟᴀʜ ᴀꜰᴋ**")
-    if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "【AFK】"))
-    else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="【AFK】"))
-    if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**Lord Telah AFK!**")
-    ISAFK = True
-    afk_time = datetime.now()  # pylint:disable=E0602
-    raise StopPropagation
+        tunggu afk_e.edit (f "** ✘ Rama ** \ n ** sedang AFK! ** \
+        \ n☛ ** ✘
+✦҈͜͡➳ Alasan: ** `{string}` ")
+    lain:
+        tunggu afk_e.edit ("** ✘ Rama ** \ n ** sedang AFK! **")
+    jika user.last_name:
+        menunggu afk_e.client (UpdateProfileRequest (first_name = user.first_name, last_name = user.last_name + "【OFF】"))
+    lain:
+        menunggu afk_e.client (UpdateProfileRequest (first_name = user.first_name, last_name = "【OFF】"))
+    jika BOTLOG:
+        tunggu afk_e.client.send_message (BOTLOG_CHATID, "#Rama \ n ** sedang AFK! **")
+    ISAFK = Benar
+    afk_time = datetime.now () # pylint: nonaktifkan = E0602
+    naikkan StopPropagation
 
 
-@register(outgoing=True)
-async def type_afk_is_not_true(notafk):
-    """ This sets your status as not afk automatically when you write something while being afk """
-    global ISAFK
-    global COUNT_MSG
-    global USERS
-    global AFKREASON
-    global USER_AFK  # pylint:disable=E0602
-    global afk_time  # pylint:disable=E0602
-    global afk_start
-    global afk_end
-    user = await bot.get_me()  # pylint:disable=E0602
+@register (keluar = True)
+asinkron def type_afk_is_not_true (notafk):
+    "" "Ini menyetel status Anda sebagai tidak afk secara otomatis ketika Anda menulis sesuatu ketika sedang afk" ""
+    ISAFK global
+    COUNT_MSG global
+    PENGGUNA global
+    AFKREASON global
+    global USER_AFK # pylint: nonaktifkan = E0602
+    global afk_time # pylint: nonaktifkan = E0602
+    afk_start global
+    afk_end global
+    pengguna = menunggu bot.get_me () # pylint: nonaktifkan = E0602
     last = user.last_name
-    if last and last.endswith("【AFK】"):
-        last1 = last[:-12]
-    else:
+    jika terakhir dan terakhir. akhiran dengan ("【OFF】"):
+        last1 = terakhir [: - 12]
+    lain:
         last1 = ""
-    back_alive = datetime.now()
-    afk_end = back_alive.replace(microsecond=0)
-    if ISAFK:
-        ISAFK = False
-        msg = await notafk.respond("**ʟᴏʀᴅ ᴛᴇʟᴀʜ ᴋᴇᴍʙᴀʟɪ !!**")
-        time.sleep(3)
-        await msg.delete()
-        await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
-        if BOTLOG:
-            await notafk.client.send_message(
+    back_alive = datetime.now ()
+    afk_end = back_alive.replace (mikrodetik = 0)
+    jika ISAFK:
+        ISAFK = Salah
+        msg = menunggu notafk.respond ("** Lord Telah Kembali! **")
+        waktu tidur (3)
+        menunggu msg.delete ()
+        menunggu notafk.client (UpdateProfileRequest (first_name = user.first_name, last_name = last1))
+        jika BOTLOG:
+            menunggu notafk.client.send_message (
                 BOTLOG_CHATID,
-                "Anda Mendapatkan " + str(COUNT_MSG) + " Pesan Dari " +
-                str(len(USERS)) + " Obrolan Saat Anda AFK",
+                "Anda Dapatkan" + str (COUNT_MSG) + "Pesan Dari" +
+                str (len (USERS)) + "Obrolan Saat Anda AFK",
             )
-            for i in USERS:
-                name = await notafk.client.get_entity(i)
-                name0 = str(name.first_name)
-                await notafk.client.send_message(
+            untuk saya di PENGGUNA:
+                name = menunggu notafk.client.get_entity (i)
+                name0 = str (name.first_name)
+                menunggu notafk.client.send_message (
                     BOTLOG_CHATID,
-                    "[" + name0 + "](tg://user?id=" + str(i) + ")" +
-                    " Mengirim Mu " + "`" + str(USERS[i]) + " Pesan`",
+                    "[" + name0 + "] (tg: // user? id =" + str (i) + ")" +
+                    "Mengirim Mu" + "` "+ str (PENGGUNA [i]) +" Pesan` ",
                 )
         COUNT_MSG = 0
-        USERS = {}
-        AFKREASON = None
+        PENGGUNA = {}
+        AFKREASON = Tidak ada
 
 
-@register(incoming=True, disable_edited=True)
-async def mention_afk(mention):
-    """ This function takes care of notifying the people who mention you that you are AFK."""
-    global COUNT_MSG
-    global USERS
-    global ISAFK
-    global USER_AFK  # pylint:disable=E0602
-    global afk_time  # pylint:disable=E0602
-    global afk_start
-    global afk_end
-    user = await bot.get_me()  # pylint:disable=E0602
-    back_alivee = datetime.now()
-    afk_end = back_alivee.replace(microsecond=0)
-    afk_since = "**Terakhir Aktif**"
-    if mention.message.mentioned and not (await mention.get_sender()).bot:
-        if ISAFK:
-            now = datetime.now()
-            datime_since_afk = now - afk_time  # pylint:disable=E0602
-            time = float(datime_since_afk.seconds)
-            days = time // (24 * 3600)
-            time = time % (24 * 3600)
-            hours = time // 3600
-            time %= 3600
-            minutes = time // 60
-            time %= 60
-            seconds = time
-            if days == 1:
-                afk_since = "**Kemarin**"
-            elif days > 1:
-                if days > 6:
-                    date = now + \
-                        datetime.timedelta(
-                            days=-days, hours=-hours, minutes=-minutes)
-                    afk_since = date.strftime("%A, %Y %B %m, %H:%I")
-                else:
-                    wday = now + datetime.timedelta(days=-days)
-                    afk_since = wday.strftime('%A')
-            elif hours > 1:
-                afk_since = f"`{int(hours)} Jam {int(minutes)} Menit`"
-            elif minutes > 0:
-                afk_since = f"`{int(minutes)} Menit {int(seconds)} Detik`"
-            else:
-                afk_since = f"`{int(seconds)} Detik`"
-            if mention.sender_id not in USERS:
-                if AFKREASON:
-                    await mention.reply(f"- 𝗔 𝗙 𝗞 -\n `{ALIVE_NAME}` **ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
-                        \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
-                else:
-                    await mention.reply(str(choice(AFKSTR)))
-                USERS.update({mention.sender_id: 1})
+@register (masuk = True, disable_edited = True)
+async def mention_afk (sebutkan):
+    "" "Fungsi ini akan memberi tahu orang yang menyebut Anda bahwa Anda AFK." ""
+    COUNT_MSG global
+    PENGGUNA global
+    ISAFK global
+    global USER_AFK # pylint: nonaktifkan = E0602
+    global afk_time # pylint: nonaktifkan = E0602
+    afk_start global
+    afk_end global
+    pengguna = menunggu bot.get_me () # pylint: nonaktifkan = E0602
+    back_alivee = datetime.now ()
+    afk_end = back_alivee.replace (mikrodetik = 0)
+    afk_since = "** Terakhir Aktif **"
+    jika mention.message.mentioned dan tidak (await mention.get_sender ()). bot:
+        jika ISAFK:
+            now = datetime.now ()
+            datime_since_afk = sekarang - afk_time # pylint: nonaktifkan = E0602
+            waktu = float (datime_since_afk.seconds)
+            hari = waktu // (24 * 3600)
+            waktu = waktu% (24 * 3600)
+            jam = waktu // 3600
+            waktu% = 3600
+            menit = waktu // 60
+            waktu% = 60
+            detik = waktu
+            jika hari == 1:
+                afk_since = "** Kemarin **"
+            elif hari> 1:
+                jika hari> 6:
+                    date = sekarang + \
+                        datetime.timedelta (
+                            hari = -hari, jam = -jam, menit = -menit)
+                    afk_since = date.strftime ("% A,% Y% B% m,% H:% I")
+                lain:
+                    wday = now + datetime.timedelta (hari = -hari)
+                    afk_since = wday.strftime ('% A')
+            jam elif> 1:
+                afk_since = f "` {int (jam)} Jam {int (menit)} Menit` "
+            elif menit> 0:
+                afk_since = f "` {int (menit)} Menit {int (detik)} Detik` "
+            lain:
+                afk_since = f "` {int (detik)} Detik` "
+            jika mention.sender_id tidak ada di USERS:
+                jika AFKREASON:
+                    tunggu mention.reply (f "** ✘ Rama {ALIVE_NAME} sedang AFK ** {afk_since} ** Yang Lalu. ** \
+                        \ n☛ ** ✘
+✦҈͜͡➳ Alasan: ** `{AFKREASON}` ")
+                lain:
+                    menunggu mention.reply (str (choice (AFKSTR)))
+                USERS.update ({mention.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
-            elif mention.sender_id in USERS:
-                if USERS[mention.sender_id] % randint(2, 4) == 0:
-                    if AFKREASON:
-                        await mention.reply(f"- 𝗔 𝗙 𝗞 -\n **ʟᴏʀᴅ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
-                            \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
-                    else:
-                        await mention.reply(str(choice(AFKSTR)))
-                    USERS[mention.sender_id] = USERS[mention.sender_id] + 1
+            elif mention.sender_id di USERS:
+                jika PENGGUNA [mention.sender_id]% randint (2, 4) == 0:
+                    jika AFKREASON:
+                        tunggu mention.reply (f "** ✘ Rama Masih AFK ** {afk_since} ** Yang Lalu. ** \
+                            \ n☛ ** ✘
+✦҈͜͡➳ Alasan: ** `{AFKREASON}` ")
+                    lain:
+                        menunggu mention.reply (str (choice (AFKSTR)))
+                    PENGGUNA [mention.sender_id] = PENGGUNA [mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
-                else:
-                    USERS[mention.sender_id] = USERS[mention.sender_id] + 1
+                lain:
+                    PENGGUNA [mention.sender_id] = PENGGUNA [mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
 
 
-@register(incoming=True, disable_errors=True)
-async def afk_on_pm(sender):
-    """ Function which informs people that you are AFK in PM """
-    global ISAFK
-    global USERS
-    global COUNT_MSG
-    global COUNT_MSG
-    global USERS
-    global ISAFK
-    global USER_AFK  # pylint:disable=E0602
-    global afk_time  # pylint:disable=E0602
-    global afk_start
-    global afk_end
-    user = await bot.get_me()  # pylint:disable=E0602
-    back_alivee = datetime.now()
-    afk_end = back_alivee.replace(microsecond=0)
-    afk_since = "**Belum Lama**"
-    if sender.is_private and sender.sender_id != 777000 and not (
-            await sender.get_sender()).bot:
-        if PM_AUTO_BAN:
-            try:
-                from userbot.modules.sql_helper.pm_permit_sql import is_approved
-                apprv = is_approved(sender.sender_id)
-            except AttributeError:
-                apprv = True
-        else:
-            apprv = True
-        if apprv and ISAFK:
-            now = datetime.now()
-            datime_since_afk = now - afk_time  # pylint:disable=E0602
-            time = float(datime_since_afk.seconds)
-            days = time // (24 * 3600)
-            time = time % (24 * 3600)
-            hours = time // 3600
-            time %= 3600
-            minutes = time // 60
-            time %= 60
-            seconds = time
-            if days == 1:
-                afk_since = "**Kemarin**"
-            elif days > 1:
-                if days > 6:
-                    date = now + \
-                        datetime.timedelta(
-                            days=-days, hours=-hours, minutes=-minutes)
-                    afk_since = date.strftime("%A, %Y %B %m, %H:%I")
-                else:
-                    wday = now + datetime.timedelta(days=-days)
-                    afk_since = wday.strftime('%A')
-            elif hours > 1:
-                afk_since = f"`{int(hours)} Jam {int(minutes)} Menit`"
-            elif minutes > 0:
-                afk_since = f"`{int(minutes)} Menit {int(seconds)} Detik`"
-            else:
-                afk_since = f"`{int(seconds)} Detik`"
-            if sender.sender_id not in USERS:
-                if AFKREASON:
-                    await sender.reply(f"- 𝗔 𝗙 𝗞 -\n **ʟᴏʀᴅ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
-                            \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
-                else:
-                    await sender.reply(str(choice(AFKSTR)))
-                USERS.update({sender.sender_id: 1})
+@register (masuk = Benar, disable_errors = True)
+async def afk_on_pm (pengirim):
+    "" "Fungsi yang menginformasikan orang bahwa Anda AFK di PM" ""
+    ISAFK global
+    PENGGUNA global
+    COUNT_MSG global
+    COUNT_MSG global
+    PENGGUNA global
+    ISAFK global
+    global USER_AFK # pylint: nonaktifkan = E0602
+    global afk_time # pylint: nonaktifkan = E0602
+    afk_start global
+    afk_end global
+    pengguna = menunggu bot.get_me () # pylint: nonaktifkan = E0602
+    back_alivee = datetime.now ()
+    afk_end = back_alivee.replace (mikrodetik = 0)
+    afk_since = "** Belum Lama **"
+    jika sender.is_private dan sender.sender_id! = 777000 dan bukan (
+            menunggu sender.get_sender ()). bot:
+        jika PM_AUTO_BAN:
+            mencoba:
+                dari userbot.modules.sql_helper.pm_permit_sql impor is_approved
+                apprv = is_approved (sender.sender_id)
+            kecuali AttributeError:
+                apprv = Benar
+        lain:
+            apprv = Benar
+        jika apprv dan ISAFK:
+            now = datetime.now ()
+            datime_since_afk = sekarang - afk_time # pylint: nonaktifkan = E0602
+            waktu = float (datime_since_afk.seconds)
+            hari = waktu // (24 * 3600)
+            waktu = waktu% (24 * 3600)
+            jam = waktu // 3600
+            waktu% = 3600
+            menit = waktu // 60
+            waktu% = 60
+            detik = waktu
+            jika hari == 1:
+                afk_since = "** Kemarin **"
+            elif hari> 1:
+                jika hari> 6:
+                    date = sekarang + \
+                        datetime.timedelta (
+                            hari = -hari, jam = -jam, menit = -menit)
+                    afk_since = date.strftime ("% A,% Y% B% m,% H:% I")
+                lain:
+                    wday = now + datetime.timedelta (hari = -hari)
+                    afk_since = wday.strftime ('% A')
+            jam elif> 1:
+                afk_since = f "` {int (jam)} Jam {int (menit)} Menit` "
+            elif menit> 0:
+                afk_since = f "` {int (menit)} Menit {int (detik)} Detik` "
+            lain:
+                afk_since = f "` {int (detik)} Detik` "
+            jika sender.sender_id tidak ada di USERS:
+                jika AFKREASON:
+                    menunggu sender.reply (f "** ✘ Rama Sedang AFK ** {afk_since} ** Yang Lalu **. \
+                        \ n☛ ** ✘
+✦҈͜͡➳ Alasan **: `{AFKREASON}` ")
+                lain:
+                    menunggu pengirim.reply (str (pilihan (AFKSTR)))
+                USERS.update ({sender.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
-            elif apprv and sender.sender_id in USERS:
-                if USERS[sender.sender_id] % randint(2, 4) == 0:
-                    if AFKREASON:
-                        await sender.reply(f"- 𝗔 𝗙 𝗞 -\n **ʟᴏʀᴅ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
-                            \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
-                    else:
-                        await sender.reply(str(choice(AFKSTR)))
-                    USERS[sender.sender_id] = USERS[sender.sender_id] + 1
+            elif apprv dan sender.sender_id di PENGGUNA:
+                jika PENGGUNA [sender.sender_id]% randint (2, 4) == 0:
+                    jika AFKREASON:
+                        menunggu sender.reply (f "**✘ Rama Sedang AFK ** {afk_since} ** Yang Lalu. ** \
+                            \ n☛ ** ✘
+✦҈͜͡➳ Alasan **: `{AFKREASON}` ")
+                    lain:
+                        menunggu pengirim.reply (str (pilihan (AFKSTR)))
+                    PENGGUNA [sender.sender_id] = PENGGUNA [sender.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
-                else:
-                    USERS[sender.sender_id] = USERS[sender.sender_id] + 1
+                lain:
+                    PENGGUNA [sender.sender_id] = PENGGUNA [sender.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
 
 
-CMD_HELP.update({
+CMD_HELP.update ({
     "afk":
-    "**Modules: `AFK`\
-    \n\n**• Perintah:** `.afk`\
-    \n**➥ Penjelasan:** __Siapapun Yang Balas, Tag, Atau Chat Kamu__\
-__Mereka Akan Tau Alasan Kamu OFF__.\n\n**Note:** `AFK Bisa Dilakukan Dan Dibatalkan Dimanapun.`\
+    "` .afk` [Alasan] \
+\ nPenggunaan: Lakukan ketika ingin OFF. \ nSiapapun Yang Balas, Tag, Atau Chat Kamu \
+Mereka Akan Tau Alasan Kamu OFF. \ N \ nAFK Bisa Dilakukan Dan Dibatalkan Apapun. \
 "
 })
