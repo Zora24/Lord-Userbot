@@ -33,8 +33,8 @@ async def help(lord):
         await lord.edit("⚡")
         string = ""
         for i in CMD_HELP:
-            string += "`" + str(i)
-            string += "`\t•  "
+            string += "" + str(i)
+            string += "\t•  "
         await lord.edit("**⚡️ MODULES 1:**\n"
                         "`admin`  `adzan`  `afk`  `gabut`  `vip`  `animasi`  `android`  `anime`  `anti_spambot`  `aria`  `ascii`\n\n"
                         "**⚡️ MODULES 2:**\n"
@@ -64,8 +64,8 @@ async def help(lord):
                         "**⚡️ MODULES 14:**\n"
                         "`transform`  `update`  `download`  `getid`  `waifu`  `wallpaper`  `weather`\n\n"
                         "**⚡️ MODULES 15:**\n"
-                        "`webupload`  `welcome`  `whois`  `ping`  `sinyal`  `xiaomi`  `zipfile`\n\n")
-        await lord.reply(f"\n**CARA MENGGUNAKAN,** **CONTOH:** **KETIK** `.help afk` **UNTUK INFORMASI MODULES**\n**GROUP SUPPORT:** @LORDUSERBOT_GROUP")
+                        "`webupload`  `welcome`  `whois`  `ping`  `sinyal`  `xiaomi`  `zipfile`")
+        await lord.reply(f"\n**CARA MENGGUNAKAN,** **CONTOH:**\n **KETIK** `.help afk` **UNTUK INFORMASI MODULES**\n**GROUP SUPPORT:** @LORDUSERBOT_GROUP")
         await asyncio.sleep(1000)
         await lord.delete()
 
