@@ -3,7 +3,10 @@
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
-""" Userbot help command """
+""" Lord Userbot help command """
+
+# LORD USERBOT
+# @LORDUSERBOT_GROUP
 
 import asyncio
 from userbot import CMD_HELP
@@ -11,6 +14,9 @@ from userbot.events import register
 
 modules = CMD_HELP
 
+# EDIT BY ALVIN / @LIUALVINAS FOR LORD USERBOT
+# CREDIT EDIT FROM LORD
+# JANGAN HAPUS!!!
 
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
 async def help(lord):
@@ -62,3 +68,5 @@ async def help(lord):
         await lord.reply(f"\n**CARA MENGGUNAKAN,** **CONTOH:** **KETIK** `.help afk` **UNTUK INFORMASI MODULES**\n**GROUP SUPPORT:** @LORDUSERBOT_GROUP")
         await asyncio.sleep(1000)
         await lord.delete()
+
+# ALVIN GANTENG
