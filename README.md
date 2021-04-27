@@ -11,14 +11,14 @@
   </a>
 </p>  
 
-# Lord Userbot
-![Lord Userbot Logo](https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg)
+# AMM Userbot
+![AMM Userbot Logo](https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg)
 
 <h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
 <p align="center">&nbsp;</p>
 
-### Repo Lord Userbot
-Repo Yang Dibuat [Alvin](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github 
+### Repo FORK AM.Userbot
+Repo Yang Dibuat [Alvin](https://t.me/istmeamm) Dari  Repo Lord Userbot 
 
 
 ### CARA MENDAPATKAN STRING SESSON
