@@ -18,14 +18,14 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.punten(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Halo`"
-                     "`Punten`"
-                     "kak Mawar`"
-                     "`Cuma`"
-                     "`Mau`"
-                     "`Memberi tahukan`"
-                     "`bahwa`"
-                     "Aku Cinta Mawar")
+    await typew.edit("`\nHalo`"
+                     "`\nPunten`"
+                     "\nkak Mawar`"
+                     "`\nCuma`"
+                     "`\nMau`"
+                     "`\nMemberi tahukan`"
+                     "`\nbahwa`"
+                     "\nAku Cinta Mawar")
 
 
 @register(outgoing=True, pattern='^.pantau(?: |$)(.*)')
