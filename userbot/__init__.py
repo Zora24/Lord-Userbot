@@ -101,9 +101,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/istammuyee/Lord-Userbot.git")
+    "https://github.com/istammuyee/Amm-Userbot.git")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Lord-Userbot")
+    "UPSTREAM_REPO_BRANCH", "Amm-Userbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -390,9 +390,9 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("Lord-Userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/istammuyee/Lord-Userbot.git)")
+                await event.reply("Lord-Userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/istammuyee/Amm-Userbot)")
             else:
-                await event.reply(f"`Hai Lord {ALIVE_NAME}\n\nApa Kabarmu?`")
+                await event.reply(f"`Hai Amm {ALIVE_NAME}\n\nApa Kabarmu?`")
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
@@ -412,7 +412,7 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Lord✗Userbot ",
+                    "Bantuan Amm✗Userbot ",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
@@ -424,7 +424,7 @@ with bot:
                         [
                             custom.Button.url(
                                 "〆Repo AMM-Userbot",
-                                "https://github.com/istammuyee/Lord-Userbot"),
+                                "https://github.com/istammuyee/Amm-Userbot"),
                             custom.Button.url(
                                 "〆Pemilik Repo",
                                 "t.me/istmeamm")],
