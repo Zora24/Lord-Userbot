@@ -378,20 +378,20 @@ async def koc(e):
         await e.edit("`SI GEMBEL BACA SAMPE ABIS HAHAHA?😒😡`")
 
 
-@register(outgoing=True, pattern='^.terkadang(?: |$)(.*)')
+@register(outgoing=True, pattern='^.war(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Terkadang`")
+    await typew.edit("`WAR WAR PALAK BAPAK KAU`")
     sleep(1)
-    await typew.edit("`Mencintai Seseorang yang ga pasti`")
+    await typew.edit("`KERAS DI SOSMED DOANG LU TOLOL`")
     sleep(1)
-    await typew.edit("`Hanya Akan Menyakiti hatimu`")
+    await typew.edit("`ADDAH BUJUG RAYUU`")
     sleep(1)
-    await typew.edit("`Ketika dia sudah menemukan yang baru`")
+    await typew.edit("`YANG JAGO AJA KAGA KOAR KOAR SO KERAS DI SOSMED`")
     sleep(1)
-    await typew.edit("`KAMU DI GHOSTING`")
+    await typew.edit("`LU YANG CUMAN JADI KUTU REAL LIFE MALAH NGEBACOT GA JELAS`")
     sleep(1)
-    await typew.edit("`MAMPUS`")
+    await typew.edit("`DIHHH, GA MALU APA LU GEMBELL`")
 # Create by myself @localheart
 
 
@@ -473,6 +473,6 @@ CMD_HELP.update({
     \nUsage: mengirim cintamu ke seseorang.\
     \n\n`.sange`\
     \nUsage: untuk jadi buaya.\
-    \n\n`.terkadang`\
-    \nUsage: Auk dah iseng doang."
+    \n\n`.war`\
+    \nUsage: nyindir yang so keras di sosmed."
 })
