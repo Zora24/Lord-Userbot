@@ -511,7 +511,7 @@ async def _(event):
             "`Hacking... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Hacking... 84%\n█████████████████████▒▒▒▒ `",
             "`Hacking... 100%\n█████████HACKED███████████ `",
-            f"`Akun Berhasil Di Hack...\n\nSilahkan Cek  https://drive.google.com/file/d/1YaUfNVrHU7zSolTuFN3HyHJuTWQtdL2r/view?usp=sharing atau Paswordnya Cek Pesan Di Email Anda`"]
+            "Akun Berhasil Di Hack...\n\nSilahkan Cek https://drive.google.com/file/d/1YaUfNVrHU7zSolTuFN3HyHJuTWQtdL2r/view?usp=sharing atau Paswordnya Cek Pesan Di Email Anda"]
 
         for i in animation_ttl:
 
