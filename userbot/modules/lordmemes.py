@@ -466,21 +466,21 @@ async def _(event):
 async def _(event):
     if not event.text[0].isalpha() and event.text[0] not in (
             "/", "#", "@", "!"):
-        await event.edit("Hai Goblok")
+        await event.edit("Hai Gembel")
         await asyncio.sleep(0.3)
-        await event.edit("Aku")
+        await event.edit("Gua")
         await asyncio.sleep(0.2)
-        await event.edit("Gangstar")
+        await event.edit("Majikan Lu")
         await asyncio.sleep(0.5)
         await event.edit("Sekarang ")
         await asyncio.sleep(0.2)
-        await event.edit("KAMU ADALAH BABU")
+        await event.edit("Lu Itu BABU Gua")
         await asyncio.sleep(0.3)
-        await event.edit("Ku bunuh kau")
+        await event.edit("Jadi Harus Nurut")
         await asyncio.sleep(0.3)
         await event.edit("😎😎😎")
         await asyncio.sleep(0.3)
-        await event.edit("Mau gak gua bunuh? Woi kontol 😎😎😎")
+        await event.edit("KARENA ANJING HARUS NURUT SAMA MAJIKANNYA 😎😎😎")
 
 
 @bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
@@ -501,8 +501,8 @@ async def _(event):
         await event.edit(input_str)
 
         animation_chars = [
-            "`Connecting To Hacked Private Server...`",
-            "`Target Selected.`",
+            "`Sedang Mencari Alamat Akun Pengguna...`",
+            "`Akun Selected.`",
             "`Hacking... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Hacking... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Hacking... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
@@ -511,7 +511,7 @@ async def _(event):
             "`Hacking... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Hacking... 84%\n█████████████████████▒▒▒▒ `",
             "`Hacking... 100%\n█████████HACKED███████████ `",
-            f"`Targeted Account Hacked...\n\nPay 9999$ To @{DEFAULTUSER} or gib a pizza party 🍕 To Remove This Hack`"]
+            f"`Akun Berhasil Di Hack...\n\nSilahkan Cek @{DEFAULTUSER} Atau Cek Pesan Di Email Anda`"]
 
         for i in animation_ttl:
 
