@@ -22,10 +22,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"**Maaf {ALIVE_NAME} Sedang OFF!**",
-    f"**Maaf {ALIVE_NAME} Sedang OFF\n Tunggu Sampai Online!**",
-    f"**{ALIVE_NAME} Sedang OFF\n Tunggulah Sampai Online**",
-    f"**Maaf {ALIVE_NAME} Sedang OFF!**",
+    f"**Maaf {ALIVE_NAME} Lagi Selingkuh Jan Ganggu!**",
+    f"**Maaf {ALIVE_NAME} Lagi OFF\n Tunggu Sampai Balik Ya Paok!**",
+    f"**{ALIVE_NAME} Lagi Selingkuh\n Tunggulah Sampai Balik Ya Paok!**",
+    f"**Maaf {ALIVE_NAME} Lagi Selingkuh!**",
 ]
 
 
@@ -164,7 +164,7 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"**✥ {ALIVE_NAME} Sedang OFF** {afk_since} **Yang Lalu.**\
+                    await mention.reply(f"**✥ {ALIVE_NAME} Sedang Selingkuh** {afk_since} **Yang Lalu.**\
                         \n➥ **Alasan:** `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -173,7 +173,7 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"**✥ {ALIVE_NAME} Masih OFF** {afk_since} **Yang Lalu.**\
+                        await mention.reply(f"**✥ {ALIVE_NAME} Masih Selingkuh** {afk_since} **Yang Lalu.**\
                             \n➥ **Alasan:** `{AFKREASON}`")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
@@ -241,7 +241,7 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)} Detik`"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"✥ **{ALIVE_NAME} Sedang OFF** {afk_since} **Yang Lalu**.\
+                    await sender.reply(f"✥ **{ALIVE_NAME} Sedang Selingkuh** {afk_since} **Yang Lalu** Jan Ganggu Dulu Ett Dah.\
                         \n➥ **Alasan**: `{AFKREASON}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))

@@ -65,23 +65,23 @@ async def sleepybot(time):
 @register(outgoing=True, pattern="^.shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await event.edit("`Mematikan Lord-Userbot....`")
+    await event.edit("`Mematikan Amm-Userbot....`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n"
-                                        "`Lord-Userbot Telah Dimatikan`")
+                                        "`Amm-Userbot Telah Dimatikan`")
     await bot.disconnect()
 
 
 @register(outgoing=True, pattern="^.restart$")
 async def killdabot(event):
-    await event.edit("`Restarting Lord-Userbot...`")
+    await event.edit("`Restarting Amm-Userbot...`")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#RESTARTBOT \n"
-                                        "`Lord-Userbot Telah Di Restart`")
+                                        "`Amm-Userbot Telah Di Restart`")
     await bot.disconnect()
     # Spin a new instance of bot
     execl(sys.executable, sys.executable, *sys.argv)
@@ -120,7 +120,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "❃ **Repo Userbot:** [Lord-Userbot](https://github.com/Zora24/Lord-Userbot)\n❃ **Pemilik:** [Alvin](t.me/liualvinas)"
+        "❃ **Repo Userbot:** [Amm-Userbot](https://github.com/istammuyee/Amm-Userbot)\n❃ **Pemilik:** [Amm](https://t.me/vtbchannell)"
     )
 
 
@@ -159,7 +159,7 @@ async def okgoogle(img):
         photo = io.BytesIO()
         await bot.download_media(message, photo)
     else:
-        await img.edit("`Harap Balas Di Gambar Lord`")
+        await img.edit("`Harap Balas Di Gambar`")
         return
 
     if photo:

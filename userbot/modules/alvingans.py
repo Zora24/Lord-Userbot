@@ -121,7 +121,7 @@ async def typewriter(typew):
                      "──▄▀█▄▄▄─────▄▀█▄▄▄\n"
                      "▄▀──█▄▄──────█─█▄▄\n"
                      "─▄▄▄▀──▀▄───▄▄▄▀──▀▄\n"
-                     "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok..`")
+                     "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok..DASAR TOLOL!!`")
 
 
 @register(outgoing=True, pattern='^.ular(?: |$)(.*)')
