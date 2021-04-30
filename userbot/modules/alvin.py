@@ -349,20 +349,20 @@ async def koc(e):
         await e.edit("`GABUT`")
 
 
-@register(outgoing=True, pattern='^.terkadang(?: |$)(.*)')
+@register(outgoing=True, pattern='^.Aku(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Terkadang`")
-    sleep(1)
-    await typew.edit("`Mencintai Seseorang`")
+    await typew.edit("`Hai`")
+    sleep(2)
+    await typew.edit("`Namaku Alfareza`")
     sleep(1)
     await typew.edit("`Hanya Akan Membuang Waktumu`")
-    sleep(1)
-    await typew.edit("`Ketika Waktumu Habis`")
-    sleep(1)
-    await typew.edit("`Tambah Aja 5000`")
-    sleep(1)
-    await typew.edit("`Bercanda`")
+    sleep(2)
+    await typew.edit("`Aku Dari Jateng Kota pati 🥰`")
+    sleep(2)
+    await typew.edit("`Salam kenal ya`")
+    sleep(2)
+    await typew.edit("`🥰🥰`")
 # Create by myself @localheart
 
 
@@ -390,7 +390,7 @@ async def _(event):
         await event.edit(input_str)
 
         animation_chars = [
-            "`Connecting Ke Server Cinta`",
+            "`Loading To Server Cinta`",
             "`Mencari Target Cinta`",
             "`Mengirim Cintaku.. 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Mengirim Cintaku.. 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
@@ -399,8 +399,8 @@ async def _(event):
             "`Mengirim Cintaku.. 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Mengirim Cintaku.. 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Mengirim Cintaku.. 84%\n█████████████████████▒▒▒▒ `",
-            "`Mengirim Cintaku.. 100%\n█████████CINTAKU███████████ `",
-            f"`Cintaku Sekarang Sepenuhnya Terkirim Padamu, Dan Sekarang Aku Sangat Mencintai Mu, I Love You 💞`"]
+            "`Mengirim Cintaku.. 100%\n██████████BERHASIL██████████ `",
+            f"`Berhasil Masuk ke server cinta Sekarang cintaku aku sangat mencintaimu, I Love You 😘`"]
 
         for i in animation_ttl:
 

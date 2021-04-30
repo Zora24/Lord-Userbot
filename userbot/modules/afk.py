@@ -24,10 +24,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"**• ᴍᴀᴀꜰ ʟᴏʀᴅ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!**",
-    f"**• ᴍᴀᴀꜰ ʟᴏʀᴅ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n • ᴛᴜɴɢɢᴜ ꜱᴀᴍᴘᴀɪ ᴅɪᴀ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ!**",
-    f"**• ʟᴏʀᴅ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!\n • ᴛᴜɴɢɢᴜʟᴀʜ ꜱᴀᴍᴘᴀɪ ᴏɴʟɪɴᴇ!**",
-    f"**• ᴍᴀᴀꜰ ʟᴏʀᴅ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!**",
+    f"**• ᴍᴀᴀꜰ ᴋᴀɴᴊᴇɴɢ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!**",
+    f"**• ᴍᴀᴀꜰ ᴋᴀɴᴊᴇɴɢ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n • ᴛᴜɴɢɢᴜ ꜱᴀᴍᴘᴀɪ ᴋᴀɴᴊᴇɴɢ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ!**",
+    f"**• ᴋᴀɴᴊᴇɴɢ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!\n • ᴛᴜɴɢɢᴜʟᴀʜ ꜱᴀᴍᴘᴀɪ ᴏɴʟɪɴᴇ!**",
+    f"**• ᴍᴀᴀꜰ ᴋᴀɴᴊᴇɴɢ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!**",
 ]
 
 
@@ -62,10 +62,10 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"- 𝗔 𝗙 𝗞 -\n**• ʟᴏʀᴅ ᴛᴇʟᴀʜ ᴀꜰᴋ**\
+        await afk_e.edit(f"𝗔 𝗙 𝗞 🌹\n**• ᴋᴀɴᴊᴇɴɢ ᴛᴇʟᴀʜ ᴀꜰᴋ**\
         \n**• ᴀʟᴀꜱᴀɴ :** `{string}`")
     else:
-        await afk_e.edit("- 𝗔 𝗙 𝗞 -\n**• ʟᴏʀᴅ ᴛᴇʟᴀʜ ᴀꜰᴋ**")
+        await afk_e.edit("𝗔 𝗙 𝗞 🌹\n**• ᴋᴀɴᴊᴇɴɢ ᴛᴇʟᴀʜ ᴀꜰᴋ**")
     if user.last_name:
         await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "【AFK】"))
     else:
@@ -98,7 +98,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("**ʟᴏʀᴅ ᴛᴇʟᴀʜ ᴋᴇᴍʙᴀʟɪ !!**")
+        msg = await notafk.respond("**ᴋᴀɴᴊᴇɴɢ ᴛᴇʟᴀʜ ᴋᴇᴍʙᴀʟɪ !!**")
         time.sleep(3)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
@@ -166,7 +166,7 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"- 𝗔 𝗙 𝗞 -\n `{ALIVE_NAME}` **ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                    await mention.reply(f"𝗔 𝗙 𝗞 🌹\n `{ALIVE_NAME}` **ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
                         \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -175,7 +175,7 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"- 𝗔 𝗙 𝗞 -\n **ʟᴏʀᴅ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                        await mention.reply(f"𝗔 𝗙 𝗞 🌹\n **ᴋᴀɴᴊᴇɴɢ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
                             \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
@@ -243,7 +243,7 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)} Detik`"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"- 𝗔 𝗙 𝗞 -\n **ʟᴏʀᴅ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                    await sender.reply(f"𝗔 𝗙 𝗞 🌹\n **ᴋᴀɴᴊᴇɴɢ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
                             \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -252,7 +252,7 @@ async def afk_on_pm(sender):
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"- 𝗔 𝗙 𝗞 -\n **ʟᴏʀᴅ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                        await sender.reply(f"𝗔 𝗙 𝗞 🌹\n **ᴋᴀɴᴊᴇɴɢ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
                             \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
