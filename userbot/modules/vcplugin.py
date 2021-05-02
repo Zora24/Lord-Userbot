@@ -33,7 +33,7 @@
 
 """
 
-from pyUltroid.functions.vc_sudos import add_vcsudo, del_vcsudo, get_vcsudos, is_vcsudo
+from pyGEMBEL-ELITE.functions.vc_sudos import add_vcsudo, del_vcsudo, get_vcsudos, is_vcsudo
 from telethon.tl.functions.channels import GetFullChannelRequest as getchat
 from telethon.tl.functions.phone import CreateGroupCallRequest as startvc
 from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
@@ -78,7 +78,7 @@ async def _(e):
     await zz.edit(f"Failed {er}")
 
 
-@ultroid_cmd(
+@GembelElite_cmd(
     pattern="vcinvite$",
     groups_only=True,
 )
@@ -99,7 +99,7 @@ async def _(e):
     await ok.edit(f"`Invited {z} users`")
 
 
-@ultroid_cmd(
+@GembelElite_cmd(
     pattern="startvc$",
     admins_only=True,
     groups_only=True,
@@ -112,7 +112,7 @@ async def _(e):
         await eor(e, f"`{str(ex)}`")
 
 
-@ultroid_cmd(
+@GembelElite_cmd(
     pattern="listvcaccess$",
 )
 async def _(e):
@@ -129,7 +129,7 @@ async def _(e):
     await xx.edit(pp)
 
 
-@ultroid_cmd(
+@GembelElite_cmd(
     pattern="rmvcaccess ?(.*)",
 )
 async def _(e):
@@ -163,7 +163,7 @@ async def _(e):
         return await eod(xx, f"`{str(ex)}`", time=5)
 
 
-@ultroid_cmd(
+@GembelElite_cmd(
     pattern="vcaccess ?(.*)",
 )
 async def _(e):
