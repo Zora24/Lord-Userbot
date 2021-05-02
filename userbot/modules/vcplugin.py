@@ -33,7 +33,7 @@
 
 """
 
-from pyGEMBEL-ELITE.functions.vc_sudos import add_vcsudo, del_vcsudo, get_vcsudos, is_vcsudo
+from pyGembelElite.functions.vc_sudos import add_vcsudo, del_vcsudo, get_vcsudos, is_vcsudo
 from telethon.tl.functions.channels import GetFullChannelRequest as getchat
 from telethon.tl.functions.phone import CreateGroupCallRequest as startvc
 from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
