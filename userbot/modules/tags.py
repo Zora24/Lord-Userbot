@@ -29,7 +29,7 @@ async def _(event):
         xx = f"{lll}"
     else:
         xx = ""
-    async for bb in event.client.iter_participants(event.chat_id, 99):
+    async for bb in bot.iter_participants(event.chat_id, 99):
         users = users + 1
         x = bb.status
         y = bb.participant
