@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Zora24/Lord-Userbot",
-  "telegram": "https://t.me/liualvinas",
-  "success_url": "https://t.me/liualvinasmahaputra",
+  "repository": "https://github.com/jokokendi/Lord-Userbot",
+  "telegram": "https://t.me/kenasisstantbot",
+  "success_url": "https://t.me/haremku",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -49,10 +49,6 @@
       "description": "If you need verbosity on the console logging",
       "value": "False"
     },
-    "GENIUS_ACCESS_TOKEN": {
-      "description": "Client Access Token from https://genius.com/api-clients.",
-      "required": false
-    },
     "GITHUB_ACCESS_TOKEN": {
       "description": "Your GITHUB_ACCESS_TOKEN, get it from 'https://github.com/settings/tokens'",
       "required": false
@@ -76,11 +72,6 @@
       "value": "False",
       "required": true
     },
-    "YOUTUBE_API_KEY": {
-      "description": "YouTube Data API Key for .yt command. Get from https://console.cloud.google.com",
-      "required": false
-
-    },
     "ANTI_SPAMBOT": {
       "description": "Kicks spambots from groups after they join. [Requires admin powers in groups to kick.]",
       "value": "False"
@@ -96,19 +87,13 @@
     "CLEAN_WELCOME": {
       "description": "When a new person joins, the old welcome message is deleted.",
       "value": "True"
-    },
-    "G_DRIVE_FOLDER_ID": {
-      "description": "Create a folder and put that folder's id here.check folder link for id.",
-      "required": false
+
+
     },
     "HEROKU_MEMEZ": {
       "description": "This should be True if the userbot is running on a Heroku Dyno.",
       "value": "True",
       "required": true
-    },
-    "BIO_PREFIX": {
-      "description": "Prefix for Last.FM Module Bio.",
-      "required": false
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
@@ -126,14 +111,6 @@
     "G_BAN_LOGGER_GROUP": {
       "description": "Buatlah Sebuah Grup Private/Public Lalu Masukkan Bot Rose Lalu Ketik /id.",
       "value": "Isi id grup mu",
-      "required": false
-    },
-    "G_DRIVE_DATA": {
-      "description": "Enter the Google Drive authentication data, as a JSON structure.",
-      "required": false
-    },
-    "G_PHOTOS_CLIENT_ID": {
-      "description": "get the client id from https://j.mp/39lWQQm",
       "required": false
     },
     "WEATHER_DEFCITY": {
