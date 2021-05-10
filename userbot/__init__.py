@@ -101,7 +101,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/Zora24/Lord-Userbot.git")
+    "https://github.com/jokokendi/Lord-Userbot.git")
 UPSTREAM_REPO_BRANCH = os.environ.get(
     "UPSTREAM_REPO_BRANCH", "Lord-Userbot")
 
@@ -349,7 +349,7 @@ def paginate_help(page_number, loaded_modules, prefix):
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {} ♛".format("♛", x), data="ub_modul_{}".format(x))
+        custom.Button.inline("{} {} ⛔".format("⛔", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols],
@@ -365,10 +365,10 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "☚", data="{}_prev({})".format(prefix, modulo_page)
+                    "⏮️", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    "☛", data="{}_next({})".format(prefix, modulo_page)
+                    "⏭️", data="{}_next({})".format(prefix, modulo_page)
                 )
             )
         ]
@@ -390,7 +390,7 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("Lord-Userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/Zora24/Lord-Userbot.git)")
+                await event.reply("Lord-Userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/jokokendi/Lord-Userbot.git)")
             else:
                 await event.reply(f"`Hai Lord {ALIVE_NAME}\n\nApa Kabarmu?`")
 
@@ -404,7 +404,7 @@ with bot:
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
                     text="{}\n\n**❃ Jumlah Modul Yang Tersedia:** `{}`\n               \n**❃ Daftar Modul Lord Userbot:** \n".format(
-                        "**♛ Lord-Userbot**",
+                        "**📳 Lord-Userbot**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -424,7 +424,7 @@ with bot:
                         [
                             custom.Button.url(
                                 "Repo Lord-Userbot",
-                                "https://github.com/Zora24/Lord-Userbot"),
+                                "https://github.com/jokokendi/Lord-Userbot"),
                             custom.Button.url(
                                 "Pemilik Repo",
                                 "t.me/liualvinas")],
