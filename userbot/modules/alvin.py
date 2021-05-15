@@ -354,15 +354,15 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Terkadang`")
     sleep(1)
-    await typew.edit("`Mencintai Seseorang`")
+    await typew.edit("`MENJADI FAKBOII ITU SUSAH`")
     sleep(1)
-    await typew.edit("`Hanya Akan Membuang Waktumu`")
+    await typew.edit("`MAKA DARI ITU `")
     sleep(1)
-    await typew.edit("`Ketika Waktumu Habis`")
+    await typew.edit("`BELAJARLAH BERSAMA AMM`")
     sleep(1)
-    await typew.edit("`Tambah Aja 5000`")
+    await typew.edit("`AMM NI BOSSSSSSS`")
     sleep(1)
-    await typew.edit("`Bercanda`")
+    await typew.edit("`ITU TADI PESAN DARI AMM`")
 # Create by myself @localheart
 
 
