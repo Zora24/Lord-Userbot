@@ -14,7 +14,7 @@ async def typewriter(typew):
     await typew.edit(f"**Hallo Gembell Saya {DEFAULTUSER}**")
     sleep(2)
     await typew.edit("Assalamualaikum.....")
-    
+#Owner @Bacot_anjingg
 
     
 
@@ -31,7 +31,7 @@ async def typewriter(typew):
     typew.edit("Astaghfirulloh Jawab Salam Kontoll...")
     sleep(1)
     await typew.edit("waalaikumsalam.......")
-
+#Owner @Bacot_anjingg
   
 
 
