@@ -60,7 +60,7 @@ async def help(lord):
                         "**☣ MODULES 14:**\n"
                         "`transform`  `update`  `download`  `getid`  `waifu`  `wallpaper`  `weather`\n\n"
                         "**☣ MODULES 15:**\n"
-                        "`webupload`  `welcome`  `whois`  `ping`  `sinyal`  `xiaomi`  `zipfile`")
+                        "`webupload`  `welcome`  `whois`  `ping`  `sinyal`  `xiaomi`  `amm`  `zipfile`")
         await lord.reply("\n**CARA MENGGUNAKAN,** **CONTOH:**\n**KETIK** `.help afk` **UNTUK INFORMASI MODULES** )")
         await asyncio.sleep(1000)
         await lord.delete()
