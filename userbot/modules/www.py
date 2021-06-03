@@ -46,21 +46,21 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit(".                       /¯ )")
-    await pong.edit(".                       /¯ )\n                      /¯  /")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ ")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (\n              \\  ")
+    await pong.edit("『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ👑』 ")
+    await pong.edit("『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ👑』 ")
+    await pong.edit("『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ👑』 ")
+    await pong.edit("『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ👑』 ")
+    await pong.edit("『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ👑』 ")
+    await pong.edit("『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ👑』 ")
+    await pong.edit("『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ👑』 ")
+    await pong.edit("『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ👑』 ")
+    await pong.edit("『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ👑』 ")
+    await pong.edit("『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ👑』』 ")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**𖣘 PING** "
+    await pong.edit(f"**👑 PING** "
                     f"\n  ➥ `%sms` \n"
-                    f"**𖣘 LORD** "
+                    f"**👑 AMM** "
                     f"\n  ➥ `{ALIVE_NAME}` \n" % (duration))
 
 
@@ -69,18 +69,18 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("⚡")
-    await pong.edit("__**LORD⚡**__")
-    await pong.edit("__**LOR⚡D**__")
-    await pong.edit("__**LO⚡RD**__")
-    await pong.edit("__**L⚡ORD**__")
-    await pong.edit("__**⚡LORD⚡**__")
+    await pong.edit("👑")
+    await pong.edit("__**SAYA**__")
+    await pong.edit("__**ADALAH**__")
+    await pong.edit("__**AMM-USERBOT**__")
+    await pong.edit("__**AMM**__")
+    await pong.edit("__**AMM-USERBOT**__")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**⚡ʟ̶ᴏ̶ʀ̶ᴅ̶ ᴘɪɴɢ⚡**\n"
-                    f"⚡ **ᴘɪɴɢ:** "
+    await pong.edit(f"**『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ』**\n"
+                    f"👑 **ᴘɪɴɢ:** "
                     f"`%sms` \n"
-                    f"⚡ **ᴏɴʟɪɴᴇ:** "
+                    f"👑 **ᴏɴʟɪɴᴇ:** "
                     f"`{uptime}` \n" % (duration))
 
 
@@ -104,18 +104,18 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**𖣘**")
-    await pong.edit("**𖣘𖣘**")
-    await pong.edit("**𖣘𖣘𖣘**")
-    await pong.edit("**✦҈͜͡➳ PONG!**")
+    await pong.edit("**PING**")
+    await pong.edit("**AMM**")
+    await pong.edit("**『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ👑』**")
+    await pong.edit("**PANTEK KAU**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**♛ Lord Ping ♛**\n"
-                    f"❃ **Ping:** "
+    await pong.edit(f"**☠ AMM Ping 〆**\n"
+                    f"☠ **Ping:** "
                     f"`%sms` \n"
-                    f"❃ **Uptime:** "
+                    f"☠ **Uptime:** "
                     f"`{uptime}` \n"
-                    f"**✦҈͜͡➳ My Lord:** `{ALIVE_NAME}`" % (duration))
+                    f"**☠ My Name:** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.sinyal$")
@@ -124,20 +124,20 @@ async def pingme(pong):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await pong.edit("`Mengecek Sinyal...`")
-    await pong.edit("**0% ▒▒▒▒▒▒▒▒▒▒**")
-    await pong.edit("**20% ██▒▒▒▒▒▒▒▒**")
-    await pong.edit("**40% ████▒▒▒▒▒▒**")
-    await pong.edit("**60% ██████▒▒▒▒**")
-    await pong.edit("**80% ████████▒▒**")
-    await pong.edit("**100% ██████████**")
+    await pong.edit("**0% LOADING**")
+    await pong.edit("**20% LOADING**")
+    await pong.edit("**40% LOADING**")
+    await pong.edit("**60% LOADING**")
+    await pong.edit("**80% LOADING**")
+    await pong.edit("**100% LOADING**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"- 𝐋 𝐎 𝐑 𝐃 -\n"
+    await pong.edit(f"- 『ᴀᴍᴍ-ᴜsᴇʀʙᴏᴛ👑』-\n"
                     f"**• ꜱɪɴʏᴀʟ  :** "
                     f"`%sms` \n"
                     f"**• ᴏɴʟɪɴᴇ  :** "
                     f"`{uptime}` \n"
-                    f"**• ᴏᴡɴᴇʀ  :** `{ALIVE_NAME}`" % (duration))
+                    f"**• ɴᴀᴍᴇ  :** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.speed$")
