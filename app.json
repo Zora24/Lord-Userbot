@@ -1,6 +1,6 @@
 {
-  "name": "Lord-Userbot",
-  "description": "[Lord-Userbot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "name": "DIABLO-USERBOT",
+  "description": "[DIABLO-USERBOT] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
   "logo": "https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg",
   "keywords": [
     "telegram",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Zora24/Lord-Userbot",
-  "telegram": "https://t.me/liualvinas",
-  "success_url": "https://t.me/liualvinasmahaputra",
+  "repository": "https://github.com/azel-kochoyy/DIABLO-USERBOT",
+  "telegram": "https://t.me/diabloyy",
+  "success_url": "https://t.me/bibitunggulnexus",
   "stack": "container",
   "env": {
     "API_KEY": {
