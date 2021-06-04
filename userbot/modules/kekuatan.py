@@ -31,7 +31,7 @@
 # SOFTWARE.
 # Ported from Xtra-telegram by @heyworld
 
-# LORD USERBOT
+# DIABLO USERBOT
 
 import os
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -40,21 +40,21 @@ from userbot.events import register
 from userbot import bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HELP
 
 
-@register(outgoing=True, pattern=r'^.kekuatan(:? |$)([1-8])?')
+@register(outgoing=True, pattern=r'^.jutsu(:? |$)([1-8])?')
 async def _(fry):
-    await fry.edit("`Lord Mengaktifkan Kekuatan Telegram...👾`")
+    await fry.edit("`Tuan ku Mengaktifkan jutsu EDO TENSEI NO JUTSU ...🥵`")
     level = fry.pattern_match.group(2)
     if fry.fwd_from:
         return
     if not fry.reply_to_msg_id:
-        await fry.edit("`Mohon Balas Di Sticker Lord`")
+        await fry.edit("`Balas Di Sticker idiot !`")
         return
     reply_message = await fry.get_reply_message()
     if not reply_message.media:
-        await fry.edit("`Gambar tidak di dukung`")
+        await fry.edit("`ngetik yg bener kontol !`")
         return
     if reply_message.sender.bot:
-        await fry.edit("`Mohon Balas Di Sticker Lord`")
+        await fry.edit("`Balas Di Sticker idiot !`")
         return
     chat = "@image_deepfrybot"
     message_id_to_reply = fry.message.reply_to_msg_id
@@ -73,7 +73,7 @@ async def _(fry):
             """ - don't spam notif - """
             await bot.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await fry.reply("`Lord Mohon Unblock` @image_deepfrybot`...`")
+            await fry.reply("`Woi Unblock dulu setan` @image_deepfrybot`...`")
             return
         if response.text.startswith("Forward"):
             await fry.edit("`Lord Mohon Matikan Setelan Forward Privasi...`")
@@ -109,14 +109,14 @@ async def _(fry):
     if fry.fwd_from:
         return
     if not fry.reply_to_msg_id:
-        await fry.edit("`Mohon Balas Di Sticker Lord`")
+        await fry.edit("`Balas Di Sticker idiot !`")
         return
     reply_message = await fry.get_reply_message()
     if not reply_message.media:
-        await fry.edit("`Mohon Balas Di Sticker Lord`")
+        await fry.edit("`Balas Di Sticker idiot !`")
         return
     if reply_message.sender.bot:
-        await fry.edit("`Mohon Balas Di Sticker Lord`")
+        await fry.edit("`Balas Di Sticker idiot !`")
         return
     chat = "@image_deepfrybot"
     message_id_to_reply = fry.message.reply_to_msg_id
@@ -135,7 +135,7 @@ async def _(fry):
             """ - don't spam notif - """
             await bot.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await fry.reply("`Lord Mohon Unblock` @image_deepfrybot`...`")
+            await fry.reply("`WOII Unblock dulu` @image_deepfrybot`...`")
             return
         if response.text.startswith("Forward"):
             await fry.edit("`Lord Mohon Matikan Setelan Privasi Forward...`")
@@ -165,7 +165,7 @@ async def _(fry):
 
 
 CMD_HELP.update({
-    "kekuatan":
-    "**Modules: __Kekuatan__\n\n**Perintah:** `.kekuatan` / `.kekuatan [level(1-8)]`"
+    "JUTSU":
+    "**Modules: __jutsu__\n\n**Perintah:** `.jutsu` / `.jutsu [level(1-8)]`"
     "\n**Penjelasan:** untuk mengubah foto/sticker."
 })
