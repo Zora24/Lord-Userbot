@@ -14,7 +14,7 @@
 # Lord Userbot
 ![Lord Userbot Logo](https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg)
 
-<h3 align="center">Repo yang di ciptakan ketika gabut</h3>
+<h3 align="center">Repo Yang Di Buat Karena Gabut Ajg</h3>
 <p align="center">&nbsp;</p>
 
 ### Repo GAL-EBOT
