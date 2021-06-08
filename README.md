@@ -1,5 +1,5 @@
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/5501763.gif" width="473" height="82" alt="LORD USERBOT" /></a>
 
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/5534665.png" width="350" height="81" alt="GAL-EBOT" /></a>
 
 <p align="center">
   <a href="https://github.com/Zora24/Lord-Userbot/fork">
