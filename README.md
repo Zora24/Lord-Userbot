@@ -12,7 +12,7 @@
 </p>  
 
 # GAL-EBOT
-![Lord Userbot Logo](https://telegra.ph/GALE-06-09)
+![GALE-BOT Logo](https://telegra.ph/file/f356e4b0dde6e3b9ed00c.jpg)
 
 <h3 align="center">Repo Yang Di Buat Karena Gabut Ajg</h3>
 <p align="center">&nbsp;</p>
