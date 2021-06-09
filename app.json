@@ -1,7 +1,7 @@
 {
-  "name": "Lord-Userbot",
-  "description": "[Lord-Userbot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
-  "logo": "https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg",
+  "name": "GAL-EBOT",
+  "description": "[GAL-EBOT] Userbot Yang bertujuan untuk bersenang senang",
+  "logo": "https://https://telegra.ph/file/f356e4b0dde6e3b9ed00c.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Zora24/Lord-Userbot",
-  "telegram": "https://t.me/liualvinas",
-  "success_url": "https://t.me/liualvinasmahaputra",
+  "repository": "https://github.com/galeinst/GAL-EBOT",
+  "telegram": "https://t.me/Gstwne",
+  "success_url": "https://t.me/gstwne",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -42,7 +42,7 @@
     },
     "BOTLOG_CHATID": {
       "description": "Buatlah sebuah grup private/public masukan bot rose lalu ketik /id.",
-      "value": "Isi id grup mu",
+      "value": "Isi Id grup mu cok",
       "required": true
     },
     "CONSOLE_LOGGER_VERBOSE": {
@@ -151,15 +151,15 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "LORD-USERBOT",
+      "value": "GAL-EBOT",
       "required": false
     },
     "ALIVE_NAME": {
       "description": "Nama untuk menunjukan pesan .alive",
       "required": false
     },
-    "LORD_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .lord (Isi Terserah)",
+    "Gl_TEKS_KUSTOM": {
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .Gl (Isi Terserah)",
       "required": false
     },
     "S_PACK_NAME": {
@@ -168,7 +168,7 @@
     },
     "G_BAN_LOGGER_GROUP": {
       "description": "Buatlah Sebuah Grup Private/Public Lalu Masukkan Bot Rose Lalu Ketik /id.",
-      "value": "Isi id grup mu",
+      "value": "Isi id grup mu cok",
       "required": false
     },
     "G_DRIVE_DATA": {
@@ -189,7 +189,7 @@
       "required": false
     },
     "UB_BLACK_LIST_CHAT": {
-      "description": "Isi Apa Aja",
+      "description": "Terserah Isi apa aja",
       "required": false
     },
     "LYDIA_API_KEY": {
@@ -198,7 +198,7 @@
     },
     "WEATHER_DEFCITY": {
       "description": "Set the default city for the userbot's weather module.",
-      "value": "Batam",
+      "value": "Kuningan",
       "required": false
     },
     "LOGSPAMMER": {
