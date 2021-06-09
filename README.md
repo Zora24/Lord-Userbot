@@ -11,8 +11,8 @@
   </a>
 </p>  
 
-# Lord Userbot
-![Lord Userbot Logo](https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg)
+# GAL-EBOT
+![Lord Userbot Logo](https://telegra.ph/GALE-06-09)
 
 <h3 align="center">Repo Yang Di Buat Karena Gabut Ajg</h3>
 <p align="center">&nbsp;</p>
