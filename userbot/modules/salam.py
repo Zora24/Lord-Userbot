@@ -7,16 +7,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern='^P(?: |$)(.*)')
-async def typewriter(typew):
-    typew.pattern_match.group(1)
-    sleep(1)
-    await typew.edit(f"**Hallo Gembell Saya {DEFAULTUSER}**")
-    sleep(2)
-    await typew.edit("Assalamualaikum.....")
-#Owner @Bacot_anjingg
 
-    
 
 
 @register(outgoing=True, pattern='^.atg(?: |$)(.*)')
@@ -25,14 +16,6 @@ async def typewriter(typew):
     await typew.edit("ASTAGHFIRULLAH.... GOBLOKKKKK!!!!")
 
 
-@register(outgoing=True, pattern='^L(?: |$)(.*)')
-async def typewriter(typew):
-    typew.pattern_match.group(1)
-    typew.edit("Astaghfirulloh Jawab Salam Kontoll...")
-    sleep(1)
-    await typew.edit("waalaikumsalam.......")
-#Owner @Bacot_anjingg
-  
 
 
 @register(outgoing=True, pattern='^.ast(?: |$)(.*)')
