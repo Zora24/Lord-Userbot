@@ -3,15 +3,15 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern='^.sadboy(?: |$)(.*)')
+@register(outgoing=True, pattern='^.ayg(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
-    await typew.edit("`Pertama-tama kamu cantik`")
+    await typew.edit("`HAYY KAMUU`")
     sleep(2)
-    await typew.edit("`Kedua kamu manis`")
+    await typew.edit("`GUA CUMAN MAU BILANGG`")
     sleep(1)
-    await typew.edit("`Dan yang terakhir adalah kamu bukan jodohku`")
+    await typew.edit("`GUA SAYANG BANGET AMA LU SUMPAHH`")
 # Create by myself @localheart
 
 
@@ -34,16 +34,16 @@ async def typewriter(typew):
     await typew.edit("**jeje ganteng☑️**")
     await typew.edit("**jeje Ganteng✅**")
     sleep(1)
-    await typew.edit("**deep gembel☑️**")
-    await typew.edit("**deep tolol✅**")
+    await typew.edit("**Lu Semua gembel☑️**")
+    await typew.edit("**Lu Semua tolol✅**")
     sleep(2)
-    await typew.edit("**tepen haram☑️**")
-    await typew.edit("**tepen pecundang✅**")
+    await typew.edit("**Lu semua haram☑️**")
+    await typew.edit("**Lu semua pecundang✅**")
     sleep(1)
-    await typew.edit("**oyee anak kontol☑️**")
-    await typew.edit("**oyee kepala botak✅**")
+    await typew.edit("**Lu semua anak kontol☑️**")
+    await typew.edit("**Lu semua anak bangsat✅**")
     sleep(1)
-    await typew.edit("**Kalian Semua GEMBEL,Kecuali JEJE😋**")
+    await typew.edit("**Intinya Lu Semua GEMBEL,Kecuali JEJE😋**")
 
 
 # Create by myself @localheart
