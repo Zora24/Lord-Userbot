@@ -35,20 +35,20 @@ async def _(event):
 
         animation_chars = [
 
-            "ALLIGATOR LEWAT NIH NIHHH!!!",
-            "AYEE, RAHMA, MICIN!!!",
-            "JEN, FAREL, SALMA!!!",
-            "ARRA, KENN, NOR!!",
-            "CICA, IKBAL, SEREIN!!!",
-            "RARA, UPIN, BABY!!!",
-            "PIANA, CHI, OPAL!!!!",
-            "BIE, GITA, JEHA!!!",
-            "AIN, AW, MARIA!!!!",
-            "GIN, RYL, CECE!!",
-            "YAJUJ, RAFI",
-            "5 PARTAI ALG!!!",
-            "JEJE, DEEPZ, RIOO, STEVEN, UPIN/OYEE!",
-            "CIRCLE ALLIGATOR LEWAT NIHH!!!"
+            "FAMILY X ALIANSI TELEGRAM NIHH!!!",
+            "ALLIGATOR, SYINDICATE, KOZHOY!!!",
+            "AZTEC, MS, AL!!!",
+            "NOTSEXY, LV, BW!!",
+            "ALAHSIA, KHR, DOUBLE ZZ!!!",
+            "KOCAK, TBB, NOMERCY!!!",
+            "DIGENDIR, ICIPIYEY, GANJASANS!!!!",
+            "ALN, 999, TELQUEEN!!!",
+            "QUIXOTIC, BDS, BANDAR!!!!",
+            "KONOHA, 404, EAGLES!!",
+            "BATAVIA, JAKANA, SK",
+            "KALO KETEMU JAN DI SENGGOL!!!",
+            "KITA CIPTAKAN PERDAMAIAN TELEGRAM!",
+            "FAMILY X ALIANSI TELEGRAM LEWAT NIHHH!!!"
         ]
 
         for i in animation_ttl:
@@ -462,25 +462,25 @@ async def _(event):
             await event.edit(animation_chars[i % 24])
 
 
-@register(outgoing=True, pattern="^.gangstar(?: |$)(.*)")
+@register(outgoing=True, pattern="^.Cantik(?: |$)(.*)")
 async def _(event):
     if not event.text[0].isalpha() and event.text[0] not in (
             "/", "#", "@", "!"):
-        await event.edit("Hai Gembel")
+        await event.edit("Hai Cantik")
         await asyncio.sleep(0.3)
-        await event.edit("Gua")
+        await event.edit("Gua cuman mau bilang")
         await asyncio.sleep(0.2)
-        await event.edit("Majikan Lu")
+        await event.edit("Kalo Sebenrnya??")
         await asyncio.sleep(0.5)
-        await event.edit("Sekarang ")
+        await event.edit("Hmmmmm")
         await asyncio.sleep(0.2)
-        await event.edit("Lu Itu BABU Gua")
+        await event.edit("Jadi gini Sebenernya!")
         await asyncio.sleep(0.3)
-        await event.edit("Jadi Harus Nurut")
+        await event.edit("Gua Suka Ama Lu")
         await asyncio.sleep(0.3)
-        await event.edit("😎😎😎")
+        await event.edit("Intinya Harus mau")
         await asyncio.sleep(0.3)
-        await event.edit("KARENA ANJING HARUS NURUT SAMA MAJIKANNYA 😎😎😎")
+        await event.edit("Yauda Gua Tunggu No wa Lu Di Pc Ya cantik")
 
 
 @bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
@@ -2409,7 +2409,7 @@ async def _(event):
 
             "0️⃣",
 
-            "🆘"
+            "I MISS YOU🖤"
 
         ]
 
