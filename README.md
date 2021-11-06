@@ -46,6 +46,12 @@ Atau Bisa Gabung Ke Grup Lord Userbot -> [TEKAN DISINI](https://t.me/LordUserbot
 
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Zora24/Lord-Userbot/tree/Lord-Userbot"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
+
+## <p align="center">VIDEO TUTORIAL DEPLOY</p>
+
+
+<p align="center"><a href="https://www.youtube.com/watch?v=lfiHmAKHilk"> <img src="https://www.logo.wine/a/logo/YouTube/YouTube-Logo.wine.svg" width="450" height="150" /></a></p>
+
 <br>
 </p>
 
